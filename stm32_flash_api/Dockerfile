@@ -13,11 +13,15 @@ RUN apt-get update && apt-get install -y \
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the application files to the container
-COPY . .
-
 # Install Flask using pip
 RUN pip3 install flask
+
+# Install pyvisa to talk to the Siglent Power Supply
+RUN pip3 install pyvisa-py
+RUN pip3 install PyUSB
+
+# Copy the application files to the container
+COPY . .
 
 # Expose the port that Flask app will run on
 EXPOSE 5000

@@ -27,7 +27,7 @@ services:
       - mongodb
 
   stm32_flash_api:
-    image: stm32_flash_api:v0.3
+    image: stm32_flash_api:2.1
     ports:
       - 5000:5000
       - 5001:5001

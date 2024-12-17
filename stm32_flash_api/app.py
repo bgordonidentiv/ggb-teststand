@@ -1,5 +1,6 @@
 import subprocess
-import html
+import pyvisa 
+import time
 import re
 from flask import Flask, jsonify, render_template_string
 
@@ -19,7 +20,16 @@ def read_flash():
 
 @app.route('/ps')
 def read_ps():
-    return "<p>Power Supply Info: </p>" 
+    rm = pyvisa.ResourceManager()
+
+    inst=rm.open_resource("USB0::0x0483::0x7540::SPD3ECAC3R0303::INSTR")
+    inst.write_termination='\n'
+    inst.read_termination='\n'
+    time.sleep(0.04)
+    inst.write('*IDN?')
+    time.sleep(0.25) # I guess the power supply needs a bit of time before reading
+    qStr = inst.read()
+    return qStr 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
