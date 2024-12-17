@@ -38,3 +38,18 @@ To build the image:
 ---
 
 ### stm32_flash_api
+
+This container is build on top of previously build STM32 Cube Programmer CLI container (stm32_flash_cli)
+
+This container installs Python and Flask to create api enpoints for the cube programmer
+
+To build the image:
+1. Run this command in the stm32\_flash\_api directory
+    ```
+    docker build -t stm32\_flash\_api:0.1 .
+    ```
+2. To test if container works:
+    ```
+    docker run -v /dev:/dev --device /dev:/dev --net=host -it stm3\_flash\_api:0.1
+    ```
+3. Open a browser and go to <container IP>:5000/info
