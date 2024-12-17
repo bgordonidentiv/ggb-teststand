@@ -52,4 +52,13 @@ To build the image:
     ```
     docker run -v /dev:/dev --device /dev:/dev --net=host -it stm3\_flash\_api:0.1
     ```
-3. Open a browser and go to <container IP>:5000/info
+3. Open a browser and go to /<container IP/>:5000/info
+
+---
+
+## Docker Compose
+
+To start the Test Stand run the following command:
+    ```
+    docker compose -f docker\_compose.yml up
+
