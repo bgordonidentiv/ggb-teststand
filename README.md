@@ -61,4 +61,5 @@ To build the image:
 To start the Test Stand run the following command:
     ```
     docker compose -f docker\_compose.yml up
+    ```
 
