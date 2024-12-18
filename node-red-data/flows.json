@@ -1,0 +1,660 @@
+[
+    {
+        "id": "ad57ba2b8e45a235",
+        "type": "tab",
+        "label": "Debug",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1c54bdb8824552f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1a5390da2650b706",
+        "type": "ui_tab",
+        "name": "Debug",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "85aec48b25a285f3",
+        "type": "ui_group",
+        "name": "STM32 Flash",
+        "tab": "1a5390da2650b706",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "04e53e6377e3f8f2",
+        "type": "ui_group",
+        "name": "Power Supply",
+        "tab": "1a5390da2650b706",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "59d2ffcf07c045f6",
+        "type": "inject",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "fca513e27b477515"
+            ]
+        ]
+    },
+    {
+        "id": "3b5b944bee5d7e7f",
+        "type": "debug",
+        "z": "ad57ba2b8e45a235",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fca513e27b477515",
+        "type": "http request",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.223:5000/read",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "948af03c0b122da1"
+            ]
+        ]
+    },
+    {
+        "id": "948af03c0b122da1",
+        "type": "json",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "3b5b944bee5d7e7f",
+                "639af7b6d05956e3"
+            ]
+        ]
+    },
+    {
+        "id": "639af7b6d05956e3",
+        "type": "switch",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "property": "payload.returncode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "3cd31489c58912b0"
+            ],
+            [
+                "6079f76193645dd5"
+            ]
+        ]
+    },
+    {
+        "id": "3cd31489c58912b0",
+        "type": "change",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Flash Successful",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 300,
+        "wires": [
+            [
+                "b9398c944c0071bc"
+            ]
+        ]
+    },
+    {
+        "id": "6079f76193645dd5",
+        "type": "change",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Flash Failed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [
+                "b9398c944c0071bc"
+            ]
+        ]
+    },
+    {
+        "id": "57583d3f68f8e391",
+        "type": "comment",
+        "z": "ad57ba2b8e45a235",
+        "name": "STM32 Flash",
+        "info": "",
+        "x": 150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "49b8ad2c777533a6",
+        "type": "comment",
+        "z": "ad57ba2b8e45a235",
+        "name": "Power Supply",
+        "info": "",
+        "x": 150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3dd002baca7555d6",
+        "type": "inject",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 90,
+        "y": 680,
+        "wires": [
+            [
+                "2e5bc9aba6655f8e",
+                "bd3d3d94070ec689"
+            ]
+        ]
+    },
+    {
+        "id": "6a788f12b8993bba",
+        "type": "function",
+        "z": "ad57ba2b8e45a235",
+        "name": "function 1",
+        "func": "// Get the input number\nlet number = msg.payload\n\n// Format the number to 2 decimal places\nlet formattedNumber = parseFloat(number).toFixed(1);\n\n// Pass the formatted number to the next node\nmsg.payload = formattedNumber;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "b5aeae6bd5f1a7ea"
+            ]
+        ]
+    },
+    {
+        "id": "debc844cb48f3b1f",
+        "type": "function",
+        "z": "ad57ba2b8e45a235",
+        "name": "function 2",
+        "func": "// Get the input number\nlet number = msg.payload\n\n// Format the number to 2 decimal places\nlet formattedNumber = parseFloat(number).toFixed(1);\n\n// Pass the formatted number to the next node\nmsg.payload = formattedNumber;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "a2f69949f03b11d5"
+            ]
+        ]
+    },
+    {
+        "id": "53a5734d0ad17bf5",
+        "type": "http request",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.223:5000/ps/info",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 620,
+        "wires": [
+            [
+                "be54f2e043225ebf"
+            ]
+        ]
+    },
+    {
+        "id": "be54f2e043225ebf",
+        "type": "json",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 890,
+        "y": 620,
+        "wires": [
+            [
+                "c5b3c607f40c1c55"
+            ]
+        ]
+    },
+    {
+        "id": "c5b3c607f40c1c55",
+        "type": "debug",
+        "z": "ad57ba2b8e45a235",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2e5bc9aba6655f8e",
+        "type": "ui_slider",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "04e53e6377e3f8f2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "32",
+        "step": "0.1",
+        "className": "",
+        "x": 250,
+        "y": 680,
+        "wires": [
+            [
+                "6a788f12b8993bba"
+            ]
+        ]
+    },
+    {
+        "id": "bd3d3d94070ec689",
+        "type": "ui_slider",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "04e53e6377e3f8f2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "2",
+        "step": "0.1",
+        "className": "",
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "debc844cb48f3b1f"
+            ]
+        ]
+    },
+    {
+        "id": "f79b59db37aecccd",
+        "type": "ui_button",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "group": "85aec48b25a285f3",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Flash",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "Flash Button Pressed",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "fca513e27b477515"
+            ]
+        ]
+    },
+    {
+        "id": "c1b3f613ef8cf145",
+        "type": "ui_button",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "group": "04e53e6377e3f8f2",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 480,
+        "y": 540,
+        "wires": [
+            [
+                "53a5734d0ad17bf5"
+            ]
+        ]
+    },
+    {
+        "id": "50af0f377e3ccd63",
+        "type": "ui_switch",
+        "z": "ad57ba2b8e45a235",
+        "name": "",
+        "label": "Power",
+        "tooltip": "",
+        "group": "04e53e6377e3f8f2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 470,
+        "y": 600,
+        "wires": [
+            [
+                "53a5734d0ad17bf5"
+            ]
+        ]
+    },
+    {
+        "id": "b5aeae6bd5f1a7ea",
+        "type": "ui_text",
+        "z": "ad57ba2b8e45a235",
+        "group": "04e53e6377e3f8f2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Voltage",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 700,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "a2f69949f03b11d5",
+        "type": "ui_text",
+        "z": "ad57ba2b8e45a235",
+        "group": "04e53e6377e3f8f2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 700,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "b9398c944c0071bc",
+        "type": "ui_toast",
+        "z": "ad57ba2b8e45a235",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1130,
+        "y": 340,
+        "wires": []
+    }
+]
