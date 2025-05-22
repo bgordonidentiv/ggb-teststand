@@ -18,7 +18,7 @@ def read_flash():
     # return render_template_string(formatted_output)
     return jsonify({"output": clean_output, "error": result.stderr, "returncode": result.returncode})
 
-@app.route('/ps')
+@app.route('/ps/info')
 def read_ps():
     rm = pyvisa.ResourceManager()
 
@@ -27,6 +27,27 @@ def read_ps():
     inst.read_termination='\n'
     time.sleep(0.04)
     inst.write('*IDN?')
+    time.sleep(0.25) # I guess the power supply needs a bit of time before reading
+    qStr = inst.read()
+    info_list = qStr.split(",")
+    data = {
+        "Manufacturer" : info_list[0],
+        "Product Model" : info_list[1],
+        "Serial Number" : info_list[2],
+        "Software Version" : info_list[3]
+    }
+    data_out = jsonify(data)
+    return data_out 
+
+@app.route('/ps/ch1/cur')
+def read_curr_ch1():
+    rm = pyvisa.ResourceManager()
+
+    inst=rm.open_resource("USB0::0x0483::0x7540::SPD3ECAC3R0303::INSTR")
+    inst.write_termination='\n'
+    inst.read_termination='\n'
+    time.sleep(0.04)
+    inst.write('CH1:CURRent?')
     time.sleep(0.25) # I guess the power supply needs a bit of time before reading
     qStr = inst.read()
     return qStr 

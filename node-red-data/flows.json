@@ -1,145 +1,2602 @@
 [
     {
-        "id": "ad57ba2b8e45a235",
+        "id": "8992ffe741acd3ee",
         "type": "tab",
-        "label": "Debug",
+        "label": "Main Test Flow",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "a1c54bdb8824552f",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
+        "id": "7921f5df104fbd3f",
+        "type": "tab",
+        "label": "LabJack T7 Playground",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2e2b8069db449ba9",
+        "type": "tab",
+        "label": "MongoDB",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4cb430ba2addf410",
+        "type": "tab",
+        "label": "STM32 Flash",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ca180f9998bd7792",
+        "type": "tab",
+        "label": "Siglet Power Supply",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ec7ffdcfa1cb4d13",
+        "type": "subflow",
+        "name": "LabJack AIN to Decimal",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "df4e3ff11eba05b2",
+                        "port": 0
+                    }
+                ]
             },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#097479",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
+            {
+                "x": 580,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "9a0f432b3dcac13c",
+                        "port": 0
+                    }
+                ]
             },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            {
+                "x": 580,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "77fa9b4a3369a3fe",
+                        "port": 0
+                    }
+                ]
             },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": false
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "group-textColor": {
-                    "value": "#0eb8c0",
-                    "edited": false
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": false
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": false
-                },
-                "widget-backgroundColor": {
-                    "value": "#097479",
-                    "edited": false
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": false
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
+            {
+                "x": 580,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "9aee33519da9f43b",
+                        "port": 0
+                    }
+                ]
             },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
+            {
+                "x": 580,
+                "y": 400,
+                "wires": [
+                    {
+                        "id": "0a5ca35064fa24b7",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "b3cee38646d18818",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 520,
+                "wires": [
+                    {
+                        "id": "44fb4f40479abd5f",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 580,
+                "wires": [
+                    {
+                        "id": "be37ea34d73757e4",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 640,
+                "wires": [
+                    {
+                        "id": "886aaa571a563a95",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 700,
+                "wires": [
+                    {
+                        "id": "0d11e6d8ad24eda7",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 760,
+                "wires": [
+                    {
+                        "id": "0a69e1aa5779b958",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 820,
+                "wires": [
+                    {
+                        "id": "33d42aa6213a94e5",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 880,
+                "wires": [
+                    {
+                        "id": "a53ecb85906cd1c9",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 940,
+                "wires": [
+                    {
+                        "id": "e3683935c82ad0ec",
+                        "port": 0
+                    }
+                ]
             }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "16e07721fd9c57c8",
+        "type": "subflow",
+        "name": "LabJack FIO Read",
+        "info": "",
+        "category": "",
+        "in": [],
+        "out": [
+            {
+                "x": 740,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "3a1bc2efbf6f60da",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "2d029bf03cc8bc70",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "95531e0463f9f4d3",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "36f9fd0d036569b2",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "292768858c208003",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "0ec008fecfa9f11c",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 420,
+                "wires": [
+                    {
+                        "id": "1f262e031decf330",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 740,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "ce4a39f8f857adbc",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "816b1a16a4c6ed2f",
+        "type": "subflow",
+        "name": "Init Hardware",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "f4bd75ad10cb1673"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 820,
+                "y": 440,
+                "wires": [
+                    {
+                        "id": "609d74adbd31c246",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 820,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "a04ac3615f050949",
+                        "port": 1
+                    },
+                    {
+                        "id": "609d74adbd31c246",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "a69044879ba93890",
+        "type": "subflow",
+        "name": "LabJack T7 Read",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 280,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "66f09c63f8377e61"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 720,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "66f09c63f8377e61",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 720,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "66f09c63f8377e61",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "b772539faaa6108e",
+        "type": "subflow",
+        "name": "LabJack T7 Write",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 380,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "542e4f4852b62347"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 920,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "542e4f4852b62347",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 920,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "542e4f4852b62347",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "c2bca422a609058c",
+        "type": "group",
+        "z": "4cb430ba2addf410",
+        "name": "Debug Terminal",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#3f3f3f"
         },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
+        "nodes": [
+            "3d569b3ef4a4da57",
+            "952229a52100f262",
+            "01c728ed8616c1bf",
+            "e39252305fcf99ff",
+            "38fb58837d1cb040"
+        ],
+        "x": 134,
+        "y": 79,
+        "w": 952,
+        "h": 82
+    },
+    {
+        "id": "10252ec72e40228d",
+        "type": "group",
+        "z": "ca180f9998bd7792",
+        "name": "Get Power Supply Info",
+        "style": {
+            "label": true,
+            "color": "#3f3f3f",
+            "fill": "#bfdbef"
+        },
+        "nodes": [
+            "ecddea2160134f5b",
+            "2e91a44404406313",
+            "30f31fe57aa5cf19",
+            "81b675564a04a150",
+            "927aa40e4b391031",
+            "6de392e07aed1934",
+            "961359b6648b99f4",
+            "fff3edb4cedeea08",
+            "92381d1f484bf704",
+            "c9273644a6707a44",
+            "7d8a69fa2776b28e",
+            "5fc4908f52001002",
+            "41f0d68f38d32ba3"
+        ],
+        "x": 74,
+        "y": 219,
+        "w": 892,
+        "h": 402
+    },
+    {
+        "id": "6224f3394241d463",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "6248b72ac892d749",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#800000",
+            "primary": "#9da9a0",
+            "bgPage": "#0e1116",
+            "groupBg": "#1a1b25",
+            "groupOutline": "#9c9c9c"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
         }
     },
     {
-        "id": "1a5390da2650b706",
-        "type": "ui_tab",
-        "name": "Debug",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
+        "id": "17804591f45974f5",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "6224f3394241d463",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 4,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
     },
     {
-        "id": "85aec48b25a285f3",
-        "type": "ui_group",
-        "name": "STM32 Flash",
-        "tab": "1a5390da2650b706",
+        "id": "29fa62bcf4437420",
+        "type": "ui-group",
+        "name": "Group 1",
+        "page": "17804591f45974f5",
+        "width": "10",
+        "height": "4",
         "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
     },
     {
-        "id": "04e53e6377e3f8f2",
-        "type": "ui_group",
-        "name": "Power Supply",
-        "tab": "1a5390da2650b706",
+        "id": "3c78a6eb08cacdd4",
+        "type": "mongodb",
+        "hostname": "192.168.8.223",
+        "topology": "direct",
+        "connectOptions": "",
+        "port": "27017",
+        "db": "ggb_test",
+        "name": ""
+    },
+    {
+        "id": "648ea2b0078cf7c8",
+        "type": "mongodb3",
+        "uri": "192.168.8.224",
+        "name": "",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "a090672be3fbf2f9",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "4c2e2ca0c20d4a2a",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyS1",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "19200",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "e3b9bad5128a1f79",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.8.148",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "95d890d57b7fb911",
+        "type": "ui-page",
+        "name": "LabJack T7",
+        "ui": "6224f3394241d463",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 3,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "c0df6a81dd62a6e2",
+        "type": "ui-group",
+        "name": "Analog",
+        "page": "95d890d57b7fb911",
+        "width": "1",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "708edc68cbb12e3b",
+        "type": "ui-group",
+        "name": "GPIO",
+        "page": "95d890d57b7fb911",
+        "width": "1",
+        "height": "1",
         "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "276709556fd58643",
+        "type": "ui-page",
+        "name": "MongoDB",
+        "ui": "6224f3394241d463",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 5,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "6f5106dc7cfd1c4e",
+        "type": "ui-group",
+        "name": "Section 1",
+        "page": "276709556fd58643",
+        "width": "2",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "de76f57e39382a92",
+        "type": "ui-page",
+        "name": "Test Dashboard",
+        "ui": "6224f3394241d463",
+        "path": "/page4",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "326aba1ddf33faae",
+        "type": "ui-group",
+        "name": "Test Results",
+        "page": "de76f57e39382a92",
+        "width": "2",
+        "height": "6",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "ec13ee8c79f5c406",
+        "type": "ui-spacer",
+        "group": "326aba1ddf33faae",
+        "name": "spacer",
+        "tooltip": "",
+        "order": 2,
+        "width": 1,
+        "height": 1,
         "className": ""
     },
     {
-        "id": "59d2ffcf07c045f6",
+        "id": "9bddf898b439d6b4",
+        "type": "ui-page",
+        "name": "STM32 Flash",
+        "ui": "6224f3394241d463",
+        "path": "/stm_flash",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "77c8cf75515c1de9",
+        "type": "ui-group",
+        "name": "Debug Terminal",
+        "page": "9bddf898b439d6b4",
+        "width": "8",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "dd3c8fe7c3c596d3",
+        "type": "ui-group",
+        "name": "Status",
+        "page": "9bddf898b439d6b4",
+        "width": "2",
+        "height": "2",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "681925e771053f04",
+        "type": "ui-page",
+        "name": "Siglet Power Supply",
+        "ui": "6224f3394241d463",
+        "path": "/power_supply",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 6,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "925a7306e7551f2f",
+        "type": "ui-group",
+        "name": "Supply Info",
+        "page": "681925e771053f04",
+        "width": "3",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "b42620cc7cc895ea",
+        "type": "ui-group",
+        "name": "Channel 1",
+        "page": "681925e771053f04",
+        "width": "3",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "df4e3ff11eba05b2",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN0",
+        "func": "let channel = 0;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a0f432b3dcac13c",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN1",
+        "func": "let channel = 1;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77fa9b4a3369a3fe",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN2",
+        "func": "let channel = 2;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9aee33519da9f43b",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN3",
+        "func": "let channel = 3;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a5ca35064fa24b7",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN4",
+        "func": "let channel = 4;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b3cee38646d18818",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN5",
+        "func": "let channel = 5;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44fb4f40479abd5f",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN6",
+        "func": "let channel = 6;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be37ea34d73757e4",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN7",
+        "func": "let channel = 7;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "886aaa571a563a95",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN8",
+        "func": "let channel = 8;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d11e6d8ad24eda7",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN9",
+        "func": "let channel = 9;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0a69e1aa5779b958",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN10",
+        "func": "let channel = 10;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "33d42aa6213a94e5",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN11",
+        "func": "let channel = 11;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a53ecb85906cd1c9",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN12",
+        "func": "let channel = 12;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3683935c82ad0ec",
+        "type": "function",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "AIN13",
+        "func": "let channel = 13;  // AIN Input\n\nlet buffer = Buffer.alloc(4) // 2 x 16-bit = 4 bytes\nbuffer.writeUInt16BE(msg.payload[(channel*2)], 0);\nbuffer.writeUInt16BE(msg.payload[(channel*2)+1], 2);\n\nlet floatValue = buffer.readFloatBE(0);\n\nmsg.payload = floatValue.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67b999343945935e",
+        "type": "modbus-read",
+        "z": "ec7ffdcfa1cb4d13",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "28",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "df4e3ff11eba05b2",
+                "9a0f432b3dcac13c",
+                "77fa9b4a3369a3fe",
+                "9aee33519da9f43b",
+                "0a5ca35064fa24b7",
+                "b3cee38646d18818",
+                "44fb4f40479abd5f",
+                "be37ea34d73757e4",
+                "886aaa571a563a95",
+                "0d11e6d8ad24eda7",
+                "0a69e1aa5779b958",
+                "33d42aa6213a94e5",
+                "a53ecb85906cd1c9",
+                "e3683935c82ad0ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5765b56bc0b1c915",
+        "type": "modbus-read",
+        "z": "16e07721fd9c57c8",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": true,
+        "logIOActivities": false,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "2500",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "3a1bc2efbf6f60da",
+                "2d029bf03cc8bc70",
+                "95531e0463f9f4d3",
+                "36f9fd0d036569b2",
+                "292768858c208003",
+                "0ec008fecfa9f11c",
+                "1f262e031decf330",
+                "ce4a39f8f857adbc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3a1bc2efbf6f60da",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 0)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d029bf03cc8bc70",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 1)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95531e0463f9f4d3",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 2)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36f9fd0d036569b2",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 3)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "292768858c208003",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 4)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ec008fecfa9f11c",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 5)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f262e031decf330",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 6)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce4a39f8f857adbc",
+        "type": "function",
+        "z": "16e07721fd9c57c8",
+        "name": "isBitSet",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\nif(isBitSet(msg.payload, 7)){\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b48b9883fdd57ce",
+        "type": "comment",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Notes",
+        "info": "This flow is used to initalize any \nconnected hardware\n\n# LabJack T7\n\n[Modbus Map](https://support.labjack.com/docs/3-1-modbus-map-t-series-datasheet)\n",
+        "x": 110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f4bd75ad10cb1673",
+        "type": "function",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Set FIO Direction",
+        "func": "// FIO Port Direct 0=Input, 1=Output\nlet fio_map = 0xff  // All Output\n\nmsg.payload = { 'value': fio_map, 'fc': 6, 'unitid': 1, 'address': 2600, 'quantity': 1 };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "a04ac3615f050949"
+            ]
+        ]
+    },
+    {
+        "id": "a04ac3615f050949",
+        "type": "subflow:b772539faaa6108e",
+        "z": "816b1a16a4c6ed2f",
+        "name": "",
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "84011f01433aadc4"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "84011f01433aadc4",
+        "type": "function",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Set EIO Direction",
+        "func": "// FIO Port Direct 0=Input, 1=Output\nlet fio_map = 0xff  // All Output\n\nmsg.payload = { 'value': fio_map, 'fc': 6, 'unitid': 1, 'address': 2601, 'quantity': 1 };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "609d74adbd31c246"
+            ]
+        ]
+    },
+    {
+        "id": "609d74adbd31c246",
+        "type": "subflow:b772539faaa6108e",
+        "z": "816b1a16a4c6ed2f",
+        "name": "",
+        "x": 540,
+        "y": 360,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "66f09c63f8377e61",
+        "type": "modbus-flex-getter",
+        "z": "a69044879ba93890",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "542e4f4852b62347",
+        "type": "modbus-flex-write",
+        "z": "b772539faaa6108e",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "e3b9bad5128a1f79",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "96e2f4ba53b1116c",
         "type": "inject",
-        "z": "ad57ba2b8e45a235",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "279b53178650eb5c"
+            ]
+        ]
+    },
+    {
+        "id": "119bf3460f0a3c4e",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Version 0.1",
+        "info": "",
+        "x": 140,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4c45043847656ec2",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Working Notes",
+        "info": "",
+        "x": 460,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "279b53178650eb5c",
+        "type": "subflow:816b1a16a4c6ed2f",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "f47dda522486b91e"
+            ],
+            [
+                "f47dda522486b91e"
+            ]
+        ]
+    },
+    {
+        "id": "f47dda522486b91e",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9d3c62be1699292a",
+        "type": "ui-text",
+        "z": "8992ffe741acd3ee",
+        "group": "326aba1ddf33faae",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "24VDC Supply",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "efb1ec12307193d2",
+        "type": "ui-gauge",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "group": "29fa62bcf4437420",
+        "order": 1,
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "units": "VDC",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#000000"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5fbd810e31f63511",
+        "type": "ui-chart",
+        "z": "7921f5df104fbd3f",
+        "group": "29fa62bcf4437420",
+        "name": "",
+        "label": "chart",
+        "order": 2,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "30",
+        "removeOlderUnit": "1",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 730,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7aa0d3096c65d54b",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN0",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "64874c229baa99b9",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "7774d8f5a371a280",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "15ada7d162c01a0f",
+        "type": "subflow:ec7ffdcfa1cb4d13",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "x": 380,
+        "y": 900,
+        "wires": [
+            [
+                "7aa0d3096c65d54b",
+                "efb1ec12307193d2",
+                "5fbd810e31f63511"
+            ],
+            [
+                "64874c229baa99b9"
+            ],
+            [
+                "7774d8f5a371a280"
+            ],
+            [
+                "cb1a084843f48ef4"
+            ],
+            [
+                "7748fe9db2492361"
+            ],
+            [
+                "5bf96b2f5688da39"
+            ],
+            [
+                "0f3d7d10389646e9"
+            ],
+            [
+                "c5f281693573585f"
+            ],
+            [
+                "4f52a34f508b9599"
+            ],
+            [
+                "c539262cd35bddc2"
+            ],
+            [
+                "86b222650e694b85"
+            ],
+            [
+                "faea5e26f71133f8"
+            ],
+            [
+                "d5c7a2a4484fec2a"
+            ],
+            [
+                "5e165f974e71cc3d"
+            ]
+        ]
+    },
+    {
+        "id": "cb1a084843f48ef4",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "7748fe9db2492361",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5bf96b2f5688da39",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN5",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "0f3d7d10389646e9",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN6",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "c5f281693573585f",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN7",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "4f52a34f508b9599",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN8",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c539262cd35bddc2",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN9",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "86b222650e694b85",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN10",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "faea5e26f71133f8",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN11",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "d5c7a2a4484fec2a",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN12",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "5e165f974e71cc3d",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "c0df6a81dd62a6e2",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AIN13",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "14",
+        "color": "#787878",
+        "wrapText": false,
+        "className": "",
+        "x": 730,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "5d42440bb78cbdf6",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO0",
+        "group": "708edc68cbb12e3b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1500,
+        "wires": [
+            [
+                "a3c00be8754e1937"
+            ]
+        ]
+    },
+    {
+        "id": "3f02d8e0bc842fb3",
+        "type": "subflow:16e07721fd9c57c8",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "x": 370,
+        "y": 1700,
+        "wires": [
+            [
+                "5d42440bb78cbdf6"
+            ],
+            [
+                "608b7b5029ac7c6c"
+            ],
+            [
+                "b8fccd51e3632110"
+            ],
+            [
+                "78915e6976087229"
+            ],
+            [
+                "dd1c2b70d093a0cc"
+            ],
+            [
+                "b85a8f6c4d3061f9"
+            ],
+            [
+                "ab9fef471a1fa23b"
+            ],
+            [
+                "794ebb7b51d48bcc"
+            ]
+        ]
+    },
+    {
+        "id": "608b7b5029ac7c6c",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO1",
+        "group": "708edc68cbb12e3b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8fccd51e3632110",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO2",
+        "group": "708edc68cbb12e3b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78915e6976087229",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO3",
+        "group": "708edc68cbb12e3b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd1c2b70d093a0cc",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO4",
+        "group": "708edc68cbb12e3b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b85a8f6c4d3061f9",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO5",
+        "group": "708edc68cbb12e3b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab9fef471a1fa23b",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO6",
+        "group": "708edc68cbb12e3b",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "794ebb7b51d48bcc",
+        "type": "ui-switch",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "label": "DIO7",
+        "group": "708edc68cbb12e3b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 750,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3c00be8754e1937",
+        "type": "debug",
+        "z": "7921f5df104fbd3f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e67d78125f7d11b0",
+        "type": "modbus-read",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "2600",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "h",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "1507cd282bc17404"
+            ],
+            [
+                "1507cd282bc17404"
+            ]
+        ]
+    },
+    {
+        "id": "1507cd282bc17404",
+        "type": "debug",
+        "z": "7921f5df104fbd3f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e128932f5913ee58",
+        "type": "modbus-write",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "2600",
+        "quantity": "1",
+        "server": "e3b9bad5128a1f79",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "1507cd282bc17404"
+            ],
+            [
+                "1507cd282bc17404"
+            ]
+        ]
+    },
+    {
+        "id": "d5fd864706503cf4",
+        "type": "inject",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0xff",
+        "payloadType": "num",
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "e128932f5913ee58",
+                "8b61fc66b8dc7847"
+            ]
+        ]
+    },
+    {
+        "id": "0c142fb6a206230a",
+        "type": "inject",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "e128932f5913ee58",
+                "8b61fc66b8dc7847"
+            ]
+        ]
+    },
+    {
+        "id": "859ac635eff5af2f",
+        "type": "modbus-flex-getter",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "1507cd282bc17404"
+            ],
+            [
+                "1507cd282bc17404"
+            ]
+        ]
+    },
+    {
+        "id": "8438b5b9b6f8bdad",
+        "type": "inject",
+        "z": "7921f5df104fbd3f",
         "name": "",
         "props": [
             {
@@ -157,35 +2614,569 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 140,
+        "x": 120,
+        "y": 120,
         "wires": [
             [
-                "fca513e27b477515"
+                "6930f83ec8b2997f"
             ]
         ]
     },
     {
-        "id": "3b5b944bee5d7e7f",
+        "id": "6930f83ec8b2997f",
+        "type": "function",
+        "z": "7921f5df104fbd3f",
+        "name": "function 3",
+        "func": "msg.payload = { 'value': msg.payload, 'fc': 3, 'unitid': 1, 'address': 2600, 'quantity': 1 };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "859ac635eff5af2f"
+            ]
+        ]
+    },
+    {
+        "id": "cfd0ee770e227914",
+        "type": "modbus-flex-write",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "server": "e3b9bad5128a1f79",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "1507cd282bc17404"
+            ],
+            [
+                "1507cd282bc17404"
+            ]
+        ]
+    },
+    {
+        "id": "8b61fc66b8dc7847",
+        "type": "function",
+        "z": "7921f5df104fbd3f",
+        "name": "function 4",
+        "func": "msg.payload = { 'value': msg.payload, 'fc': 6, 'unitid': 1, 'address': 2600, 'quantity': 1 };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "cfd0ee770e227914"
+            ]
+        ]
+    },
+    {
+        "id": "390b7cc1f06eaedc",
+        "type": "mongodb out",
+        "z": "2e2b8069db449ba9",
+        "mongodb": "3c78a6eb08cacdd4",
+        "name": "",
+        "collection": "",
+        "payonly": false,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 710,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "888a00f05efa5b21",
+        "type": "function",
+        "z": "2e2b8069db449ba9",
+        "name": "function 1",
+        "func": "msg.collection = \"test_collection\";\n\nmsg.payload = {\"timestamp\" : msg.payload,\n               \"name\" : \"Erin\"};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "390b7cc1f06eaedc"
+            ]
+        ]
+    },
+    {
+        "id": "a328cd92f5d55734",
+        "type": "inject",
+        "z": "2e2b8069db449ba9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "888a00f05efa5b21"
+            ]
+        ]
+    },
+    {
+        "id": "d36e267e85e3f6aa",
+        "type": "mongodb in",
+        "z": "2e2b8069db449ba9",
+        "mongodb": "3c78a6eb08cacdd4",
+        "name": "",
+        "collection": "",
+        "operation": "find",
+        "x": 710,
+        "y": 500,
+        "wires": [
+            [
+                "ddba47476983fd4b",
+                "e0b62f2c8e2cdfde"
+            ]
+        ]
+    },
+    {
+        "id": "7413cf5efd173595",
+        "type": "inject",
+        "z": "2e2b8069db449ba9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 500,
+        "wires": [
+            [
+                "fb0406342f7c223a"
+            ]
+        ]
+    },
+    {
+        "id": "fb0406342f7c223a",
+        "type": "function",
+        "z": "2e2b8069db449ba9",
+        "name": "function 2",
+        "func": "msg.collection = \"test_collection\";\n\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "d36e267e85e3f6aa"
+            ]
+        ]
+    },
+    {
+        "id": "ddba47476983fd4b",
         "type": "debug",
-        "z": "ad57ba2b8e45a235",
-        "name": "debug 1",
+        "z": "2e2b8069db449ba9",
+        "name": "debug 2",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 740,
-        "y": 240,
+        "x": 1180,
+        "y": 500,
         "wires": []
     },
     {
-        "id": "fca513e27b477515",
+        "id": "2d44c7d1f601f9f7",
+        "type": "ui-text",
+        "z": "2e2b8069db449ba9",
+        "group": "6f5106dc7cfd1c4e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1170,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e0b62f2c8e2cdfde",
+        "type": "change",
+        "z": "2e2b8069db449ba9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1].payload.name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 580,
+        "wires": [
+            [
+                "2d44c7d1f601f9f7",
+                "ddba47476983fd4b"
+            ]
+        ]
+    },
+    {
+        "id": "3ef0da27dbc7c0e4",
+        "type": "debug",
+        "z": "4cb430ba2addf410",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3d569b3ef4a4da57",
+        "type": "link in",
+        "z": "4cb430ba2addf410",
+        "g": "c2bca422a609058c",
+        "name": "Log to Dashboard Terminal",
+        "links": [
+            "38fb58837d1cb040",
+            "53b83a7ae3766422",
+            "3db5c9670427469f"
+        ],
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "952229a52100f262"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "952229a52100f262",
+        "type": "function",
+        "z": "4cb430ba2addf410",
+        "g": "c2bca422a609058c",
+        "name": "log to context.log",
+        "func": "const MAX_ROWS = 200\n\nif (msg.topic === \"clear-log\") {\n    context.set('log', [])\n    msg.topic = ''\n    msg.payload = []\n    return msg\n}\n\nconst incomingMessage = msg.payload\nlet log = context.get('log') || []\nif (!Array.isArray(log)) {\n    log = []\n}\n\nlet logMessages = normaliseLogEntry(msg.payload)\n\nfunction normaliseLogEntry(data) {\n    const result = []\n    if (data === null) {\n        return normaliseLogEntry(\"null\")\n    } else if (typeof data === \"undefined\") {\n        return normaliseLogEntry(\"undefined\")\n    } else if (typeof data === 'number') {\n        return normaliseLogEntry(\"\" + data)\n    } else if (Array.isArray(data)) {\n        const arrStr = [\"[\"]\n        for (let index = 0; index < data.length; index++) {\n            if (index > 0) { arrStr.push(', ') }\n            arrStr.push(normaliseLogEntry(data[index]))\n        }\n        arrStr.push(\"]\")\n        return normaliseLogEntry(arrStr.join(''))\n    } else if (typeof data === 'object') {\n        result.push(\"> \" + JSON.stringify(data, null, 2))\n    } else if (Buffer.isBuffer(data)) {\n        result.push(\"> \" + data.toJSON())\n    } else if (data && typeof data !== 'string') {\n        result.push(\"> \" + data.toString())\n    } else {\n        if (data.includes('\\n')) {\n            const lines = data.split('\\n').map(m => \"> \" + m)\n            result.push(...lines)\n        } else {\n            result.push(\"> \" + data)\n        }\n    }\n    return result\n}\n\nlog.push(...logMessages.flat())\n\nif (log.length >= MAX_ROWS) {\n    // remove the oldest messages which are at the beginning of the array\n    log = log.slice(-MAX_ROWS)\n}\n\ncontext.set('log', log)\nmsg.payload = log\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "01c728ed8616c1bf"
+            ]
+        ]
+    },
+    {
+        "id": "01c728ed8616c1bf",
+        "type": "ui-template",
+        "z": "4cb430ba2addf410",
+        "g": "c2bca422a609058c",
+        "group": "77c8cf75515c1de9",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div class=\"terminal\" ref=\"terminal\">\n        <div class=\"log-entry\" v-for=\"(log, index) in logData\" :key=\"index\">\n            {{ log }}\n        </div>\n    </div>\n    <v-btn @click=\"clearLog()\">Clear</v-btn>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                logData: []\n            }\n        },\n        watch: {\n            msg: function () {               \n                if (Array.isArray(this.msg.payload)) {\n                    const terminal = this.$refs.terminal;\n                    const graceDistance = 25 //px\n                    const isAtBottom = terminal.scrollHeight - terminal.scrollTop - terminal.clientHeight <= graceDistance;\n                    if (isAtBottom) {\n                        this.$nextTick(() => {\n                            terminal.scrollTop = terminal.scrollHeight;\n                        })\n                    }\n                    this.logData = this.msg.payload\n                }\n            }\n        },\n        methods: {\n            clearLog: function () {\n                this.send({topic: \"clear-log\"})\n            },\n        }\n    }\n</script>\n<style scoped>\n    .terminal {\n        background-color: black;\n        color: limegreen;\n        font-family: 'Courier New', Courier, monospace;\n        padding: 20px;\n        border-radius: 5px;\n        height: 600px;\n        overflow-y: auto;\n        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);\n    }\n\n    .log-entry {\n        margin: 0;\n        line-height: 1.5;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 740,
+        "y": 120,
+        "wires": [
+            [
+                "e39252305fcf99ff"
+            ]
+        ]
+    },
+    {
+        "id": "e39252305fcf99ff",
+        "type": "switch",
+        "z": "4cb430ba2addf410",
+        "g": "c2bca422a609058c",
+        "name": "clear-log?",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "clear-log",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 120,
+        "wires": [
+            [
+                "38fb58837d1cb040"
+            ]
+        ]
+    },
+    {
+        "id": "38fb58837d1cb040",
+        "type": "link out",
+        "z": "4cb430ba2addf410",
+        "g": "c2bca422a609058c",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "3d569b3ef4a4da57"
+        ],
+        "x": 1045,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f01afb867bf0d7ba",
+        "type": "change",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.output",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "53b83a7ae3766422"
+            ]
+        ]
+    },
+    {
+        "id": "53b83a7ae3766422",
+        "type": "link out",
+        "z": "4cb430ba2addf410",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "3d569b3ef4a4da57"
+        ],
+        "x": 855,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "91d3b4dca0e9bc0a",
+        "type": "ui-text",
+        "z": "4cb430ba2addf410",
+        "group": "dd3c8fe7c3c596d3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Error:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 890,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2c8c5b4ed8dc6457",
+        "type": "change",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.error",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 440,
+        "wires": [
+            [
+                "91d3b4dca0e9bc0a"
+            ]
+        ]
+    },
+    {
+        "id": "0019ad7ed92edf7c",
+        "type": "change",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.returncode",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "e4a8ca2d0e57bac0"
+            ]
+        ]
+    },
+    {
+        "id": "e4a8ca2d0e57bac0",
+        "type": "ui-text",
+        "z": "4cb430ba2addf410",
+        "group": "dd3c8fe7c3c596d3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Return Code:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 910,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b04180f94cae9f33",
+        "type": "inject",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 600,
+        "wires": [
+            [
+                "88597f823df0b0f8"
+            ]
+        ]
+    },
+    {
+        "id": "88597f823df0b0f8",
         "type": "http request",
-        "z": "ad57ba2b8e45a235",
+        "z": "4cb430ba2addf410",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -198,76 +3189,64 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
-        "y": 240,
+        "x": 450,
+        "y": 600,
         "wires": [
             [
-                "948af03c0b122da1"
+                "3ef0da27dbc7c0e4",
+                "eccec280694c6b15"
             ]
         ]
     },
     {
-        "id": "948af03c0b122da1",
+        "id": "eccec280694c6b15",
         "type": "json",
-        "z": "ad57ba2b8e45a235",
+        "z": "4cb430ba2addf410",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 550,
-        "y": 240,
+        "x": 510,
+        "y": 500,
         "wires": [
             [
-                "3b5b944bee5d7e7f",
-                "639af7b6d05956e3"
+                "3ef0da27dbc7c0e4",
+                "f01afb867bf0d7ba",
+                "2c8c5b4ed8dc6457",
+                "0019ad7ed92edf7c"
             ]
         ]
     },
     {
-        "id": "639af7b6d05956e3",
-        "type": "switch",
-        "z": "ad57ba2b8e45a235",
-        "name": "",
-        "property": "payload.returncode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 730,
-        "y": 340,
-        "wires": [
-            [
-                "3cd31489c58912b0"
-            ],
-            [
-                "6079f76193645dd5"
-            ]
-        ]
+        "id": "ecddea2160134f5b",
+        "type": "debug",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 580,
+        "wires": []
     },
     {
-        "id": "3cd31489c58912b0",
+        "id": "2e91a44404406313",
         "type": "change",
-        "z": "ad57ba2b8e45a235",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
         "name": "",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "Flash Successful",
-                "tot": "str"
+                "to": "payload.Manufacturer",
+                "tot": "msg"
             }
         ],
         "action": "",
@@ -275,131 +3254,72 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
-        "y": 300,
+        "x": 640,
+        "y": 260,
         "wires": [
             [
-                "b9398c944c0071bc"
+                "30f31fe57aa5cf19"
             ]
         ]
     },
     {
-        "id": "6079f76193645dd5",
-        "type": "change",
-        "z": "ad57ba2b8e45a235",
+        "id": "30f31fe57aa5cf19",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "group": "925a7306e7551f2f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
         "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Flash Failed",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 380,
-        "wires": [
-            [
-                "b9398c944c0071bc"
-            ]
-        ]
-    },
-    {
-        "id": "57583d3f68f8e391",
-        "type": "comment",
-        "z": "ad57ba2b8e45a235",
-        "name": "STM32 Flash",
-        "info": "",
-        "x": 150,
-        "y": 80,
+        "label": "Manufacturer:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 840,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "49b8ad2c777533a6",
-        "type": "comment",
-        "z": "ad57ba2b8e45a235",
-        "name": "Power Supply",
-        "info": "",
-        "x": 150,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "3dd002baca7555d6",
+        "id": "81b675564a04a150",
         "type": "inject",
-        "z": "ad57ba2b8e45a235",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
         "name": "",
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "0",
-        "payloadType": "num",
-        "x": 90,
-        "y": 680,
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 580,
         "wires": [
             [
-                "2e5bc9aba6655f8e",
-                "bd3d3d94070ec689"
+                "927aa40e4b391031"
             ]
         ]
     },
     {
-        "id": "6a788f12b8993bba",
-        "type": "function",
-        "z": "ad57ba2b8e45a235",
-        "name": "function 1",
-        "func": "// Get the input number\nlet number = msg.payload\n\n// Format the number to 2 decimal places\nlet formattedNumber = parseFloat(number).toFixed(1);\n\n// Pass the formatted number to the next node\nmsg.payload = formattedNumber;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 680,
-        "wires": [
-            [
-                "b5aeae6bd5f1a7ea"
-            ]
-        ]
-    },
-    {
-        "id": "debc844cb48f3b1f",
-        "type": "function",
-        "z": "ad57ba2b8e45a235",
-        "name": "function 2",
-        "func": "// Get the input number\nlet number = msg.payload\n\n// Format the number to 2 decimal places\nlet formattedNumber = parseFloat(number).toFixed(1);\n\n// Pass the formatted number to the next node\nmsg.payload = formattedNumber;\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 740,
-        "wires": [
-            [
-                "a2f69949f03b11d5"
-            ]
-        ]
-    },
-    {
-        "id": "53a5734d0ad17bf5",
+        "id": "927aa40e4b391031",
         "type": "http request",
-        "z": "ad57ba2b8e45a235",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
         "name": "",
         "method": "GET",
         "ret": "txt",
@@ -412,35 +3332,268 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 710,
-        "y": 620,
+        "x": 370,
+        "y": 580,
         "wires": [
             [
-                "be54f2e043225ebf"
+                "ecddea2160134f5b",
+                "6de392e07aed1934"
             ]
         ]
     },
     {
-        "id": "be54f2e043225ebf",
+        "id": "6de392e07aed1934",
         "type": "json",
-        "z": "ad57ba2b8e45a235",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
         "name": "",
         "property": "payload",
         "action": "",
-        "pretty": false,
-        "x": 890,
-        "y": 620,
+        "pretty": true,
+        "x": 430,
+        "y": 500,
         "wires": [
             [
-                "c5b3c607f40c1c55"
+                "ecddea2160134f5b",
+                "2e91a44404406313",
+                "961359b6648b99f4",
+                "92381d1f484bf704",
+                "7d8a69fa2776b28e"
             ]
         ]
     },
     {
-        "id": "c5b3c607f40c1c55",
+        "id": "961359b6648b99f4",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"Product Model\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 320,
+        "wires": [
+            [
+                "fff3edb4cedeea08"
+            ]
+        ]
+    },
+    {
+        "id": "fff3edb4cedeea08",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "group": "925a7306e7551f2f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Product Model:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 840,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "92381d1f484bf704",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"Serial Number\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "c9273644a6707a44"
+            ]
+        ]
+    },
+    {
+        "id": "c9273644a6707a44",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "group": "925a7306e7551f2f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Serial Number:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 840,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7d8a69fa2776b28e",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"Software Version\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 440,
+        "wires": [
+            [
+                "5fc4908f52001002"
+            ]
+        ]
+    },
+    {
+        "id": "5fc4908f52001002",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "group": "925a7306e7551f2f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Software Version:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 850,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f7617d092e8012b4",
+        "type": "comment",
+        "z": "ca180f9998bd7792",
+        "name": "",
+        "info": "",
+        "x": 140,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "41f0d68f38d32ba3",
+        "type": "ui-button",
+        "z": "ca180f9998bd7792",
+        "g": "10252ec72e40228d",
+        "group": "925a7306e7551f2f",
+        "name": "",
+        "label": "Refresh",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "927aa40e4b391031"
+            ]
+        ]
+    },
+    {
+        "id": "8d0a20693fc77b44",
+        "type": "http request",
+        "z": "ca180f9998bd7792",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.223:5000/ps/ch1/cur",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 860,
+        "wires": [
+            [
+                "41ddd5e5d868d0b7"
+            ]
+        ]
+    },
+    {
+        "id": "41ddd5e5d868d0b7",
         "type": "debug",
-        "z": "ad57ba2b8e45a235",
-        "name": "debug 2",
+        "z": "ca180f9998bd7792",
+        "name": "debug 7",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -448,213 +3601,47 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1040,
-        "y": 620,
+        "x": 580,
+        "y": 860,
         "wires": []
     },
     {
-        "id": "2e5bc9aba6655f8e",
-        "type": "ui_slider",
-        "z": "ad57ba2b8e45a235",
+        "id": "84fcd1807ea16dbd",
+        "type": "ui-button",
+        "z": "ca180f9998bd7792",
+        "group": "b42620cc7cc895ea",
         "name": "",
-        "label": "",
-        "tooltip": "",
-        "group": "04e53e6377e3f8f2",
-        "order": 2,
+        "label": "Refresh",
+        "order": 1,
         "width": 0,
         "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "32",
-        "step": "0.1",
-        "className": "",
-        "x": 250,
-        "y": 680,
-        "wires": [
-            [
-                "6a788f12b8993bba"
-            ]
-        ]
-    },
-    {
-        "id": "bd3d3d94070ec689",
-        "type": "ui_slider",
-        "z": "ad57ba2b8e45a235",
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "group": "04e53e6377e3f8f2",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "topic",
-        "topicType": "msg",
-        "min": 0,
-        "max": "2",
-        "step": "0.1",
-        "className": "",
-        "x": 250,
-        "y": 740,
-        "wires": [
-            [
-                "debc844cb48f3b1f"
-            ]
-        ]
-    },
-    {
-        "id": "f79b59db37aecccd",
-        "type": "ui_button",
-        "z": "ad57ba2b8e45a235",
-        "name": "",
-        "group": "85aec48b25a285f3",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Flash",
+        "emulateClick": false,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "Flash Button Pressed",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 130,
-        "y": 240,
-        "wires": [
-            [
-                "fca513e27b477515"
-            ]
-        ]
-    },
-    {
-        "id": "c1b3f613ef8cf145",
-        "type": "ui_button",
-        "z": "ad57ba2b8e45a235",
-        "name": "",
-        "group": "04e53e6377e3f8f2",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Submit",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
+        "iconPosition": "left",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 480,
-        "y": 540,
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 180,
+        "y": 860,
         "wires": [
             [
-                "53a5734d0ad17bf5"
+                "8d0a20693fc77b44"
             ]
         ]
-    },
-    {
-        "id": "50af0f377e3ccd63",
-        "type": "ui_switch",
-        "z": "ad57ba2b8e45a235",
-        "name": "",
-        "label": "Power",
-        "tooltip": "",
-        "group": "04e53e6377e3f8f2",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "animate": false,
-        "className": "",
-        "x": 470,
-        "y": 600,
-        "wires": [
-            [
-                "53a5734d0ad17bf5"
-            ]
-        ]
-    },
-    {
-        "id": "b5aeae6bd5f1a7ea",
-        "type": "ui_text",
-        "z": "ad57ba2b8e45a235",
-        "group": "04e53e6377e3f8f2",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Voltage",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 700,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "a2f69949f03b11d5",
-        "type": "ui_text",
-        "z": "ad57ba2b8e45a235",
-        "group": "04e53e6377e3f8f2",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Current",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 700,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "b9398c944c0071bc",
-        "type": "ui_toast",
-        "z": "ad57ba2b8e45a235",
-        "position": "top right",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1130,
-        "y": 340,
-        "wires": []
     }
 ]

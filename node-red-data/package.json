@@ -4,6 +4,9 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-dashboard": "~3.6.5"
+        "@flowfuse/node-red-dashboard": "~1.24.0",
+        "node-red-contrib-modbus": "~5.43.0",
+        "node-red-contrib-mongodb3": "~2.0.1",
+        "node-red-node-mongodb": "~0.2.5"
     }
 }

@@ -1,2 +1,8 @@
 # Ignore STM32 Cube Programmer Install Files
 en.stm32cubeprg-lin-v2-18-0
+
+# Node-Red Ignores
+node-red-data/lib/
+node-red-data/node_modules/
+node-red-data/.npm/
+node-red-data/*.backup
