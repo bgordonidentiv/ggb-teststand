@@ -471,6 +471,33 @@
         "h": 402
     },
     {
+        "id": "b17e1e25966d5d49",
+        "type": "group",
+        "z": "ca180f9998bd7792",
+        "name": "Get Channel 1 Volt/Current",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "8d0a20693fc77b44",
+            "41ddd5e5d868d0b7",
+            "84fcd1807ea16dbd",
+            "af415c86e5b934b0",
+            "fffd2ea9e139cfb9",
+            "2dd3dad16d7f4faa",
+            "77d3c51ba782d2ee",
+            "cb16acbc4e8ba623",
+            "1fb7adb5f6cfed10",
+            "3c48cb45eb8a381f"
+        ],
+        "x": 74,
+        "y": 659,
+        "w": 932,
+        "h": 242
+    },
+    {
         "id": "6224f3394241d463",
         "type": "ui-base",
         "name": "My Dashboard",
@@ -961,7 +988,7 @@
         "type": "ui-group",
         "name": "Channel 1",
         "page": "681925e771053f04",
-        "width": "3",
+        "width": "2",
         "height": "1",
         "order": 2,
         "showTitle": true,
@@ -2906,8 +2933,7 @@
         "name": "Log to Dashboard Terminal",
         "links": [
             "38fb58837d1cb040",
-            "53b83a7ae3766422",
-            "3db5c9670427469f"
+            "53b83a7ae3766422"
         ],
         "x": 270,
         "y": 120,
@@ -3268,7 +3294,7 @@
         "z": "ca180f9998bd7792",
         "g": "10252ec72e40228d",
         "group": "925a7306e7551f2f",
-        "order": 2,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3396,7 +3422,7 @@
         "z": "ca180f9998bd7792",
         "g": "10252ec72e40228d",
         "group": "925a7306e7551f2f",
-        "order": 3,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3447,7 +3473,7 @@
         "z": "ca180f9998bd7792",
         "g": "10252ec72e40228d",
         "group": "925a7306e7551f2f",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3498,7 +3524,7 @@
         "z": "ca180f9998bd7792",
         "g": "10252ec72e40228d",
         "group": "925a7306e7551f2f",
-        "order": 5,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3533,7 +3559,7 @@
         "group": "925a7306e7551f2f",
         "name": "",
         "label": "Refresh",
-        "order": 1,
+        "order": 5,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -3569,11 +3595,12 @@
         "id": "8d0a20693fc77b44",
         "type": "http request",
         "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
         "name": "",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.223:5000/ps/ch1/cur",
+        "url": "192.168.8.223:5000/ps/ch1/current",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -3581,11 +3608,12 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
+        "x": 350,
         "y": 860,
         "wires": [
             [
-                "41ddd5e5d868d0b7"
+                "41ddd5e5d868d0b7",
+                "af415c86e5b934b0"
             ]
         ]
     },
@@ -3593,6 +3621,7 @@
         "id": "41ddd5e5d868d0b7",
         "type": "debug",
         "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
         "name": "debug 7",
         "active": true,
         "tosidebar": true,
@@ -3601,7 +3630,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 560,
         "y": 860,
         "wires": []
     },
@@ -3609,10 +3638,11 @@
         "id": "84fcd1807ea16dbd",
         "type": "ui-button",
         "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
         "group": "b42620cc7cc895ea",
         "name": "",
         "label": "Refresh",
-        "order": 1,
+        "order": 3,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -3636,11 +3666,174 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 180,
+        "x": 160,
         "y": 860,
         "wires": [
             [
                 "8d0a20693fc77b44"
+            ]
+        ]
+    },
+    {
+        "id": "af415c86e5b934b0",
+        "type": "json",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 390,
+        "y": 760,
+        "wires": [
+            [
+                "41ddd5e5d868d0b7",
+                "fffd2ea9e139cfb9"
+            ]
+        ]
+    },
+    {
+        "id": "fffd2ea9e139cfb9",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 760,
+        "wires": [
+            [
+                "2dd3dad16d7f4faa",
+                "77d3c51ba782d2ee"
+            ]
+        ]
+    },
+    {
+        "id": "2dd3dad16d7f4faa",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "group": "b42620cc7cc895ea",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current (A):",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 890,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "77d3c51ba782d2ee",
+        "type": "http request",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.223:5000/ps/ch1/voltage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 700,
+        "wires": [
+            [
+                "cb16acbc4e8ba623"
+            ]
+        ]
+    },
+    {
+        "id": "cb16acbc4e8ba623",
+        "type": "json",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 530,
+        "y": 700,
+        "wires": [
+            [
+                "3c48cb45eb8a381f"
+            ]
+        ]
+    },
+    {
+        "id": "1fb7adb5f6cfed10",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "group": "b42620cc7cc895ea",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Voltage (VDC):",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3c48cb45eb8a381f",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.voltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 700,
+        "wires": [
+            [
+                "1fb7adb5f6cfed10"
             ]
         ]
     }

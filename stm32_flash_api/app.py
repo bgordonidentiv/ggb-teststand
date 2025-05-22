@@ -39,7 +39,25 @@ def read_ps():
     data_out = jsonify(data)
     return data_out 
 
-@app.route('/ps/ch1/cur')
+@app.route('/ps/ch1/voltage')
+def read_volt_ch1():
+    rm = pyvisa.ResourceManager()
+
+    inst=rm.open_resource("USB0::0x0483::0x7540::SPD3ECAC3R0303::INSTR")
+    inst.write_termination='\n'
+    inst.read_termination='\n'
+    time.sleep(0.04)
+    inst.write('CH1:VOLTage?')
+    time.sleep(0.25) # I guess the power supply needs a bit of time before reading
+    qStr = inst.read()
+    data = {
+        "channel" : "1",
+        "voltage" : qStr
+    }
+    data_out = jsonify(data)
+    return data_out 
+
+@app.route('/ps/ch1/current')
 def read_curr_ch1():
     rm = pyvisa.ResourceManager()
 
@@ -50,7 +68,12 @@ def read_curr_ch1():
     inst.write('CH1:CURRent?')
     time.sleep(0.25) # I guess the power supply needs a bit of time before reading
     qStr = inst.read()
-    return qStr 
+    data = {
+        "channel" : "1",
+        "current" : qStr
+    }
+    data_out = jsonify(data)
+    return data_out 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
