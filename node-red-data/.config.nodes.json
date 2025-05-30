@@ -429,7 +429,7 @@
     },
     "@flowfuse/node-red-dashboard": {
         "name": "@flowfuse/node-red-dashboard",
-        "version": "1.24.0",
+        "version": "1.24.1",
         "local": true,
         "user": true,
         "nodes": {
