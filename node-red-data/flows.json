@@ -312,8 +312,8 @@
         ],
         "out": [
             {
-                "x": 1200,
-                "y": 420,
+                "x": 1140,
+                "y": 540,
                 "wires": [
                     {
                         "id": "673fdcbab69e202d",
@@ -326,6 +326,10 @@
                     {
                         "id": "ed97a2d0736c95d0",
                         "port": 1
+                    },
+                    {
+                        "id": "8ba92d9b732be6bf",
+                        "port": 0
                     }
                 ]
             }
@@ -429,7 +433,7 @@
         "in": [
             {
                 "x": 80,
-                "y": 300,
+                "y": 340,
                 "wires": [
                     {
                         "id": "63ad87bc07b11c5c"
@@ -457,8 +461,36 @@
                     {
                         "id": "7e89efc64d0a0140",
                         "port": 0
+                    },
+                    {
+                        "id": "07efcc2ba746c4d0",
+                        "port": 0
                     }
                 ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "bb82e6202e78d692",
+        "type": "subflow",
+        "name": "Init Global Vars",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 240,
+                "y": 220,
+                "wires": []
+            }
+        ],
+        "out": [
+            {
+                "x": 880,
+                "y": 240,
+                "wires": []
             }
         ],
         "env": [],
@@ -521,7 +553,7 @@
         "id": "b17e1e25966d5d49",
         "type": "group",
         "z": "ca180f9998bd7792",
-        "name": "Read Channel 1 Volt/Current",
+        "name": "Read Channel 1 Set & Measured Volt/Current",
         "style": {
             "fill": "#bfdbef",
             "label": true,
@@ -537,12 +569,20 @@
             "77d3c51ba782d2ee",
             "cb16acbc4e8ba623",
             "1fb7adb5f6cfed10",
-            "3c48cb45eb8a381f"
+            "3c48cb45eb8a381f",
+            "3460f6c660cb8753",
+            "e6f7d108bf8ece11",
+            "06cdda9c9f5f6157",
+            "bf58a01ffcc35203",
+            "540dd145699f9ea6",
+            "076449cc81412880",
+            "de7f5428e9048cd4",
+            "6006d274641d449f"
         ],
         "x": 74,
         "y": 539,
-        "w": 932,
-        "h": 242
+        "w": 952,
+        "h": 342
     },
     {
         "id": "f6c09ca86e62adb6",
@@ -569,7 +609,7 @@
             "404dc7f3d6574d17"
         ],
         "x": 74,
-        "y": 999,
+        "y": 1099,
         "w": 932,
         "h": 362
     },
@@ -592,7 +632,7 @@
             "a56aa2f237cb9a4d"
         ],
         "x": 74,
-        "y": 799,
+        "y": 899,
         "w": 932,
         "h": 182
     },
@@ -614,8 +654,8 @@
             "98d3ab4d09a82df2"
         ],
         "x": 74,
-        "y": 1419,
-        "w": 692,
+        "y": 1479,
+        "w": 712,
         "h": 122
     },
     {
@@ -666,74 +706,6 @@
         "port": "27017",
         "db": "ggb_test",
         "name": ""
-    },
-    {
-        "id": "648ea2b0078cf7c8",
-        "type": "mongodb3",
-        "uri": "192.168.8.224",
-        "name": "",
-        "options": "",
-        "parallelism": "-1"
-    },
-    {
-        "id": "a090672be3fbf2f9",
-        "type": "modbus-client",
-        "name": "",
-        "clienttype": "simpleser",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "127.0.0.1",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "4c2e2ca0c20d4a2a",
-        "type": "modbus-client",
-        "name": "",
-        "clienttype": "simpleser",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "127.0.0.1",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyS1",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "19200",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": 1,
-        "commandDelay": 1,
-        "clientTimeout": 1000,
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": 2000,
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
     },
     {
         "id": "e3b9bad5128a1f79",
@@ -1069,20 +1041,6 @@
         "groupType": "default"
     },
     {
-        "id": "55af94702e245591",
-        "type": "ui-group",
-        "name": "Bin File",
-        "page": "9bddf898b439d6b4",
-        "width": "3",
-        "height": "1",
-        "order": 3,
-        "showTitle": true,
-        "className": "",
-        "visible": "true",
-        "disabled": "false",
-        "groupType": "default"
-    },
-    {
         "id": "89cc343fd485396f",
         "type": "ui-group",
         "name": "PyVisa Device List",
@@ -1179,6 +1137,20 @@
         "type": "ui-group",
         "name": "Settings",
         "page": "175e02ddacbebce0",
+        "width": "2",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "611dc11b0e0564c9",
+        "type": "ui-group",
+        "name": "Read Flash",
+        "page": "9bddf898b439d6b4",
         "width": "2",
         "height": "1",
         "order": 3,
@@ -1817,33 +1789,6 @@
         "wires": []
     },
     {
-        "id": "b30ef4b706a3137a",
-        "type": "change",
-        "z": "816b1a16a4c6ed2f",
-        "name": "Set Voltage",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"access\":\"write\",\"command\":\"set_voltage\",\"channel\":1,\"set_volt\":\"24.0\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 310,
-        "y": 720,
-        "wires": [
-            [
-                "0551eec6086b3b09"
-            ]
-        ]
-    },
-    {
         "id": "0551eec6086b3b09",
         "type": "subflow:906636402e88ceef",
         "z": "816b1a16a4c6ed2f",
@@ -1909,7 +1854,7 @@
         "y": 720,
         "wires": [
             [
-                "f27a3d726c282f2f"
+                "d512205595b96b91"
             ],
             []
         ]
@@ -1927,8 +1872,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
-        "y": 820,
+        "x": 670,
+        "y": 900,
         "wires": []
     },
     {
@@ -1940,33 +1885,6 @@
         "x": 180,
         "y": 680,
         "wires": []
-    },
-    {
-        "id": "f27a3d726c282f2f",
-        "type": "change",
-        "z": "816b1a16a4c6ed2f",
-        "name": "Set Current",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"access\":\"write\",\"command\":\"set_current\",\"channel\":1,\"set_current\":\"0.5\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 310,
-        "y": 820,
-        "wires": [
-            [
-                "8ba92d9b732be6bf"
-            ]
-        ]
     },
     {
         "id": "8ba92d9b732be6bf",
@@ -2008,7 +1926,7 @@
         "id": "de973069441717ad",
         "type": "change",
         "z": "816b1a16a4c6ed2f",
-        "name": "Set Voltage",
+        "name": "PS Off",
         "rules": [
             {
                 "t": "set",
@@ -2023,7 +1941,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
+        "x": 290,
         "y": 620,
         "wires": [
             [
@@ -2065,9 +1983,50 @@
         "y": 620,
         "wires": [
             [
-                "b30ef4b706a3137a"
+                "e91827c5c37ccdb3"
             ],
             []
+        ]
+    },
+    {
+        "id": "e91827c5c37ccdb3",
+        "type": "function",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Set Voltage",
+        "func": "var ps_voltage = global.get('settings.ps_voltage');\n\nvar set_voltage = ps_voltage;\n\nmsg.payload = {\n    \"access\": \"write\",\n    \"command\": \"set_voltage\",\n    \"channel\": 1,\n    \"set_volt\": set_voltage\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 720,
+        "wires": [
+            [
+                "0551eec6086b3b09"
+            ]
+        ]
+    },
+    {
+        "id": "d512205595b96b91",
+        "type": "function",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Set Current",
+        "func": "var ps_current = global.get('settings.ps_current');\n\nvar set_current = ps_current;\n\nmsg.payload = {\n    \"access\": \"write\",\n    \"command\": \"set_current\",\n    \"channel\": 1,\n    \"set_current\": set_current\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "8ba92d9b732be6bf",
+                "0cc2fc22280f2c3e"
+            ]
         ]
     },
     {
@@ -2137,7 +2096,7 @@
         "repair": false,
         "outputs": 2,
         "x": 210,
-        "y": 300,
+        "y": 340,
         "wires": [
             [
                 "3f8817a580532cc4"
@@ -2217,7 +2176,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/info",
+        "url": "192.168.8.224:5000/api/ps/info",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2246,8 +2205,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
-        "y": 700,
+        "x": 880,
+        "y": 760,
         "wires": []
     },
     {
@@ -2321,7 +2280,9 @@
             ],
             [],
             [],
-            [],
+            [
+                "6120c114bee967f6"
+            ],
             [
                 "71c37f0501e44eae",
                 "011bdb7e621d2349"
@@ -2336,7 +2297,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/voltage",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_voltage",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2345,7 +2306,7 @@
         "senderr": false,
         "headers": [],
         "x": 590,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "eca9c1681571bb0d"
@@ -2361,7 +2322,7 @@
         "action": "",
         "pretty": false,
         "x": 770,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "db58c86b11c87934"
@@ -2381,7 +2342,7 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 420,
+        "y": 380,
         "wires": [
             []
         ]
@@ -2412,7 +2373,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/current",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_current",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2421,7 +2382,7 @@
         "senderr": false,
         "headers": [],
         "x": 590,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "08081fa2209fb077"
@@ -2437,7 +2398,7 @@
         "action": "",
         "pretty": false,
         "x": 770,
-        "y": 460,
+        "y": 420,
         "wires": [
             [
                 "39578e38d83f7471"
@@ -2457,7 +2418,7 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 460,
+        "y": 420,
         "wires": [
             []
         ]
@@ -2470,7 +2431,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/off",
+        "url": "192.168.8.224:5000/api/ps/ch1/off",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -2479,7 +2440,7 @@
         "senderr": false,
         "headers": [],
         "x": 580,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "45103c807a2b145b"
@@ -2495,7 +2456,7 @@
         "action": "",
         "pretty": false,
         "x": 770,
-        "y": 600,
+        "y": 660,
         "wires": [
             [
                 "7e89efc64d0a0140"
@@ -2515,7 +2476,65 @@
         "finalize": "",
         "libs": [],
         "x": 980,
-        "y": 600,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6120c114bee967f6",
+        "type": "http request",
+        "z": "906636402e88ceef",
+        "name": "Power On",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/ps/ch1/on",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 580,
+        "y": 620,
+        "wires": [
+            [
+                "67f2196de6e0775b"
+            ]
+        ]
+    },
+    {
+        "id": "67f2196de6e0775b",
+        "type": "json",
+        "z": "906636402e88ceef",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 770,
+        "y": 620,
+        "wires": [
+            [
+                "07efcc2ba746c4d0"
+            ]
+        ]
+    },
+    {
+        "id": "07efcc2ba746c4d0",
+        "type": "function",
+        "z": "906636402e88ceef",
+        "name": "Current Success / Fail",
+        "func": "var state = msg.payload.msg;\n\nif (state == \"on\") {\n    msg.payload = { 'status' : 'success'}\n} else {\n    msg.payload = { 'status' : 'error', 'msg' : 'Failed to Turn On Power Supply'}\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 620,
         "wires": [
             []
         ]
@@ -2590,8 +2609,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 420,
+        "x": 880,
+        "y": 660,
         "wires": []
     },
     {
@@ -2639,8 +2658,8 @@
         "raw": true,
         "className": "",
         "name": "",
-        "x": 1250,
-        "y": 240,
+        "x": 1150,
+        "y": 460,
         "wires": [
             []
         ]
@@ -2665,12 +2684,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 790,
+        "x": 810,
         "y": 300,
         "wires": [
             [
-                "6e923177917d97f0",
-                "f47dda522486b91e"
+                "6e923177917d97f0"
             ],
             [
                 "9f3edc0ba482161e"
@@ -2689,8 +2707,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 240,
+        "x": 1090,
+        "y": 380,
         "wires": [
             [
                 "583b649f138baacd"
@@ -2703,7 +2721,7 @@
         "z": "8992ffe741acd3ee",
         "name": "",
         "x": 600,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "3804cf6b98e51996"
@@ -2720,8 +2738,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "",
-                "tot": "str"
+                "to": "{\"access\":\"write\",\"command\":\"ch1_on\",\"channel\":1}",
+                "tot": "json"
             }
         ],
         "action": "",
@@ -2730,10 +2748,11 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
-                "4e5daabc0e18ec0a"
+                "4e5daabc0e18ec0a",
+                "f47dda522486b91e"
             ]
         ]
     },
@@ -2758,15 +2777,36 @@
         "repair": false,
         "outputs": 2,
         "x": 810,
-        "y": 380,
+        "y": 440,
         "wires": [
             [
                 "f47dda522486b91e"
             ],
             [
-                "f47dda522486b91e"
+                "f47dda522486b91e",
+                "9f3edc0ba482161e"
             ]
         ]
+    },
+    {
+        "id": "f729ab249f9d7570",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Initalize Hardware",
+        "info": "",
+        "x": 290,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ff15fec5a3c32b7d",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Turn Power Supply On",
+        "info": "",
+        "x": 300,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "63b8c36bcb47dde8",
@@ -2825,7 +2865,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 770,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "e1734adf448935da"
@@ -2864,7 +2904,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 180,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "5f6bed48e17a11d6"
@@ -2884,7 +2924,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 410,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "9847bca7ea51657e"
@@ -2900,11 +2940,11 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "5b7ab9f221ce24ed",
-                "7db9f826dd487ab7"
+                "6d88ecdefd479029"
             ]
         ]
     },
@@ -2920,28 +2960,12 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 1150,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "5f6bed48e17a11d6"
             ]
         ]
-    },
-    {
-        "id": "7db9f826dd487ab7",
-        "type": "debug",
-        "z": "37909226f52cbb23",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 200,
-        "wires": []
     },
     {
         "id": "9847bca7ea51657e",
@@ -2952,11 +2976,11 @@
         "action": "",
         "pretty": false,
         "x": 610,
-        "y": 300,
+        "y": 360,
         "wires": [
             [
                 "63b8c36bcb47dde8",
-                "7db9f826dd487ab7"
+                "6d88ecdefd479029"
             ]
         ]
     },
@@ -3141,7 +3165,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 770,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "58ae527d49bd3996"
@@ -3180,7 +3204,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 180,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "17a24dc30a9e92c5"
@@ -3200,7 +3224,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 390,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "5ec6774b2e4b76da"
@@ -3216,10 +3240,11 @@
         "action": "",
         "pretty": false,
         "x": 610,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
-                "2dbb25bd3e041863"
+                "2dbb25bd3e041863",
+                "405143f4dd8c1a15"
             ]
         ]
     },
@@ -3232,10 +3257,11 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
-                "6bf6f1be0b3bb645"
+                "6bf6f1be0b3bb645",
+                "405143f4dd8c1a15"
             ]
         ]
     },
@@ -3251,7 +3277,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 1130,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "17a24dc30a9e92c5"
@@ -3290,7 +3316,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 180,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "6b4d46386683ec3a"
@@ -3310,7 +3336,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 390,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "f8078926fdbd50de"
@@ -3326,10 +3352,11 @@
         "action": "",
         "pretty": false,
         "x": 610,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
-                "6bdec1164775aaee"
+                "6bdec1164775aaee",
+                "ce79545152cd358e"
             ]
         ]
     },
@@ -3340,20 +3367,28 @@
         "name": "",
         "group": "ee88df47509ab4d4",
         "label": "",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "options": [
             {
                 "label": "Power Supply Voltage",
-                "key": "ps_volts",
+                "key": "ps_voltage",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Power Supply Current",
+                "key": "ps_current",
                 "type": "number",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "ps_volts": ""
+            "ps_voltage": "",
+            "ps_current": ""
         },
         "payload": "",
         "submit": "Save",
@@ -3366,7 +3401,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 770,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "406b9029adaf14b0"
@@ -3382,10 +3417,11 @@
         "action": "",
         "pretty": false,
         "x": 910,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
-                "b943ab84a4338644"
+                "b943ab84a4338644",
+                "ce79545152cd358e"
             ]
         ]
     },
@@ -3401,12 +3437,170 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 1130,
-        "y": 580,
+        "y": 640,
         "wires": [
             [
                 "6b4d46386683ec3a"
             ]
         ]
+    },
+    {
+        "id": "11b1c0c3bc99f20c",
+        "type": "inject",
+        "z": "37909226f52cbb23",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "5f6bed48e17a11d6",
+                "17a24dc30a9e92c5",
+                "6b4d46386683ec3a"
+            ]
+        ]
+    },
+    {
+        "id": "6d88ecdefd479029",
+        "type": "change",
+        "z": "37909226f52cbb23",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "parameters",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88d50a6022a7de33",
+        "type": "comment",
+        "z": "37909226f52cbb23",
+        "name": "Load / Save Test Parameters",
+        "info": "",
+        "x": 160,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d05b8475b4c18dbe",
+        "type": "comment",
+        "z": "37909226f52cbb23",
+        "name": "Load / Save Flow",
+        "info": "",
+        "x": 120,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1602ed8bb15c5933",
+        "type": "comment",
+        "z": "37909226f52cbb23",
+        "name": "Load / Save Settings",
+        "info": "",
+        "x": 130,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "405143f4dd8c1a15",
+        "type": "change",
+        "z": "37909226f52cbb23",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flowCfg",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce79545152cd358e",
+        "type": "change",
+        "z": "37909226f52cbb23",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "settings",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99c199f3143e75ef",
+        "type": "ui-text",
+        "z": "37909226f52cbb23",
+        "group": "ee88df47509ab4d4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Power Supply",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 800,
+        "y": 700,
+        "wires": []
     },
     {
         "id": "3ef0da27dbc7c0e4",
@@ -3417,11 +3611,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 600,
+        "x": 740,
+        "y": 1040,
         "wires": []
     },
     {
@@ -3449,7 +3644,7 @@
         "z": "4cb430ba2addf410",
         "g": "c2bca422a609058c",
         "name": "log to context.log",
-        "func": "const MAX_ROWS = 200\n\nif (msg.topic === \"clear-log\") {\n    context.set('log', [])\n    msg.topic = ''\n    msg.payload = []\n    return msg\n}\n\nconst incomingMessage = msg.payload\nlet log = context.get('log') || []\nif (!Array.isArray(log)) {\n    log = []\n}\n\nlet logMessages = normaliseLogEntry(msg.payload)\n\nfunction normaliseLogEntry(data) {\n    const result = []\n    if (data === null) {\n        return normaliseLogEntry(\"null\")\n    } else if (typeof data === \"undefined\") {\n        return normaliseLogEntry(\"undefined\")\n    } else if (typeof data === 'number') {\n        return normaliseLogEntry(\"\" + data)\n    } else if (Array.isArray(data)) {\n        const arrStr = [\"[\"]\n        for (let index = 0; index < data.length; index++) {\n            if (index > 0) { arrStr.push(', ') }\n            arrStr.push(normaliseLogEntry(data[index]))\n        }\n        arrStr.push(\"]\")\n        return normaliseLogEntry(arrStr.join(''))\n    } else if (typeof data === 'object') {\n        result.push(\"> \" + JSON.stringify(data, null, 2))\n    } else if (Buffer.isBuffer(data)) {\n        result.push(\"> \" + data.toJSON())\n    } else if (data && typeof data !== 'string') {\n        result.push(\"> \" + data.toString())\n    } else {\n        if (data.includes('\\n')) {\n            const lines = data.split('\\n').map(m => \"> \" + m)\n            result.push(...lines)\n        } else {\n            result.push(\"> \" + data)\n        }\n    }\n    return result\n}\n\nlog.push(...logMessages.flat())\n\nif (log.length >= MAX_ROWS) {\n    // remove the oldest messages which are at the beginning of the array\n    log = log.slice(-MAX_ROWS)\n}\n\ncontext.set('log', log)\nmsg.payload = log\nreturn msg",
+        "func": "const MAX_ROWS = 600\n\nif (msg.topic === \"clear-log\") {\n    context.set('log', [])\n    msg.topic = ''\n    msg.payload = []\n    return msg\n}\n\nconst incomingMessage = msg.payload\nlet log = context.get('log') || []\nif (!Array.isArray(log)) {\n    log = []\n}\n\nlet logMessages = normaliseLogEntry(msg.payload)\n\nfunction normaliseLogEntry(data) {\n    const result = []\n    if (data === null) {\n        return normaliseLogEntry(\"null\")\n    } else if (typeof data === \"undefined\") {\n        return normaliseLogEntry(\"undefined\")\n    } else if (typeof data === 'number') {\n        return normaliseLogEntry(\"\" + data)\n    } else if (Array.isArray(data)) {\n        const arrStr = [\"[\"]\n        for (let index = 0; index < data.length; index++) {\n            if (index > 0) { arrStr.push(', ') }\n            arrStr.push(normaliseLogEntry(data[index]))\n        }\n        arrStr.push(\"]\")\n        return normaliseLogEntry(arrStr.join(''))\n    } else if (typeof data === 'object') {\n        result.push(\"> \" + JSON.stringify(data, null, 2))\n    } else if (Buffer.isBuffer(data)) {\n        result.push(\"> \" + data.toJSON())\n    } else if (data && typeof data !== 'string') {\n        result.push(\"> \" + data.toString())\n    } else {\n        if (data.includes('\\n')) {\n            const lines = data.split('\\n').map(m => \"> \" + m)\n            result.push(...lines)\n        } else {\n            result.push(\"> \" + data)\n        }\n    }\n    return result\n}\n\nlog.push(...logMessages.flat())\n\nif (log.length >= MAX_ROWS) {\n    // remove the oldest messages which are at the beginning of the array\n    log = log.slice(-MAX_ROWS)\n}\n\ncontext.set('log', log)\nmsg.payload = log\nreturn msg",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3550,8 +3745,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 500,
+        "x": 800,
+        "y": 660,
         "wires": [
             [
                 "53b83a7ae3766422"
@@ -3567,8 +3762,8 @@
         "links": [
             "3d569b3ef4a4da57"
         ],
-        "x": 855,
-        "y": 500,
+        "x": 935,
+        "y": 660,
         "wires": []
     },
     {
@@ -3576,7 +3771,7 @@
         "type": "ui-text",
         "z": "4cb430ba2addf410",
         "group": "dd3c8fe7c3c596d3",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3589,8 +3784,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 890,
-        "y": 440,
+        "x": 970,
+        "y": 600,
         "wires": []
     },
     {
@@ -3612,8 +3807,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 440,
+        "x": 800,
+        "y": 600,
         "wires": [
             [
                 "91d3b4dca0e9bc0a"
@@ -3639,8 +3834,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 380,
+        "x": 800,
+        "y": 540,
         "wires": [
             [
                 "e4a8ca2d0e57bac0"
@@ -3652,7 +3847,7 @@
         "type": "ui-text",
         "z": "4cb430ba2addf410",
         "group": "dd3c8fe7c3c596d3",
-        "order": 2,
+        "order": 3,
         "width": 0,
         "height": 0,
         "name": "",
@@ -3665,8 +3860,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 910,
-        "y": 380,
+        "x": 990,
+        "y": 540,
         "wires": []
     },
     {
@@ -3690,8 +3885,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 260,
-        "y": 600,
+        "x": 240,
+        "y": 1040,
         "wires": [
             [
                 "88597f823df0b0f8"
@@ -3702,11 +3897,11 @@
         "id": "88597f823df0b0f8",
         "type": "http request",
         "z": "4cb430ba2addf410",
-        "name": "",
-        "method": "GET",
+        "name": "Read Flash",
+        "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/read",
+        "url": "192.168.8.224:5000/api/st_link/read",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -3714,8 +3909,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 450,
-        "y": 600,
+        "x": 430,
+        "y": 1040,
         "wires": [
             [
                 "3ef0da27dbc7c0e4",
@@ -3731,8 +3926,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 510,
-        "y": 500,
+        "x": 490,
+        "y": 600,
         "wires": [
             [
                 "3ef0da27dbc7c0e4",
@@ -3743,54 +3938,14 @@
         ]
     },
     {
-        "id": "747e729d4c5216ed",
-        "type": "ui-file-input",
-        "z": "4cb430ba2addf410",
-        "group": "55af94702e245591",
-        "name": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "topic": "topic",
-        "topicType": "msg",
-        "label": "File Input",
-        "icon": "paperclip",
-        "allowMultiple": false,
-        "accept": "",
-        "className": "",
-        "x": 440,
-        "y": 760,
-        "wires": [
-            [
-                "ccdb27f7e8e1c288"
-            ]
-        ]
-    },
-    {
-        "id": "ccdb27f7e8e1c288",
-        "type": "debug",
-        "z": "4cb430ba2addf410",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 660,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "3cdb62d32e62f3f0",
+        "id": "6d4d2c75cee43f9c",
         "type": "http request",
         "z": "4cb430ba2addf410",
-        "name": "",
-        "method": "POST",
+        "name": "CLI Help",
+        "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/voltage",
+        "url": "192.168.8.224:5000/api/st_link/cli",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -3798,16 +3953,359 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 610,
-        "y": 860,
+        "x": 380,
+        "y": 720,
         "wires": [
             [
-                "ccdb27f7e8e1c288"
+                "eccec280694c6b15"
             ]
         ]
     },
     {
-        "id": "7ef9437e176cc05d",
+        "id": "f72f2bd5461c278e",
+        "type": "ui-button",
+        "z": "4cb430ba2addf410",
+        "group": "dd3c8fe7c3c596d3",
+        "name": "",
+        "label": "Help",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 230,
+        "y": 720,
+        "wires": [
+            [
+                "6d4d2c75cee43f9c"
+            ]
+        ]
+    },
+    {
+        "id": "6d1eb022314c9ddb",
+        "type": "ui-form",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "group": "611dc11b0e0564c9",
+        "label": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Start Address",
+                "key": "start_address",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "# of Kilobytes",
+                "key": "no_of_bytes",
+                "type": "dropdown",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "start_address": "",
+            "no_of_bytes": ""
+        },
+        "payload": "",
+        "submit": "Read",
+        "cancel": "Clear",
+        "resetOnSubmit": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [
+            {
+                "dropdown": "",
+                "value": "0x8000000",
+                "label": "Program Memory"
+            },
+            {
+                "dropdown": "no_of_bytes",
+                "value": "0x400",
+                "label": "1k"
+            }
+        ],
+        "x": 230,
+        "y": 880,
+        "wires": [
+            [
+                "3ef0da27dbc7c0e4",
+                "ee480272aa707e7c"
+            ]
+        ]
+    },
+    {
+        "id": "44ad592c1bd08be2",
+        "type": "ui-text",
+        "z": "4cb430ba2addf410",
+        "group": "611dc11b0e0564c9",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Program Memory:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 670,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "38ab23b057502913",
+        "type": "inject",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.start_address",
+                "v": "0x8000000",
+                "vt": "str"
+            },
+            {
+                "p": "payload.no_of_bytes",
+                "v": "1k",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "6d1eb022314c9ddb",
+                "8d68010446f2583a"
+            ]
+        ]
+    },
+    {
+        "id": "ee480272aa707e7c",
+        "type": "function",
+        "z": "4cb430ba2addf410",
+        "name": "function 7",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 960,
+        "wires": [
+            [
+                "88597f823df0b0f8"
+            ]
+        ]
+    },
+    {
+        "id": "f8c2e22dfe3b31e1",
+        "type": "ui-button",
+        "z": "4cb430ba2addf410",
+        "group": "611dc11b0e0564c9",
+        "name": "",
+        "label": "Erase",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 230,
+        "y": 1100,
+        "wires": [
+            [
+                "72f7c0beddc8433e"
+            ]
+        ]
+    },
+    {
+        "id": "72f7c0beddc8433e",
+        "type": "http request",
+        "z": "4cb430ba2addf410",
+        "name": "Erase",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/st_link/erase",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 1100,
+        "wires": [
+            [
+                "3ef0da27dbc7c0e4",
+                "eccec280694c6b15"
+            ]
+        ]
+    },
+    {
+        "id": "8d68010446f2583a",
+        "type": "change",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.start_address",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 820,
+        "wires": [
+            [
+                "44ad592c1bd08be2"
+            ]
+        ]
+    },
+    {
+        "id": "5959f85aaba4d216",
+        "type": "http in",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "url": "/upload",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 1500,
+        "wires": [
+            [
+                "517cc44f634faa13",
+                "86da91d6b385fae0"
+            ]
+        ]
+    },
+    {
+        "id": "517cc44f634faa13",
+        "type": "debug",
+        "z": "4cb430ba2addf410",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "dca82025773b5798",
+        "type": "http response",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "86da91d6b385fae0",
+        "type": "change",
+        "z": "4cb430ba2addf410",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "<h1>Looks like it is working!!</h1>",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "200",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1500,
+        "wires": [
+            [
+                "dca82025773b5798"
+            ]
+        ]
+    },
+    {
+        "id": "385b53923239ad3a",
         "type": "inject",
         "z": "4cb430ba2addf410",
         "name": "",
@@ -3828,10 +4326,35 @@
         "payload": "",
         "payloadType": "date",
         "x": 240,
-        "y": 860,
+        "y": 1260,
         "wires": [
             [
-                "3cdb62d32e62f3f0"
+                "dba1621164c9cb79"
+            ]
+        ]
+    },
+    {
+        "id": "dba1621164c9cb79",
+        "type": "http request",
+        "z": "4cb430ba2addf410",
+        "name": "Write Flash",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/st_link/write",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 430,
+        "y": 1260,
+        "wires": [
+            [
+                "3ef0da27dbc7c0e4",
+                "eccec280694c6b15"
             ]
         ]
     },
@@ -3942,7 +4465,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/info",
+        "url": "192.168.8.224:5000/api/ps/info",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4192,7 +4715,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/current",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_current",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4200,11 +4723,10 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 350,
-        "y": 740,
+        "x": 330,
+        "y": 760,
         "wires": [
             [
-                "41ddd5e5d868d0b7",
                 "af415c86e5b934b0"
             ]
         ]
@@ -4222,8 +4744,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 740,
+        "x": 620,
+        "y": 840,
         "wires": []
     },
     {
@@ -4234,7 +4756,7 @@
         "group": "b42620cc7cc895ea",
         "name": "",
         "label": "Refresh",
-        "order": 4,
+        "order": 6,
         "width": 0,
         "height": 0,
         "emulateClick": false,
@@ -4259,7 +4781,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 160,
-        "y": 740,
+        "y": 760,
         "wires": [
             [
                 "8d0a20693fc77b44"
@@ -4275,8 +4797,8 @@
         "property": "payload",
         "action": "",
         "pretty": true,
-        "x": 390,
-        "y": 640,
+        "x": 490,
+        "y": 760,
         "wires": [
             [
                 "41ddd5e5d868d0b7",
@@ -4304,8 +4826,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 640,
+        "x": 660,
+        "y": 760,
         "wires": [
             [
                 "2dd3dad16d7f4faa",
@@ -4323,7 +4845,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Current (A):",
+        "label": "Set Current (A):",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -4332,8 +4854,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 890,
-        "y": 640,
+        "x": 860,
+        "y": 760,
         "wires": []
     },
     {
@@ -4345,7 +4867,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/voltage",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_voltage",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4353,8 +4875,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 370,
-        "y": 580,
+        "x": 330,
+        "y": 700,
         "wires": [
             [
                 "cb16acbc4e8ba623"
@@ -4370,11 +4892,12 @@
         "property": "payload",
         "action": "",
         "pretty": true,
-        "x": 530,
-        "y": 580,
+        "x": 490,
+        "y": 700,
         "wires": [
             [
-                "3c48cb45eb8a381f"
+                "3c48cb45eb8a381f",
+                "41ddd5e5d868d0b7"
             ]
         ]
     },
@@ -4388,7 +4911,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Voltage (VDC):",
+        "label": "Set Voltage (VDC):",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "style": false,
@@ -4397,8 +4920,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 900,
-        "y": 580,
+        "x": 870,
+        "y": 700,
         "wires": []
     },
     {
@@ -4421,11 +4944,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
-        "y": 580,
+        "x": 660,
+        "y": 700,
         "wires": [
             [
-                "1fb7adb5f6cfed10"
+                "1fb7adb5f6cfed10",
+                "3460f6c660cb8753"
             ]
         ]
     },
@@ -4438,7 +4962,7 @@
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/list",
+        "url": "192.168.8.224:5000/api/ps/device_list",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4447,7 +4971,7 @@
         "senderr": false,
         "headers": [],
         "x": 350,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "9067087358230ecb",
@@ -4469,7 +4993,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 560,
-        "y": 940,
+        "y": 1040,
         "wires": []
     },
     {
@@ -4505,7 +5029,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 160,
-        "y": 940,
+        "y": 1040,
         "wires": [
             [
                 "1543d0624e4c69dc"
@@ -4522,7 +5046,7 @@
         "action": "",
         "pretty": true,
         "x": 390,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "9067087358230ecb",
@@ -4551,7 +5075,7 @@
         "to": "",
         "reg": false,
         "x": 600,
-        "y": 840,
+        "y": 940,
         "wires": [
             [
                 "a56aa2f237cb9a4d"
@@ -4578,7 +5102,7 @@
         "wrapText": false,
         "className": "",
         "x": 910,
-        "y": 840,
+        "y": 940,
         "wires": []
     },
     {
@@ -4623,7 +5147,7 @@
         "passthru": false,
         "dropdownOptions": [],
         "x": 190,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "5e2c3dbfdbbe5725",
@@ -4646,7 +5170,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 900,
-        "y": 1120,
+        "y": 1220,
         "wires": []
     },
     {
@@ -4658,7 +5182,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/voltage",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_voltage",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4667,7 +5191,7 @@
         "senderr": false,
         "headers": [],
         "x": 410,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "6c2698311f2fd23a"
@@ -4684,7 +5208,7 @@
         "action": "",
         "pretty": false,
         "x": 570,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "126e4bf343e99424"
@@ -4705,7 +5229,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1120,
+        "y": 1220,
         "wires": [
             [
                 "768a59bb7f969431",
@@ -4723,7 +5247,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/current",
+        "url": "192.168.8.224:5000/api/ps/ch1/set_current",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4732,7 +5256,7 @@
         "senderr": false,
         "headers": [],
         "x": 410,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "c9196ab5e037de41"
@@ -4749,7 +5273,7 @@
         "action": "",
         "pretty": false,
         "x": 570,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "73f2d429283ba1c6"
@@ -4770,7 +5294,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1200,
+        "y": 1300,
         "wires": [
             [
                 "bac15b5ce9b475d4",
@@ -4792,7 +5316,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 900,
-        "y": 1200,
+        "y": 1300,
         "wires": []
     },
     {
@@ -4816,7 +5340,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 1280,
+        "y": 1380,
         "wires": [
             []
         ]
@@ -4842,7 +5366,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 1320,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -4868,7 +5392,7 @@
         "to": "",
         "reg": false,
         "x": 790,
-        "y": 1040,
+        "y": 1140,
         "wires": [
             []
         ]
@@ -4881,7 +5405,7 @@
         "name": "",
         "label": "Power",
         "group": "b42620cc7cc895ea",
-        "order": 3,
+        "order": 5,
         "width": 0,
         "height": 0,
         "passthru": false,
@@ -4901,7 +5425,7 @@
         "officon": "",
         "offcolor": "",
         "x": 150,
-        "y": 1480,
+        "y": 1540,
         "wires": [
             [
                 "e354f273ba481205"
@@ -4917,7 +5441,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/on",
+        "url": "192.168.8.224:5000/api/ps/ch1/on",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4926,7 +5450,7 @@
         "senderr": false,
         "headers": [],
         "x": 470,
-        "y": 1460,
+        "y": 1520,
         "wires": [
             [
                 "98d3ab4d09a82df2"
@@ -4953,7 +5477,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1480,
+        "y": 1540,
         "wires": [
             [
                 "2a2e39dab58619d6"
@@ -4972,7 +5496,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/ps/ch1/off",
+        "url": "192.168.8.224:5000/api/ps/ch1/off",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -4981,7 +5505,7 @@
         "senderr": false,
         "headers": [],
         "x": 470,
-        "y": 1500,
+        "y": 1560,
         "wires": [
             [
                 "98d3ab4d09a82df2"
@@ -5001,8 +5525,197 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
+        "x": 680,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "3460f6c660cb8753",
+        "type": "http request",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/ps/ch1/measured_voltage",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "e6f7d108bf8ece11"
+            ]
+        ]
+    },
+    {
+        "id": "e6f7d108bf8ece11",
+        "type": "json",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 490,
+        "y": 640,
+        "wires": [
+            [
+                "bf58a01ffcc35203",
+                "41ddd5e5d868d0b7"
+            ]
+        ]
+    },
+    {
+        "id": "06cdda9c9f5f6157",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "group": "b42620cc7cc895ea",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Measured Voltage (VDC):",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 890,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bf58a01ffcc35203",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.voltage",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
         "x": 660,
-        "y": 1480,
+        "y": 640,
+        "wires": [
+            [
+                "06cdda9c9f5f6157",
+                "540dd145699f9ea6"
+            ]
+        ]
+    },
+    {
+        "id": "540dd145699f9ea6",
+        "type": "http request",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/ps/ch1/measured_current",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "076449cc81412880"
+            ]
+        ]
+    },
+    {
+        "id": "076449cc81412880",
+        "type": "json",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "de7f5428e9048cd4",
+                "41ddd5e5d868d0b7"
+            ]
+        ]
+    },
+    {
+        "id": "de7f5428e9048cd4",
+        "type": "change",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.current",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "6006d274641d449f"
+            ]
+        ]
+    },
+    {
+        "id": "6006d274641d449f",
+        "type": "ui-text",
+        "z": "ca180f9998bd7792",
+        "g": "b17e1e25966d5d49",
+        "group": "b42620cc7cc895ea",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Measured Current (A):",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 880,
+        "y": 580,
         "wires": []
     },
     {
