@@ -923,5 +923,24 @@
                 "file": "/data/node_modules/node-red-contrib-modbus/modbus/modbus-flex-fc.js"
             }
         }
+    },
+    "node-red-contrib-timeout": {
+        "name": "node-red-contrib-timeout",
+        "version": "1.1.5",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "timeout": {
+                "name": "timeout",
+                "types": [
+                    "timeout"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-timeout",
+                "file": "/data/node_modules/node-red-contrib-timeout/timeout.js"
+            }
+        }
     }
 }
