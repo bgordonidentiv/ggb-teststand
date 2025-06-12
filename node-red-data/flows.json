@@ -48,6 +48,14 @@
         "env": []
     },
     {
+        "id": "c21c2a31923f4a5d",
+        "type": "tab",
+        "label": "Debug",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "ec7ffdcfa1cb4d13",
         "type": "subflow",
         "name": "LabJack AIN to Decimal",
@@ -210,7 +218,7 @@
         "out": [
             {
                 "x": 740,
-                "y": 180,
+                "y": 120,
                 "wires": [
                     {
                         "id": "3a1bc2efbf6f60da",
@@ -220,7 +228,7 @@
             },
             {
                 "x": 740,
-                "y": 220,
+                "y": 160,
                 "wires": [
                     {
                         "id": "2d029bf03cc8bc70",
@@ -230,7 +238,7 @@
             },
             {
                 "x": 740,
-                "y": 260,
+                "y": 200,
                 "wires": [
                     {
                         "id": "95531e0463f9f4d3",
@@ -240,7 +248,7 @@
             },
             {
                 "x": 740,
-                "y": 300,
+                "y": 240,
                 "wires": [
                     {
                         "id": "36f9fd0d036569b2",
@@ -250,7 +258,7 @@
             },
             {
                 "x": 740,
-                "y": 340,
+                "y": 280,
                 "wires": [
                     {
                         "id": "292768858c208003",
@@ -260,7 +268,7 @@
             },
             {
                 "x": 740,
-                "y": 380,
+                "y": 320,
                 "wires": [
                     {
                         "id": "0ec008fecfa9f11c",
@@ -270,7 +278,7 @@
             },
             {
                 "x": 740,
-                "y": 420,
+                "y": 360,
                 "wires": [
                     {
                         "id": "1f262e031decf330",
@@ -280,7 +288,7 @@
             },
             {
                 "x": 740,
-                "y": 460,
+                "y": 400,
                 "wires": [
                     {
                         "id": "ce4a39f8f857adbc",
@@ -318,7 +326,7 @@
         ],
         "out": [
             {
-                "x": 900,
+                "x": 1120,
                 "y": 620,
                 "wires": [
                     {
@@ -328,8 +336,8 @@
                 ]
             },
             {
-                "x": 1280,
-                "y": 620,
+                "x": 1120,
+                "y": 700,
                 "wires": [
                     {
                         "id": "29c85bba41cfc463",
@@ -535,7 +543,67 @@
         "env": [],
         "meta": {},
         "color": "#D8BFD8",
-        "icon": "node-red/envelope.svg"
+        "icon": "font-awesome/fa-comments"
+    },
+    {
+        "id": "33f423e5b98c6025",
+        "type": "subflow",
+        "name": "Info Dialog",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 560,
+                "y": 360,
+                "wires": [
+                    {
+                        "id": "858b46312c5c063e"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#D8BFD8",
+        "icon": "font-awesome/fa-comments"
+    },
+    {
+        "id": "edd8667f264d5ce9",
+        "type": "subflow",
+        "name": "LabJack I/O Update",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 320,
+                "y": 280,
+                "wires": [
+                    {
+                        "id": "9cb41faf9e0ef278"
+                    },
+                    {
+                        "id": "82bc724c80a85770"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1080,
+                "y": 520,
+                "wires": [
+                    {
+                        "id": "e5926e298626232f",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#D8BFD8",
+        "icon": "font-awesome/fa-refresh"
     },
     {
         "id": "c2bca422a609058c",
@@ -709,14 +777,13 @@
         },
         "nodes": [
             "279b53178650eb5c",
-            "9d2a8283dd648ea1",
             "f729ab249f9d7570",
             "0d31a03a75fe41ea",
-            "d54e1994ddaae467"
+            "fd22439395f13765"
         ],
         "x": 194,
-        "y": 159,
-        "w": 692,
+        "y": 239,
+        "w": 412,
         "h": 162
     },
     {
@@ -734,18 +801,77 @@
             "bc924e8d3a02dcc7",
             "40a53635f3c8ee87",
             "6747cf5442e245fa",
-            "87334bdac62581ae",
             "1616294d41afe094",
             "c19f93bfde420695",
             "7a3360b81aa124b2",
             "0eb8abe1d7b1a811",
             "583f7d769b0d91f3",
-            "18f697e53c4d2658"
+            "18f697e53c4d2658",
+            "92eb11b45c1b7001",
+            "bf51a932ed543437",
+            "76802a8fedd4f0b6",
+            "1c6272ffdd8bc834",
+            "054bca2d94bfcce7",
+            "e310ecc5252cf731",
+            "222d6c7c59d982a4",
+            "9501eeda73f64a5d",
+            "b619d22d8d2a7fdf",
+            "c4a40f0420a1280b",
+            "ae84df597b55b588",
+            "1af98347886983f0"
         ],
         "x": 194,
-        "y": 459,
-        "w": 1072,
-        "h": 302
+        "y": 539,
+        "w": 992,
+        "h": 582
+    },
+    {
+        "id": "aa394877794572d2",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "f47dda522486b91e",
+            "4e5daabc0e18ec0a",
+            "6e923177917d97f0",
+            "3804cf6b98e51996",
+            "ff15fec5a3c32b7d",
+            "0f8cb77f96cd9e85",
+            "af2be3d90fd20d3d",
+            "8b3bdf85ced5c478"
+        ],
+        "x": 194,
+        "y": 1179,
+        "w": 912,
+        "h": 242
+    },
+    {
+        "id": "bebea141a7deaa03",
+        "type": "group",
+        "z": "c21c2a31923f4a5d",
+        "name": "Channel 1 Power Supply",
+        "style": {
+            "label": true,
+            "fill": "#d1d1d1",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "5c86395705c437c1",
+            "b247b982a05aadba",
+            "2b4805e476669b69",
+            "78437d10aeae8887",
+            "8157a954d98524d1",
+            "1bcb1bc8ee4c143e",
+            "a3e6fd84aad7e140"
+        ],
+        "x": 174,
+        "y": 139,
+        "w": 1192,
+        "h": 122
     },
     {
         "id": "6224f3394241d463",
@@ -1281,6 +1407,106 @@
         "groupType": "default"
     },
     {
+        "id": "b2201dbe8e3b5479",
+        "type": "ui-page",
+        "name": "Page 7",
+        "ui": "6224f3394241d463",
+        "path": "/page7",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 7,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "a7ac5c1b1bab6543",
+        "type": "ui-group",
+        "name": "Fixture Status",
+        "page": "de76f57e39382a92",
+        "width": "2",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "05681d05b84ab2f2",
+        "type": "ui-page",
+        "name": "Debug",
+        "ui": "6224f3394241d463",
+        "path": "/page8",
+        "icon": "bug",
+        "layout": "grid",
+        "theme": "6248b72ac892d749",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 8,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "7aa38326e518e47f",
+        "type": "ui-group",
+        "name": "Power Supply",
+        "page": "05681d05b84ab2f2",
+        "width": "2",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
         "id": "df4e3ff11eba05b2",
         "type": "function",
         "z": "ec7ffdcfa1cb4d13",
@@ -1546,7 +1772,7 @@
         "dataType": "HoldingRegister",
         "adr": "0",
         "quantity": "28",
-        "rate": "500",
+        "rate": "250",
         "rateUnit": "ms",
         "delayOnStart": false,
         "startDelayTime": "",
@@ -1581,7 +1807,7 @@
         "id": "5765b56bc0b1c915",
         "type": "modbus-read",
         "z": "16e07721fd9c57c8",
-        "name": "",
+        "name": "Read FIO",
         "topic": "",
         "showStatusActivities": true,
         "logIOActivities": false,
@@ -1591,7 +1817,7 @@
         "dataType": "HoldingRegister",
         "adr": "2500",
         "quantity": "1",
-        "rate": "1",
+        "rate": "2",
         "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
@@ -1600,8 +1826,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": true,
-        "x": 290,
-        "y": 320,
+        "x": 280,
+        "y": 260,
         "wires": [
             [
                 "3a1bc2efbf6f60da",
@@ -1629,7 +1855,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 180,
+        "y": 120,
         "wires": [
             []
         ]
@@ -1647,7 +1873,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 220,
+        "y": 160,
         "wires": [
             []
         ]
@@ -1665,7 +1891,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 260,
+        "y": 200,
         "wires": [
             []
         ]
@@ -1683,7 +1909,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 300,
+        "y": 240,
         "wires": [
             []
         ]
@@ -1701,7 +1927,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1719,7 +1945,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 380,
+        "y": 320,
         "wires": [
             []
         ]
@@ -1737,7 +1963,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 420,
+        "y": 360,
         "wires": [
             []
         ]
@@ -1755,7 +1981,7 @@
         "finalize": "",
         "libs": [],
         "x": 560,
-        "y": 460,
+        "y": 400,
         "wires": [
             []
         ]
@@ -1809,7 +2035,7 @@
         "type": "function",
         "z": "816b1a16a4c6ed2f",
         "name": "Set EIO Direction",
-        "func": "// EIO Port Assignments\n\n// EIO7 = Spare TP123 (Input)\n// EIO6 = Spare TP117 (Input)\n// EIO5 = Spare TP122 (Input)\n// EIO4 = Spare TP116 (Input)\n// EIO3 = Spare TP121 (Input)\n// EIO2 = Spare TP115 (Input)\n// EIO1 = Spare TP120 (Input)\n// EIO0 = DRY_VOLTAGE_RELAY (Output)\n\n// I/O Direction Map\n// 1000 0000 = 0x80\n\n// FIO Port Direct 0=Input, 1=Output\nlet eio_map = 0x80  // All Output\n\nmsg.payload = { 'value': eio_map, 'fc': 6, 'unitid': 1, 'address': 2601, 'quantity': 1 };\nreturn msg;",
+        "func": "// EIO Port Assignments\n\n// EIO7 = Spare TP123 (Input)\n// EIO6 = Spare TP117 (Input)\n// EIO5 = Spare TP122 (Input)\n// EIO4 = Spare TP116 (Input)\n// EIO3 = Spare TP121 (Input)\n// EIO2 = DUT_INSTALLED  [TP115] (Input)\n// EIO1 = FIXTURE_CLOSED [TP120] (Input)\n// EIO0 = DRY_VOLTAGE_RELAY (Output)\n\n// I/O Direction Map\n// 1000 0000 = 0x80\n\n// FIO Port Direct 0=Input, 1=Output\nlet eio_map = 0x80  // All Output\n\nmsg.payload = { 'value': eio_map, 'fc': 6, 'unitid': 1, 'address': 2601, 'quantity': 1 };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1884,7 +2110,7 @@
         "z": "816b1a16a4c6ed2f",
         "name": "Init LabJack IO",
         "info": "",
-        "x": 140,
+        "x": 100,
         "y": 220,
         "wires": []
     },
@@ -2367,12 +2593,11 @@
         "links": [
             "302008d9a9eb23c0",
             "b0c064a9cdb51507",
-            "7563d4a53d2d1e4d",
             "cf1b0dc9ba222cde",
             "c0879d7d8f8cff88"
         ],
-        "x": 1215,
-        "y": 620,
+        "x": 1055,
+        "y": 700,
         "wires": [
             []
         ]
@@ -2396,8 +2621,8 @@
         "z": "816b1a16a4c6ed2f",
         "name": "Status Messages",
         "info": "",
-        "x": 1280,
-        "y": 580,
+        "x": 1240,
+        "y": 700,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -2502,7 +2727,7 @@
         "z": "816b1a16a4c6ed2f",
         "name": "DAQ Error?",
         "info": "",
-        "x": 130,
+        "x": 90,
         "y": 540,
         "wires": []
     },
@@ -2552,7 +2777,7 @@
         "z": "816b1a16a4c6ed2f",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "6",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -2682,6 +2907,27 @@
                 "0dd7b93f68360a8e"
             ]
         ]
+    },
+    {
+        "id": "ed6b40805d86071a",
+        "type": "comment",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Power Supply Error?",
+        "info": "",
+        "x": 110,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f3bc786984dcac22",
+        "type": "comment",
+        "z": "816b1a16a4c6ed2f",
+        "name": "Done",
+        "info": "",
+        "x": 1210,
+        "y": 620,
+        "wires": [],
+        "icon": "node-red/alert.svg"
     },
     {
         "id": "66f09c63f8377e61",
@@ -3206,38 +3452,259 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <v-dialog width=\"auto\" v-model=\"showDialog\">\n        <v-card rounded=lg color=\"background\" v-click-outside=\"{handler: onClickOutside}\">\n            <v-toolbar color=\"navigation-background\">\n                <v-card-title>\n                    <span>{{dialogData.title}}</span>\n                </v-card-title>\n            </v-toolbar>\n            <v-card-text>\n                <!-- <div class=\"pa-12\">{{dialogData.content}}</div> -->\n                <div class=\"text-h6\" v-html=\"content\"></div>\n                <div class=\"d-flex py-2 justify-space-between\"></div>\n                <v-text-field v-if=\"textLabel\" :label=\"textLabel\" v-model=\"textvalue\"></v-text-field>\n            </v-card-text>\n            <v-card-actions class=\"justify-end\">                \n                <v-btn v-if=\"okText\" variant=\"elevated\" @click=\"okDialog\" v-html=\"okText\"></v-btn>\n                <v-btn variant=\"elevated\" @click=\"cancelDialog\" v-html=\"cancelText\"></v-btn>\n            </v-card-actions>\n        </v-card>\n    </v-dialog>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                dialogData:null\n            }\n        },\n        watch: {\n            msg: function() {\n                // if(typeof this.msg.payload === \"object\" && (!this.msg._client || this.msg._client.socketId === this.$socket.id)) {\n                    this.dialogData = this.msg.payload;\n                    if(!this.dialogData.okText) {\n                        // this.dialogData.okText = \"OK\"\n                        this.dialogData.okText = null\n                    }\n                    if(!this.dialogData.cancelText) {\n                        this.dialogData.cancelText = \"Cancel\"\n                    }\n                    if(this.dialogData.title) {         \n                        this.dialogData.shown = false;  // This prevents dialog from loading on Deploy    \n                    }\n                    this.textvalue = this.msg.payload?.textvalue ?? \"\"\n                // }\n                // prevent redraw on deploy\n                this.msg.payload = null\n            }      \n        },\n        computed: {\n            title: function () {\n                return this.dialogData?.title ?? \"\"\n            },\n            content:function() {\n                return this.dialogData?.content ?? \"\"\n            },\n            cancelText:function() {\n                return this.dialogData?.cancelText ?? \"Cancel\"\n            },\n            okText:function() {\n                // return this.dialogData?.okText ?? \"OK\"\n                return this.dialogData?.okText ?? null\n            },\n            textLabel:function() {\n                return this.dialogData?.textLabel ?? \"\"\n            },\n            showDialog: function() {\n                return this.dialogData?.shown == false\n            }\n        },\n        methods: {\n            cancelDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.cancelText };\n                this.send(this.msg);\n            },\n            okDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.okText, text_value: this.textvalue };\n                this.send(this.msg);\n            }\n            // onClickOutside () {\n            //     this.dialogData.shown = true;\n            // },\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n            this.dialogData = null\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-themed-element {\n    header: var(--theme-header);\n    }\n</style>",
+        "format": "<template>\n    <v-dialog width=\"auto\" v-model=\"showDialog\">\n        <v-card rounded=lg color=\"background\" v-click-outside=\"{handler: onClickOutside}\">\n            <v-toolbar color=\"navigation-background\">\n                <v-card-title>\n                    <span>{{dialogData.title}}</span>\n                </v-card-title>\n            </v-toolbar>\n            <v-card-text>\n                <!-- <div class=\"pa-12\">{{dialogData.content}}</div> -->\n                <div class=\"text-h6\" v-html=\"content\"></div>\n                <div class=\"d-flex py-2 justify-space-between\"></div>\n                <v-text-field v-if=\"textLabel\" :label=\"textLabel\" v-model=\"textvalue\"></v-text-field>\n            </v-card-text>\n            <v-card-actions class=\"justify-end\">                \n                <v-btn v-if=\"okText\" variant=\"elevated\" @click=\"okDialog\" v-html=\"okText\" :disabled=\"!okDisabled\"></v-btn>\n                <v-btn variant=\"elevated\" @click=\"cancelDialog\" v-html=\"cancelText\"></v-btn>\n            </v-card-actions>\n        </v-card>\n    </v-dialog>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                dialogData:null\n            }\n        },\n        watch: {\n            msg: function() {\n                // if(typeof this.msg.payload === \"object\" && (!this.msg._client || this.msg._client.socketId === this.$socket.id)) {\n                    this.dialogData = this.msg.payload;\n                    if(!this.dialogData.okText) {\n                        // this.dialogData.okText = \"OK\"\n                        this.dialogData.okText = null\n                    }\n                    if(!this.dialogData.okDisabled) {\n                        this.dialogData.okDisabled = false\n                    }\n                    if(!this.dialogData.cancelText) {\n                        this.dialogData.cancelText = \"Cancel\"\n                    }\n                    if(this.dialogData.title) {         \n                        this.dialogData.shown = false;  // This prevents dialog from loading on Deploy    \n                    }\n                    this.textvalue = this.msg.payload?.textvalue ?? \"\"\n                // }\n                // prevent redraw on deploy\n                this.msg.payload = null\n            }      \n        },\n        computed: {\n            title: function () {\n                return this.dialogData?.title ?? \"\"\n            },\n            content:function() {\n                return this.dialogData?.content ?? \"\"\n            },\n            cancelText:function() {\n                return this.dialogData?.cancelText ?? \"Cancel\"\n            },\n            okText:function() {\n                // return this.dialogData?.okText ?? \"OK\"\n                return this.dialogData?.okText ?? null\n            },\n            okDisabled:function() {\n                return this.dialogData?.okDisabled == false\n            },\n            textLabel:function() {\n                return this.dialogData?.textLabel ?? \"\"\n            },\n            showDialog: function() {\n                return this.dialogData?.shown == false\n            }\n        },\n        methods: {\n            cancelDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.cancelText };\n                this.send(this.msg);\n            },\n            okDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.okText, text_value: this.textvalue };\n                this.send(this.msg);\n            }\n            // onClickOutside () {\n            //     this.dialogData.shown = true;\n            // },\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n            this.dialogData = null\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-themed-element {\n    header: var(--theme-header);\n    }\n    .v-btn:disabled {\n        opacity: 0.4;\n        pointer-events: none;\n        cursor: not-allowed;\n    }\n</style>",
         "storeOutMessages": true,
         "passthru": false,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 700,
-        "y": 240,
+        "y": 300,
         "wires": [
             []
         ]
     },
     {
-        "id": "22ef7729c2d9a8a0",
+        "id": "858b46312c5c063e",
         "type": "ui-template",
-        "z": "2c1c44b1675b8eac",
+        "z": "33f423e5b98c6025",
         "group": "326aba1ddf33faae",
         "page": "",
         "ui": "",
-        "name": "",
-        "order": 3,
+        "name": "Info Dialog",
+        "order": 2,
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n    <p :style=\"this.textColor\">Hey Bryan</p>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                textColor: null\n            }\n        },\n        watch: {\n            msg: function () {\n                console.log(this.msg.payload.color)\n                textColor = this.msg.payload.color\n            }\n    \n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n</style>",
+        "format": "<template>\n    <div class=\"text-center pa-4\">\n        <v-dialog\n            v-model=\"dialog\"\n            width=\"auto\"\n            persistent\n        >\n            <v-list\n                class=\"py-2\"\n                color=\"primary\"\n                elevation=\"12\"\n                rounded=\"lg\"\n            >\n                <v-list-item>\n                    <template v-slot:prepend>\n                        <div class=\"pe-4\">\n                            <v-icon :color=\"dialogData.icon_color\" size=\"x-large\">\n                                {{ dialogData.icon }}\n                            </v-icon>\n                        </div>\n                    </template>\n                    <v-list-item-title class=\"text-wrap\">\n                        {{ dialogData.title }}\n                    </v-list-item-title>\n                    <v-list-item-subtitle class=\"text-wrap\">\n                        {{ dialogData.text}}\n                    </v-list-item-subtitle>\n                    <template v-slot:append>\n                        <v-progress-circular\n                            v-if=\"dialogData.spinner\"\n                            :color=\"dialogData.icon_color\"\n                            indeterminate=\"disable-shrink\"\n                            size=\"16\"\n                            width=\"2\"\n                        ></v-progress-circular>\n                        <v-icon v-else @click=dialogClose>mdi-close</v-icon> \n                    </template>\n                </v-list-item>\n            </v-list>\n        </v-dialog>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                dialogData:null,\n                dialog: false\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            msg: function() {\n                console.log(\"Hey Bryan\")\n                this.dialogData = this.msg.payload\n                this.dialog = this.dialogData.shown\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            title: function() {\n                return this.dialogData?.title ?? \"Default Title\"\n            },\n\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            dialogClose: function() {\n                this.dialog = false\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n.text-wrap {\n    white-space: normal;\n    work-break: break-word;\n}\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 700,
-        "y": 300,
+        "x": 750,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9cb41faf9e0ef278",
+        "type": "function",
+        "z": "edd8667f264d5ce9",
+        "name": "Read FIO",
+        "func": "let ports = msg.payload.toLowerCase();\n// let ports_lower = ports.toLowerCase();\n\nlet port_f = ports.includes(\"port_f\") || ports.includes(\"all\");\n\nif(port_f) {\n    msg.payload = { 'value': msg.payload, 'fc': 3, 'unitid': 1, 'address': 2500, 'quantity': 1 };\n} else {\n    msg.payload = \"skip\";\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 280,
+        "wires": [
+            [
+                "7a22a74113e32ae0"
+            ]
+        ]
+    },
+    {
+        "id": "ed07f7e1eb4f15da",
+        "type": "modbus-flex-getter",
+        "z": "edd8667f264d5ce9",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 890,
+        "y": 280,
+        "wires": [
+            [
+                "d9c96a11645e716d",
+                "0b44bbbd5b0a98ae"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d9c96a11645e716d",
+        "type": "debug",
+        "z": "edd8667f264d5ce9",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7a22a74113e32ae0",
+        "type": "switch",
+        "z": "edd8667f264d5ce9",
+        "name": "Skip?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "skip",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "ed07f7e1eb4f15da"
+            ]
+        ]
+    },
+    {
+        "id": "66a2d8c0e6e7183b",
+        "type": "function",
+        "z": "edd8667f264d5ce9",
+        "name": "Read EIO",
+        "func": "let ports = msg.payload.toLowerCase();\n// let ports_lower = ports.toLowerCase();\n\nlet port_e = ports.includes(\"port_e\") || ports.includes(\"all\");\n\nif(port_e) {\n    msg.payload = { 'value': msg.payload, 'fc': 3, 'unitid': 1, 'address': 2501, 'quantity': 1 };\n} else {\n    msg.payload = \"skip\";\n}\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "edbcb4a937f363c5"
+            ]
+        ]
+    },
+    {
+        "id": "82bc724c80a85770",
+        "type": "delay",
+        "z": "edd8667f264d5ce9",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "50",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "66a2d8c0e6e7183b"
+            ]
+        ]
+    },
+    {
+        "id": "edbcb4a937f363c5",
+        "type": "switch",
+        "z": "edd8667f264d5ce9",
+        "name": "Skip?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "skip",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 440,
+        "wires": [
+            [
+                "e5926e298626232f"
+            ]
+        ]
+    },
+    {
+        "id": "e5926e298626232f",
+        "type": "modbus-flex-getter",
+        "z": "edd8667f264d5ce9",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "e3b9bad5128a1f79",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 890,
+        "y": 440,
+        "wires": [
+            [
+                "d9c96a11645e716d",
+                "39b2a0c421de2393"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0b44bbbd5b0a98ae",
+        "type": "function",
+        "z": "edd8667f264d5ce9",
+        "name": "Update PORT_F Values",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\n// LabJack T7 Pin Name Array\n// null = pin is set to output\n\nlet pin_name = [ null,          //FIO0\n                \"reader1_led\",\n                \"door2_led\",\n                \"wiegand_osdp\",\n                \"door1_led\",\n                null,\n                null,\n                null            //FIO7\n               ]\n\nfor(let i=0; i<8; i++) {\n    if(pin_name[i]) {   // Check if pin is input\n        if(isBitSet(msg.payload, i)) {\n            global.set(\"daq.\" + pin_name[i], true);\n        } else {\n            global.set(\"daq.\" + pin_name[i], false)\n        }\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39b2a0c421de2393",
+        "type": "function",
+        "z": "edd8667f264d5ce9",
+        "name": "Update PORT_E Values",
+        "func": "const isBitSet = (value, bitIndex) => {\n    return (value & (1 << bitIndex)) !== 0;\n};\n\n// LabJack T7 Pin Name Array\n// null = pin is set to output\n\nlet pin_name = [ null,          // EIO0\n                \"fixture_closed\",\n                \"dut_installed\",\n                \"spare_tp121\",\n                \"spare_tp116\",\n                \"spare_tp122\",\n                \"spare_tp117\",\n                \"spare_tp123\"  // EIO7\n               ]\n\nfor(let i=0; i<8; i++) {\n    if(pin_name[i]) {   // Check if pin is input\n        if(isBitSet(msg.payload, i)) {\n            global.set(\"daq.\" + pin_name[i], true);\n        } else {\n            global.set(\"daq.\" + pin_name[i], false)\n        }\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 440,
         "wires": [
             []
         ]
@@ -3260,10 +3727,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 120,
-        "y": 260,
+        "y": 340,
         "wires": [
             [
-                "9d2a8283dd648ea1"
+                "279b53178650eb5c"
             ]
         ]
     },
@@ -3282,7 +3749,7 @@
         "type": "comment",
         "z": "8992ffe741acd3ee",
         "name": "Test Flow",
-        "info": "# Run Once\n\n 1. Initialize Global Variables\n 2. Initialize Connected Hardware\n    -  LabJack T7\n    -  Siglent Power Supply\n\n# Run Each Test\n\n1. Prompt user to scan Serial Number\n2. Prompt user to insert DUT\n    - Prompt will disapear once DUT is installed and top is closed\n3. Turn on Power Supply",
+        "info": "# Run Once\n## Initalize Hardware\n 1. Initialize Global Variables\n 2. Initialize Connected Hardware\n    -  LabJack T7\n    -  Siglent Power Supply\n\n# Run Each Test\n## Prompt User for Serial Number & DUT Installed\n1. Prompt user to scan Serial Number\n2. Instruct user to insert DUT\n    - Prompt will disapear once DUT is installed top is closed and OK is pressed\n\n## Voltage Tests\n1. Turn on Power Supply",
         "x": 440,
         "y": 80,
         "wires": []
@@ -3293,14 +3760,14 @@
         "z": "8992ffe741acd3ee",
         "g": "e9169bf8924b9c44",
         "name": "",
-        "x": 570,
-        "y": 260,
+        "x": 350,
+        "y": 340,
         "wires": [
             [
                 "0d31a03a75fe41ea"
             ],
             [
-                "d54e1994ddaae467"
+                "fd22439395f13765"
             ]
         ]
     },
@@ -3308,53 +3775,27 @@
         "id": "f47dda522486b91e",
         "type": "debug",
         "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
         "name": "debug 4",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
-        "y": 1140,
+        "x": 1000,
+        "y": 1380,
         "wires": []
-    },
-    {
-        "id": "9d2a8283dd648ea1",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "e9169bf8924b9c44",
-        "name": "Init Global Variables",
-        "rules": [
-            {
-                "t": "set",
-                "p": "serial_num",
-                "pt": "global",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 360,
-        "y": 260,
-        "wires": [
-            [
-                "279b53178650eb5c"
-            ]
-        ]
     },
     {
         "id": "4e5daabc0e18ec0a",
         "type": "subflow:906636402e88ceef",
         "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
         "name": "",
-        "x": 600,
-        "y": 1060,
+        "x": 700,
+        "y": 1280,
         "wires": [
             [
                 "3804cf6b98e51996"
@@ -3365,6 +3806,7 @@
         "id": "6e923177917d97f0",
         "type": "change",
         "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
         "name": "",
         "rules": [
             {
@@ -3380,8 +3822,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
-        "y": 1060,
+        "x": 460,
+        "y": 1280,
         "wires": [
             [
                 "4e5daabc0e18ec0a",
@@ -3393,6 +3835,7 @@
         "id": "3804cf6b98e51996",
         "type": "switch",
         "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
         "name": "Error Check",
         "property": "payload.status",
         "propertyType": "msg",
@@ -3409,11 +3852,12 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 810,
-        "y": 1060,
+        "x": 910,
+        "y": 1280,
         "wires": [
             [
-                "f47dda522486b91e"
+                "f47dda522486b91e",
+                "8b3bdf85ced5c478"
             ],
             [
                 "f47dda522486b91e"
@@ -3428,17 +3872,18 @@
         "name": "Initalize Hardware",
         "info": "- Run only once",
         "x": 310,
-        "y": 200,
+        "y": 280,
         "wires": []
     },
     {
         "id": "ff15fec5a3c32b7d",
         "type": "comment",
         "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
         "name": "Turn Power Supply On",
         "info": "",
-        "x": 300,
-        "y": 1020,
+        "x": 320,
+        "y": 1220,
         "wires": []
     },
     {
@@ -3447,11 +3892,12 @@
         "z": "8992ffe741acd3ee",
         "g": "9ca8b428dea7fd18",
         "name": "",
-        "x": 730,
-        "y": 640,
+        "x": 690,
+        "y": 780,
         "wires": [
             [
-                "6747cf5442e245fa"
+                "6747cf5442e245fa",
+                "054bca2d94bfcce7"
             ]
         ]
     },
@@ -3460,16 +3906,17 @@
         "type": "link in",
         "z": "8992ffe741acd3ee",
         "g": "9ca8b428dea7fd18",
-        "name": "Start of Test",
+        "name": "User Prompts",
         "links": [
             "0d31a03a75fe41ea"
         ],
-        "x": 255,
-        "y": 640,
+        "x": 295,
+        "y": 700,
         "wires": [
             [
                 "0eb8abe1d7b1a811",
-                "bc924e8d3a02dcc7"
+                "bc924e8d3a02dcc7",
+                "9501eeda73f64a5d"
             ]
         ]
     },
@@ -3494,7 +3941,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 640,
+        "y": 780,
         "wires": [
             [
                 "a2eaf19f6976fe76"
@@ -3506,9 +3953,9 @@
         "type": "comment",
         "z": "8992ffe741acd3ee",
         "name": "Functional Test Start",
-        "info": "- This is the start of the functional test\n- This will be run for each DUT",
-        "x": 290,
-        "y": 440,
+        "info": "- This is the start of the functional test section\n- This will be run for each DUT that is tested",
+        "x": 230,
+        "y": 520,
         "wires": []
     },
     {
@@ -3517,40 +3964,10 @@
         "z": "8992ffe741acd3ee",
         "g": "9ca8b428dea7fd18",
         "name": "Prompt User for Serial Number & DUT Install",
-        "info": "- If S/N is entered add to global.serial_num\n- If no S/N, then do not save any of the results",
+        "info": "## Serial Number Prompt\n- If S/N is entered and OK pressed add to global.serial_num\n- If no S/N and OK pressed or Cancel pressed, then do not save any of the results\n\n## Insert DUT Prompt\n- Wait for DUT to be inserted and fixture top closed before OK button is available\n- If Cancel is pressed, return to Serial Number Prompt",
         "x": 390,
-        "y": 500,
+        "y": 580,
         "wires": []
-    },
-    {
-        "id": "a6c68923990f015b",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
-        "y": 620,
-        "wires": [
-            [
-                "0eb8abe1d7b1a811",
-                "bc924e8d3a02dcc7"
-            ]
-        ]
     },
     {
         "id": "6747cf5442e245fa",
@@ -3565,40 +3982,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 920,
-        "y": 640,
+        "x": 860,
+        "y": 780,
         "wires": [
             [
-                "87334bdac62581ae",
                 "7a3360b81aa124b2"
-            ]
-        ]
-    },
-    {
-        "id": "87334bdac62581ae",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "9ca8b428dea7fd18",
-        "name": "Insert DUT Prompt",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"title\":\"Install DUT\",\"content\":\"Please Place DUT in Fixture and Close Top\",\"cancelText\":\"Cancel\",\"okText\":\"OK\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 720,
-        "wires": [
-            [
-                "1616294d41afe094"
             ]
         ]
     },
@@ -3608,8 +3996,8 @@
         "z": "8992ffe741acd3ee",
         "g": "9ca8b428dea7fd18",
         "name": "",
-        "x": 730,
-        "y": 720,
+        "x": 810,
+        "y": 1020,
         "wires": [
             [
                 "c19f93bfde420695"
@@ -3639,24 +4027,17 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 890,
-        "y": 720,
+        "x": 950,
+        "y": 1020,
         "wires": [
             [
-                "bc924e8d3a02dcc7"
+                "bc924e8d3a02dcc7",
+                "e310ecc5252cf731"
             ],
-            []
+            [
+                "222d6c7c59d982a4"
+            ]
         ]
-    },
-    {
-        "id": "22b50e417f7d93d7",
-        "type": "comment",
-        "z": "8992ffe741acd3ee",
-        "name": "Check if DUT is installed and Top is Closed",
-        "info": "",
-        "x": 360,
-        "y": 840,
-        "wires": []
     },
     {
         "id": "7a3360b81aa124b2",
@@ -3677,8 +4058,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1160,
-        "y": 640,
+        "x": 1080,
+        "y": 780,
         "wires": []
     },
     {
@@ -3694,6 +4075,13 @@
                 "pt": "msg",
                 "to": "",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "ui_update.color",
+                "pt": "msg",
+                "to": "white",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -3702,7 +4090,7 @@
         "to": "",
         "reg": false,
         "x": 500,
-        "y": 560,
+        "y": 720,
         "wires": [
             [
                 "583f7d769b0d91f3"
@@ -3719,8 +4107,8 @@
         "links": [
             "18f697e53c4d2658"
         ],
-        "x": 615,
-        "y": 560,
+        "x": 605,
+        "y": 720,
         "wires": []
     },
     {
@@ -3732,11 +4120,13 @@
         "links": [
             "583f7d769b0d91f3"
         ],
-        "x": 1095,
-        "y": 580,
+        "x": 1015,
+        "y": 720,
         "wires": [
             [
-                "7a3360b81aa124b2"
+                "7a3360b81aa124b2",
+                "b619d22d8d2a7fdf",
+                "c4a40f0420a1280b"
             ]
         ]
     },
@@ -3750,34 +4140,405 @@
         "links": [
             "667c2b56633a8e0c"
         ],
-        "x": 745,
-        "y": 240,
+        "x": 475,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "d54e1994ddaae467",
-        "type": "ui-template",
+        "id": "fd22439395f13765",
+        "type": "subflow:33f423e5b98c6025",
         "z": "8992ffe741acd3ee",
         "g": "e9169bf8924b9c44",
-        "group": "326aba1ddf33faae",
-        "page": "",
-        "ui": "",
-        "name": "Info Dialog",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div class=\"text-center pa-4\">\n        <v-dialog\n            v-model=\"dialog\"\n            width=\"auto\"\n            persistent\n        >\n            <v-list\n                class=\"py-2\"\n                color=\"primary\"\n                elevation=\"12\"\n                rounded=\"lg\"\n            >\n                <v-list-item>\n                    <template v-slot:prepend>\n                        <div class=\"pe-4\">\n                            <v-icon :color=\"dialogData.icon_color\" size=\"x-large\">\n                                {{ dialogData.icon }}\n                            </v-icon>\n                        </div>\n                    </template>\n                    <v-list-item-title class=\"text-wrap\">\n                        {{ dialogData.title }}\n                    </v-list-item-title>\n                    <v-list-item-subtitle class=\"text-wrap\">\n                        {{ dialogData.text}}\n                    </v-list-item-subtitle>\n                    <template v-slot:append>\n                        <v-progress-circular\n                            v-if=\"dialogData.spinner\"\n                            :color=\"dialogData.icon_color\"\n                            indeterminate=\"disable-shrink\"\n                            size=\"16\"\n                            width=\"2\"\n                        ></v-progress-circular>\n                        <v-icon v-else @click=dialogClose>mdi-close</v-icon> \n                    </template>\n                </v-list-item>\n            </v-list>\n        </v-dialog>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                dialogData:null,\n                dialog: false\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            msg: function() {\n                console.log(\"Hey Bryan\")\n                this.dialogData = this.msg.payload\n                this.dialog = this.dialogData.shown\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            title: function() {\n                return this.dialogData?.title ?? \"Default Title\"\n            },\n\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            dialogClose: function() {\n                this.dialog = false\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n.text-wrap {\n    white-space: normal;\n    work-break: break-word;\n}\n</style>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 790,
-        "y": 280,
+        "name": "",
+        "x": 520,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "92eb11b45c1b7001",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "DUT Installed & Fixture Closed",
+        "func": "let dut_installed = global.get(\"daq.dut_installed\");\nlet fixture_closed = global.get(\"daq.fixture_closed\")\n\n// dut_installed = true if PCB is installed\n// fuxture_closed = true if Fixture Lid is Closed\n\nif(dut_installed && fixture_closed) {\n    msg.payload = {\n        \"title\": \"Start Test\",\n        \"content\": \"Please Place DUT in Fixture and Close\",\n        \"cancelText\": \"Cancel\",\n        \"okText\": \"Start\",\n        \"okDisabled\": false\n    }\n} else {\n    msg.payload = {\n        \"title\": \"Start Test\",\n        \"content\": \"Please Place DUT in Fixture and Close\",\n        \"cancelText\": \"Cancel\",\n        \"okText\": \"Start\",\n        \"okDisabled\": true\n    }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 1020,
+        "wires": [
+            [
+                "1616294d41afe094",
+                "1c6272ffdd8bc834",
+                "ae84df597b55b588",
+                "1af98347886983f0"
+            ]
+        ]
+    },
+    {
+        "id": "bf51a932ed543437",
+        "type": "subflow:edd8667f264d5ce9",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "",
+        "x": 530,
+        "y": 880,
+        "wires": [
+            [
+                "92eb11b45c1b7001"
+            ]
+        ]
+    },
+    {
+        "id": "76802a8fedd4f0b6",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 1080,
+        "wires": [
+            [
+                "bf51a932ed543437"
+            ]
+        ]
+    },
+    {
+        "id": "1c6272ffdd8bc834",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "Trigger Delay?",
+        "func": "if (msg.payload.okDisabled) {\n    msg.payload = \"port_e\";\n} else {\n    msg = null;\n}\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1080,
+        "wires": [
+            [
+                "76802a8fedd4f0b6"
+            ]
+        ]
+    },
+    {
+        "id": "054bca2d94bfcce7",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "port_e",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 880,
+        "wires": [
+            [
+                "bf51a932ed543437"
+            ]
+        ]
+    },
+    {
+        "id": "e310ecc5252cf731",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "Reset Timer",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1010,
+        "y": 1080,
+        "wires": [
+            [
+                "76802a8fedd4f0b6"
+            ]
+        ]
+    },
+    {
+        "id": "222d6c7c59d982a4",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "DUT Installed",
+        "mode": "link",
+        "links": [],
+        "x": 1115,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "576e8a1952ca2bc9",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Test Setup",
+        "info": "",
+        "x": 200,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9501eeda73f64a5d",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "Init Global Variables",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serial_num",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "daq.fixture_closed",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "daq.dut_installed",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 660,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "0f8cb77f96cd9e85",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
+        "name": "Voltage Test Start",
+        "links": [],
+        "x": 315,
+        "y": 1280,
+        "wires": [
+            [
+                "6e923177917d97f0"
+            ]
+        ]
+    },
+    {
+        "id": "b619d22d8d2a7fdf",
+        "type": "ui-text",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "group": "a7ac5c1b1bab6543",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DUT Installed:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1080,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c4a40f0420a1280b",
+        "type": "ui-text",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "group": "a7ac5c1b1bab6543",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fixture Closed:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1080,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "e5819edc533305a7",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 700,
+        "wires": [
+            [
+                "9501eeda73f64a5d",
+                "0eb8abe1d7b1a811",
+                "bc924e8d3a02dcc7"
+            ]
+        ]
+    },
+    {
+        "id": "ae84df597b55b588",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "DUT Message",
+        "func": "msg.ui_update = {}\n\nlet dut_status = global.get(\"daq.dut_installed\")\n\nif(dut_status == true) {\n    msg.payload = \"Installed\"\n    msg.ui_update.color = \"green\"\n} else {\n    msg.payload = \"Missing\"\n    msg.ui_update.color = \"red\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 880,
+        "wires": [
+            [
+                "b619d22d8d2a7fdf"
+            ]
+        ]
+    },
+    {
+        "id": "1af98347886983f0",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "9ca8b428dea7fd18",
+        "name": "Fixture State",
+        "func": "msg.ui_update = {}\n\nlet dut_status = global.get(\"daq.fixture_closed\")\n\nif (dut_status == true) {\n    msg.payload = \"Closed\"\n    msg.ui_update.color = \"green\"\n} else {\n    msg.payload = \"Open\"\n    msg.ui_update.color = \"red\"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 940,
+        "wires": [
+            [
+                "c4a40f0420a1280b"
+            ]
+        ]
+    },
+    {
+        "id": "af2be3d90fd20d3d",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
+        "name": "Note: Finish Error Checking",
+        "info": "",
+        "x": 780,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8b3bdf85ced5c478",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "0d6bb2dbdb92ed77"
+        ],
+        "x": 1025,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "0d6bb2dbdb92ed77",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "name": "link in 3",
+        "links": [
+            "8b3bdf85ced5c478"
+        ],
+        "x": 265,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa871332bbbed41a",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Measure Voltage",
+        "info": "",
+        "x": 320,
+        "y": 1500,
+        "wires": []
     },
     {
         "id": "63b8c36bcb47dde8",
@@ -8326,6 +9087,190 @@
             [
                 "2d44c7d1f601f9f7",
                 "ddba47476983fd4b"
+            ]
+        ]
+    },
+    {
+        "id": "5c86395705c437c1",
+        "type": "subflow:906636402e88ceef",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "",
+        "x": 860,
+        "y": 200,
+        "wires": [
+            [
+                "2b4805e476669b69"
+            ]
+        ]
+    },
+    {
+        "id": "b247b982a05aadba",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"access\":\"write\",\"command\":\"ch1_on\",\"channel\":1}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "5c86395705c437c1"
+            ]
+        ]
+    },
+    {
+        "id": "2b4805e476669b69",
+        "type": "switch",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "Error Check",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "success",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1070,
+        "y": 200,
+        "wires": [
+            [
+                "8157a954d98524d1"
+            ],
+            [
+                "8157a954d98524d1"
+            ]
+        ]
+    },
+    {
+        "id": "78437d10aeae8887",
+        "type": "ui-switch",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "",
+        "label": "Power Ch1",
+        "group": "7aa38326e518e47f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-spread",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "1bcb1bc8ee4c143e"
+            ]
+        ]
+    },
+    {
+        "id": "8157a954d98524d1",
+        "type": "debug",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1bcb1bc8ee4c143e",
+        "type": "switch",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 200,
+        "wires": [
+            [
+                "b247b982a05aadba"
+            ],
+            [
+                "a3e6fd84aad7e140"
+            ]
+        ]
+    },
+    {
+        "id": "a3e6fd84aad7e140",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "g": "bebea141a7deaa03",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"access\":\"write\",\"command\":\"ch1_off\",\"channel\":1}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 220,
+        "wires": [
+            [
+                "5c86395705c437c1"
             ]
         ]
     }
