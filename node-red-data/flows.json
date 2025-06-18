@@ -595,21 +595,58 @@
         "category": "",
         "in": [
             {
-                "x": 300,
+                "x": 140,
                 "y": 320,
-                "wires": []
+                "wires": [
+                    {
+                        "id": "11656e7353653493"
+                    }
+                ]
             }
         ],
         "out": [
             {
-                "x": 1140,
-                "y": 260,
-                "wires": []
-            },
+                "x": 940,
+                "y": 320,
+                "wires": [
+                    {
+                        "id": "11656e7353653493",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6dada49096c48101",
+        "type": "subflow",
+        "name": "Test Result Template",
+        "info": "",
+        "category": "",
+        "in": [
             {
-                "x": 1140,
-                "y": 380,
-                "wires": []
+                "x": 480,
+                "y": 420,
+                "wires": [
+                    {
+                        "id": "71a5cbc0781682f1"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 900,
+                "y": 420,
+                "wires": [
+                    {
+                        "id": "71a5cbc0781682f1",
+                        "port": 0
+                    }
+                ]
             }
         ],
         "env": [],
@@ -850,19 +887,20 @@
             "label": true
         },
         "nodes": [
-            "f47dda522486b91e",
             "4e5daabc0e18ec0a",
             "6e923177917d97f0",
             "3804cf6b98e51996",
             "ff15fec5a3c32b7d",
             "0f8cb77f96cd9e85",
             "af2be3d90fd20d3d",
-            "8b3bdf85ced5c478"
+            "8b3bdf85ced5c478",
+            "0a440468c3df5460",
+            "1758bfd8feee78e6"
         ],
         "x": 194,
-        "y": 1179,
-        "w": 912,
-        "h": 242
+        "y": 1159,
+        "w": 812,
+        "h": 202
     },
     {
         "id": "bebea141a7deaa03",
@@ -915,6 +953,56 @@
         "y": 1619,
         "w": 1252,
         "h": 142
+    },
+    {
+        "id": "911968d6966da0cc",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "a55288c4518f4621",
+            "27b33091f3e41e8f",
+            "e37b01e2c04fef8b",
+            "eec540f6dc3ecff8",
+            "0f367029b3ce9e8f",
+            "e9c57e196071e53c",
+            "1413586a46a136da",
+            "07bd5c8fee381059",
+            "1f360a3090b29d0c"
+        ],
+        "x": 814,
+        "y": 219,
+        "w": 792,
+        "h": 222
+    },
+    {
+        "id": "99fddf99c756b027",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "aa871332bbbed41a",
+            "43c9f5608fb24506",
+            "e983ec668fa47ee7",
+            "4224953e4ff2fe96",
+            "71ced5ee6880c833",
+            "6d021a84f1941c6e",
+            "498d78dce13e9db2",
+            "99d955b9e3f92199",
+            "65cf39effb40c29b"
+        ],
+        "x": 194,
+        "y": 1559,
+        "w": 802,
+        "h": 342
     },
     {
         "id": "6224f3394241d463",
@@ -1371,7 +1459,7 @@
         "name": "Test Flow",
         "page": "175e02ddacbebce0",
         "width": "2",
-        "height": "1",
+        "height": "13",
         "order": 2,
         "showTitle": true,
         "className": "",
@@ -3527,7 +3615,7 @@
         "page": "",
         "ui": "",
         "name": "Dialog Pop-Up",
-        "order": 1,
+        "order": 10,
         "width": 0,
         "height": 0,
         "head": "",
@@ -3551,7 +3639,7 @@
         "page": "",
         "ui": "",
         "name": "Info Dialog",
-        "order": 2,
+        "order": 11,
         "width": 0,
         "height": 0,
         "head": "",
@@ -3618,12 +3706,14 @@
         "id": "d9c96a11645e716d",
         "type": "debug",
         "z": "edd8667f264d5ce9",
+        "d": true,
         "name": "debug 16",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 800,
@@ -3799,6 +3889,120 @@
         "wires": []
     },
     {
+        "id": "11656e7353653493",
+        "type": "function",
+        "z": "78b5cecde0aff5c6",
+        "name": "Voltage Test",
+        "func": "let flowEnabled = global.get(\"flowCfg.\" + msg.payload.ain);     // Test Enabled?\n\nlet vMax = global.get(\"measurements.\" + msg.payload.ain + \"_max\");  // Get measured max voltage\nlet vMin = global.get(\"measurements.\" + msg.payload.ain + \"_min\");  // Get measured min voltage\n\nlet vMaxLimit = global.get(\"parameters.\" + msg.payload.ain + \"_max\");   // Get max voltage limit\nlet vMinLimit = global.get(\"parameters.\" + msg.payload.ain + \"_min\");   // Get min voltage limit\n\n// Check if test is enabled\nif(flowEnabled == true) {\n    if(vMax > vMaxLimit) {              // Voltage too HIGH\n        node.warn(\"Super Cap Voltage too high\");\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : vMax,\n            \"limit\" : vMaxLimit,\n            \"error\" : \"Voltage Too High\"\n        }\n    } else if (vMin < vMinLimit) {      // Voltage too LOW\n        node.warn(\"Super Cap Voltage too low\");\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : vMin,\n            \"limit\" : vMinLimit,\n            \"error\" : \"Voltage Too Low\"\n        }\n    } else {                            // Voltage just right\n        node.warn(\"Super Cap Voltage is just right\");\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Passed\"\n        }\n    }\n} else {                                // Test Skipped\n    msg.payload = {\n        \"name\" : msg.payload.name,\n        \"result\" : \"Skipped\"\n    };\n}\n\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "ebaa225d8f5a2880"
+            ]
+        ],
+        "outputLabels": [
+            "Continue"
+        ]
+    },
+    {
+        "id": "ebaa225d8f5a2880",
+        "type": "debug",
+        "z": "78b5cecde0aff5c6",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "dd46f8a1165b0fbb",
+        "type": "ui-template",
+        "z": "6dada49096c48101",
+        "d": true,
+        "group": "326aba1ddf33faae",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <span>{{ msg.payload.name }}</span>\n        <v-tooltip location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip v-if=\"failed\" v-bind=\"props\" color=\"red\" text-color=\"white\" variant=\"flat\" pill style=\"width: 100px; justify-content: center;\">\n                Failed\n                </v-chip>\n                <v-chip v-else-if=\"passed\" v-bind=\"props\" color=\"green\" text-color=\"white\" variant=\"flat\" pill style=\"width: 100px; justify-content: center;\">\n                Passed\n                </v-chip>\n                <v-chip v-if=\"skipped\" v-bind=\"props\" color=\"gray\" text-color=\"white\" variant=\"flat\" pill style=\"width: 100px; justify-content: center;\">\n                Skipped\n                </v-chip>\n            </template>\n            <!-- <h3>Voltage Too High</h3> -->\n            <h3 v-if=\"failed\">{{ msg.payload.error }}\n            <p style=\"color: gray\">Measured: 16.2VDC</p>\n            <span>Max Limit: 13.2VDC</span>\n        </v-tooltip>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n            }\n        },\n        watch: {\n            // watch for any changes\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            failed: function () {\n                if(this.msg.payload.result == \"Failed\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            },\n            passed: function () {\n                if(this.msg.payload.result == \"Passed\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            },\n            skipped: function () {\n                if(this.msg.payload.result == \"Skipped\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .span {\n        color: gray;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8240a27d57e0c4b",
+        "type": "ui-template",
+        "z": "6dada49096c48101",
+        "d": true,
+        "group": "326aba1ddf33faae",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div style=\"display: flex; flex-direction: column; gap: 4px;\">\n    <div v-if=\"passed\" style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <span>{{ msg.payload.name }}</span>\n        <v-chip variant=\"flat\" color=\"green\" text-color=\"white\" pill style=\"width: 100px; justify-content: center\">\n            Passed\n        </v-chip>\n    </div>\n    <div v-if=\"failed\" style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <span>{{ msg.payload.name }}</span>\n        <v-tooltip location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip v-if=\"failed\" v-bind=\"props\" color=\"red\" text-color=\"white\" variant=\"flat\" pill\n                    style=\"width: 100px; justify-content: center;\">\n                    Failed\n                </v-chip>\n            </template>\n            <h3 v-if=\"failed\">{{ msg.payload.error }}\n                <p>Measured: {{ msg.payload.measured }}VDC</p>\n                <span>Max Limit: {{ msg.payload.limit }}VDC</span>\n        </v-tooltip>\n    </div>\n    <div v-if=\"skipped\" style=\"display: flex; justify-content: space-between; align-items: center;\">\n        <span>{{ msg.payload.name }}</span>\n        <v-chip variant=\"flat\" color=\"gray\" text-color=\"white\" pill style=\"width: 100px; justify-content: center\">\n            Skipped\n        </v-chip>\n    </div>\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n            }\n        },\n        watch: {\n            // watch for any changes\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            failed: function () {\n                if(this.msg.payload.result == \"Failed\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            },\n            passed: function () {\n                if(this.msg.payload.result == \"Passed\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            },\n            skipped: function () {\n                if(this.msg.payload.result == \"Skipped\") {\n                    return true;\n                } else {\n                    return false;\n                }\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .span {\n        color: gray;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71a5cbc0781682f1",
+        "type": "ui-template",
+        "z": "6dada49096c48101",
+        "group": "326aba1ddf33faae",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n  <v-virtual-scroll :items=\"items\" height=\"600\">\n    <template v-slot:default=\"{ item }\">\n      <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px;\">\n        <span>{{ item.name }} Test:</span>\n        <v-tooltip :disabled=\"!item.showToolTip\" location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip \n                    v-bind=\"props\"\n                    variant=\"flat\"\n                    :color=\"item.color\" \n                    text-color=\"white\" \n                    pill\n                    style=\"width: 80px; justify-content: center\">\n                {{ item.result }}\n                </v-chip>\n            </template>\n            <h3>{{ item.error }}</h3>\n            <p>Measured: {{ item.measured }}VDC</p>\n            <span>Max Limit: {{ item.limit }}VDC</span>\n        </v-tooltip>\n      </div>\n    </template>\n  </v-virtual-scroll>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                items: []\n            }\n        },\n        watch: {\n            // watch for any changes\n            msg: function () {\n                if(this.msg.payload == \"\") {\n                    this.items = [];\n                } else if(this.msg.payload.result == \"Passed\") {\n                    this.msg.payload.color = \"green\";\n                    this.msg.payload.showToolTip = false;\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Failed\") {\n                    this.msg.payload.color = \"red\";\n                    this.msg.payload.showToolTip = true\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Skipped\") {\n                    this.msg.payload.color = \"gray\";\n                    this.msg.payload.showToolTip = false\n                    this.items.push(this.msg.payload);\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "96e2f4ba53b1116c",
         "type": "inject",
         "z": "8992ffe741acd3ee",
@@ -3861,30 +4065,13 @@
         ]
     },
     {
-        "id": "f47dda522486b91e",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "g": "aa394877794572d2",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 1380,
-        "wires": []
-    },
-    {
         "id": "4e5daabc0e18ec0a",
         "type": "subflow:906636402e88ceef",
         "z": "8992ffe741acd3ee",
         "g": "aa394877794572d2",
         "name": "",
-        "x": 700,
-        "y": 1280,
+        "x": 780,
+        "y": 1260,
         "wires": [
             [
                 "3804cf6b98e51996"
@@ -3911,12 +4098,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 1280,
+        "x": 520,
+        "y": 1240,
         "wires": [
             [
-                "4e5daabc0e18ec0a",
-                "f47dda522486b91e"
+                "4e5daabc0e18ec0a"
             ]
         ]
     },
@@ -3941,16 +4127,13 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 910,
-        "y": 1280,
+        "x": 790,
+        "y": 1320,
         "wires": [
             [
-                "f47dda522486b91e",
                 "8b3bdf85ced5c478"
             ],
-            [
-                "f47dda522486b91e"
-            ]
+            []
         ]
     },
     {
@@ -3969,10 +4152,10 @@
         "type": "comment",
         "z": "8992ffe741acd3ee",
         "g": "aa394877794572d2",
-        "name": "Turn Power Supply On",
+        "name": "Turn Power Supply On / Off",
         "info": "",
-        "x": 320,
-        "y": 1220,
+        "x": 340,
+        "y": 1200,
         "wires": []
     },
     {
@@ -3997,7 +4180,8 @@
         "g": "9ca8b428dea7fd18",
         "name": "User Prompts",
         "links": [
-            "0d31a03a75fe41ea"
+            "0d31a03a75fe41ea",
+            "07bd5c8fee381059"
         ],
         "x": 295,
         "y": 700,
@@ -4164,13 +4348,6 @@
                 "pt": "msg",
                 "to": "",
                 "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "ui_update.color",
-                "pt": "msg",
-                "to": "white",
-                "tot": "str"
             }
         ],
         "action": "",
@@ -4194,9 +4371,11 @@
         "name": "Clear UI",
         "mode": "link",
         "links": [
-            "18f697e53c4d2658"
+            "18f697e53c4d2658",
+            "17a876359040a111",
+            "d60ae9b1f9631f27"
         ],
-        "x": 605,
+        "x": 615,
         "y": 720,
         "wires": []
     },
@@ -4391,8 +4570,10 @@
         "g": "9ca8b428dea7fd18",
         "name": "DUT Installed",
         "mode": "link",
-        "links": [],
-        "x": 1115,
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 1095,
         "y": 1020,
         "wires": []
     },
@@ -4447,6 +4628,13 @@
                 "pt": "global",
                 "to": "100",
                 "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -4466,12 +4654,14 @@
         "z": "8992ffe741acd3ee",
         "g": "aa394877794572d2",
         "name": "Voltage Test Start",
-        "links": [],
-        "x": 315,
-        "y": 1280,
+        "links": [
+            "1413586a46a136da"
+        ],
+        "x": 245,
+        "y": 1260,
         "wires": [
             [
-                "6e923177917d97f0"
+                "1758bfd8feee78e6"
             ]
         ]
     },
@@ -4602,7 +4792,7 @@
         "name": "Note: Finish Error Checking",
         "info": "",
         "x": 780,
-        "y": 1220,
+        "y": 1200,
         "wires": []
     },
     {
@@ -4615,8 +4805,8 @@
         "links": [
             "0d6bb2dbdb92ed77"
         ],
-        "x": 1025,
-        "y": 1240,
+        "x": 965,
+        "y": 1320,
         "wires": []
     },
     {
@@ -4627,8 +4817,8 @@
         "links": [
             "8b3bdf85ced5c478"
         ],
-        "x": 265,
-        "y": 1580,
+        "x": 245,
+        "y": 1440,
         "wires": [
             [
                 "d9cfc8a7fee862eb"
@@ -4639,55 +4829,11 @@
         "id": "aa871332bbbed41a",
         "type": "comment",
         "z": "8992ffe741acd3ee",
-        "name": "Measure Voltage",
+        "g": "99fddf99c756b027",
+        "name": "Power Supply Voltage Tests",
         "info": "",
-        "x": 320,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "2bc1296c550ef338",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 280,
-        "y": 1900,
-        "wires": [
-            [
-                "43c9f5608fb24506"
-            ]
-        ]
-    },
-    {
-        "id": "48b3e7a5b430f047",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "name": "debug 18",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 920,
-        "y": 1900,
+        "x": 340,
+        "y": 1600,
         "wires": []
     },
     {
@@ -4712,11 +4858,11 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 320,
+        "x": 300,
         "y": 620,
         "wires": [
             [
-                "9501eeda73f64a5d"
+                "0eb8abe1d7b1a811"
             ]
         ]
     },
@@ -4785,15 +4931,15 @@
         "id": "43c9f5608fb24506",
         "type": "subflow:78b5cecde0aff5c6",
         "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
         "name": "",
-        "x": 570,
-        "y": 1900,
+        "x": 530,
+        "y": 1720,
         "wires": [
             [
-                "48b3e7a5b430f047"
-            ],
-            [
-                "48b3e7a5b430f047"
+                "498d78dce13e9db2",
+                "99d955b9e3f92199",
+                "65cf39effb40c29b"
             ]
         ]
     },
@@ -4803,7 +4949,7 @@
         "z": "8992ffe741acd3ee",
         "name": "PCB Boot Delay",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "2",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -4814,16 +4960,20 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 420,
-        "y": 1580,
+        "x": 400,
+        "y": 1440,
         "wires": [
-            []
-        ]
+            [
+                "0d9ec407d337f240"
+            ]
+        ],
+        "info": "Give the PCB time to boot and the voltages to level out.\r\n"
     },
     {
         "id": "a55288c4518f4621",
         "type": "ui-button",
         "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
         "group": "a7ac5c1b1bab6543",
         "name": "",
         "label": "Start",
@@ -4837,7 +4987,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "",
+        "payload": "running",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
@@ -4851,16 +5001,20 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1330,
-        "y": 280,
+        "x": 1190,
+        "y": 320,
         "wires": [
-            []
+            [
+                "e9c57e196071e53c",
+                "9938caaff02bf284"
+            ]
         ]
     },
     {
         "id": "27b33091f3e41e8f",
         "type": "ui-button",
         "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
         "group": "a7ac5c1b1bab6543",
         "name": "",
         "label": "Stop",
@@ -4874,7 +5028,7 @@
         "className": "",
         "icon": "",
         "iconPosition": "left",
-        "payload": "",
+        "payload": "stopped",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
@@ -4888,16 +5042,20 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1330,
-        "y": 320,
+        "x": 1190,
+        "y": 360,
         "wires": [
-            []
+            [
+                "e9c57e196071e53c",
+                "9938caaff02bf284"
+            ]
         ]
     },
     {
         "id": "e37b01e2c04fef8b",
         "type": "ui-button",
         "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
         "group": "a7ac5c1b1bab6543",
         "name": "",
         "label": "Reset",
@@ -4925,47 +5083,266 @@
         "enablePointerup": false,
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
-        "x": 1330,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ae1cc8bb3ec8ff26",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "enabled",
-                "v": "false",
-                "vt": "bool"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 930,
-        "y": 280,
+        "x": 1190,
+        "y": 400,
         "wires": [
             [
-                "a55288c4518f4621"
+                "07bd5c8fee381059"
             ]
         ]
     },
     {
-        "id": "606e29c36efa9a35",
+        "id": "eec540f6dc3ecff8",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "function 8",
+        "func": "let testState = global.get(\"test.state\");\nlet startEnableMsg = false;\nlet stopEnableMsg = false;\nlet resetEnableMsg = false;\n\nif (testState == \"running\") {\n    startEnableMsg = { \"enabled\": false };\n    stopEnableMsg = { \"enabled\": true };\n    resetEnableMsg = { \"enabled\": false };\n}\nelse if(testState == \"stopped\") {\n    startEnableMsg = { \"enabled\" : true };\n    stopEnableMsg = { \"enabled\" : false };\n    resetEnableMsg = { \"enabled\" : true };\n}\nreturn [startEnableMsg, stopEnableMsg, resetEnableMsg];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 360,
+        "wires": [
+            [
+                "a55288c4518f4621"
+            ],
+            [
+                "27b33091f3e41e8f"
+            ],
+            [
+                "e37b01e2c04fef8b"
+            ]
+        ]
+    },
+    {
+        "id": "0f367029b3ce9e8f",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "link in 4",
+        "links": [
+            "222d6c7c59d982a4",
+            "1413586a46a136da"
+        ],
+        "x": 855,
+        "y": 360,
+        "wires": [
+            [
+                "eec540f6dc3ecff8"
+            ]
+        ]
+    },
+    {
+        "id": "9938caaff02bf284",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e9c57e196071e53c",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 320,
+        "wires": [
+            [
+                "1413586a46a136da"
+            ]
+        ]
+    },
+    {
+        "id": "1413586a46a136da",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f",
+            "0f8cb77f96cd9e85"
+        ],
+        "x": 1565,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "0a440468c3df5460",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"access\":\"write\",\"command\":\"ch1_off\",\"channel\":1}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 1280,
+        "wires": [
+            [
+                "4e5daabc0e18ec0a"
+            ]
+        ]
+    },
+    {
+        "id": "1758bfd8feee78e6",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "aa394877794572d2",
+        "name": "",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 1260,
+        "wires": [
+            [
+                "6e923177917d97f0"
+            ],
+            [
+                "0a440468c3df5460"
+            ]
+        ]
+    },
+    {
+        "id": "07bd5c8fee381059",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "667c2b56633a8e0c"
+        ],
+        "x": 1305,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1f360a3090b29d0c",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "Start / Stop / Reset Logic",
+        "info": "",
+        "x": 970,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e983ec668fa47ee7",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 1660,
+        "wires": [
+            [
+                "4224953e4ff2fe96"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "0d9ec407d337f240",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Clear All Min/Max",
+        "func": "let ainList = global.get(\"admin.labjack.ain\");\n\n// Grab all of the AIN values\nconst values = Object.values(ainList);\n\nmsg.payload = values;\n\n// Loop through each value and set the _max / _min to default values\nfor (const value of values) {\n    let maxStr = \"measurements.\" + value + \"_max\";\n    let minStr = \"measurements.\" + value + \"_min\";\n\n    global.set(maxStr, 0);\n    global.set(minStr, 100);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1440,
+        "wires": [
+            [
+                "0aba180fabae6c9f"
+            ]
+        ]
+    },
+    {
+        "id": "3c840d94ca30c5af",
         "type": "inject",
         "z": "8992ffe741acd3ee",
         "name": "",
         "props": [
             {
-                "p": "enabled",
-                "v": "true",
-                "vt": "bool"
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -4973,11 +5350,264 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 930,
-        "y": 320,
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 1500,
         "wires": [
             [
-                "a55288c4518f4621"
+                "0d9ec407d337f240"
+            ]
+        ]
+    },
+    {
+        "id": "fc25baf2b3166174",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "I think I will only need to do this once at the start of the test.",
+        "info": "",
+        "x": 510,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "4224953e4ff2fe96",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "Super Cap",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Super Cap\",\"ain\":\"super_cap\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 1720,
+        "wires": [
+            [
+                "43c9f5608fb24506"
+            ]
+        ]
+    },
+    {
+        "id": "0aba180fabae6c9f",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 1440,
+        "wires": [
+            [
+                "e983ec668fa47ee7"
+            ]
+        ]
+    },
+    {
+        "id": "71ced5ee6880c833",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "5VDC",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"5VDC\",\"ain\":\"5vdc\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 1840,
+        "wires": [
+            [
+                "6d021a84f1941c6e"
+            ]
+        ]
+    },
+    {
+        "id": "6d021a84f1941c6e",
+        "type": "subflow:78b5cecde0aff5c6",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "",
+        "x": 530,
+        "y": 1840,
+        "wires": [
+            [
+                "99d955b9e3f92199",
+                "65cf39effb40c29b"
+            ]
+        ]
+    },
+    {
+        "id": "498d78dce13e9db2",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 1780,
+        "wires": [
+            [
+                "71ced5ee6880c833"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9615741ec2fe70a0",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Flash Test Code",
+        "info": "",
+        "x": 220,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "f99fb86d11a437d5",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Door Relay Tests",
+        "info": "",
+        "x": 220,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "1b335fc98a0327be",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Input Tests",
+        "info": "",
+        "x": 200,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "cee46c5f4bd687c2",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Reader Tests",
+        "info": "",
+        "x": 210,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "99d955b9e3f92199",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "debug 21",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "cbf269f9255d29df",
+        "type": "subflow:6dada49096c48101",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "x": 1250,
+        "y": 1740,
+        "wires": [
+            []
+        ],
+        "icon": "font-awesome/fa-tv"
+    },
+    {
+        "id": "d60ae9b1f9631f27",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "name": "link in 6",
+        "links": [
+            "583f7d769b0d91f3"
+        ],
+        "x": 1115,
+        "y": 1680,
+        "wires": [
+            [
+                "cbf269f9255d29df"
+            ]
+        ]
+    },
+    {
+        "id": "65cf39effb40c29b",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "Voltage Test Result",
+        "mode": "link",
+        "links": [
+            "7b1e1beb670237f3"
+        ],
+        "x": 755,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "7b1e1beb670237f3",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "name": "Test Result In",
+        "links": [
+            "65cf39effb40c29b"
+        ],
+        "x": 1115,
+        "y": 1800,
+        "wires": [
+            [
+                "cbf269f9255d29df"
             ]
         ]
     },
@@ -5019,13 +5649,29 @@
                 "type": "number",
                 "required": true,
                 "rows": null
+            },
+            {
+                "label": "Super Cap Max",
+                "key": "super_cap_max",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Super Cap Min",
+                "key": "super_cap_min",
+                "type": "number",
+                "required": true,
+                "rows": null
             }
         ],
         "formValue": {
             "24vmax": "",
             "24vmin": "",
             "12vmax": "",
-            "12vmin": ""
+            "12vmin": "",
+            "super_cap_max": "",
+            "super_cap_min": ""
         },
         "payload": "",
         "submit": "Save",
@@ -5176,32 +5822,32 @@
         "label": "",
         "order": 2,
         "width": "2",
-        "height": "9",
+        "height": 10,
         "options": [
             {
                 "label": "Fixture 24V Test",
-                "key": "fixture_24v_test",
+                "key": "vin",
                 "type": "checkbox",
                 "required": false,
                 "rows": null
             },
             {
                 "label": "12V Supply Test",
-                "key": "12v_supply_test",
+                "key": "12vdc",
                 "type": "checkbox",
                 "required": false,
                 "rows": null
             },
             {
                 "label": "5V Supply Test",
-                "key": "5v_supply_test",
+                "key": "5vdc",
                 "type": "checkbox",
                 "required": false,
                 "rows": null
             },
             {
                 "label": "3.3V Supply Test",
-                "key": "3v3_supply_test",
+                "key": "3v3dc",
                 "type": "checkbox",
                 "required": false,
                 "rows": null
@@ -5250,10 +5896,10 @@
             }
         ],
         "formValue": {
-            "fixture_24v_test": false,
-            "12v_supply_test": false,
-            "5v_supply_test": false,
-            "3v3_supply_test": false,
+            "vin": false,
+            "12vdc": false,
+            "5vdc": false,
+            "3v3dc": false,
             "super_cap": false,
             "fw_version": false,
             "d1_relay": false,
@@ -9351,6 +9997,51 @@
         "x": 750,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "c27a6faf316e1952",
+        "type": "inject",
+        "z": "7921f5df104fbd3f",
+        "name": "",
+        "props": [
+            {
+                "p": "ui_update",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 730,
+        "y": 540,
+        "wires": [
+            [
+                "8bb4af7585672f39"
+            ]
+        ]
+    },
+    {
+        "id": "8bb4af7585672f39",
+        "type": "function",
+        "z": "7921f5df104fbd3f",
+        "name": "function 9",
+        "func": "let max = global.get(\"parameters.super_cap_max\");\nlet min = global.get(\"parameters.super_cap_min\");\n\nmsg.ui_update = {\n    segments: [\n        {color: \"red\", from: 0},\n        {color: \"green\", from: min},\n        {color: \"red\", from: max}\n    ]\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 540,
+        "wires": [
+            [
+                "766904599c34605b"
+            ]
+        ]
     },
     {
         "id": "390b7cc1f06eaedc",
