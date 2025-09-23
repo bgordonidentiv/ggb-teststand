@@ -1,5 +1,8 @@
 # ggb-teststand
 
+## Node-Red
+1. After cloning the repository, change to the node-red-data directory and run npm install.
+
 ## STM32 Cube Programmer Container
 ### stm32\_flash\_cli
 
