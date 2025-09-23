@@ -5,6 +5,12 @@ services:
       - 1880:1880
     volumes:
       - ./node-red-data:/data
+      - ./node-red-data/flash_files:/data/flash_files
+      - /dev:/dev
+      - /shared_data:/shared_data
+    devices:
+      - /dev:/dev
+    privileged: true
 
   # Using mongdb version 4.4.29 so that it will run without a CPU that does not support AVX 
   mongodb:
@@ -16,27 +22,33 @@ services:
         #- MONGO_INITDB_ROOT_PASSWORD: ""
     volumes:
       - ./mongodb_data:/data/db
+      - /shared_data:/shared_data
 
   mongo-express:
     image: mongo-express
     ports:
       - 8081:8081
     environment:
-        #ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-        #ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      #ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      #ME_CONFIG_MONGODB_ADMINPASSWORD: password
       ME_CONFIG_MONGODB_SERVER: mongodb
     depends_on:
       - mongodb
 
   stm32_flash_api:
     #    image: stm32_flash_api:v0.3
-    image: stm32_flash_api:2.2
+    image: stm32_flash_api:1.3
     ports:
       - 5000:5000
       - 5001:5001
     volumes:
-      - ./stm32-data:/home/ubuntu
+      #- ./stm32-data:/home/ubuntu
+      - ./node-red-data/flash_files:/home/ubuntu
       - /dev:/dev
+      - /shared_data:/shared_data
     devices:
       - /dev:/dev
-    privileged: true    #added to allow access to USB connected devices
+    privileged: true #added to allow access to USB connected devices
+
+volumes:
+  shared_data:

@@ -19,11 +19,48 @@ import subprocess
 import pyvisa 
 import time
 import re
-from flask import Flask, jsonify, request
+import os
+from flask import Flask, jsonify, request, render_template, redirect, url_for, flash
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key"
+
+UPLOAD_FOLDER = '/home/ubuntu/ggb_test_bins/'
+ALLOWED_EXTENSIONS = {'bin', 'hex', 'txt'}
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+        filename.rsplit('.',1)[1].lower() in ALLOWED_EXTENSIONS
 
 delay = 0.5 # Delay for while communicating over USB to the power supply
+
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_page():
+    if request.method == 'POST':
+        # Check if file part exists
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+
+        file = request.files['file']
+
+        if file.filename == '':
+            flash('No file selected')
+            return redirect(request.url)
+
+        if file and allowed_file(file.filename):
+            filename = file.filename
+            save_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(save_path)
+            flash(f"File uploaded successfully: {filename}")
+            return redirect(request.url)
+
+        flash('Invalid file type')
+        return redirect(request.url)
+
+    return render_template('upload.html')
 
 @app.route('/api/st_link/cli')
 def cli_info():
@@ -86,7 +123,7 @@ def write_flash():
 
     result = subprocess.run([st_link_cli,
                              "-c","port=swd",
-                             "-w","/home/ubuntu/GGB_LED_TEST.bin","0x8000000",
+                             "-w","/data/flash_files/ggb1.bin","0x8000000",
                              "-v", "-q", "-rst"
                             ], capture_output=True, text=True)
     # result = subprocess.run(["ls", "/home/ubuntu"], capture_output=True, text=True, check=True)
