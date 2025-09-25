@@ -1088,6 +1088,52 @@
         "h": 302
     },
     {
+        "id": "09c231e6bb082835",
+        "type": "group",
+        "z": "c21c2a31923f4a5d",
+        "name": "Debug Terminal",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true,
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "45499bd37bba7c24",
+            "da128cf6dcbd05bc",
+            "0505b8f9c6ee6294",
+            "85083c8451d94456",
+            "4307d3e6a4911641"
+        ],
+        "x": 154,
+        "y": 99,
+        "w": 952,
+        "h": 82
+    },
+    {
+        "id": "7d59cd562498f69c",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "9615741ec2fe70a0",
+            "fa54e6af56d3605a",
+            "243de20ff3770aa6",
+            "8c07aac8f1d6eccf",
+            "fb3d59c835d4f818",
+            "e55d40efe59920a5",
+            "aa3630c79c2b3c87",
+            "a7bc2f3b56f9d90c"
+        ],
+        "x": 194,
+        "y": 2519,
+        "w": 782,
+        "h": 202
+    },
+    {
         "id": "6224f3394241d463",
         "type": "ui-base",
         "name": "My Dashboard",
@@ -1677,7 +1723,7 @@
         "page": "05681d05b84ab2f2",
         "width": "2",
         "height": "1",
-        "order": 1,
+        "order": 3,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1783,7 +1829,7 @@
         "page": "05681d05b84ab2f2",
         "width": "2",
         "height": "1",
-        "order": 3,
+        "order": 2,
         "showTitle": true,
         "className": "",
         "visible": "true",
@@ -1797,12 +1843,46 @@
         "page": "05681d05b84ab2f2",
         "width": "2",
         "height": "1",
-        "order": 2,
+        "order": 4,
         "showTitle": true,
         "className": "",
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "2f18e2f3b97e3f88",
+        "type": "ui-group",
+        "name": "Terminal",
+        "page": "05681d05b84ab2f2",
+        "width": "8",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "415c042d5c9edcd4",
+        "type": "serial-port",
+        "name": "Serial Debug",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
     },
     {
         "id": "df4e3ff11eba05b2",
@@ -2093,7 +2173,7 @@
         "type": "function",
         "z": "ec7ffdcfa1cb4d13",
         "name": "Get AIN Values",
-        "func": "// let adc_ports = [\n//     \"super_cap\",    // AIN0\n//     \"door2_no\",     // AIN1\n//     \"12vdc\",        // AIN2\n//     \"door2_nc\",     // AIN3\n//     \"5vdc\",         // AIN4\n//     \"door2_com\",    // AIN5\n//     \"3v3dc\",        // AIN6\n//     \"door1_no\",     // AIN7\n//     \"10vdc\",        // AIN8\n//     \"door1_nc\",     // AIN9\n//     \"rdr1_12vdc\",   // AIN10\n//     \"door1_com\",    // AIN11\n//     \"rdr2_12vdc\",   // AIN12\n//     \"vin\"           // AIN13\n// ];\n\nlet ain_array = global.get(\"admin.labjack.ain\");    // List of AIN Names\nlet adc_ports = Object.values(ain_array);           // \n\nlet voltages = [];\nlet out = [];\n\n// Convert each AINx to a decimal value\nfor(let i=0; i<14; i++) {           \n    voltages.push(adc_to_float(i));\n\n}\n\nfor (let i=0; i<14; i++) {\n\n    global.set(\"measurements.\" + adc_ports[i], voltages[i]); // Store voltage\n    // Check for new Max/Min value\n    if( voltages[i] > global.get(\"measurements.\" + adc_ports[i] + \"_max\")) {\n        global.set(\"measurements.\" + adc_ports[i] + \"_max\", voltages[i])\n    }\n    if( voltages[i] < global.get(\"measurements.\" + adc_ports[i] + \"_min\")) {\n        global.set(\"measurements.\" + adc_ports[i] + \"_min\", voltages[i])\n    }\n    out[i] = {payload: voltages[i] }; // Create an individual message for each output\n}\n\nreturn out;\n\n\n// function to convert LabJack AIN value to a decimal\nfunction adc_to_float(ch) {\n\n    let buffer = Buffer.alloc(4)\n    buffer.writeUInt16BE(msg.payload[(ch * 2)], 0);\n    buffer.writeUInt16BE(msg.payload[(ch * 2) + 1], 2);\n\n//    let floatValue = buffer.readFloatBE(0).toFixed(2);\n    let floatValue = buffer.readFloatBE(0);\n    let result = 0;\n\n    if(ch == 0) {   // Super Cap (No Voltage Divider)\n        result = floatValue;\n    } else if(ch == 6) {   // 3V3DC Voltage Divider\n        result = floatValue / 0.760;\n    } else {        // Everything Else\n        result = floatValue / 0.338;\n    }\n    return result.toFixed(2);\n}",
+        "func": "// let adc_ports = [\n//     \"super_cap\",    // AIN0\n//     \"door2_no\",     // AIN1\n//     \"12vdc\",        // AIN2\n//     \"door2_nc\",     // AIN3\n//     \"5vdc\",         // AIN4\n//     \"door2_com\",    // AIN5\n//     \"3v3dc\",        // AIN6\n//     \"door1_no\",     // AIN7\n//     \"10vdc\",        // AIN8\n//     \"door1_nc\",     // AIN9\n//     \"rdr1_12vdc\",   // AIN10\n//     \"door1_com\",    // AIN11\n//     \"rdr2_12vdc\",   // AIN12\n//     \"vin\"           // AIN13\n// ];\n\nlet ain_array = global.get(\"admin.labjack.ain\");    // List of AIN Names\nlet adc_ports = Object.values(ain_array);           // \n\nlet voltages = [];\nlet out = [];\n\n// Convert each AINx to a decimal value\nfor(let i=0; i<14; i++) {           \n    voltages.push(adc_to_float(i));\n\n}\n\nfor (let i=0; i<14; i++) {\n\n    global.set(\"measurements.\" + adc_ports[i], voltages[i]); // Store voltage\n    // Check for new Max/Min value\n    if( voltages[i] > global.get(\"measurements.\" + adc_ports[i] + \"_max\")) {\n        global.set(\"measurements.\" + adc_ports[i] + \"_max\", voltages[i])\n    }\n    if( voltages[i] < global.get(\"measurements.\" + adc_ports[i] + \"_min\")) {\n        global.set(\"measurements.\" + adc_ports[i] + \"_min\", voltages[i])\n    }\n    out[i] = {payload: voltages[i] }; // Create an individual message for each output\n}\n\nreturn out;\n\n\n// function to convert LabJack AIN value to a decimal\nfunction adc_to_float(ch) {\n\n    let buffer = Buffer.alloc(4)\n    buffer.writeUInt16BE(msg.payload[(ch * 2)], 0);\n    buffer.writeUInt16BE(msg.payload[(ch * 2) + 1], 2);\n\n//    let floatValue = buffer.readFloatBE(0).toFixed(2);\n    let floatValue = buffer.readFloatBE(0);\n    let result = 0;\n\n    if(ch == 6) {\n        result = floatValue / 0.760;\n    } else {\n        result = floatValue / 0.338;\n    }\n\n    // if(ch == 0) {   // Super Cap (No Voltage Divider)\n    //     result = floatValue;\n    // } else if(ch == 6) {   // 3V3DC Voltage Divider\n    //     result = floatValue / 0.760;\n    // } else {        // Everything Else\n    //     result = floatValue / 0.338;\n    // }\n    \n    return result.toFixed(2);\n}",
         "outputs": 14,
         "timeout": 0,
         "noerr": 0,
@@ -2351,7 +2431,7 @@
         "type": "function",
         "z": "816b1a16a4c6ed2f",
         "name": "Set EIO Direction",
-        "func": "// EIO Port Assignments\n\n// EIO7 = Spare TP123 (Input)\n// EIO6 = Spare TP117 (Input)\n// EIO5 = Spare TP122 (Input)\n// EIO4 = Spare TP116 (Input)\n// EIO3 = Spare TP121 (Input)\n// EIO2 = DUT_INSTALLED  [TP115] (Input)\n// EIO1 = FIXTURE_CLOSED [TP120] (Input)\n// EIO0 = DRY_VOLTAGE_RELAY (Output)\n\n// I/O Direction Map\n// 1000 0000 = 0x80\n\n// FIO Port Direct 0=Input, 1=Output\nlet eio_map = 0x80  // All Output\n\nmsg.payload = { 'value': eio_map, 'fc': 6, 'unitid': 1, 'address': 2601, 'quantity': 1 };\nreturn msg;",
+        "func": "// EIO Port Assignments\n\n// EIO7 = Spare TP123 (Input)\n// EIO6 = Spare TP117 (Input)\n// EIO5 = Spare TP122 (Input)\n// EIO4 = Spare TP116 (Input)\n// EIO3 = Spare TP121 (Input)\n// EIO2 = DUT_INSTALLED  [TP115] (Input)\n// EIO1 = FIXTURE_CLOSED [TP120] (Input)\n// EIO0 = DRY_VOLTAGE_RELAY (Output)\n\n// I/O Direction Map\n// 0000 0001 = 0x01\n\n// FIO Port Direct 0=Input, 1=Output\nlet eio_map = 0x01  // All Output\n\nmsg.payload = { 'value': eio_map, 'fc': 6, 'unitid': 1, 'address': 2601, 'quantity': 1 };\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5669,7 +5749,7 @@
         "g": "2bcafb5091af493d",
         "name": "",
         "pauseType": "delay",
-        "timeout": "3",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -5766,20 +5846,21 @@
         "id": "9615741ec2fe70a0",
         "type": "comment",
         "z": "8992ffe741acd3ee",
-        "name": "Flash Test Code",
+        "g": "7d59cd562498f69c",
+        "name": "Upload Test Code",
         "info": "",
-        "x": 260,
-        "y": 2600,
+        "x": 310,
+        "y": 2560,
         "wires": []
     },
     {
         "id": "f99fb86d11a437d5",
         "type": "comment",
         "z": "8992ffe741acd3ee",
-        "name": "Door Relay Tests",
-        "info": "",
-        "x": 260,
-        "y": 3040,
+        "name": "Door1 Relay Tests",
+        "info": "# Dry Test Setup\nSet DUT to Dry Relay Mode\nTurn Door1 & Door2 Relays OFF\nConnect 5VDC DUT Voltage to DOOR1_COM & DOOR2_COM\n# Door1 Dry Test\nCheck Door1 COM voltage = 2.15VDC\nCheck Door1 NC voltage = 2.15VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 5VDC\nTurn Door1 Relay OFF\n# Door1 Wet 12V\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 12VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 12VDC\nTurn Door1 Relay OFF\n# Door1 Wet 24V\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 24VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 24VDC\nTurn Door1 Relay OFF\n",
+        "x": 290,
+        "y": 2820,
         "wires": []
     },
     {
@@ -5788,8 +5869,8 @@
         "z": "8992ffe741acd3ee",
         "name": "Input Tests",
         "info": "",
-        "x": 240,
-        "y": 3100,
+        "x": 220,
+        "y": 4780,
         "wires": []
     },
     {
@@ -5798,8 +5879,8 @@
         "z": "8992ffe741acd3ee",
         "name": "Reader Tests",
         "info": "",
-        "x": 250,
-        "y": 3160,
+        "x": 230,
+        "y": 4840,
         "wires": []
     },
     {
@@ -5866,94 +5947,14 @@
         "z": "8992ffe741acd3ee",
         "name": "Test Result In",
         "links": [
-            "65cf39effb40c29b"
+            "65cf39effb40c29b",
+            "e55d40efe59920a5"
         ],
         "x": 1125,
         "y": 1840,
         "wires": [
             [
                 "cbf269f9255d29df"
-            ]
-        ]
-    },
-    {
-        "id": "387bc44321807ffe",
-        "type": "watch",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "files": "/data",
-        "recursive": "",
-        "x": 670,
-        "y": 3080,
-        "wires": [
-            [
-                "1f929f820b680e47"
-            ]
-        ]
-    },
-    {
-        "id": "1f929f820b680e47",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "name": "debug 22",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 3080,
-        "wires": []
-    },
-    {
-        "id": "63873e5f48669130",
-        "type": "function",
-        "z": "8992ffe741acd3ee",
-        "name": "function 10",
-        "func": "const fs = require('fs');\nconst dir = \"/data\";\n\ntry {\n    const files = fs.readdirSync(dir);\n    msg.payload = files;\n} catch (err) {\n    msg.payload = `Error: ${err.message}`;\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 3140,
-        "wires": [
-            [
-                "1f929f820b680e47"
-            ]
-        ]
-    },
-    {
-        "id": "26e269bceba819db",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 720,
-        "y": 3140,
-        "wires": [
-            [
-                "63873e5f48669130"
             ]
         ]
     },
@@ -5969,43 +5970,14 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 910,
-        "y": 3280,
+        "x": 390,
+        "y": 4920,
         "wires": [
             [
                 "87c96b617e2d086b"
             ],
             [],
             []
-        ]
-    },
-    {
-        "id": "659489dc4aa2f11f",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 660,
-        "y": 3600,
-        "wires": [
-            [
-                "c16f2561361fa5df"
-            ]
         ]
     },
     {
@@ -6021,8 +5993,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1300,
-        "y": 3240,
+        "x": 800,
+        "y": 4920,
         "wires": []
     },
     {
@@ -6037,30 +6009,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
-        "y": 3240,
+        "x": 590,
+        "y": 4920,
         "wires": [
             [
                 "4a28a106381ca942"
             ]
-        ]
-    },
-    {
-        "id": "da09d071a68f73c1",
-        "type": "function",
-        "z": "8992ffe741acd3ee",
-        "name": "function 12",
-        "func": "msg.ui_update = {\"options\" : [\"Bryan\", \"Erin\"]}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 930,
-        "y": 3400,
-        "wires": [
-            []
         ]
     },
     {
@@ -6424,69 +6378,1410 @@
         "wires": [
             [
                 "99d955b9e3f92199",
-                "65cf39effb40c29b"
+                "65cf39effb40c29b",
+                "a7bc2f3b56f9d90c"
             ]
         ]
     },
     {
-        "id": "3ce255e75e50ff44",
-        "type": "exec",
+        "id": "87595114dde686bd",
+        "type": "inject",
         "z": "8992ffe741acd3ee",
-        "command": "ls /shared_data",
-        "addpay": "",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
         "name": "",
-        "x": 900,
-        "y": 3500,
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 4920,
         "wires": [
             [
-                "c143c35ccb80eda1"
+                "b47f74dbfa05c180"
+            ]
+        ]
+    },
+    {
+        "id": "fa54e6af56d3605a",
+        "type": "http request",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "Write Flash",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/st_link/write",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 310,
+        "y": 2660,
+        "wires": [
+            [
+                "243de20ff3770aa6"
+            ]
+        ]
+    },
+    {
+        "id": "243de20ff3770aa6",
+        "type": "json",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 2660,
+        "wires": [
+            [
+                "8c07aac8f1d6eccf"
+            ]
+        ]
+    },
+    {
+        "id": "8c07aac8f1d6eccf",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "",
+        "property": "payload.returncode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 2660,
+        "wires": [
+            [
+                "fb3d59c835d4f818"
             ],
-            [],
+            [
+                "aa3630c79c2b3c87"
+            ]
+        ]
+    },
+    {
+        "id": "fb3d59c835d4f818",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Firmware\",\"result\":\"Passed\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 2640,
+        "wires": [
+            [
+                "e55d40efe59920a5"
+            ]
+        ]
+    },
+    {
+        "id": "e55d40efe59920a5",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "link out 12",
+        "mode": "link",
+        "links": [
+            "7b1e1beb670237f3"
+        ],
+        "x": 935,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "aa3630c79c2b3c87",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Firmware\",\"result\":\"Failed\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 2680,
+        "wires": [
+            [
+                "e55d40efe59920a5"
+            ]
+        ]
+    },
+    {
+        "id": "efe6e20f703d6cc0",
+        "type": "serial out",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 770,
+        "y": 2920,
+        "wires": []
+    },
+    {
+        "id": "4dceb7107d31899a",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Relay Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "5",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 2920,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "0a2ccadc5582518b"
+            ]
+        ]
+    },
+    {
+        "id": "0a2ccadc5582518b",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 2980,
+        "wires": [
+            [
+                "da8e6b4b6bb2b3e5"
+            ]
+        ]
+    },
+    {
+        "id": "da8e6b4b6bb2b3e5",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 2980,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "005e5d69adaf1139"
+            ]
+        ]
+    },
+    {
+        "id": "9628c717e985973b",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door2 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3040,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "d1d364618396a7d9"
+            ]
+        ]
+    },
+    {
+        "id": "1c73ec137d088a84",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "x": 800,
+        "y": 3100,
+        "wires": [
+            [
+                "0e73b7b09764c1ba"
+            ]
+        ]
+    },
+    {
+        "id": "f0ccbadafeef05cd",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Voltage Relay ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"dry_voltage_relay\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 3100,
+        "wires": [
+            [
+                "1c73ec137d088a84"
+            ]
+        ]
+    },
+    {
+        "id": "a7bc2f3b56f9d90c",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 2600,
+        "wires": [
+            [
+                "fa54e6af56d3605a"
+            ],
             []
         ]
     },
     {
-        "id": "c143c35ccb80eda1",
+        "id": "bf0d305239505d23",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 2920,
+        "wires": [
+            [
+                "4dceb7107d31899a"
+            ]
+        ]
+    },
+    {
+        "id": "005e5d69adaf1139",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3040,
+        "wires": [
+            [
+                "9628c717e985973b"
+            ]
+        ]
+    },
+    {
+        "id": "d1d364618396a7d9",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3100,
+        "wires": [
+            [
+                "f0ccbadafeef05cd"
+            ]
+        ]
+    },
+    {
+        "id": "0e73b7b09764c1ba",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3180,
+        "wires": [
+            [
+                "ccba9301204d9f56"
+            ]
+        ]
+    },
+    {
+        "id": "ccba9301204d9f56",
         "type": "function",
         "z": "8992ffe741acd3ee",
-        "name": "function 13",
-        "func": "let files = msg.payload.split('\\n').map(f => f.trim()).filter(f => f);\nmsg.payload = msg.payload.split('\\n').map(f => f.trim()).filter(f => f);\nmsg.ui_update = {\"options\" : files};\n// msg.ui_update = {\"options\" : [\"Bryan\"]};\n\nreturn msg;",
+        "name": "Check Door1 Dry (OFF)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.10;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1110,
-        "y": 3480,
+        "x": 550,
+        "y": 3180,
         "wires": [
             [
-                "4a28a106381ca942"
+                "3fe1ca576b8fecb3"
             ]
         ]
     },
     {
-        "id": "c16f2561361fa5df",
-        "type": "file in",
+        "id": "f83d250550a0140f",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Relay Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "3fe1ca576b8fecb3",
+        "type": "switch",
         "z": "8992ffe741acd3ee",
         "name": "",
-        "filename": "/shared_data/Encrypted.key",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 940,
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 3180,
+        "wires": [
+            [
+                "c314903ac51be00a",
+                "f83d250550a0140f"
+            ],
+            [
+                "f83d250550a0140f"
+            ]
+        ]
+    },
+    {
+        "id": "c314903ac51be00a",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 3240,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "c08836ef39351a84"
+            ]
+        ]
+    },
+    {
+        "id": "c08836ef39351a84",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3300,
+        "wires": [
+            [
+                "3a9c8cf92e669ddd"
+            ]
+        ]
+    },
+    {
+        "id": "3a9c8cf92e669ddd",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Check Door1 Dry (ON)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.10;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(no > v_min && no < v_max) {              // NO should be between v_max and v_min\n        if(nc < gnd) {                          // NC shoudl be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 3300,
+        "wires": [
+            [
+                "d2c53fc919eb25a5"
+            ]
+        ]
+    },
+    {
+        "id": "d2c53fc919eb25a5",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 3300,
+        "wires": [
+            [
+                "f83d250550a0140f",
+                "0c8e5ee0a0e61df1"
+            ],
+            [
+                "f83d250550a0140f"
+            ]
+        ]
+    },
+    {
+        "id": "0c8e5ee0a0e61df1",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3360,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "b5f1a835f02ce0b6"
+            ]
+        ]
+    },
+    {
+        "id": "9f32060fe819ced1",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Relay Test",
+        "info": "",
+        "x": 340,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "c3f29ccbd4085eeb",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 12VDC Test",
+        "info": "",
+        "x": 360,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "d0823e685d8f1b26",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3540,
+        "wires": [
+            [
+                "3c2ddef04290d62b"
+            ]
+        ]
+    },
+    {
+        "id": "3c2ddef04290d62b",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 12VDC Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "6",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 3540,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "ba1e4aa06d28cbb4"
+            ]
+        ]
+    },
+    {
+        "id": "2c05938021b33bf1",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Voltage Relay OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"dry_voltage_relay\",\"state\":\"off\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 3480,
+        "wires": [
+            [
+                "3af1a40562429a0f"
+            ]
+        ]
+    },
+    {
+        "id": "b5f1a835f02ce0b6",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3480,
+        "wires": [
+            [
+                "2c05938021b33bf1"
+            ]
+        ]
+    },
+    {
+        "id": "3af1a40562429a0f",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "x": 800,
+        "y": 3480,
+        "wires": [
+            [
+                "d0823e685d8f1b26"
+            ]
+        ]
+    },
+    {
+        "id": "28f7e64a6c3bf7dc",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Check Door1 Wet 12V (OFF)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 12.00;\nlet v_min = 11.50;\nlet gnd = 0.10;\n\nif (com < gnd) {                                // COM should be between 0V\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
         "y": 3600,
         "wires": [
             [
-                "4a28a106381ca942"
+                "0b64b0fb0f362d1c"
+            ]
+        ]
+    },
+    {
+        "id": "ba1e4aa06d28cbb4",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 3600,
+        "wires": [
+            [
+                "28f7e64a6c3bf7dc"
+            ]
+        ]
+    },
+    {
+        "id": "0b64b0fb0f362d1c",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 3600,
+        "wires": [
+            [
+                "a85639ab5a9a1563",
+                "a275e2ef57f45add"
+            ],
+            [
+                "a85639ab5a9a1563"
+            ]
+        ]
+    },
+    {
+        "id": "a85639ab5a9a1563",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 12V Relay Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 3660,
+        "wires": []
+    },
+    {
+        "id": "a275e2ef57f45add",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 3660,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "09095c0d21f60f7a"
+            ]
+        ]
+    },
+    {
+        "id": "dc7b5e944318efca",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Check Door1 Wet 12V (ON)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 12.00;\nlet v_min = 11.50;\nlet gnd = 0.10;\n\nif (com < gnd) {                                // COM should be between 0V\n    if(no > v_min && no < v_max) {              // NO should be between v_max and v_min\n        if(nc < gnd) {                          // NC should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 3720,
+        "wires": [
+            [
+                "b01c044493c36432"
+            ]
+        ]
+    },
+    {
+        "id": "09095c0d21f60f7a",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3720,
+        "wires": [
+            [
+                "dc7b5e944318efca"
+            ]
+        ]
+    },
+    {
+        "id": "d2beb961e77bde5d",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3780,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "12af208f842c8e42"
+            ]
+        ]
+    },
+    {
+        "id": "e28db23df8723b9f",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 24VDC Test",
+        "info": "",
+        "x": 360,
+        "y": 3840,
+        "wires": []
+    },
+    {
+        "id": "12af208f842c8e42",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 3900,
+        "wires": [
+            [
+                "976fa2be8b75e23d"
+            ]
+        ]
+    },
+    {
+        "id": "976fa2be8b75e23d",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 24VDC Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "7",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 3900,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "e53aa91d18e8eada"
+            ]
+        ]
+    },
+    {
+        "id": "e53aa91d18e8eada",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 3960,
+        "wires": [
+            [
+                "66c96dec8fbb1f82"
+            ]
+        ]
+    },
+    {
+        "id": "66c96dec8fbb1f82",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Check Door1 Wet 24V (OFF)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 24.00;\nlet v_min = 23.00;\nlet gnd = 0.10;\n\nif (com < gnd) {                                // COM should be between 0V\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 3960,
+        "wires": [
+            [
+                "f4d68e7bd695a190"
+            ]
+        ]
+    },
+    {
+        "id": "b01c044493c36432",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 3720,
+        "wires": [
+            [
+                "a85639ab5a9a1563",
+                "d2beb961e77bde5d"
+            ],
+            [
+                "a85639ab5a9a1563"
+            ]
+        ]
+    },
+    {
+        "id": "f4d68e7bd695a190",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 3960,
+        "wires": [
+            [
+                "1f7b4541b572c86c",
+                "53bc2349c6e2096a"
+            ],
+            [
+                "1f7b4541b572c86c"
+            ]
+        ]
+    },
+    {
+        "id": "1f7b4541b572c86c",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "Wet 24V Relay Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1030,
+        "y": 4020,
+        "wires": []
+    },
+    {
+        "id": "53bc2349c6e2096a",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 4020,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "4a05aada2f5b9a09"
+            ]
+        ]
+    },
+    {
+        "id": "4a05aada2f5b9a09",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 4080,
+        "wires": [
+            [
+                "a4f209db293f4936"
+            ]
+        ]
+    },
+    {
+        "id": "a4f209db293f4936",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Check Door1 Wet 24V (ON)",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 24.00;\nlet v_min = 23.00;\nlet gnd = 0.10;\n\nif (com < gnd) {                                // COM should be between 0V\n    if(no > v_min && no < v_max) {              // NO should be between v_max and v_min\n        if(nc < gnd) {                          // NC should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed: Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed: Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed: Door1 COM\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 4080,
+        "wires": [
+            [
+                "8c3cc9c845c7942b"
+            ]
+        ]
+    },
+    {
+        "id": "8c3cc9c845c7942b",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Passed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 4080,
+        "wires": [
+            [
+                "1f7b4541b572c86c",
+                "da0ef717d19a10e7"
+            ],
+            [
+                "1f7b4541b572c86c"
+            ]
+        ]
+    },
+    {
+        "id": "da0ef717d19a10e7",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 4140,
+        "wires": [
+            [
+                "efe6e20f703d6cc0",
+                "ca6b67b6c33ab773"
+            ]
+        ]
+    },
+    {
+        "id": "96f391e60112944c",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Relay Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "5",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 4300,
+        "wires": [
+            [
+                "efe6e20f703d6cc0"
+            ]
+        ]
+    },
+    {
+        "id": "0b9d03da6cb06e66",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Door1 Relay Tests",
+        "info": "# Dry Test Setup\nSet DUT to Dry Relay Mode\nTurn Door1 & Door2 Relays OFF\nConnect 5VDC DUT Voltage to DOOR1_COM & DOOR2_COM\n# Door1 Dry Test\nCheck Door1 COM voltage = 2.15VDC\nCheck Door1 NC voltage = 2.15VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 5VDC\nTurn Door1 Relay OFF\n# Door1 Wet 12V\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 12VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 12VDC\nTurn Door1 Relay OFF\n# Door1 Wet 24V\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 24VDC\nCheck Door1 NO voltage = 0VDC\nTurn Door1 Relay ON\nCheck Door1 COM voltage = 0VDC\nCheck Door1 NC voltage = 0VDC\nCheck Door1 NO voltage = 24VDC\nTurn Door1 Relay OFF\n",
+        "x": 290,
+        "y": 4200,
+        "wires": []
+    },
+    {
+        "id": "8fe5ee5795f9bc3d",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "name": "Dry Relay Test",
+        "info": "",
+        "x": 340,
+        "y": 4240,
+        "wires": []
+    },
+    {
+        "id": "ca6b67b6c33ab773",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 4300,
+        "wires": [
+            [
+                "96f391e60112944c"
             ]
         ]
     },
@@ -9925,7 +11220,8 @@
                 "f251048267fe6e7e"
             ],
             [
-                "64874c229baa99b9"
+                "64874c229baa99b9",
+                "cb7b828f060ba81d"
             ],
             [
                 "7774d8f5a371a280",
@@ -9933,7 +11229,8 @@
                 "e5e6b39ccc11d712"
             ],
             [
-                "cb1a084843f48ef4"
+                "cb1a084843f48ef4",
+                "2449327d1a15c915"
             ],
             [
                 "7748fe9db2492361",
@@ -9941,7 +11238,8 @@
                 "0bc3b78db25dfcfe"
             ],
             [
-                "5bf96b2f5688da39"
+                "5bf96b2f5688da39",
+                "68477efef1b0d840"
             ],
             [
                 "0f3d7d10389646e9",
@@ -9949,7 +11247,8 @@
                 "a8fc4c25715ab338"
             ],
             [
-                "c5f281693573585f"
+                "c5f281693573585f",
+                "c76175eb82d17aff"
             ],
             [
                 "4f52a34f508b9599",
@@ -9957,13 +11256,15 @@
                 "2cf913e6b7ab1fb3"
             ],
             [
-                "c539262cd35bddc2"
+                "c539262cd35bddc2",
+                "3460940eb898f59d"
             ],
             [
                 "86b222650e694b85"
             ],
             [
-                "faea5e26f71133f8"
+                "faea5e26f71133f8",
+                "b7924d766f540d8b"
             ],
             [
                 "d5c7a2a4484fec2a"
@@ -11232,7 +12533,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 990,
+        "x": 1030,
         "y": 1200,
         "wires": []
     },
@@ -11254,8 +12555,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1020,
-        "y": 1000,
+        "x": 1040,
+        "y": 960,
         "wires": []
     },
     {
@@ -11276,7 +12577,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1030,
+        "x": 1050,
         "y": 880,
         "wires": []
     },
@@ -11298,8 +12599,8 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1020,
-        "y": 840,
+        "x": 1040,
+        "y": 800,
         "wires": []
     },
     {
@@ -11320,7 +12621,7 @@
         "color": "#717171",
         "wrapText": false,
         "className": "",
-        "x": 1020,
+        "x": 1040,
         "y": 760,
         "wires": []
     },
@@ -11344,6 +12645,138 @@
         "className": "",
         "x": 1050,
         "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b7924d766f540d8b",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door1 COM",
+        "label": "Door1 COM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1060,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "3460940eb898f59d",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door1 NC",
+        "label": "Door1 NC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1050,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "c76175eb82d17aff",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door1 NO",
+        "label": "Door1 NO",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1050,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "68477efef1b0d840",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door2 COM",
+        "label": "Door2 COM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1060,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "2449327d1a15c915",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door2 NC",
+        "label": "Door2 NC",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1050,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "cb7b828f060ba81d",
+        "type": "ui-text",
+        "z": "7921f5df104fbd3f",
+        "group": "cefe79cf65b1aa96",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "(Debug) Door2 NO",
+        "label": "Door2 NO",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1050,
+        "y": 680,
         "wires": []
     },
     {
@@ -11568,8 +13001,8 @@
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
-        "x": 230,
-        "y": 140,
+        "x": 150,
+        "y": 880,
         "wires": [
             [
                 "20ecc75547a63240",
@@ -11590,8 +13023,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 80,
+        "x": 400,
+        "y": 820,
         "wires": []
     },
     {
@@ -11599,8 +13032,8 @@
         "type": "subflow:513e4a72f100d2f7",
         "z": "c21c2a31923f4a5d",
         "name": "",
-        "x": 600,
-        "y": 140,
+        "x": 520,
+        "y": 880,
         "wires": [
             []
         ]
@@ -11631,12 +13064,367 @@
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
-        "x": 250,
-        "y": 200,
+        "x": 170,
+        "y": 940,
         "wires": [
             [
                 "b282571989f9d6fb",
                 "20ecc75547a63240"
+            ]
+        ]
+    },
+    {
+        "id": "45499bd37bba7c24",
+        "type": "link in",
+        "z": "c21c2a31923f4a5d",
+        "g": "09c231e6bb082835",
+        "name": "Dashboard Terminal",
+        "links": [
+            "4307d3e6a4911641"
+        ],
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "da128cf6dcbd05bc"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "da128cf6dcbd05bc",
+        "type": "function",
+        "z": "c21c2a31923f4a5d",
+        "g": "09c231e6bb082835",
+        "name": "log to context.log",
+        "func": "const MAX_ROWS = 600\n\nif (msg.topic === \"clear-log\") {\n    context.set('log', [])\n    msg.topic = ''\n    msg.payload = []\n    return msg\n}\n\nconst incomingMessage = msg.payload\nlet log = context.get('log') || []\nif (!Array.isArray(log)) {\n    log = []\n}\n\nlet logMessages = normaliseLogEntry(msg.payload)\n\nfunction normaliseLogEntry(data) {\n    const result = []\n    if (data === null) {\n        return normaliseLogEntry(\"null\")\n    } else if (typeof data === \"undefined\") {\n        return normaliseLogEntry(\"undefined\")\n    } else if (typeof data === 'number') {\n        return normaliseLogEntry(\"\" + data)\n    } else if (Array.isArray(data)) {\n        const arrStr = [\"[\"]\n        for (let index = 0; index < data.length; index++) {\n            if (index > 0) { arrStr.push(', ') }\n            arrStr.push(normaliseLogEntry(data[index]))\n        }\n        arrStr.push(\"]\")\n        return normaliseLogEntry(arrStr.join(''))\n    } else if (typeof data === 'object') {\n        result.push(\"> \" + JSON.stringify(data, null, 2))\n    } else if (Buffer.isBuffer(data)) {\n        result.push(\"> \" + data.toJSON())\n    } else if (data && typeof data !== 'string') {\n        result.push(\"> \" + data.toString())\n    } else {\n        if (data.includes('\\n')) {\n            const lines = data.split('\\n').map(m => \"> \" + m)\n            result.push(...lines)\n        } else {\n            result.push(\"> \" + data)\n        }\n    }\n    return result\n}\n\nlog.push(...logMessages.flat())\n\nif (log.length >= MAX_ROWS) {\n    // remove the oldest messages which are at the beginning of the array\n    log = log.slice(-MAX_ROWS)\n}\n\ncontext.set('log', log)\nmsg.payload = log\nreturn msg",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "0505b8f9c6ee6294"
+            ]
+        ]
+    },
+    {
+        "id": "0505b8f9c6ee6294",
+        "type": "ui-template",
+        "z": "c21c2a31923f4a5d",
+        "g": "09c231e6bb082835",
+        "group": "2f18e2f3b97e3f88",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div class=\"terminal\" ref=\"terminal\">\n        <div class=\"log-entry\" v-for=\"(log, index) in logData\" :key=\"index\">\n            {{ log }}\n        </div>\n    </div>\n    <v-btn @click=\"clearLog()\">Clear</v-btn>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                logData: []\n            }\n        },\n        watch: {\n            msg: function () {               \n                if (Array.isArray(this.msg.payload)) {\n                    const terminal = this.$refs.terminal;\n                    const graceDistance = 25 //px\n                    const isAtBottom = terminal.scrollHeight - terminal.scrollTop - terminal.clientHeight <= graceDistance;\n                    if (isAtBottom) {\n                        this.$nextTick(() => {\n                            terminal.scrollTop = terminal.scrollHeight;\n                        })\n                    }\n                    this.logData = this.msg.payload\n                }\n            }\n        },\n        methods: {\n            clearLog: function () {\n                this.send({topic: \"clear-log\"})\n            },\n        }\n    }\n</script>\n<style scoped>\n    .terminal {\n        background-color: black;\n        color: limegreen;\n        font-family: 'Courier New', Courier, monospace;\n        padding: 20px;\n        border-radius: 5px;\n        height: 600px;\n        overflow-y: auto;\n        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);\n    }\n\n    .log-entry {\n        margin: 0;\n        line-height: 1.5;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 760,
+        "y": 140,
+        "wires": [
+            [
+                "85083c8451d94456"
+            ]
+        ]
+    },
+    {
+        "id": "85083c8451d94456",
+        "type": "switch",
+        "z": "c21c2a31923f4a5d",
+        "g": "09c231e6bb082835",
+        "name": "clear-log?",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "clear-log",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 920,
+        "y": 140,
+        "wires": [
+            [
+                "4307d3e6a4911641"
+            ]
+        ]
+    },
+    {
+        "id": "4307d3e6a4911641",
+        "type": "link out",
+        "z": "c21c2a31923f4a5d",
+        "g": "09c231e6bb082835",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "45499bd37bba7c24"
+        ],
+        "x": 1065,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d3d6db7d521edbfc",
+        "type": "serial in",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 310,
+        "y": 240,
+        "wires": [
+            [
+                "da128cf6dcbd05bc"
+            ]
+        ]
+    },
+    {
+        "id": "562457352f638d96",
+        "type": "serial out",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 1050,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "405b2755ec4913ee",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Version (v)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "v",
+        "payloadType": "str",
+        "x": 720,
+        "y": 780,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "eb86d81cc72f0d9d",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Door1 ON (1)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "f3b0242596d81447",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Door1 OFF (2)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "str",
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "cf84cab2a4179877",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Door2 ON (3)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "str",
+        "x": 710,
+        "y": 440,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "6b4049e798ba96f3",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Door2 OFF (4)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "str",
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "12194e291e1a33e0",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Inputs (a)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "a",
+        "payloadType": "str",
+        "x": 720,
+        "y": 720,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "a720739e2cbb7abc",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Dry Relays (5)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "str",
+        "x": 710,
+        "y": 540,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "3ee00a4755e4fa9d",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Wet 12VDC (6)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "str",
+        "x": 720,
+        "y": 580,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "492e07738a6508f2",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Wet 24VDC (7)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "7",
+        "payloadType": "str",
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "562457352f638d96"
             ]
         ]
     },

@@ -5,11 +5,13 @@ services:
       - 1880:1880
     volumes:
       - ./node-red-data:/data
-      - ./node-red-data/flash_files:/data/flash_files
+      # - ./node-red-data/flash_files:/data/flash_files
+      - ./stm32_bin_files:/data/flash_files
       - /dev:/dev
-      - /shared_data:/shared_data
     devices:
       - /dev:/dev
+    group_add:
+      - dialout
     privileged: true
 
   # Using mongdb version 4.4.29 so that it will run without a CPU that does not support AVX 
@@ -22,7 +24,6 @@ services:
         #- MONGO_INITDB_ROOT_PASSWORD: ""
     volumes:
       - ./mongodb_data:/data/db
-      - /shared_data:/shared_data
 
   mongo-express:
     image: mongo-express
@@ -37,18 +38,25 @@ services:
 
   stm32_flash_api:
     #    image: stm32_flash_api:v0.3
-    image: stm32_flash_api:1.3
+    image: stm32_flash_api:2.2
     ports:
       - 5000:5000
       - 5001:5001
     volumes:
       #- ./stm32-data:/home/ubuntu
-      - ./node-red-data/flash_files:/home/ubuntu
+      # - ./node-red-data/flash_files:/home/ubuntu
+      - ./stm32_bin_files:/home/ubuntu
       - /dev:/dev
-      - /shared_data:/shared_data
     devices:
       - /dev:/dev
     privileged: true #added to allow access to USB connected devices
 
-volumes:
-  shared_data:
+  filebrowser:
+    image: filebrowser/filebrowser:latest
+    container_name: filebrowser
+    ports:
+      - "8080:80"
+    volumes:
+      - ./stm32_bin_files:/srv
+      - ./filebrowser_database:/database
+      - ./filebrowser_config:/config

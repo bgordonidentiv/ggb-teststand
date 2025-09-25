@@ -123,7 +123,7 @@ def write_flash():
 
     result = subprocess.run([st_link_cli,
                              "-c","port=swd",
-                             "-w","/data/flash_files/ggb1.bin","0x8000000",
+                             "-w","/home/ubuntu/ggb_teststand.elf","0x8000000",
                              "-v", "-q", "-rst"
                             ], capture_output=True, text=True)
     # result = subprocess.run(["ls", "/home/ubuntu"], capture_output=True, text=True, check=True)
