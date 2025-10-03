@@ -1391,7 +1391,6 @@
         "nodes": [
             "f99fb86d11a437d5",
             "c6ee0a9947798851",
-            "3df11ae9ec907a4a",
             "ca7a93d57e521979",
             "2186455b0f548f46",
             "3a6ca65db2c33c8e",
@@ -1401,7 +1400,8 @@
             "d7c05c4df3800809",
             "432506cc0309ca86",
             "0998131b29c6495e",
-            "b6e971ece046c17b"
+            "b6e971ece046c17b",
+            "23978756652525b0"
         ],
         "x": 194,
         "y": 2959,
@@ -1442,21 +1442,19 @@
         "nodes": [
             "1b335fc98a0327be",
             "5c4086d67212042e",
-            "2a20341e758028e7",
             "6ac9eabf3ca9468d",
-            "df18dbc117b5e17e",
             "37a289e2befe1075",
             "28e44b61e4a3f054",
-            "9e08c4708da75e96",
             "b58ac7ce0f40e5bc",
             "b4948c3a4fb7ab7b",
             "4cf51cc8678ba759",
-            "fffa0256c6914b28"
+            "fffa0256c6914b28",
+            "8e7b4db3e8c1669b"
         ],
         "x": 194,
         "y": 3379,
-        "w": 732,
-        "h": 482
+        "w": 712,
+        "h": 502
     },
     {
         "id": "6224f3394241d463",
@@ -1693,7 +1691,7 @@
         "name": "Test Results",
         "page": "de76f57e39382a92",
         "width": "2",
-        "height": "6",
+        "height": "10",
         "order": 1,
         "showTitle": true,
         "className": "",
@@ -2222,6 +2220,26 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
+    },
+    {
+        "id": "a6c6d5d269d5dc61",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyACM1",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
     },
     {
         "id": "df4e3ff11eba05b2",
@@ -5020,7 +5038,7 @@
         "type": "function",
         "z": "9a6977147b5009cd",
         "name": "Check Door1 Dry (OFF)",
-        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.10;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed(Dry-OFF): Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed(Dry-OFF): Door1 NC\";\n    }\n} else {\n    msg.payload = \"Failed(Dry-OFF): Door1 COM\";\n}\n\nreturn msg;",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.10;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed(Dry-OFF): Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed(Dry-OFF): Door1 NC\";\n    }\n} else {\n    node.warn(\"Failed(Dry-OFF): Door1 COM\");\n    msg.payload = \"Failed(Dry-OFF): Door1 COM\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9098,7 +9116,7 @@
         "g": "21a0da3aad9ad7b1",
         "name": "Input Tests",
         "info": "# Test Sequence\nThe plan was to check the processors A/D inputs\nand then short and check the A/D again\n\nThere is an issue with the fixture where Door1 In2\ndoes not want to switch so in the short term \nI'm just going to ensure that the A/D reading is\nin the correct range\n\nThis should be good enough for now.\n\n\n# Improvment",
-        "x": 300,
+        "x": 280,
         "y": 3420,
         "wires": []
     },
@@ -9107,9 +9125,9 @@
         "type": "comment",
         "z": "8992ffe741acd3ee",
         "name": "Reader Tests",
-        "info": "",
-        "x": 230,
-        "y": 4840,
+        "info": "Measure Reader 12VDC\nConfigure fixture relays for Wiegand tests\nSend Clear Wiegand Count Message\nTrigger ESP32 to send Wiegand data\nClear Global Reader data before read\nSend Read Bit Count Message\nCheck bit counts (1's and 0's)\nSet Reader LED to HIGH\nVerify Reader LED is HIGH\nSet Reader LED to LOW\nVerify Reader LED is LOW",
+        "x": 290,
+        "y": 3960,
         "wires": []
     },
     {
@@ -9179,7 +9197,8 @@
             "65cf39effb40c29b",
             "e55d40efe59920a5",
             "ca7a93d57e521979",
-            "fffa0256c6914b28"
+            "fffa0256c6914b28",
+            "854a9f51973aa871"
         ],
         "x": 1125,
         "y": 2200,
@@ -9201,8 +9220,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 390,
-        "y": 4920,
+        "x": 1150,
+        "y": 4580,
         "wires": [
             [
                 "87c96b617e2d086b"
@@ -9224,8 +9243,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 4920,
+        "x": 1560,
+        "y": 4580,
         "wires": []
     },
     {
@@ -9240,8 +9259,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 4920,
+        "x": 1350,
+        "y": 4580,
         "wires": [
             [
                 "4a28a106381ca942"
@@ -9635,8 +9654,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
-        "y": 4920,
+        "x": 960,
+        "y": 4580,
         "wires": [
             [
                 "b47f74dbfa05c180"
@@ -9835,24 +9854,13 @@
         "y": 3120,
         "wires": [
             [
-                "3df11ae9ec907a4a"
+                "23978756652525b0"
             ],
             [
                 "2186455b0f548f46",
                 "3a6ca65db2c33c8e"
             ]
         ]
-    },
-    {
-        "id": "3df11ae9ec907a4a",
-        "type": "serial out",
-        "z": "8992ffe741acd3ee",
-        "g": "67857499edf699ee",
-        "name": "",
-        "serial": "415c042d5c9edcd4",
-        "x": 610,
-        "y": 3080,
-        "wires": []
     },
     {
         "id": "ca7a93d57e521979",
@@ -9985,7 +9993,7 @@
         "y": 3240,
         "wires": [
             [
-                "3df11ae9ec907a4a"
+                "23978756652525b0"
             ],
             [
                 "2186455b0f548f46",
@@ -10049,7 +10057,8 @@
         "y": 3260,
         "wires": [
             [
-                "ca7a93d57e521979"
+                "ca7a93d57e521979",
+                "5c4086d67212042e"
             ]
         ]
     },
@@ -10132,25 +10141,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 3460,
+        "x": 330,
+        "y": 3480,
         "wires": [
             [
                 "6ac9eabf3ca9468d"
             ],
             []
         ]
-    },
-    {
-        "id": "2a20341e758028e7",
-        "type": "serial out",
-        "z": "8992ffe741acd3ee",
-        "g": "21a0da3aad9ad7b1",
-        "name": "",
-        "serial": "415c042d5c9edcd4",
-        "x": 690,
-        "y": 3520,
-        "wires": []
     },
     {
         "id": "6ac9eabf3ca9468d",
@@ -10172,42 +10170,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 3520,
+        "x": 350,
+        "y": 3540,
         "wires": [
             [
-                "2a20341e758028e7",
-                "28e44b61e4a3f054"
-            ]
-        ]
-    },
-    {
-        "id": "df18dbc117b5e17e",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "g": "21a0da3aad9ad7b1",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
-        "y": 3520,
-        "wires": [
-            [
-                "6ac9eabf3ca9468d"
+                "28e44b61e4a3f054",
+                "8e7b4db3e8c1669b"
             ]
         ]
     },
@@ -10255,7 +10223,8 @@
         "y": 680,
         "wires": [
             [
-                "1de928f944e6295c"
+                "1de928f944e6295c",
+                "374a64a4f1c42825"
             ]
         ]
     },
@@ -10380,7 +10349,7 @@
         "type": "function",
         "z": "8992ffe741acd3ee",
         "name": "Decode JSON Respose",
-        "func": "let temp_msg = msg.payload;\n\nif(temp_msg.relay1 != null) {\n    msg.payload = \"Relay1 Message\";\n    global.set(\"status.relay1\",temp_msg.relay1);\n} else if(temp_msg.relay2 != null) {\n    msg.payload = \"Relay2 Message\";\n    global.set(\"status.relay2\", temp_msg.relay2);\n} else if(temp_msg.inputs != null) {\n    msg.payload = \"Input Message\";\n    global.set(\"measurements.inputs\", temp_msg.inputs);\n} else {\n    msg.payload = \"Not a Relay Message\";\n}\n\nreturn msg;",
+        "func": "let temp_msg = msg.payload;\n\nif(temp_msg.relay1 != null) {\n    msg.payload = \"Relay1 Message\";\n    global.set(\"status.relay1\",temp_msg.relay1);\n} else if(temp_msg.relay2 != null) {\n    msg.payload = \"Relay2 Message\";\n    global.set(\"status.relay2\", temp_msg.relay2);\n} else if(temp_msg.inputs != null) {\n    msg.payload = \"Input Message\";\n    global.set(\"measurements.inputs\", temp_msg.inputs);\n} else if(temp_msg.reader1_data != null) {\n    msg.payload = \"Reader1 Bit Count\";\n    global.set(\"measurements.rdr1_bit_cnt[0]\", temp_msg.reader1_data[0]);\n    global.set(\"measurements.rdr1_bit_cnt[1]\", temp_msg.reader1_data[1]);\n} else {\n    msg.payload = \"Not a Relay Message\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10408,11 +10377,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 3640,
+        "x": 360,
+        "y": 3660,
         "wires": [
             [
-                "9e08c4708da75e96",
                 "b58ac7ce0f40e5bc",
                 "fffa0256c6914b28"
             ]
@@ -10436,31 +10404,13 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 500,
-        "y": 3580,
+        "x": 340,
+        "y": 3600,
         "wires": [
             [
                 "37a289e2befe1075"
             ]
         ]
-    },
-    {
-        "id": "9e08c4708da75e96",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "g": "21a0da3aad9ad7b1",
-        "name": "debug 28",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 3600,
-        "wires": []
     },
     {
         "id": "b58ac7ce0f40e5bc",
@@ -10475,12 +10425,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 3700,
+        "x": 360,
+        "y": 3720,
         "wires": [
             [
                 "b4948c3a4fb7ab7b",
-                "9e08c4708da75e96",
                 "fffa0256c6914b28"
             ]
         ]
@@ -10498,12 +10447,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 3760,
+        "x": 360,
+        "y": 3780,
         "wires": [
             [
                 "4cf51cc8678ba759",
-                "9e08c4708da75e96",
                 "fffa0256c6914b28"
             ]
         ]
@@ -10521,11 +10469,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 3820,
+        "x": 360,
+        "y": 3840,
         "wires": [
             [
-                "9e08c4708da75e96",
                 "fffa0256c6914b28"
             ]
         ]
@@ -10540,9 +10487,936 @@
         "links": [
             "7b1e1beb670237f3"
         ],
-        "x": 885,
-        "y": 3720,
+        "x": 865,
+        "y": 3760,
         "wires": []
+    },
+    {
+        "id": "a29ca9f410078b83",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4020,
+        "wires": [
+            [
+                "f50bd4a4db6b2373"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f50bd4a4db6b2373",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Reader1 12V",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader1 12V\",\"ain\":\"rdr1_12vdc\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 4080,
+        "wires": [
+            [
+                "c89923f6d158893f"
+            ]
+        ]
+    },
+    {
+        "id": "a36913c1cff31cb8",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 4140,
+        "wires": [
+            [
+                "e9a22f62d16b9b68"
+            ]
+        ]
+    },
+    {
+        "id": "c89923f6d158893f",
+        "type": "subflow:78b5cecde0aff5c6",
+        "z": "8992ffe741acd3ee",
+        "name": "12VDC Test",
+        "x": 490,
+        "y": 4080,
+        "wires": [
+            [
+                "854a9f51973aa871",
+                "e9a22f62d16b9b68"
+            ]
+        ]
+    },
+    {
+        "id": "854a9f51973aa871",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "7b1e1beb670237f3"
+        ],
+        "x": 825,
+        "y": 4080,
+        "wires": []
+    },
+    {
+        "id": "e9a22f62d16b9b68",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "WIEGAND_OSDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"wiegand_osdp\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 4140,
+        "wires": [
+            [
+                "ea448bd57ab21aea"
+            ]
+        ]
+    },
+    {
+        "id": "ea448bd57ab21aea",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "x": 560,
+        "y": 4140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1999b57c591d48ab",
+        "type": "serial out",
+        "z": "8992ffe741acd3ee",
+        "name": "ESP32",
+        "serial": "a6c6d5d269d5dc61",
+        "x": 900,
+        "y": 4260,
+        "wires": []
+    },
+    {
+        "id": "8df4c09eabbf6e72",
+        "type": "serial in",
+        "z": "8992ffe741acd3ee",
+        "name": "ESP32",
+        "serial": "a6c6d5d269d5dc61",
+        "x": 930,
+        "y": 4400,
+        "wires": [
+            [
+                "013cfce067a37a8c"
+            ]
+        ]
+    },
+    {
+        "id": "013cfce067a37a8c",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 4400,
+        "wires": []
+    },
+    {
+        "id": "62fc90893e5ad45a",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Send Reader1 Wiegand",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 4260,
+        "wires": [
+            [
+                "1999b57c591d48ab",
+                "52c44812dc7ab9fd"
+            ]
+        ]
+    },
+    {
+        "id": "374a64a4f1c42825",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "23978756652525b0",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "67857499edf699ee",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 610,
+        "y": 3060,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "3df11ae9ec907a4a",
+        "type": "serial out",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 1190,
+        "y": 3060,
+        "wires": []
+    },
+    {
+        "id": "a3822cad79ea2d7e",
+        "type": "link in",
+        "z": "8992ffe741acd3ee",
+        "name": "link in 8",
+        "links": [
+            "23978756652525b0",
+            "8e7b4db3e8c1669b",
+            "048203f58fe4affa",
+            "8ac6a4f531e745d6"
+        ],
+        "x": 1055,
+        "y": 3060,
+        "wires": [
+            [
+                "3df11ae9ec907a4a"
+            ]
+        ]
+    },
+    {
+        "id": "8e7b4db3e8c1669b",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 570,
+        "y": 3540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "043ec7e978d0aa1d",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Get Reader1 Bit Cnt",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "b",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 4440,
+        "wires": [
+            [
+                "048203f58fe4affa",
+                "8aba59ec2b95ee49"
+            ]
+        ]
+    },
+    {
+        "id": "048203f58fe4affa",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 630,
+        "y": 4440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5c649c4430c06a03",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 4200,
+        "wires": [
+            [
+                "6e8f99c7b3959609"
+            ]
+        ]
+    },
+    {
+        "id": "ecb7de7e0270470b",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Clear Reader1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "measurements.rdr1_bit_cnt[0]",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "measurements.rdr1_bit_cnt[1]",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 4380,
+        "wires": [
+            [
+                "043ec7e978d0aa1d"
+            ]
+        ]
+    },
+    {
+        "id": "52c44812dc7ab9fd",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 4320,
+        "wires": [
+            [
+                "ecb7de7e0270470b"
+            ]
+        ]
+    },
+    {
+        "id": "da27cd1835166ec7",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "function 12",
+        "func": "let bit0_cnt = global.get(\"measurements.rdr1_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr1_bit_cnt[1]\");\n\nif(bit0_cnt == 19) {\n    if(bit1_cnt == 7) {\n        msg.payload = \"Passed\";\n    } else {\n        msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n    }\n} else {\n    msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 4560,
+        "wires": [
+            [
+                "3b49d42a84ced8ee"
+            ]
+        ]
+    },
+    {
+        "id": "3b49d42a84ced8ee",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 31",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 4560,
+        "wires": []
+    },
+    {
+        "id": "6e8f99c7b3959609",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Clear Wiegand Count",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "d",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 4200,
+        "wires": [
+            [
+                "048203f58fe4affa",
+                "1f8e632a4dcfafff"
+            ]
+        ]
+    },
+    {
+        "id": "1f8e632a4dcfafff",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 4200,
+        "wires": [
+            [
+                "62fc90893e5ad45a"
+            ]
+        ]
+    },
+    {
+        "id": "cd4a703e0eae57f4",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Send Reader2 Wiegand",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 4980,
+        "wires": [
+            [
+                "ca0f6f218957f071",
+                "1999b57c591d48ab"
+            ]
+        ]
+    },
+    {
+        "id": "c8ce187f549e9e48",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Get Reader2 Bit Cnt",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "c",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 5200,
+        "wires": [
+            [
+                "8ac6a4f531e745d6",
+                "9a56919d6e39ba2f"
+            ]
+        ]
+    },
+    {
+        "id": "8ac6a4f531e745d6",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 630,
+        "y": 5200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1a2f640f1791f303",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 4920,
+        "wires": [
+            [
+                "a10fd730da29e975"
+            ]
+        ]
+    },
+    {
+        "id": "c8af83b2ac6f7a7f",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 5200,
+        "wires": [
+            [
+                "c8ce187f549e9e48"
+            ]
+        ]
+    },
+    {
+        "id": "5b32d3e07ba84cc5",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Clear Reader2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "measurements.rdr2_bit_cnt[0]",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "measurements.rdr2_bit_cnt[1]",
+                "pt": "global",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 5100,
+        "wires": [
+            [
+                "c8ce187f549e9e48"
+            ]
+        ]
+    },
+    {
+        "id": "0a7d718d5c833701",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 5100,
+        "wires": [
+            [
+                "5b32d3e07ba84cc5"
+            ]
+        ]
+    },
+    {
+        "id": "ca0f6f218957f071",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 5040,
+        "wires": [
+            [
+                "5b32d3e07ba84cc5"
+            ]
+        ]
+    },
+    {
+        "id": "9a56919d6e39ba2f",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "function 13",
+        "func": "let bit0_cnt = global.get(\"measurements.rdr2_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr2_bit_cnt[1]\");\n\nif(bit0_cnt == 19) {\n    if(bit1_cnt == 7) {\n        msg.payload = \"Passed\";\n    } else {\n        msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n    }\n} else {\n    msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 5300,
+        "wires": [
+            [
+                "6ef5d63dd71040e1"
+            ]
+        ]
+    },
+    {
+        "id": "6ef5d63dd71040e1",
+        "type": "debug",
+        "z": "8992ffe741acd3ee",
+        "name": "debug 32",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 5300,
+        "wires": []
+    },
+    {
+        "id": "bf24813668bdfa2c",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 5300,
+        "wires": [
+            [
+                "9a56919d6e39ba2f"
+            ]
+        ]
+    },
+    {
+        "id": "a10fd730da29e975",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Clear Wiegand Count",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "d",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 4920,
+        "wires": [
+            [
+                "8ac6a4f531e745d6",
+                "7cce54b9e955d027"
+            ]
+        ]
+    },
+    {
+        "id": "7cce54b9e955d027",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 4920,
+        "wires": [
+            [
+                "cd4a703e0eae57f4"
+            ]
+        ]
+    },
+    {
+        "id": "8aba59ec2b95ee49",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 4500,
+        "wires": [
+            [
+                "da27cd1835166ec7"
+            ]
+        ]
+    },
+    {
+        "id": "2aa32067bf3f62d8",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "name": "Set Reader1 LED to HIGH",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "e",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 4620,
+        "wires": [
+            [
+                "048203f58fe4affa"
+            ]
+        ]
+    },
+    {
+        "id": "69b6b0a9703eda9e",
+        "type": "inject",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 4620,
+        "wires": [
+            [
+                "2aa32067bf3f62d8"
+            ]
+        ]
     },
     {
         "id": "63b8c36bcb47dde8",
@@ -10897,6 +11771,41 @@
                 "type": "checkbox",
                 "required": false,
                 "rows": null
+            },
+            {
+                "label": "Reader1 12V",
+                "key": "rdr1_12vdc",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Reader1 Wiegand",
+                "key": "rdr1_wiegand",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Reader1 I/O",
+                "key": "rdr1_io",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Reader1 OSDP",
+                "key": "rdr1_osdp",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Reader2 12V",
+                "key": "rdr2_12vdc",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
             }
         ],
         "formValue": {
@@ -10910,7 +11819,12 @@
             "d1_relay": false,
             "d2_relay": false,
             "d1_input": false,
-            "d2_input": false
+            "d2_input": false,
+            "rdr1_12vdc": false,
+            "rdr1_wiegand": false,
+            "rdr1_io": false,
+            "rdr1_osdp": false,
+            "rdr2_12vdc": false
         },
         "payload": "",
         "submit": "Save",
@@ -15776,8 +16690,8 @@
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
-        "x": 110,
-        "y": 1020,
+        "x": 750,
+        "y": 760,
         "wires": [
             [
                 "20ecc75547a63240",
@@ -15798,8 +16712,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 360,
-        "y": 960,
+        "x": 980,
+        "y": 700,
         "wires": []
     },
     {
@@ -15807,8 +16721,8 @@
         "type": "subflow:513e4a72f100d2f7",
         "z": "c21c2a31923f4a5d",
         "name": "",
-        "x": 480,
-        "y": 1020,
+        "x": 1020,
+        "y": 760,
         "wires": [
             []
         ]
@@ -15839,8 +16753,8 @@
         "offvalueType": "json",
         "officon": "",
         "offcolor": "",
-        "x": 130,
-        "y": 1080,
+        "x": 770,
+        "y": 820,
         "wires": [
             [
                 "b282571989f9d6fb",
@@ -16000,8 +16914,8 @@
         "topic": "",
         "payload": "v",
         "payloadType": "str",
-        "x": 140,
-        "y": 880,
+        "x": 120,
+        "y": 1140,
         "wires": [
             [
                 "562457352f638d96"
@@ -16125,8 +17039,8 @@
         "topic": "",
         "payload": "a",
         "payloadType": "str",
-        "x": 140,
-        "y": 820,
+        "x": 120,
+        "y": 780,
         "wires": [
             [
                 "562457352f638d96"
@@ -16202,6 +17116,241 @@
         "payloadType": "str",
         "x": 140,
         "y": 720,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "0ee20523b52aaf73",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader1 Bits (b)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "b",
+        "payloadType": "str",
+        "x": 140,
+        "y": 820,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "5c6a53c25ffb17cb",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader2 Bits (c)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "c",
+        "payloadType": "str",
+        "x": 140,
+        "y": 860,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "58b11080ec787b41",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Clear Reader Bits (d)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "d",
+        "payloadType": "str",
+        "x": 160,
+        "y": 900,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "33e2c8356780141f",
+        "type": "serial out",
+        "z": "c21c2a31923f4a5d",
+        "name": "ESP32",
+        "serial": "a6c6d5d269d5dc61",
+        "x": 1060,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e486f24a946f2b80",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader1 Wiegand Data (1)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 830,
+        "y": 440,
+        "wires": [
+            [
+                "33e2c8356780141f"
+            ]
+        ]
+    },
+    {
+        "id": "39b54619428621d3",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader2 Wiegand Data (2)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "str",
+        "x": 830,
+        "y": 480,
+        "wires": [
+            [
+                "33e2c8356780141f"
+            ]
+        ]
+    },
+    {
+        "id": "b96662997fc8cbfa",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader1 LED HIGH (e)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "e",
+        "payloadType": "str",
+        "x": 160,
+        "y": 940,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "8aac01eb635db589",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader1 LED LOW (f)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "f",
+        "payloadType": "str",
+        "x": 160,
+        "y": 980,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "994588979cebf6ec",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader2 LED HIGH (g)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "g",
+        "payloadType": "str",
+        "x": 160,
+        "y": 1020,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "6d5bc5e7031f0a4a",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Reader2 LED LOW (h)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "h",
+        "payloadType": "str",
+        "x": 160,
+        "y": 1060,
         "wires": [
             [
                 "562457352f638d96"
