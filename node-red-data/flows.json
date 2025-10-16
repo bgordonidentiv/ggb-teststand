@@ -842,7 +842,8 @@
         ],
         "env": [],
         "meta": {},
-        "color": "#DDAA99"
+        "color": "#C0DEED",
+        "icon": "font-awesome/fa-lock"
     },
     {
         "id": "19f2dcbfa4b9f13f",
@@ -961,7 +962,8 @@
         ],
         "env": [],
         "meta": {},
-        "color": "#DDAA99"
+        "color": "#C0DEED",
+        "icon": "font-awesome/fa-lock"
     },
     {
         "id": "916401c4eebbcc52",
@@ -971,11 +973,11 @@
         "category": "",
         "in": [
             {
-                "x": 180,
-                "y": 260,
+                "x": 160,
+                "y": 200,
                 "wires": [
                     {
-                        "id": "cc1da4a454e6b5a8"
+                        "id": "a49ea9d6760ad398"
                     }
                 ]
             }
@@ -1018,14 +1020,30 @@
                         "port": 0
                     },
                     {
-                        "id": "20b26d63e30d94d2",
+                        "id": "9b358dfed9e3ce53",
+                        "port": 0
+                    },
+                    {
+                        "id": "bde91057e12867bf",
+                        "port": 0
+                    },
+                    {
+                        "id": "d4d08943b4c5d3a4",
+                        "port": 0
+                    },
+                    {
+                        "id": "949cb47d41933669",
+                        "port": 0
+                    },
+                    {
+                        "id": "3b0bca62e41ff646",
                         "port": 0
                     }
                 ]
             },
             {
                 "x": 920,
-                "y": 540,
+                "y": 620,
                 "wires": [
                     {
                         "id": "1c7f0a23ef298ff3",
@@ -1035,7 +1053,7 @@
             },
             {
                 "x": 920,
-                "y": 720,
+                "y": 800,
                 "wires": [
                     {
                         "id": "26981e0e1ea32ca5",
@@ -1077,7 +1095,7 @@
             },
             {
                 "x": 880,
-                "y": 2580,
+                "y": 2700,
                 "wires": [
                     {
                         "id": "370c84bc45f47d3a",
@@ -1091,14 +1109,18 @@
             },
             {
                 "x": 880,
-                "y": 2940,
+                "y": 3000,
                 "wires": [
                     {
                         "id": "60b6eee64d3b32c6",
                         "port": 0
                     },
                     {
-                        "id": "20b26d63e30d94d2",
+                        "id": "949cb47d41933669",
+                        "port": 0
+                    },
+                    {
+                        "id": "3b0bca62e41ff646",
                         "port": 0
                     }
                 ]
@@ -1106,7 +1128,8 @@
         ],
         "env": [],
         "meta": {},
-        "color": "#DDAA99"
+        "color": "#DEBD5C",
+        "icon": "font-awesome/fa-wifi"
     },
     {
         "id": "d9d0929cb405a791",
@@ -1116,11 +1139,11 @@
         "category": "",
         "in": [
             {
-                "x": 80,
+                "x": 100,
                 "y": 140,
                 "wires": [
                     {
-                        "id": "3a4eb00b422348e3"
+                        "id": "e7beb56533836a41"
                     }
                 ]
             }
@@ -1128,7 +1151,7 @@
         "out": [
             {
                 "x": 940,
-                "y": 140,
+                "y": 240,
                 "wires": [
                     {
                         "id": "c46c4889e71549c8",
@@ -1159,14 +1182,34 @@
                         "port": 0
                     },
                     {
-                        "id": "8ec5f34a308e01c3",
+                        "id": "906cb849cfacdbfa",
+                        "port": 0
+                    },
+                    {
+                        "id": "e1a54ebd9717da8b",
+                        "port": 0
+                    },
+                    {
+                        "id": "994f8bf221d1084a",
+                        "port": 1
+                    },
+                    {
+                        "id": "0e9ac6117724c576",
+                        "port": 0
+                    },
+                    {
+                        "id": "ab37557b2f1c3e71",
+                        "port": 0
+                    },
+                    {
+                        "id": "12ca1ed97dd1161b",
                         "port": 0
                     }
                 ]
             },
             {
                 "x": 940,
-                "y": 420,
+                "y": 540,
                 "wires": [
                     {
                         "id": "9e11071950aa0e6a",
@@ -1176,7 +1219,7 @@
             },
             {
                 "x": 940,
-                "y": 600,
+                "y": 720,
                 "wires": [
                     {
                         "id": "b9e6dba98085c8bd",
@@ -1222,7 +1265,7 @@
             },
             {
                 "x": 860,
-                "y": 2580,
+                "y": 2740,
                 "wires": [
                     {
                         "id": "c8ac81cb85db4d8a",
@@ -1236,14 +1279,18 @@
             },
             {
                 "x": 860,
-                "y": 2960,
+                "y": 3120,
                 "wires": [
                     {
                         "id": "9de73528badcaa1d",
                         "port": 0
                     },
                     {
-                        "id": "8ec5f34a308e01c3",
+                        "id": "ab37557b2f1c3e71",
+                        "port": 0
+                    },
+                    {
+                        "id": "12ca1ed97dd1161b",
                         "port": 0
                     }
                 ]
@@ -1251,7 +1298,42 @@
         ],
         "env": [],
         "meta": {},
-        "color": "#DDAA99"
+        "color": "#DEBD5C",
+        "icon": "font-awesome/fa-wifi"
+    },
+    {
+        "id": "b72dbfa71bf72ff3",
+        "type": "subflow",
+        "name": "Finished Dialog",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 520,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "4facd05924f25108"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 900,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "4facd05924f25108",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#3FADB5",
+        "icon": "node-red/comment.svg"
     },
     {
         "id": "c2bca422a609058c",
@@ -1457,7 +1539,7 @@
             "1758bfd8feee78e6"
         ],
         "x": 194,
-        "y": 1379,
+        "y": 1459,
         "w": 782,
         "h": 202
     },
@@ -1536,10 +1618,10 @@
             "1413586a46a136da",
             "07bd5c8fee381059",
             "1f360a3090b29d0c",
-            "9938caaff02bf284"
+            "a3cc0673b7f8e04c"
         ],
         "x": 194,
-        "y": 1139,
+        "y": 1219,
         "w": 792,
         "h": 222
     },
@@ -1560,7 +1642,6 @@
             "71ced5ee6880c833",
             "6d021a84f1941c6e",
             "498d78dce13e9db2",
-            "99d955b9e3f92199",
             "65cf39effb40c29b",
             "7970e220a8b56d3a",
             "e28b0a71441cd0f2",
@@ -1573,11 +1654,12 @@
             "567cff6486304761",
             "548e27cc449c1ec2",
             "f2148da5d43a858d",
-            "0b0cbd59be462c5f"
+            "0b0cbd59be462c5f",
+            "f01aeb69367fcbc6"
         ],
         "x": 194,
-        "y": 1919,
-        "w": 712,
+        "y": 1999,
+        "w": 692,
         "h": 802
     },
     {
@@ -1592,7 +1674,6 @@
         "nodes": [
             "d9cfc8a7fee862eb",
             "0d9ec407d337f240",
-            "3c840d94ca30c5af",
             "fc25baf2b3166174",
             "0aba180fabae6c9f",
             "7d69e67343937665",
@@ -1601,9 +1682,9 @@
             "1a49c1cd5a927319"
         ],
         "x": 194,
-        "y": 1599,
+        "y": 1679,
         "w": 712,
-        "h": 302
+        "h": 262
     },
     {
         "id": "09c231e6bb082835",
@@ -1643,13 +1724,14 @@
             "8c07aac8f1d6eccf",
             "fb3d59c835d4f818",
             "e55d40efe59920a5",
-            "aa3630c79c2b3c87",
             "a7bc2f3b56f9d90c",
             "29c61c2f8de7cc7c",
-            "7e03262e4b3c48b9"
+            "7e03262e4b3c48b9",
+            "f1d4375440de5907",
+            "4bc95be491b5b8e4"
         ],
         "x": 194,
-        "y": 2739,
+        "y": 2819,
         "w": 782,
         "h": 202
     },
@@ -1668,21 +1750,22 @@
             "ca7a93d57e521979",
             "3a6ca65db2c33c8e",
             "6159bf147d4e2f0c",
-            "91cb8804dc75f2d2",
             "f4f71fe9693570e8",
             "d7c05c4df3800809",
             "432506cc0309ca86",
-            "0998131b29c6495e",
             "b6e971ece046c17b",
             "23978756652525b0",
             "92ba45402a9020f4",
             "4e5576e9e88b8a8e",
             "bed1cae6d10865c8",
             "d8ee419b25e39299",
-            "ad092f2820683d2e"
+            "ad092f2820683d2e",
+            "3cb54aae56a984c5",
+            "26619a3d30d8c569",
+            "e0fea46d862c0642"
         ],
         "x": 194,
-        "y": 2959,
+        "y": 3039,
         "w": 712,
         "h": 382
     },
@@ -1705,12 +1788,18 @@
             "b4948c3a4fb7ab7b",
             "4cf51cc8678ba759",
             "fffa0256c6914b28",
-            "8e7b4db3e8c1669b"
+            "8e7b4db3e8c1669b",
+            "520a3f8497efe4f3",
+            "f988136bf3d89545",
+            "be8bb1a90576f75e",
+            "7e44050fcd7c0956",
+            "96fab275a71a7d5f",
+            "4bcf6ed391dace6e"
         ],
         "x": 194,
-        "y": 3379,
-        "w": 712,
-        "h": 502
+        "y": 3459,
+        "w": 612,
+        "h": 562
     },
     {
         "id": "0eca9bf2ed418f2d",
@@ -1731,12 +1820,13 @@
             "ae3b985aa7e8251c",
             "59e0f2cfd4b11210",
             "8292fca9de5bb960",
-            "3f174f192d107477"
+            "3f174f192d107477",
+            "3025fe309ced1ce0"
         ],
         "x": 194,
-        "y": 3899,
-        "w": 532,
-        "h": 444.5
+        "y": 4059,
+        "w": 612,
+        "h": 404.5
     },
     {
         "id": "efa2eb74839b1194",
@@ -1744,7 +1834,7 @@
         "z": "8992ffe741acd3ee",
         "name": "",
         "style": {
-            "fill": "#ffC000",
+            "fill": "#ffefbf",
             "label": true
         },
         "nodes": [
@@ -1823,12 +1913,44 @@
             "874e56a28601990b",
             "227982b6e3239380",
             "b707d4ab6e9548d2",
-            "9dae07942b32e445"
+            "9dae07942b32e445",
+            "766c1d08fe1d1e80",
+            "b86d9907184fb447",
+            "6611e6abe634dc81",
+            "509b68e1df19700d"
         ],
         "x": 194,
         "y": 499,
         "w": 972,
-        "h": 622
+        "h": 642
+    },
+    {
+        "id": "6d39391e20d074cd",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "30dd43fdc6181bde",
+            "bc0da9dcc974f651",
+            "956c0eadf5b5c8f3",
+            "46f3c986a096e99e",
+            "67a13f4458d1b6e7",
+            "fd7a65f908acd305",
+            "cd879e9e17e21ce8",
+            "72f0d2f7464a0bdb",
+            "10de179cfe5f14cb",
+            "e5f776204af2e15e",
+            "ace56b4fe59f4e9b",
+            "5e67380ac05b628d"
+        ],
+        "x": 194,
+        "y": 4499,
+        "w": 612,
+        "h": 462
     },
     {
         "id": "6224f3394241d463",
@@ -5270,7 +5392,7 @@
         "type": "function",
         "z": "78b5cecde0aff5c6",
         "name": "Voltage Test",
-        "func": "let flowEnabled = global.get(\"flowCfg.\" + msg.payload.ain);     // Test Enabled?\n\nlet vMax = global.get(\"measurements.\" + msg.payload.ain + \"_max\");  // Get measured max voltage\nlet vMin = global.get(\"measurements.\" + msg.payload.ain + \"_min\");  // Get measured min voltage\n\nlet vMaxLimit = global.get(\"parameters.\" + msg.payload.ain + \"_max\");   // Get max voltage limit\nlet vMinLimit = global.get(\"parameters.\" + msg.payload.ain + \"_min\");   // Get min voltage limit\n\n// Check if test is enabled\nif(flowEnabled == true) {\n    if(vMax > vMaxLimit) {              // Voltage too HIGH\n        node.warn(\"Voltage too high\");\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : vMax,\n            \"limit\" : vMaxLimit,\n            \"error\" : \"Voltage Too High\"\n        }\n    } else if (vMin < vMinLimit) {      // Voltage too LOW\n        node.warn(\"Voltage too low\");\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : vMin,\n            \"limit\" : vMinLimit,\n            \"error\" : \"Voltage Too Low\"\n        }\n    } else {                            // Voltage just right\n        node.warn(\"Voltage is just right \" + vMax + \" \" + vMaxLimit);\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Passed\"\n        }\n    }\n} else {                                // Test Skipped\n    msg.payload = {\n        \"name\" : msg.payload.name,\n        \"result\" : \"Skipped\"\n    };\n}\n\nreturn msg",
+        "func": "let flowEnabled = global.get(\"flowCfg.\" + msg.payload.ain);     // Test Enabled?\n\nlet vMax = global.get(\"measurements.\" + msg.payload.ain + \"_max\");  // Get measured max voltage\nlet vMin = global.get(\"measurements.\" + msg.payload.ain + \"_min\");  // Get measured min voltage\n\nlet vMaxLimit = global.get(\"parameters.\" + msg.payload.ain + \"_max\");   // Get max voltage limit\nlet vMinLimit = global.get(\"parameters.\" + msg.payload.ain + \"_min\");   // Get min voltage limit\n\n// Check if test is enabled\nif(flowEnabled == true) {\n    if(vMax > vMaxLimit) {              // Voltage too HIGH\n        node.warn(\"Voltage too high\");\n        global.set(\"test.result\", \"failed\")\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : \"Measured: \" + vMax,\n            \"limit\" : \"Limit: \" + vMaxLimit,\n            \"error\" : \"Voltage Too High\"\n        }\n    } else if (vMin < vMinLimit) {      // Voltage too LOW\n        node.warn(\"Voltage too low\");\n        global.set(\"test.result\", \"failed\")\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Failed\",\n            \"measured\" : \"Measured: \" + vMin,\n            \"limit\" : \"Limit: \" + vMinLimit,\n            \"error\" : \"Voltage Too Low\"\n        }\n    } else {                            // Voltage just right\n        node.warn(\"Voltage is just right \" + vMax + \" \" + vMaxLimit);\n        msg.payload = {\n            \"name\" : msg.payload.name,\n            \"result\" : \"Passed\"\n        }\n    }\n} else {                                // Test Skipped\n    msg.payload = {\n        \"name\" : msg.payload.name,\n        \"result\" : \"Skipped\"\n    };\n}\n\nreturn msg",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5367,7 +5489,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <v-virtual-scroll :items=\"items\" height=\"900\">\n    <template v-slot:default=\"{ item }\">\n      <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px;\">\n        <span>{{ item.name }} Test:</span>\n        <v-tooltip :disabled=\"!item.showToolTip\" location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip \n                    v-bind=\"props\"\n                    variant=\"flat\"\n                    :color=\"item.color\" \n                    text-color=\"white\" \n                    pill\n                    style=\"width: 80px; justify-content: center\">\n                {{ item.result }}\n                </v-chip>\n            </template>\n            <h3>{{ item.error }}</h3>\n            <p>Measured: {{ item.measured }}</p>\n            <span>Limit: {{ item.limit }}</span>\n        </v-tooltip>\n      </div>\n    </template>\n  </v-virtual-scroll>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                items: []\n            }\n        },\n        watch: {\n            // watch for any changes\n            msg: function () {\n                if(this.msg.payload == \"\") {\n                    this.items = [];\n                } else if(this.msg.payload.result == \"Passed\") {\n                    this.msg.payload.color = \"green\";\n                    this.msg.payload.showToolTip = false;\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Failed\") {\n                    this.msg.payload.color = \"red\";\n                    this.msg.payload.showToolTip = true\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Skipped\") {\n                    this.msg.payload.color = \"gray\";\n                    this.msg.payload.showToolTip = false\n                    this.items.push(this.msg.payload);\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n</style>",
+        "format": "<template>\n  <v-virtual-scroll :items=\"items\" height=\"900\">\n    <template v-slot:default=\"{ item }\">\n      <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px;\">\n        <span>{{ item.name }} Test:</span>\n        <v-tooltip :disabled=\"!item.showToolTip\" location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip \n                    v-bind=\"props\"\n                    variant=\"flat\"\n                    :color=\"item.color\" \n                    text-color=\"white\" \n                    pill\n                    style=\"width: 80px; justify-content: center\">\n                {{ item.result }}\n                </v-chip>\n            </template>\n            <h3>{{ item.error }}</h3>\n            <p>{{ item.measured }}</p>\n            <span>{{item.limit}}</span>\n            <!-- <p>Measured: {{ item.measured }}</p> -->\n            <!-- <span>Limit: {{ item.limit }}</span> -->\n        </v-tooltip>\n      </div>\n    </template>\n  </v-virtual-scroll>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                items: []\n            }\n        },\n        watch: {\n            // watch for any changes\n            msg: function () {\n                if(this.msg.payload == \"\") {\n                    this.items = [];\n                } else if(this.msg.payload.result == \"Passed\") {\n                    this.msg.payload.color = \"green\";\n                    this.msg.payload.showToolTip = false;\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Failed\") {\n                    this.msg.payload.color = \"red\";\n                    this.msg.payload.showToolTip = true\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Skipped\") {\n                    this.msg.payload.color = \"gray\";\n                    this.msg.payload.showToolTip = false\n                    this.items.push(this.msg.payload);\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -8356,7 +8478,7 @@
         "name": "Serial Debug",
         "info": "",
         "x": 930,
-        "y": 660,
+        "y": 740,
         "wires": []
     },
     {
@@ -8395,7 +8517,7 @@
         "y": 260,
         "wires": [
             [
-                "64825f4d9e4a0f99"
+                "a391e72b5c0fd8be"
             ]
         ]
     },
@@ -8405,8 +8527,8 @@
         "z": "916401c4eebbcc52",
         "name": "Check Reader Voltage",
         "info": "",
-        "x": 340,
-        "y": 200,
+        "x": 140,
+        "y": 260,
         "wires": []
     },
     {
@@ -8439,7 +8561,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 320,
+        "y": 440,
         "wires": [
             [
                 "f3dab923c7cf4920"
@@ -8452,7 +8574,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 570,
-        "y": 320,
+        "y": 440,
         "wires": [
             [
                 "84c289595cd9d29b"
@@ -8479,7 +8601,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "a07d39174e45b815"
@@ -8504,7 +8626,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 590,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "1c7f0a23ef298ff3"
@@ -8531,7 +8653,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "45cc853e97abee35"
@@ -8545,7 +8667,7 @@
         "name": "ESP32 Serial",
         "info": "",
         "x": 930,
-        "y": 500,
+        "y": 580,
         "wires": []
     },
     {
@@ -8566,7 +8688,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 600,
+        "y": 680,
         "wires": [
             [
                 "b7824023b4398a83"
@@ -8600,7 +8722,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 660,
+        "y": 740,
         "wires": [
             [
                 "26981e0e1ea32ca5"
@@ -8627,7 +8749,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 720,
+        "y": 800,
         "wires": [
             [
                 "681601d865c315c8"
@@ -8652,7 +8774,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 780,
+        "y": 860,
         "wires": [
             [
                 "e0985620c445cfde"
@@ -8664,7 +8786,7 @@
         "type": "function",
         "z": "916401c4eebbcc52",
         "name": "Wiegand Test",
-        "func": "let bit0_cnt = global.get(\"measurements.rdr1_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr1_bit_cnt[1]\");\n\nif(bit0_cnt == 19) {\n    if(bit1_cnt == 7) {\n        msg.payload = \"Passed\";\n    } else {\n        // msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n        node.warn(\"Failed Bit 1 Count\");\n        msg.payload = {\n            \"name\" : \"Reader1 Wiegand\",\n            \"result\" : \"Failed\"\n        }\n    }\n} else {\n    // msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n    node.warn(\"Failed Bit 0 Count\");\n    msg.payload = {\n        \"name\": \"Reader1 Wiegand\",\n        \"result\": \"Failed\"\n    }\n}\n\nreturn msg;",
+        "func": "let bit0_cnt = global.get(\"measurements.rdr1_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr1_bit_cnt[1]\");\n\nif(bit0_cnt == 19) {\n    if(bit1_cnt == 7) {\n        msg.payload = \"Passed\";\n    } else {\n        // msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n        node.warn(\"Failed Bit 1 Count\");\n        msg.payload = {\n            \"name\" : \"Reader1 Wiegand\",\n            \"result\" : \"Failed\",\n            \"measured\": \"Bit1 Count: \" + bit1_cnt,\n            \"Limit: \": \"Expected: 7\"\n        }\n        global.set(\"test.result\", \"failed\");\n    }\n} else {\n    // msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n    node.warn(\"Failed Bit 0 Count\");\n    msg.payload = {\n        \"name\": \"Reader1 Wiegand\",\n        \"result\": \"Failed\",\n        \"measured\": \"Bit0 Count: \" + bit0_cnt,\n        \"Limit: \": \"Expected: 19\"\n    }\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -8672,7 +8794,7 @@
         "finalize": "",
         "libs": [],
         "x": 340,
-        "y": 840,
+        "y": 920,
         "wires": [
             [
                 "e23433bd5ae6ce4d"
@@ -8699,7 +8821,7 @@
         "to": "",
         "reg": false,
         "x": 380,
-        "y": 1020,
+        "y": 1100,
         "wires": [
             [
                 "cce8f4f2d49250fd"
@@ -8712,8 +8834,8 @@
         "z": "916401c4eebbcc52",
         "name": "Check Reader I/O",
         "info": "",
-        "x": 330,
-        "y": 920,
+        "x": 150,
+        "y": 1000,
         "wires": []
     },
     {
@@ -8737,10 +8859,10 @@
         "repair": false,
         "outputs": 2,
         "x": 530,
-        "y": 840,
+        "y": 920,
         "wires": [
             [
-                "462b5f67c469b057"
+                "1ae5108e05d50b0f"
             ],
             []
         ]
@@ -8763,7 +8885,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 1080,
+        "y": 1160,
         "wires": [
             [
                 "117d8ffc1d5c7be7"
@@ -8797,7 +8919,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 1140,
+        "y": 1220,
         "wires": [
             [
                 "963a02e29d7c47f8"
@@ -8810,7 +8932,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 520,
-        "y": 1140,
+        "y": 1220,
         "wires": [
             [
                 "615bae18e99cc471"
@@ -8837,7 +8959,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1200,
+        "y": 1280,
         "wires": [
             [
                 "56430a02c3939362"
@@ -8857,8 +8979,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader1 LED\",\"result\":\"Failed\",\"measured\":\"Measured: LOW\",\"limit\":\"Expected: HIGH\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -8867,7 +8996,7 @@
         "to": "",
         "reg": false,
         "x": 500,
-        "y": 1200,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -8892,7 +9021,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1260,
+        "y": 1340,
         "wires": [
             [
                 "6fdc799c6f671865"
@@ -8917,7 +9046,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 1320,
+        "y": 1400,
         "wires": [
             [
                 "3790bc7e6e54935b"
@@ -8951,7 +9080,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 1380,
+        "y": 1460,
         "wires": [
             [
                 "0bdbd39b536b5116"
@@ -8964,7 +9093,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 520,
-        "y": 1380,
+        "y": 1460,
         "wires": [
             [
                 "8cac971e491d87a8"
@@ -8991,7 +9120,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1440,
+        "y": 1520,
         "wires": [
             [
                 "bf7540ca017a28a5"
@@ -9011,8 +9140,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader1 LED\",\"result\":\"Failed\",\"measured\":\"Measured: HIGH\",\"limit\":\"Expected: LOW\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -9021,7 +9157,7 @@
         "to": "",
         "reg": false,
         "x": 500,
-        "y": 1440,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -9046,7 +9182,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 1600,
+        "y": 1640,
         "wires": [
             [
                 "1293465ab0854643"
@@ -9059,7 +9195,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 570,
-        "y": 1600,
+        "y": 1640,
         "wires": [
             [
                 "8a7e6d9a62888ab0"
@@ -9084,7 +9220,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             [
                 "d4a4323db46298f6"
@@ -9111,7 +9247,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 1720,
+        "y": 1760,
         "wires": [
             [
                 "2be4775ec818462b"
@@ -9136,7 +9272,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 1780,
+        "y": 1820,
         "wires": [
             [
                 "75d43b044201f417"
@@ -9164,7 +9300,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             [
                 "1326fc3fd563a838"
@@ -9194,7 +9330,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 1900,
+        "y": 1940,
         "wires": [
             [
                 "3f516c47330a0a63"
@@ -9207,7 +9343,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 570,
-        "y": 1900,
+        "y": 1940,
         "wires": [
             [
                 "0e298f99de0ba036"
@@ -9232,7 +9368,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 1960,
+        "y": 2000,
         "wires": [
             [
                 "2cfc456abd2fbe27"
@@ -9259,7 +9395,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 2020,
+        "y": 2060,
         "wires": [
             [
                 "b1c6a179a70b320d"
@@ -9284,7 +9420,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 2080,
+        "y": 2120,
         "wires": [
             [
                 "e84277763020fdbd"
@@ -9312,7 +9448,7 @@
         "repair": false,
         "outputs": 2,
         "x": 310,
-        "y": 2140,
+        "y": 2180,
         "wires": [
             [
                 "09c8f1eb147cc176"
@@ -9328,8 +9464,8 @@
         "z": "916401c4eebbcc52",
         "name": "LED",
         "info": "",
-        "x": 330,
-        "y": 960,
+        "x": 150,
+        "y": 1040,
         "wires": []
     },
     {
@@ -9338,8 +9474,8 @@
         "z": "916401c4eebbcc52",
         "name": "Tamper",
         "info": "",
-        "x": 330,
-        "y": 1540,
+        "x": 190,
+        "y": 1600,
         "wires": []
     },
     {
@@ -9352,8 +9488,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader1 Tamper\",\"result\":\"Failed\",\"measured\":\"Measured: LOW\",\"limit\":\"Expected: HIGH\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -9362,7 +9505,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 1840,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -9377,8 +9520,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\",\"measured\":\"Measured: HIGH\",\"limit\":\"Expected: LOW\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -9387,10 +9537,10 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 2160,
+        "y": 2200,
         "wires": [
             [
-                "29f2b148bdc0b736"
+                "865b21bcfd44f013"
             ]
         ]
     },
@@ -9414,10 +9564,10 @@
         "to": "",
         "reg": false,
         "x": 530,
-        "y": 2120,
+        "y": 2160,
         "wires": [
             [
-                "29f2b148bdc0b736"
+                "865b21bcfd44f013"
             ]
         ]
     },
@@ -9427,8 +9577,8 @@
         "z": "916401c4eebbcc52",
         "name": "Check OSDP Mode",
         "info": "",
-        "x": 330,
-        "y": 2260,
+        "x": 130,
+        "y": 2340,
         "wires": []
     },
     {
@@ -9451,7 +9601,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 380,
+        "y": 500,
         "wires": [
             [
                 "9af2a4135b367a24"
@@ -9465,7 +9615,7 @@
         "name": "Reader1 OSDP",
         "info": "",
         "x": 880,
-        "y": 2540,
+        "y": 2660,
         "wires": []
     },
     {
@@ -9487,8 +9637,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 350,
-        "y": 2400,
+        "x": 330,
+        "y": 2460,
         "wires": [
             [
                 "11588e63ac353951"
@@ -9501,7 +9651,7 @@
         "z": "916401c4eebbcc52",
         "name": "",
         "x": 590,
-        "y": 2400,
+        "y": 2460,
         "wires": [
             [
                 "c8e1e07c58b60a01"
@@ -9527,8 +9677,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 2460,
+        "x": 340,
+        "y": 2520,
         "wires": [
             [
                 "4e2cf296d7e43fb6"
@@ -9552,8 +9702,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 2520,
+        "x": 310,
+        "y": 2580,
         "wires": [
             [
                 "370c84bc45f47d3a"
@@ -9579,12 +9729,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
-        "y": 2580,
+        "x": 350,
+        "y": 2640,
         "wires": [
             [
-                "b34ae72b8c781222",
-                "1b099eb7fac62ddd"
+                "b34ae72b8c781222"
             ]
         ]
     },
@@ -9605,8 +9754,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 2640,
+        "x": 310,
+        "y": 2700,
         "wires": [
             [
                 "89815ad23049e7b1"
@@ -9633,14 +9782,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 310,
-        "y": 2940,
+        "x": 290,
+        "y": 3000,
         "wires": [
             [
                 "60b6eee64d3b32c6"
             ],
             [
-                "20b26d63e30d94d2"
+                "3b0bca62e41ff646"
             ]
         ]
     },
@@ -9663,33 +9812,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
-        "y": 2920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "20b26d63e30d94d2",
-        "type": "change",
-        "z": "916401c4eebbcc52",
-        "name": "Failed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Reader1 OSDP\",\"result\":\"Failed\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 2960,
+        "x": 500,
+        "y": 2980,
         "wires": [
             []
         ]
@@ -9711,30 +9835,13 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 320,
-        "y": 2340,
+        "x": 300,
+        "y": 2400,
         "wires": [
             [
                 "06d865fc2be5c896"
             ]
         ]
-    },
-    {
-        "id": "1b099eb7fac62ddd",
-        "type": "debug",
-        "z": "916401c4eebbcc52",
-        "name": "debug 38",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 810,
-        "y": 2440,
-        "wires": []
     },
     {
         "id": "2a9a1a0359e2895b",
@@ -9755,8 +9862,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 2820,
+        "x": 340,
+        "y": 2880,
         "wires": [
             [
                 "555bcf031b5baf3e"
@@ -9780,8 +9887,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 2880,
+        "x": 310,
+        "y": 2940,
         "wires": [
             [
                 "b551d19386766bec"
@@ -9807,8 +9914,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 2700,
+        "x": 340,
+        "y": 2760,
         "wires": [
             [
                 "12de0ef50c15aa79"
@@ -9832,8 +9939,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 330,
-        "y": 2760,
+        "x": 310,
+        "y": 2820,
         "wires": [
             [
                 "2a9a1a0359e2895b"
@@ -9847,8 +9954,258 @@
         "name": "Next Test",
         "info": "",
         "x": 880,
-        "y": 2900,
+        "y": 2940,
         "wires": []
+    },
+    {
+        "id": "a49ea9d6760ad398",
+        "type": "switch",
+        "z": "916401c4eebbcc52",
+        "name": "Skip?",
+        "property": "flowCfg.rdr1_12vdc",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "cc1da4a454e6b5a8"
+            ],
+            [
+                "9b358dfed9e3ce53"
+            ]
+        ]
+    },
+    {
+        "id": "9b358dfed9e3ce53",
+        "type": "change",
+        "z": "916401c4eebbcc52",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader1 12V\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "a391e72b5c0fd8be"
+            ]
+        ]
+    },
+    {
+        "id": "0d62889f934d3940",
+        "type": "comment",
+        "z": "916401c4eebbcc52",
+        "name": "Check Wiegand",
+        "info": "",
+        "x": 120,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a391e72b5c0fd8be",
+        "type": "switch",
+        "z": "916401c4eebbcc52",
+        "name": "Skip?",
+        "property": "flowCfg.rdr1_wiegand",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "64825f4d9e4a0f99"
+            ],
+            [
+                "bde91057e12867bf"
+            ]
+        ]
+    },
+    {
+        "id": "bde91057e12867bf",
+        "type": "change",
+        "z": "916401c4eebbcc52",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 380,
+        "wires": [
+            [
+                "1ae5108e05d50b0f"
+            ]
+        ]
+    },
+    {
+        "id": "1ae5108e05d50b0f",
+        "type": "switch",
+        "z": "916401c4eebbcc52",
+        "name": "Skip?",
+        "property": "flowCfg.rdr1_io",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 1040,
+        "wires": [
+            [
+                "462b5f67c469b057"
+            ],
+            [
+                "d4d08943b4c5d3a4"
+            ]
+        ]
+    },
+    {
+        "id": "d4d08943b4c5d3a4",
+        "type": "change",
+        "z": "916401c4eebbcc52",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader1 I/O\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 1040,
+        "wires": [
+            [
+                "865b21bcfd44f013"
+            ]
+        ]
+    },
+    {
+        "id": "865b21bcfd44f013",
+        "type": "switch",
+        "z": "916401c4eebbcc52",
+        "name": "Skip?",
+        "property": "flowCfg.rdr1_osdp",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 2340,
+        "wires": [
+            [
+                "29f2b148bdc0b736"
+            ],
+            [
+                "949cb47d41933669"
+            ]
+        ]
+    },
+    {
+        "id": "949cb47d41933669",
+        "type": "change",
+        "z": "916401c4eebbcc52",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader1 OSDP\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 2340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b0bca62e41ff646",
+        "type": "function",
+        "z": "916401c4eebbcc52",
+        "name": "Failed",
+        "func": "let result = global.get(\"status.osdp1\");\n\nmsg.payload = {\n    \"name\": \"Reader1 OSDP\",\n    \"result\": \"Failed\",\n    \"measured\": \"Measured: \" + result,\n    \"Limit: \": \"Expected: OSDP1 is working Bryan!!\"\n    };\n    global.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 3020,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "3a4eb00b422348e3",
@@ -9870,7 +10227,7 @@
         "to": "",
         "reg": false,
         "x": 270,
-        "y": 140,
+        "y": 240,
         "wires": [
             [
                 "c46c4889e71549c8"
@@ -9883,10 +10240,10 @@
         "z": "d9d0929cb405a791",
         "name": "12VDC Test",
         "x": 450,
-        "y": 140,
+        "y": 240,
         "wires": [
             [
-                "fa5728105c5933f4"
+                "77e66488c8aea726"
             ]
         ]
     },
@@ -9896,8 +10253,8 @@
         "z": "d9d0929cb405a791",
         "name": "Check Reader Voltage",
         "info": "",
-        "x": 280,
-        "y": 80,
+        "x": 160,
+        "y": 200,
         "wires": []
     },
     {
@@ -9920,7 +10277,7 @@
         "to": "",
         "reg": false,
         "x": 290,
-        "y": 200,
+        "y": 360,
         "wires": [
             [
                 "d2ce19fc14bc8839"
@@ -9933,7 +10290,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 510,
-        "y": 200,
+        "y": 360,
         "wires": [
             [
                 "b9e6dba98085c8bd"
@@ -9960,7 +10317,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 360,
+        "y": 480,
         "wires": [
             [
                 "3e17398bfdfd2b04"
@@ -9985,7 +10342,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 530,
-        "y": 360,
+        "y": 480,
         "wires": [
             [
                 "9e11071950aa0e6a"
@@ -10012,7 +10369,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 420,
+        "y": 540,
         "wires": [
             [
                 "9c4451686c870eb8"
@@ -10037,7 +10394,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 480,
+        "y": 600,
         "wires": [
             [
                 "535f560a0b0e51f1"
@@ -10071,7 +10428,7 @@
         "to": "",
         "reg": false,
         "x": 280,
-        "y": 540,
+        "y": 660,
         "wires": [
             [
                 "dfc460fcf9705299"
@@ -10098,7 +10455,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 600,
+        "y": 720,
         "wires": [
             [
                 "c6d9d28fb58bafba"
@@ -10123,7 +10480,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 660,
+        "y": 780,
         "wires": [
             [
                 "5e2dc5b3345dd0b5"
@@ -10135,7 +10492,7 @@
         "type": "function",
         "z": "d9d0929cb405a791",
         "name": "Wiegand Test",
-        "func": "let bit0_cnt = global.get(\"measurements.rdr2_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr2_bit_cnt[1]\");\n\nif(bit0_cnt == 15) {\n    if(bit1_cnt == 11) {\n        msg.payload = \"Passed\";\n    } else {\n        // msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n        node.warn(\"Failed Bit 1 Count\");\n        msg.payload = {\n            \"name\" : \"Reader2 Wiegand\",\n            \"result\" : \"Failed\"\n        }\n    }\n} else {\n    // msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n    node.warn(\"Failed Bit 0 Count\");\n    msg.payload = {\n        \"name\": \"Reader2 Wiegand\",\n        \"result\": \"Failed\"\n    }\n}\n\nreturn msg;",
+        "func": "let bit0_cnt = global.get(\"measurements.rdr2_bit_cnt[0]\");\nlet bit1_cnt = global.get(\"measurements.rdr2_bit_cnt[1]\");\n\nif(bit0_cnt == 15) {\n    if(bit1_cnt == 11) {\n        msg.payload = \"Passed\";\n    } else {\n        // msg.payload = \"Failed Bit 1: \" + bit1_cnt;\n        node.warn(\"Failed Bit 1 Count\");\n        msg.payload = {\n            \"name\" : \"Reader2 Wiegand\",\n            \"result\" : \"Failed\",\n            \"measured\": \"Bit1 Count: \" + bit1_cnt,\n            \"Limit: \": \"Expected: 11\"\n        }\n        global.set(\"test.result\", \"failed\");\n    }\n} else {\n    // msg.payload = \"Failed Bit 0: \" + bit0_cnt;\n    node.warn(\"Failed Bit 0 Count\");\n    msg.payload = {\n        \"name\": \"Reader2 Wiegand\",\n        \"result\": \"Failed\",\n        \"measured\": \"Bit1 Count: \" + bit1_cnt,\n        \"Limit: \": \"Expected: 15\"\n    }\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -10143,7 +10500,7 @@
         "finalize": "",
         "libs": [],
         "x": 280,
-        "y": 720,
+        "y": 840,
         "wires": [
             [
                 "994f8bf221d1084a"
@@ -10170,7 +10527,7 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 900,
+        "y": 1040,
         "wires": [
             [
                 "d0996b73bac2c035"
@@ -10183,8 +10540,8 @@
         "z": "d9d0929cb405a791",
         "name": "Check Reader I/O",
         "info": "",
-        "x": 270,
-        "y": 800,
+        "x": 110,
+        "y": 1000,
         "wires": []
     },
     {
@@ -10208,15 +10565,12 @@
         "repair": false,
         "outputs": 2,
         "x": 470,
-        "y": 720,
+        "y": 840,
         "wires": [
             [
-                "0b944fe56e394ef9",
-                "261492269bcb83f7"
+                "f03b4ce2ae7fd85e"
             ],
-            [
-                "0b944fe56e394ef9"
-            ]
+            []
         ]
     },
     {
@@ -10237,7 +10591,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 960,
+        "y": 1100,
         "wires": [
             [
                 "0e5004b63fcba082"
@@ -10271,7 +10625,7 @@
         "to": "",
         "reg": false,
         "x": 250,
-        "y": 1020,
+        "y": 1160,
         "wires": [
             [
                 "6c8203096aa9eb4e"
@@ -10284,7 +10638,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 460,
-        "y": 1020,
+        "y": 1160,
         "wires": [
             [
                 "0b1b81c41b2ffc96"
@@ -10311,7 +10665,7 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 1080,
+        "y": 1220,
         "wires": [
             [
                 "bf7075156481cce5"
@@ -10331,8 +10685,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader2 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader2 LED\",\"result\":\"Failed\",\"measured\":\"Measured: LOW\",\"limit\":\"Expected: HIGH\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -10341,11 +10702,9 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1080,
+        "y": 1220,
         "wires": [
-            [
-                "0b944fe56e394ef9"
-            ]
+            []
         ]
     },
     {
@@ -10368,7 +10727,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 1140,
+        "y": 1280,
         "wires": [
             [
                 "dc7a8ca22af37cff"
@@ -10393,7 +10752,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 1200,
+        "y": 1340,
         "wires": [
             [
                 "1900244f226ef4f0"
@@ -10427,7 +10786,7 @@
         "to": "",
         "reg": false,
         "x": 250,
-        "y": 1260,
+        "y": 1400,
         "wires": [
             [
                 "5046ea1e8dbb1cd5"
@@ -10440,7 +10799,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 460,
-        "y": 1260,
+        "y": 1400,
         "wires": [
             [
                 "d496c91cc87fd9f8"
@@ -10467,7 +10826,7 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 1320,
+        "y": 1460,
         "wires": [
             [
                 "37120a263f6956bb"
@@ -10487,8 +10846,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader2 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader2 LED\",\"result\":\"Failed\",\"measured\":\"Measured: HIGH\",\"limit\":\"Expected: LOW\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -10497,11 +10863,9 @@
         "to": "",
         "reg": false,
         "x": 440,
-        "y": 1320,
+        "y": 1460,
         "wires": [
-            [
-                "0b944fe56e394ef9"
-            ]
+            []
         ]
     },
     {
@@ -10524,7 +10888,7 @@
         "to": "",
         "reg": false,
         "x": 290,
-        "y": 1480,
+        "y": 1640,
         "wires": [
             [
                 "af03ba8eac7a2b3f"
@@ -10537,7 +10901,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 510,
-        "y": 1480,
+        "y": 1640,
         "wires": [
             [
                 "e227dcea9b632fc9"
@@ -10562,7 +10926,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 1540,
+        "y": 1700,
         "wires": [
             [
                 "6120d440e87cba1d"
@@ -10589,7 +10953,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 1600,
+        "y": 1760,
         "wires": [
             [
                 "ae85d950e59a1876"
@@ -10614,7 +10978,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 1660,
+        "y": 1820,
         "wires": [
             [
                 "04b7191364de9f15"
@@ -10642,7 +11006,7 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 1720,
+        "y": 1880,
         "wires": [
             [
                 "b5dda609b97a2e10"
@@ -10672,7 +11036,7 @@
         "to": "",
         "reg": false,
         "x": 290,
-        "y": 1780,
+        "y": 1940,
         "wires": [
             [
                 "b9143fdc0ef7cdee"
@@ -10685,7 +11049,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 510,
-        "y": 1780,
+        "y": 1940,
         "wires": [
             [
                 "c2d1052e558c7fcb"
@@ -10710,7 +11074,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 1840,
+        "y": 2000,
         "wires": [
             [
                 "5cc31df798b5ec13"
@@ -10737,7 +11101,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 1900,
+        "y": 2060,
         "wires": [
             [
                 "ee915580dc624991"
@@ -10762,7 +11126,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 1960,
+        "y": 2120,
         "wires": [
             [
                 "809e51ca9e249308"
@@ -10790,7 +11154,7 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 2020,
+        "y": 2180,
         "wires": [
             [
                 "220c48b40c9ceeca"
@@ -10806,8 +11170,8 @@
         "z": "d9d0929cb405a791",
         "name": "LED",
         "info": "",
-        "x": 270,
-        "y": 840,
+        "x": 130,
+        "y": 1040,
         "wires": []
     },
     {
@@ -10817,7 +11181,7 @@
         "name": "Tamper",
         "info": "",
         "x": 270,
-        "y": 1420,
+        "y": 1580,
         "wires": []
     },
     {
@@ -10830,8 +11194,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader1 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader1 Tamper\",\"result\":\"Failed\",\"measured\":\"Measured: LOW\",\"limit\":\"Expected: HIGH\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -10840,7 +11211,7 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 1720,
+        "y": 1880,
         "wires": [
             []
         ]
@@ -10855,8 +11226,15 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Reader2 Wiegand\",\"result\":\"Failed\"}",
+                "to": "{\"name\":\"Reader2 Tamper\",\"result\":\"Failed\",\"measured\":\"Measured: HIGH\",\"limit\":\"Expected: LOW\"}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "test.result",
+                "pt": "global",
+                "to": "failed",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -10865,10 +11243,10 @@
         "to": "",
         "reg": false,
         "x": 460,
-        "y": 2040,
+        "y": 2200,
         "wires": [
             [
-                "c7660c760c810613"
+                "54e60e0227a5a382"
             ]
         ]
     },
@@ -10892,10 +11270,10 @@
         "to": "",
         "reg": false,
         "x": 470,
-        "y": 2000,
+        "y": 2160,
         "wires": [
             [
-                "c7660c760c810613"
+                "54e60e0227a5a382"
             ]
         ]
     },
@@ -10905,8 +11283,8 @@
         "z": "d9d0929cb405a791",
         "name": "Check OSDP Mode",
         "info": "",
-        "x": 270,
-        "y": 2160,
+        "x": 110,
+        "y": 2340,
         "wires": []
     },
     {
@@ -10929,7 +11307,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 260,
+        "y": 420,
         "wires": [
             [
                 "4639d4fce1d5d1e3"
@@ -10956,7 +11334,7 @@
         "to": "",
         "reg": false,
         "x": 290,
-        "y": 2280,
+        "y": 2440,
         "wires": [
             [
                 "4bc8147e53aac4f6"
@@ -10969,7 +11347,7 @@
         "z": "d9d0929cb405a791",
         "name": "",
         "x": 530,
-        "y": 2280,
+        "y": 2440,
         "wires": [
             [
                 "4d5f75eea3f153ef"
@@ -10996,7 +11374,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 2340,
+        "y": 2500,
         "wires": [
             [
                 "aca18313ed57adc6"
@@ -11021,7 +11399,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 260,
-        "y": 2400,
+        "y": 2560,
         "wires": [
             [
                 "357d74845a7d2eee"
@@ -11049,13 +11427,13 @@
         "repair": false,
         "outputs": 2,
         "x": 250,
-        "y": 2960,
+        "y": 3120,
         "wires": [
             [
                 "9de73528badcaa1d"
             ],
             [
-                "8ec5f34a308e01c3"
+                "12ca1ed97dd1161b"
             ]
         ]
     },
@@ -11079,32 +11457,7 @@
         "to": "",
         "reg": false,
         "x": 480,
-        "y": 2940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8ec5f34a308e01c3",
-        "type": "change",
-        "z": "d9d0929cb405a791",
-        "name": "Failed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Reader2 OSDP\",\"result\":\"Failed\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 2980,
+        "y": 3100,
         "wires": [
             []
         ]
@@ -11127,7 +11480,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 260,
-        "y": 2220,
+        "y": 2380,
         "wires": [
             [
                 "4aca05f5ab3ee5b5"
@@ -11154,7 +11507,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 2580,
+        "y": 2740,
         "wires": [
             [
                 "69026dcda8895791"
@@ -11179,7 +11532,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 2640,
+        "y": 2800,
         "wires": [
             [
                 "7019fb2402f14167"
@@ -11206,7 +11559,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 2460,
+        "y": 2620,
         "wires": [
             [
                 "e02d4f41f0f90ae7"
@@ -11231,7 +11584,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 2520,
+        "y": 2680,
         "wires": [
             [
                 "c8ac81cb85db4d8a"
@@ -11245,7 +11598,7 @@
         "name": "Reader2 OSDP",
         "info": "",
         "x": 860,
-        "y": 2520,
+        "y": 2680,
         "wires": []
     },
     {
@@ -11255,7 +11608,7 @@
         "name": "Serial Debug",
         "info": "",
         "x": 930,
-        "y": 560,
+        "y": 680,
         "wires": []
     },
     {
@@ -11265,7 +11618,7 @@
         "name": "ESP32 Serial",
         "info": "",
         "x": 930,
-        "y": 380,
+        "y": 500,
         "wires": []
     },
     {
@@ -11275,23 +11628,7 @@
         "name": "Test Result",
         "info": "",
         "x": 920,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "0b944fe56e394ef9",
-        "type": "debug",
-        "z": "d9d0929cb405a791",
-        "name": "debug 39",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 960,
-        "y": 1120,
+        "y": 200,
         "wires": []
     },
     {
@@ -11314,7 +11651,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 2700,
+        "y": 2860,
         "wires": [
             [
                 "f3dd384bc31ce5d2"
@@ -11339,7 +11676,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 2760,
+        "y": 2920,
         "wires": [
             [
                 "65c863be8758c898"
@@ -11366,7 +11703,7 @@
         "to": "",
         "reg": false,
         "x": 300,
-        "y": 2820,
+        "y": 2980,
         "wires": [
             [
                 "aa9abf55b0e521d0"
@@ -11391,7 +11728,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 270,
-        "y": 2880,
+        "y": 3040,
         "wires": [
             [
                 "f1afd0eb88255768"
@@ -11405,8 +11742,272 @@
         "name": "Next Test",
         "info": "",
         "x": 860,
-        "y": 2900,
+        "y": 3060,
         "wires": []
+    },
+    {
+        "id": "e7beb56533836a41",
+        "type": "switch",
+        "z": "d9d0929cb405a791",
+        "name": "Skip?",
+        "property": "flowCfg.rdr2_12vdc",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "3a4eb00b422348e3"
+            ],
+            [
+                "906cb849cfacdbfa"
+            ]
+        ]
+    },
+    {
+        "id": "906cb849cfacdbfa",
+        "type": "change",
+        "z": "d9d0929cb405a791",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader2 12V\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "77e66488c8aea726"
+            ]
+        ]
+    },
+    {
+        "id": "77e66488c8aea726",
+        "type": "switch",
+        "z": "d9d0929cb405a791",
+        "name": "Skip?",
+        "property": "flowCfg.rdr2_wiegand",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "fa5728105c5933f4"
+            ],
+            [
+                "e1a54ebd9717da8b"
+            ]
+        ]
+    },
+    {
+        "id": "e1a54ebd9717da8b",
+        "type": "change",
+        "z": "d9d0929cb405a791",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader2 Wiegand\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "f03b4ce2ae7fd85e"
+            ]
+        ]
+    },
+    {
+        "id": "f03b4ce2ae7fd85e",
+        "type": "switch",
+        "z": "d9d0929cb405a791",
+        "name": "Skip?",
+        "property": "flowCfg.rdr2_io",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 920,
+        "wires": [
+            [
+                "261492269bcb83f7"
+            ],
+            [
+                "0e9ac6117724c576"
+            ]
+        ]
+    },
+    {
+        "id": "0e9ac6117724c576",
+        "type": "change",
+        "z": "d9d0929cb405a791",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader2 I/O\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 920,
+        "wires": [
+            [
+                "54e60e0227a5a382"
+            ]
+        ]
+    },
+    {
+        "id": "54e60e0227a5a382",
+        "type": "switch",
+        "z": "d9d0929cb405a791",
+        "name": "Skip?",
+        "property": "flowCfg.rdr2_osdp",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 250,
+        "y": 2320,
+        "wires": [
+            [
+                "c7660c760c810613"
+            ],
+            [
+                "ab37557b2f1c3e71"
+            ]
+        ]
+    },
+    {
+        "id": "ab37557b2f1c3e71",
+        "type": "change",
+        "z": "d9d0929cb405a791",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Reader2 OSDP\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 2320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12ca1ed97dd1161b",
+        "type": "function",
+        "z": "d9d0929cb405a791",
+        "name": "Failed",
+        "func": "let result = global.get(\"status.osdp2\");\n\nmsg.payload = {\n    \"name\": \"Reader2 OSDP\",\n    \"result\": \"Failed\",\n    \"measured\": \"Measured: \" + result,\n    \"Limit: \": \"Expected: OSDP2 is working Bryan!!\"\n    };\n    global.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 3140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4facd05924f25108",
+        "type": "ui-template",
+        "z": "b72dbfa71bf72ff3",
+        "group": "326aba1ddf33faae",
+        "page": "",
+        "ui": "",
+        "name": "Dialog Pop-Up",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <v-dialog width=\"auto\" v-model=\"showDialog\">\n        <v-card rounded=lg color=\"background\" v-click-outside=\"{handler: onClickOutside}\">\n            <v-toolbar color=\"navigation-background\">\n                <v-card-title>\n                    <span>{{dialogData.title}}</span>\n                </v-card-title>\n            </v-toolbar>\n            <v-card-text>\n                <!-- <div class=\"pa-12\">{{dialogData.content}}</div> -->\n                <div class=\"text-h6\" v-html=\"content\"></div>\n                <div class=\"d-flex py-2 justify-space-between\"></div>\n                <v-text-field v-if=\"textLabel\" :label=\"textLabel\" v-model=\"textvalue\" autofocus></v-text-field>\n            </v-card-text>\n            <v-card-actions class=\"justify-end\">                \n                <!-- <v-btn v-if=\"okText\" variant=\"elevated\" @click=\"okDialog\" v-html=\"okText\" :disabled=\"!okDisabled\"></v-btn> -->\n                <v-btn variant=\"elevated\" @click=\"cancelDialog\" v-html=\"cancelText\"></v-btn>\n            </v-card-actions>\n        </v-card>\n    </v-dialog>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                dialogData:null\n            }\n        },\n        watch: {\n            msg: function() {\n                // if(typeof this.msg.payload === \"object\" && (!this.msg._client || this.msg._client.socketId === this.$socket.id)) {\n                    this.dialogData = this.msg.payload;\n                    if(!this.dialogData.okText) {\n                        // this.dialogData.okText = \"OK\"\n                        this.dialogData.okText = null\n                    }\n                    if(!this.dialogData.okDisabled) {\n                        this.dialogData.okDisabled = false\n                    }\n                    if(!this.dialogData.cancelText) {\n                        this.dialogData.cancelText = \"Cancel\"\n                    }\n                    if(this.dialogData.title) {         \n                        this.dialogData.shown = false;  // This prevents dialog from loading on Deploy    \n                    }\n                    this.textvalue = this.msg.payload?.textvalue ?? \"\"\n                // }\n                // prevent redraw on deploy\n                this.msg.payload = null\n            }      \n        },\n        computed: {\n            title: function () {\n                return this.dialogData?.title ?? \"\"\n            },\n            content:function() {\n                return this.dialogData?.content ?? \"\"\n            },\n            cancelText:function() {\n                return this.dialogData?.cancelText ?? \"Cancel\"\n            },\n            okText:function() {\n                // return this.dialogData?.okText ?? \"OK\"\n                return this.dialogData?.okText ?? null\n            },\n            okDisabled:function() {\n                return this.dialogData?.okDisabled == false\n            },\n            textLabel:function() {\n                return this.dialogData?.textLabel ?? \"\"\n            },\n            showDialog: function() {\n                return this.dialogData?.shown == false\n            }\n        },\n        methods: {\n            cancelDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.cancelText };\n                this.send(this.msg);\n            },\n            okDialog:function(){\n                this.dialogData.shown = true;\n                this.msg.payload = { action: this.dialogData.okText, text_value: this.textvalue };\n                this.send(this.msg);\n            }\n            // onClickOutside () {\n            //     this.dialogData.shown = true;\n            // },\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n            this.dialogData = null\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-themed-element {\n    header: var(--theme-header);\n    }\n    .v-btn:disabled {\n        opacity: 0.4;\n        pointer-events: none;\n        cursor: not-allowed;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 700,
+        "y": 300,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "96e2f4ba53b1116c",
@@ -11420,7 +12021,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": "1",
         "topic": "",
         "payload": "",
@@ -11477,7 +12078,7 @@
         "g": "aa394877794572d2",
         "name": "",
         "x": 780,
-        "y": 1480,
+        "y": 1560,
         "wires": [
             [
                 "3804cf6b98e51996"
@@ -11505,7 +12106,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 1460,
+        "y": 1540,
         "wires": [
             [
                 "4e5daabc0e18ec0a"
@@ -11534,7 +12135,7 @@
         "repair": false,
         "outputs": 2,
         "x": 770,
-        "y": 1540,
+        "y": 1620,
         "wires": [
             [
                 "8b3bdf85ced5c478"
@@ -11561,7 +12162,7 @@
         "name": "Turn Power Supply On / Off",
         "info": "",
         "x": 340,
-        "y": 1420,
+        "y": 1500,
         "wires": []
     },
     {
@@ -11618,7 +12219,7 @@
             "1413586a46a136da"
         ],
         "x": 245,
-        "y": 1480,
+        "y": 1560,
         "wires": [
             [
                 "1758bfd8feee78e6"
@@ -11633,7 +12234,7 @@
         "name": "Note: Finish Error Checking",
         "info": "",
         "x": 780,
-        "y": 1420,
+        "y": 1500,
         "wires": []
     },
     {
@@ -11647,7 +12248,7 @@
             "53f9e73ca32151a8"
         ],
         "x": 935,
-        "y": 1540,
+        "y": 1620,
         "wires": []
     },
     {
@@ -11658,7 +12259,7 @@
         "name": "Power Supply Voltage Tests",
         "info": "",
         "x": 340,
-        "y": 1960,
+        "y": 2040,
         "wires": []
     },
     {
@@ -11718,11 +12319,10 @@
         "g": "99fddf99c756b027",
         "name": "VIN Test",
         "x": 520,
-        "y": 2080,
+        "y": 2160,
         "wires": [
             [
                 "498d78dce13e9db2",
-                "99d955b9e3f92199",
                 "65cf39effb40c29b"
             ]
         ]
@@ -11746,7 +12346,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 400,
-        "y": 1800,
+        "y": 1900,
         "wires": [
             [
                 "0d9ec407d337f240"
@@ -11787,11 +12387,10 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 570,
-        "y": 1240,
+        "y": 1320,
         "wires": [
             [
-                "e9c57e196071e53c",
-                "9938caaff02bf284"
+                "e9c57e196071e53c"
             ]
         ]
     },
@@ -11828,11 +12427,10 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 570,
-        "y": 1280,
+        "y": 1360,
         "wires": [
             [
-                "e9c57e196071e53c",
-                "9938caaff02bf284"
+                "a3cc0673b7f8e04c"
             ]
         ]
     },
@@ -11869,7 +12467,7 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 570,
-        "y": 1320,
+        "y": 1400,
         "wires": [
             [
                 "07bd5c8fee381059"
@@ -11890,7 +12488,7 @@
         "finalize": "",
         "libs": [],
         "x": 380,
-        "y": 1280,
+        "y": 1360,
         "wires": [
             [
                 "a55288c4518f4621"
@@ -11912,33 +12510,21 @@
         "links": [
             "222d6c7c59d982a4",
             "1413586a46a136da",
-            "2cfe40ff164bfc76"
+            "2cfe40ff164bfc76",
+            "f01aeb69367fcbc6",
+            "f1d4375440de5907",
+            "3cb54aae56a984c5",
+            "4bcf6ed391dace6e",
+            "3025fe309ced1ce0",
+            "e5f776204af2e15e"
         ],
         "x": 235,
-        "y": 1280,
+        "y": 1360,
         "wires": [
             [
                 "eec540f6dc3ecff8"
             ]
         ]
-    },
-    {
-        "id": "9938caaff02bf284",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "g": "911968d6966da0cc",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 1300,
-        "wires": []
     },
     {
         "id": "e9c57e196071e53c",
@@ -11953,6 +12539,13 @@
                 "pt": "global",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "results.timestamp",
+                "pt": "global",
+                "to": "",
+                "tot": "date"
             }
         ],
         "action": "",
@@ -11960,8 +12553,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
-        "y": 1240,
+        "x": 780,
+        "y": 1320,
         "wires": [
             [
                 "1413586a46a136da"
@@ -11980,7 +12573,7 @@
             "0f8cb77f96cd9e85"
         ],
         "x": 945,
-        "y": 1240,
+        "y": 1320,
         "wires": []
     },
     {
@@ -12004,7 +12597,7 @@
         "to": "",
         "reg": false,
         "x": 520,
-        "y": 1500,
+        "y": 1580,
         "wires": [
             [
                 "4e5daabc0e18ec0a"
@@ -12033,7 +12626,7 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 1480,
+        "y": 1560,
         "wires": [
             [
                 "6e923177917d97f0"
@@ -12055,7 +12648,7 @@
             "d64aa099bfd7b9f8"
         ],
         "x": 685,
-        "y": 1320,
+        "y": 1400,
         "wires": []
     },
     {
@@ -12066,7 +12659,7 @@
         "name": "Start / Stop / Reset Logic",
         "info": "",
         "x": 350,
-        "y": 1180,
+        "y": 1260,
         "wires": []
     },
     {
@@ -12091,12 +12684,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2020,
+        "y": 2100,
         "wires": [
             [
                 "4224953e4ff2fe96"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12113,40 +12708,10 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 1800,
+        "y": 1900,
         "wires": [
             [
                 "0aba180fabae6c9f"
-            ]
-        ]
-    },
-    {
-        "id": "3c840d94ca30c5af",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "g": "2bcafb5091af493d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 380,
-        "y": 1860,
-        "wires": [
-            [
-                "0d9ec407d337f240"
             ]
         ]
     },
@@ -12158,7 +12723,7 @@
         "name": "I think I will only need to do this once at the start of the test.",
         "info": "",
         "x": 510,
-        "y": 1760,
+        "y": 1860,
         "wires": []
     },
     {
@@ -12182,7 +12747,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 2080,
+        "y": 2160,
         "wires": [
             [
                 "43c9f5608fb24506"
@@ -12208,7 +12773,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 820,
-        "y": 1800,
+        "y": 1900,
         "wires": [
             [
                 "e983ec668fa47ee7"
@@ -12236,7 +12801,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 2200,
+        "y": 2280,
         "wires": [
             [
                 "6d021a84f1941c6e"
@@ -12250,10 +12815,9 @@
         "g": "99fddf99c756b027",
         "name": "12VDC Test",
         "x": 530,
-        "y": 2200,
+        "y": 2280,
         "wires": [
             [
-                "99d955b9e3f92199",
                 "65cf39effb40c29b",
                 "7970e220a8b56d3a"
             ]
@@ -12281,12 +12845,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2140,
+        "y": 2220,
         "wires": [
             [
                 "71ced5ee6880c833"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12297,7 +12863,7 @@
         "name": "Upload Test Code",
         "info": "",
         "x": 310,
-        "y": 2780,
+        "y": 2860,
         "wires": []
     },
     {
@@ -12308,7 +12874,7 @@
         "name": "Door Relay Tests",
         "info": "",
         "x": 300,
-        "y": 3000,
+        "y": 3080,
         "wires": []
     },
     {
@@ -12319,7 +12885,7 @@
         "name": "Input Tests",
         "info": "# Test Sequence\nThe plan was to check the processors A/D inputs\nand then short and check the A/D again\n\nThere is an issue with the fixture where Door1 In2\ndoes not want to switch so in the short term \nI'm just going to ensure that the A/D reading is\nin the correct range\n\nThis should be good enough for now.\n\n\n# Improvment",
         "x": 280,
-        "y": 3420,
+        "y": 3500,
         "wires": []
     },
     {
@@ -12330,24 +12896,7 @@
         "name": "Reader Tests",
         "info": "Measure Reader 12VDC\nConfigure fixture relays for Wiegand tests\nSend Clear Wiegand Count Message\nTrigger ESP32 to send Wiegand data\nClear Global Reader data before read\nSend Read Bit Count Message\nCheck bit counts (1's and 0's)\nSet Reader LED to HIGH\nVerify Reader LED is HIGH\nSet Reader LED to LOW\nVerify Reader LED is LOW\nSet Buzzer to HIGH on the LabJack\nVerify Buzzer is HIGH\nSet Buzzer to LOW on the LabJack\nVerify Buzzr is LOW",
         "x": 290,
-        "y": 3940,
-        "wires": []
-    },
-    {
-        "id": "99d955b9e3f92199",
-        "type": "debug",
-        "z": "8992ffe741acd3ee",
-        "g": "99fddf99c756b027",
-        "name": "debug 21",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 2200,
+        "y": 4100,
         "wires": []
     },
     {
@@ -12355,7 +12904,7 @@
         "type": "subflow:6dada49096c48101",
         "z": "8992ffe741acd3ee",
         "name": "",
-        "x": 1480,
+        "x": 1580,
         "y": 1460,
         "wires": [
             []
@@ -12388,8 +12937,8 @@
         "links": [
             "7b1e1beb670237f3"
         ],
-        "x": 755,
-        "y": 2080,
+        "x": 845,
+        "y": 2160,
         "wires": []
     },
     {
@@ -12408,7 +12957,8 @@
         "y": 1500,
         "wires": [
             [
-                "cbf269f9255d29df"
+                "cbf269f9255d29df",
+                "b17740839fa9532d"
             ]
         ]
     },
@@ -12424,8 +12974,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1150,
-        "y": 4580,
+        "x": 390,
+        "y": 5380,
         "wires": [
             [
                 "87c96b617e2d086b"
@@ -12447,8 +12997,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1560,
-        "y": 4580,
+        "x": 760,
+        "y": 5380,
         "wires": []
     },
     {
@@ -12463,8 +13013,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1350,
-        "y": 4580,
+        "x": 590,
+        "y": 5380,
         "wires": [
             [
                 "4a28a106381ca942"
@@ -12478,7 +13028,7 @@
         "g": "2bcafb5091af493d",
         "name": "",
         "x": 630,
-        "y": 1700,
+        "y": 1780,
         "wires": [
             [
                 "d9cfc8a7fee862eb"
@@ -12506,7 +13056,7 @@
         "to": "",
         "reg": false,
         "x": 410,
-        "y": 1700,
+        "y": 1780,
         "wires": [
             [
                 "7d69e67343937665"
@@ -12523,7 +13073,7 @@
             "8b3bdf85ced5c478"
         ],
         "x": 245,
-        "y": 1700,
+        "y": 1780,
         "wires": [
             [
                 "b292d82741761e89"
@@ -12538,7 +13088,7 @@
         "name": "Power DUT and Wait for Boot",
         "info": "",
         "x": 340,
-        "y": 1640,
+        "y": 1720,
         "wires": []
     },
     {
@@ -12563,12 +13113,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2260,
+        "y": 2340,
         "wires": [
             [
                 "e28b0a71441cd0f2"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12592,7 +13144,7 @@
         "to": "",
         "reg": false,
         "x": 330,
-        "y": 2320,
+        "y": 2400,
         "wires": [
             [
                 "de75e98843a215ab"
@@ -12606,11 +13158,10 @@
         "g": "99fddf99c756b027",
         "name": "5VDC Test",
         "x": 530,
-        "y": 2320,
+        "y": 2400,
         "wires": [
             [
                 "65cf39effb40c29b",
-                "99d955b9e3f92199",
                 "4294da01e2c67f27"
             ]
         ]
@@ -12637,12 +13188,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2380,
+        "y": 2460,
         "wires": [
             [
                 "8f587bf0fa4024f0"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12666,7 +13219,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 2440,
+        "y": 2520,
         "wires": [
             [
                 "2145bcdf87cfc3aa"
@@ -12680,12 +13233,11 @@
         "g": "99fddf99c756b027",
         "name": "10VDC Test",
         "x": 530,
-        "y": 2440,
+        "y": 2520,
         "wires": [
             [
                 "65cf39effb40c29b",
-                "8e937d567a1a8433",
-                "99d955b9e3f92199"
+                "8e937d567a1a8433"
             ]
         ]
     },
@@ -12711,12 +13263,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2500,
+        "y": 2580,
         "wires": [
             [
                 "f9138a7ef85bae39"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12740,7 +13294,7 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 2560,
+        "y": 2640,
         "wires": [
             [
                 "567cff6486304761"
@@ -12754,10 +13308,9 @@
         "g": "99fddf99c756b027",
         "name": "3.3VDC Test",
         "x": 530,
-        "y": 2560,
+        "y": 2640,
         "wires": [
             [
-                "99d955b9e3f92199",
                 "65cf39effb40c29b",
                 "548e27cc449c1ec2"
             ]
@@ -12785,12 +13338,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 2620,
+        "y": 2700,
         "wires": [
             [
                 "f2148da5d43a858d"
             ],
-            []
+            [
+                "f01aeb69367fcbc6"
+            ]
         ]
     },
     {
@@ -12814,7 +13369,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 2680,
+        "y": 2760,
         "wires": [
             [
                 "0b0cbd59be462c5f"
@@ -12828,10 +13383,9 @@
         "g": "99fddf99c756b027",
         "name": "Super Cap Chargeing Test",
         "x": 580,
-        "y": 2680,
+        "y": 2760,
         "wires": [
             [
-                "99d955b9e3f92199",
                 "65cf39effb40c29b",
                 "a7bc2f3b56f9d90c"
             ]
@@ -12858,8 +13412,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 960,
-        "y": 4580,
+        "x": 200,
+        "y": 5380,
         "wires": [
             [
                 "b47f74dbfa05c180"
@@ -12884,7 +13438,7 @@
         "senderr": false,
         "headers": [],
         "x": 310,
-        "y": 2880,
+        "y": 2960,
         "wires": [
             [
                 "243de20ff3770aa6"
@@ -12901,7 +13455,7 @@
         "action": "",
         "pretty": false,
         "x": 470,
-        "y": 2880,
+        "y": 2960,
         "wires": [
             [
                 "8c07aac8f1d6eccf"
@@ -12930,13 +13484,13 @@
         "repair": false,
         "outputs": 2,
         "x": 610,
-        "y": 2880,
+        "y": 2960,
         "wires": [
             [
                 "fb3d59c835d4f818"
             ],
             [
-                "aa3630c79c2b3c87"
+                "4bc95be491b5b8e4"
             ]
         ]
     },
@@ -12961,7 +13515,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 2860,
+        "y": 2940,
         "wires": [
             [
                 "e55d40efe59920a5",
@@ -12980,43 +13534,8 @@
             "7b1e1beb670237f3"
         ],
         "x": 935,
-        "y": 2880,
+        "y": 2960,
         "wires": []
-    },
-    {
-        "id": "aa3630c79c2b3c87",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "7d59cd562498f69c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Firmware\",\"result\":\"Failed\"}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "test.state",
-                "pt": "global",
-                "to": "stopped",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 2900,
-        "wires": [
-            [
-                "e55d40efe59920a5"
-            ]
-        ]
     },
     {
         "id": "a7bc2f3b56f9d90c",
@@ -13040,12 +13559,14 @@
         "repair": false,
         "outputs": 2,
         "x": 290,
-        "y": 2820,
+        "y": 2900,
         "wires": [
             [
                 "29c61c2f8de7cc7c"
             ],
-            []
+            [
+                "f1d4375440de5907"
+            ]
         ]
     },
     {
@@ -13055,7 +13576,7 @@
         "g": "67857499edf699ee",
         "name": "",
         "x": 370,
-        "y": 3120,
+        "y": 3200,
         "wires": [
             [
                 "23978756652525b0"
@@ -13076,7 +13597,7 @@
             "7b1e1beb670237f3"
         ],
         "x": 865,
-        "y": 3200,
+        "y": 3280,
         "wires": []
     },
     {
@@ -13101,13 +13622,13 @@
         "repair": false,
         "outputs": 2,
         "x": 590,
-        "y": 3140,
+        "y": 3220,
         "wires": [
             [
                 "6159bf147d4e2f0c"
             ],
             [
-                "91cb8804dc75f2d2"
+                "26619a3d30d8c569"
             ]
         ]
     },
@@ -13132,36 +13653,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 3120,
-        "wires": [
-            [
-                "ca7a93d57e521979",
-                "bed1cae6d10865c8"
-            ]
-        ]
-    },
-    {
-        "id": "91cb8804dc75f2d2",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "67857499edf699ee",
-        "name": "Failed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Door1 Relay\",\"result\":\"Failed\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 730,
-        "y": 3160,
+        "y": 3200,
         "wires": [
             [
                 "ca7a93d57e521979",
@@ -13176,7 +13668,7 @@
         "g": "67857499edf699ee",
         "name": "",
         "x": 370,
-        "y": 3240,
+        "y": 3320,
         "wires": [
             [
                 "23978756652525b0"
@@ -13208,13 +13700,13 @@
         "repair": false,
         "outputs": 2,
         "x": 590,
-        "y": 3280,
+        "y": 3360,
         "wires": [
             [
                 "432506cc0309ca86"
             ],
             [
-                "0998131b29c6495e"
+                "e0fea46d862c0642"
             ]
         ]
     },
@@ -13239,36 +13731,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 3260,
-        "wires": [
-            [
-                "ca7a93d57e521979",
-                "5c4086d67212042e"
-            ]
-        ]
-    },
-    {
-        "id": "0998131b29c6495e",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "67857499edf699ee",
-        "name": "Failed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Door2 Relay\",\"result\":\"Failed\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 730,
-        "y": 3300,
+        "y": 3340,
         "wires": [
             [
                 "ca7a93d57e521979",
@@ -13298,12 +13761,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 3060,
+        "y": 3140,
         "wires": [
             [
                 "92ba45402a9020f4"
             ],
-            []
+            [
+                "3cb54aae56a984c5"
+            ]
         ]
     },
     {
@@ -13328,12 +13793,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 3480,
+        "y": 3560,
         "wires": [
             [
                 "6ac9eabf3ca9468d"
             ],
-            []
+            [
+                "4bcf6ed391dace6e"
+            ]
         ]
     },
     {
@@ -13357,7 +13824,7 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 3540,
+        "y": 3620,
         "wires": [
             [
                 "28e44b61e4a3f054",
@@ -13543,7 +14010,7 @@
         "z": "8992ffe741acd3ee",
         "g": "21a0da3aad9ad7b1",
         "name": "Check D1 IN1",
-        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d1in1 < max) || (d1in1 > min)) {\n    msg.payload = {\n    \"name\": \"Door1 In1 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door1 In1 Input\",\n        \"result\": \"Failed\"\n    };\n}\n\nreturn msg;",
+        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d1in1 < max) || (d1in1 > min)) {\n    msg.payload = {\n    \"name\": \"Door1 In1 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door1 In1 Input\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + d1in1,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13551,7 +14018,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 3660,
+        "y": 3740,
         "wires": [
             [
                 "b58ac7ce0f40e5bc",
@@ -13578,10 +14045,10 @@
         "allowrate": false,
         "outputs": 1,
         "x": 340,
-        "y": 3600,
+        "y": 3680,
         "wires": [
             [
-                "37a289e2befe1075"
+                "520a3f8497efe4f3"
             ]
         ]
     },
@@ -13591,7 +14058,7 @@
         "z": "8992ffe741acd3ee",
         "g": "21a0da3aad9ad7b1",
         "name": "Check D1 IN2",
-        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d1in2 < max) || (d1in2 > min)) {\n    msg.payload = {\n    \"name\": \"Door1 In2 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door1 In2 Input\",\n        \"result\": \"Failed\"\n    };\n}\n\nreturn msg;",
+        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d1in2 < max) || (d1in2 > min)) {\n    msg.payload = {\n    \"name\": \"Door1 In2 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door1 In2 Input\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + d1in2,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13599,11 +14066,11 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 3720,
+        "y": 3800,
         "wires": [
             [
-                "b4948c3a4fb7ab7b",
-                "fffa0256c6914b28"
+                "fffa0256c6914b28",
+                "be8bb1a90576f75e"
             ]
         ]
     },
@@ -13613,7 +14080,7 @@
         "z": "8992ffe741acd3ee",
         "g": "21a0da3aad9ad7b1",
         "name": "Check D2 IN1",
-        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d2in1 < max) || (d2in1 > min)) {\n    msg.payload = {\n    \"name\": \"Door2 In1 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door2 In1 Input\",\n        \"result\": \"Failed\"\n    };\n}\nreturn msg;",
+        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d2in1 < max) || (d2in1 > min)) {\n    msg.payload = {\n    \"name\": \"Door2 In1 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door2 In1 Input\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + d2in1,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13621,7 +14088,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 3780,
+        "y": 3920,
         "wires": [
             [
                 "4cf51cc8678ba759",
@@ -13635,7 +14102,7 @@
         "z": "8992ffe741acd3ee",
         "g": "21a0da3aad9ad7b1",
         "name": "Check D2 IN2",
-        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d2in2 < max) || (d2in2 > min)) {\n    msg.payload = {\n    \"name\": \"Door2 In2 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door2 In2 Input\",\n        \"result\": \"Failed\"\n    };\n}\n\nreturn msg;",
+        "func": "let d1in1 = global.get(\"measurements.inputs[0]\");\nlet d1in2 = global.get(\"measurements.inputs[1]\");\nlet d2in1 = global.get(\"measurements.inputs[2]\");\nlet d2in2 = global.get(\"measurements.inputs[3]\");\n\nlet min = global.get(\"parameters.in_closed_min\");\nlet max = global.get(\"parameters.in_closed_max\");\n\nif((d2in2 < max) || (d2in2 > min)) {\n    msg.payload = {\n    \"name\": \"Door2 In2 Input\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Door2 In2 Input\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + d2in2,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -13643,7 +14110,7 @@
         "finalize": "",
         "libs": [],
         "x": 360,
-        "y": 3840,
+        "y": 3980,
         "wires": [
             [
                 "fffa0256c6914b28",
@@ -13661,8 +14128,8 @@
         "links": [
             "7b1e1beb670237f3"
         ],
-        "x": 865,
-        "y": 3760,
+        "x": 765,
+        "y": 3780,
         "wires": []
     },
     {
@@ -13687,12 +14154,14 @@
         "repair": false,
         "outputs": 2,
         "x": 290,
-        "y": 4000,
+        "y": 4160,
         "wires": [
             [
                 "497678e376dd4a5a"
             ],
-            []
+            [
+                "3025fe309ced1ce0"
+            ]
         ]
     },
     {
@@ -13705,8 +14174,8 @@
         "links": [
             "7b1e1beb670237f3"
         ],
-        "x": 555,
-        "y": 4000,
+        "x": 675,
+        "y": 4160,
         "wires": []
     },
     {
@@ -13716,8 +14185,8 @@
         "g": "0eca9bf2ed418f2d",
         "name": "ESP32",
         "serial": "a6c6d5d269d5dc61",
-        "x": 600,
-        "y": 4060,
+        "x": 680,
+        "y": 4220,
         "wires": []
     },
     {
@@ -13764,7 +14233,7 @@
             "a3822cad79ea2d7e"
         ],
         "x": 730,
-        "y": 3020,
+        "y": 3100,
         "wires": [],
         "l": true
     },
@@ -13806,8 +14275,8 @@
         "links": [
             "a3822cad79ea2d7e"
         ],
-        "x": 570,
-        "y": 3540,
+        "x": 590,
+        "y": 3620,
         "wires": [],
         "l": true
     },
@@ -13821,8 +14290,8 @@
         "links": [
             "a3822cad79ea2d7e"
         ],
-        "x": 610,
-        "y": 4120,
+        "x": 690,
+        "y": 4280,
         "wires": [],
         "l": true
     },
@@ -13833,7 +14302,7 @@
         "g": "0eca9bf2ed418f2d",
         "name": "",
         "x": 310,
-        "y": 4120,
+        "y": 4240,
         "wires": [
             [
                 "854a9f51973aa871"
@@ -13875,8 +14344,8 @@
         "g": "0eca9bf2ed418f2d",
         "name": "",
         "serial": "9c8032cbe34870c5",
-        "x": 620,
-        "y": 4180,
+        "x": 700,
+        "y": 4340,
         "wires": []
     },
     {
@@ -13907,7 +14376,7 @@
         "g": "0eca9bf2ed418f2d",
         "name": "",
         "x": 310,
-        "y": 4280,
+        "y": 4400,
         "wires": [
             [
                 "854a9f51973aa871"
@@ -13921,7 +14390,9 @@
             [
                 "8292fca9de5bb960"
             ],
-            []
+            [
+                "956c0eadf5b5c8f3"
+            ]
         ]
     },
     {
@@ -13931,8 +14402,8 @@
         "g": "0eca9bf2ed418f2d",
         "name": "Reader2 RS485",
         "serial": "965c5561efd11b27",
-        "x": 620,
-        "y": 4280,
+        "x": 700,
+        "y": 4420,
         "wires": []
     },
     {
@@ -13994,12 +14465,14 @@
         "repair": false,
         "outputs": 2,
         "x": 290,
-        "y": 4200,
+        "y": 4320,
         "wires": [
             [
                 "59e0f2cfd4b11210"
             ],
-            []
+            [
+                "3025fe309ced1ce0"
+            ]
         ]
     },
     {
@@ -14060,6 +14533,7 @@
         "id": "30dd43fdc6181bde",
         "type": "change",
         "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
         "name": "DUT_24V_RELAY",
         "rules": [
             {
@@ -14075,8 +14549,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 4420,
+        "x": 310,
+        "y": 4720,
         "wires": [
             [
                 "bc0da9dcc974f651"
@@ -14087,12 +14561,13 @@
         "id": "bc0da9dcc974f651",
         "type": "subflow:513e4a72f100d2f7",
         "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
         "name": "",
-        "x": 550,
-        "y": 4420,
+        "x": 530,
+        "y": 4720,
         "wires": [
             [
-                "a8b9edf52f16e76d"
+                "72f0d2f7464a0bdb"
             ]
         ]
     },
@@ -14115,8 +14590,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 4800,
+        "x": 390,
+        "y": 5240,
         "wires": [
             [
                 "7c9b27c2f6e72677"
@@ -14144,8 +14619,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 4800,
+        "x": 200,
+        "y": 5240,
         "wires": [
             [
                 "1a22f1d8c4db25a5"
@@ -14157,8 +14632,8 @@
         "type": "subflow:513e4a72f100d2f7",
         "z": "8992ffe741acd3ee",
         "name": "",
-        "x": 550,
-        "y": 4800,
+        "x": 610,
+        "y": 5240,
         "wires": [
             []
         ]
@@ -14182,8 +14657,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 4860,
+        "x": 390,
+        "y": 5300,
         "wires": [
             [
                 "7c9b27c2f6e72677"
@@ -14211,8 +14686,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 140,
-        "y": 4860,
+        "x": 200,
+        "y": 5300,
         "wires": [
             [
                 "08949fac6a1c0831"
@@ -14239,7 +14714,7 @@
         "to": "",
         "reg": false,
         "x": 310,
-        "y": 4540,
+        "y": 5100,
         "wires": [
             [
                 "7fcc27d21a5cceb9"
@@ -14264,7 +14739,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 300,
-        "y": 4480,
+        "y": 5040,
         "wires": [
             [
                 "c6c59b962a13f039"
@@ -14277,7 +14752,7 @@
         "z": "8992ffe741acd3ee",
         "name": "Super Cap Chargeing Test",
         "x": 540,
-        "y": 4540,
+        "y": 5100,
         "wires": [
             []
         ]
@@ -14361,7 +14836,7 @@
         "z": "8992ffe741acd3ee",
         "g": "68f251802f837cba",
         "name": "Serial Number?",
-        "func": "if (msg.payload.action == \"OK\" && msg.payload.text_value) {\n    global.set(\"serial_num\", msg.payload.text_value)\n    msg.payload = msg.payload.text_value\n} else {\n    global.set(\"serial_num\", \"\")\n    msg.payload = \"\"\n}\nreturn msg;",
+        "func": "if (msg.payload.action == \"OK\" && msg.payload.text_value) {\n    global.set(\"serial_num\", msg.payload.text_value)\n    global.set(\"results.serial_num\", msg.payload.text_value);\n    msg.payload = msg.payload.text_value\n} else {\n    global.set(\"serial_num\", \"\")\n    msg.payload = \"\"\n}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14373,7 +14848,9 @@
         "wires": [
             [
                 "30ef10f6d238d9fe",
-                "2cfe40ff164bfc76"
+                "2cfe40ff164bfc76",
+                "b86d9907184fb447",
+                "6611e6abe634dc81"
             ]
         ]
     },
@@ -14570,7 +15047,7 @@
         "links": [
             "0f367029b3ce9e8f"
         ],
-        "x": 985,
+        "x": 675,
         "y": 1080,
         "wires": []
     },
@@ -14668,7 +15145,7 @@
         "z": "8992ffe741acd3ee",
         "g": "68f251802f837cba",
         "name": "Init Global Variables",
-        "func": "// Initalize all global variables\n\n// DAQ variables\n// Fixture variables\nglobal.set(\"daq.fixture_closed\", false);\nglobal.set(\"daq.dut_installed\", false);\nglobal.set(\"daq.dut_24v_relay\", false);\nglobal.set(\"daq.poe_pwr_relay\", false);\nglobal.set(\"daq.dry_voltage_relay\", false);\nglobal.set(\"daq.wiegand_osdp\", false);\nglobal.set(\"daq.d1_in1_relay\", false);\nglobal.set(\"daq.d1_in2_relay\", false);\nglobal.set(\"daq.d2_in1_relay\", false);\nglobal.set(\"daq.d2_in2_relay\", false);\n\n// DAQ values\nglobal.set(\"daq.port_e\", 0);\nglobal.set(\"daq.port_f\", 0);\nglobal.set(\"daq.port_m\", 0);\n\nglobal.set(\"daq.door1_led\", false);\nglobal.set(\"daq.door2_led\", false);\nglobal.set(\"daq.reader1_led\", false);\nglobal.set(\"daq.rdr1_buz\", false);\nglobal.set(\"daq.rdr2_led\", false);\nglobal.set(\"daq.rdr2_buz\", false);\n\n// Spare values\nglobal.set(\"daq.spare_tp116\", false);\nglobal.set(\"daq.spare_tp117\", false);\nglobal.set(\"daq.spare_tp118\", false);\nglobal.set(\"daq.spare_tp119\", false);\nglobal.set(\"daq.spare_tp121\", false);\nglobal.set(\"daq.spare_tp122\", false);\nglobal.set(\"daq.spare_tp123\", false);\n\n// Measurements\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.door2_no\", 0);\nglobal.set(\"measurements.12vdc\", 0);\nglobal.set(\"measurements.door2_nc\", 0);\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.5vdc\", 0);\nglobal.set(\"measurements.door2_com\", 0);\nglobal.set(\"measurements.3v3dc\", 0);\nglobal.set(\"measurements.door1_no\", 0);\nglobal.set(\"measurements.10vdc\", 0);\nglobal.set(\"measurements.door1_nc\", 0);\nglobal.set(\"measurements.rdr1_12vdc\", 0);\nglobal.set(\"measurements.door1_com\", 0);\nglobal.set(\"measurements.rdr2_12vdc\", 0);\nglobal.set(\"measurements.vin\", 0);\nglobal.set(\"measurements.super_cap_max\", 0);\nglobal.set(\"measurements.super_cap_min\", 0);\nglobal.set(\"measurements.door2_no_max\", 0);\nglobal.set(\"measurements.door2_no_min\", 0);\nglobal.set(\"measurements.12vdc_max\", 0);\nglobal.set(\"measurements.12vdc_min\", 0);\nglobal.set(\"measurements.door2_nc_max\", 0);\nglobal.set(\"measurements.door2_nc_min\", 0);\nglobal.set(\"measurements.5vdc_max\", 0);\nglobal.set(\"measurements.5vdc_min\", 0);\nglobal.set(\"measurements.door2_com_max\", 0);\nglobal.set(\"measurements.door2_com_min\", 0);\nglobal.set(\"measurements.3v3dc_max\", 0);\nglobal.set(\"measurements.3v3dc_min\", 0);\nglobal.set(\"measurements.door1_no_max\", 0);\nglobal.set(\"measurements.door1_no_min\", 0);\nglobal.set(\"measurements.10vdc_max\", 0);\nglobal.set(\"measurements.10vdc_min\", 0);\nglobal.set(\"measurements.door1_nc_max\", 0);\nglobal.set(\"measurements.door1_nc_min\", 0);\nglobal.set(\"measurements.rdr1_12vdc_max\", 0);\nglobal.set(\"measurements.rdr1_12vdc_min\", 0);\nglobal.set(\"measurements.door1_com_max\", 0);\nglobal.set(\"measurements.door1_com_min\", 0);\nglobal.set(\"measurements.rdr2_12vdc_max\", 0);\nglobal.set(\"measurements.rdr2_12vdc_min\", 0);\nglobal.set(\"measurements.vin_max\", 0);\nglobal.set(\"measurements.vin_min\", 0);\nglobal.set(\"measurements.inputs\", [0,0,0,0]);\nglobal.set(\"measurements.rdr1_bit_cnt\", [0,0]);\nglobal.set(\"measurements.rdr2_bit_cnt\",[0,0]);\n\n// global.set(\"status.labjack_init\", false);\n// global.set(\"status.power_supply\", false);\nglobal.set(\"status.osdp1\", \"XxXx\");\nglobal.set(\"status.osdp2\", \"xXxX\");\nglobal.set(\"status.relay1\", \"off\");\nglobal.set(\"status.relay2\", \"off\");\nglobal.set(\"status.rdr1_tamp\", \"x\");\nglobal.set(\"status.rdr2_tamp\", \"x\");\n\n\nreturn msg;",
+        "func": "// Initalize all global variables\n\nglobal.set(\"test.result\", \"\");\n\n// DAQ variables\n// Fixture variables\nglobal.set(\"daq.fixture_closed\", false);\nglobal.set(\"daq.dut_installed\", false);\nglobal.set(\"daq.dut_24v_relay\", false);\nglobal.set(\"daq.poe_pwr_relay\", false);\nglobal.set(\"daq.dry_voltage_relay\", false);\nglobal.set(\"daq.wiegand_osdp\", false);\nglobal.set(\"daq.d1_in1_relay\", false);\nglobal.set(\"daq.d1_in2_relay\", false);\nglobal.set(\"daq.d2_in1_relay\", false);\nglobal.set(\"daq.d2_in2_relay\", false);\n\n// DAQ values\nglobal.set(\"daq.port_e\", 0);\nglobal.set(\"daq.port_f\", 0);\nglobal.set(\"daq.port_m\", 0);\n\nglobal.set(\"daq.door1_led\", false);\nglobal.set(\"daq.door2_led\", false);\nglobal.set(\"daq.reader1_led\", false);\nglobal.set(\"daq.rdr1_buz\", false);\nglobal.set(\"daq.rdr2_led\", false);\nglobal.set(\"daq.rdr2_buz\", false);\n\n// Spare values\nglobal.set(\"daq.spare_tp116\", false);\nglobal.set(\"daq.spare_tp117\", false);\nglobal.set(\"daq.spare_tp118\", false);\nglobal.set(\"daq.spare_tp119\", false);\nglobal.set(\"daq.spare_tp121\", false);\nglobal.set(\"daq.spare_tp122\", false);\nglobal.set(\"daq.spare_tp123\", false);\n\n// Measurements\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.door2_no\", 0);\nglobal.set(\"measurements.12vdc\", 0);\nglobal.set(\"measurements.door2_nc\", 0);\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.5vdc\", 0);\nglobal.set(\"measurements.door2_com\", 0);\nglobal.set(\"measurements.3v3dc\", 0);\nglobal.set(\"measurements.door1_no\", 0);\nglobal.set(\"measurements.10vdc\", 0);\nglobal.set(\"measurements.door1_nc\", 0);\nglobal.set(\"measurements.rdr1_12vdc\", 0);\nglobal.set(\"measurements.door1_com\", 0);\nglobal.set(\"measurements.rdr2_12vdc\", 0);\nglobal.set(\"measurements.vin\", 0);\nglobal.set(\"measurements.super_cap_max\", 0);\nglobal.set(\"measurements.super_cap_min\", 0);\nglobal.set(\"measurements.door2_no_max\", 0);\nglobal.set(\"measurements.door2_no_min\", 0);\nglobal.set(\"measurements.12vdc_max\", 0);\nglobal.set(\"measurements.12vdc_min\", 0);\nglobal.set(\"measurements.door2_nc_max\", 0);\nglobal.set(\"measurements.door2_nc_min\", 0);\nglobal.set(\"measurements.5vdc_max\", 0);\nglobal.set(\"measurements.5vdc_min\", 0);\nglobal.set(\"measurements.door2_com_max\", 0);\nglobal.set(\"measurements.door2_com_min\", 0);\nglobal.set(\"measurements.3v3dc_max\", 0);\nglobal.set(\"measurements.3v3dc_min\", 0);\nglobal.set(\"measurements.door1_no_max\", 0);\nglobal.set(\"measurements.door1_no_min\", 0);\nglobal.set(\"measurements.10vdc_max\", 0);\nglobal.set(\"measurements.10vdc_min\", 0);\nglobal.set(\"measurements.door1_nc_max\", 0);\nglobal.set(\"measurements.door1_nc_min\", 0);\nglobal.set(\"measurements.rdr1_12vdc_max\", 0);\nglobal.set(\"measurements.rdr1_12vdc_min\", 0);\nglobal.set(\"measurements.door1_com_max\", 0);\nglobal.set(\"measurements.door1_com_min\", 0);\nglobal.set(\"measurements.rdr2_12vdc_max\", 0);\nglobal.set(\"measurements.rdr2_12vdc_min\", 0);\nglobal.set(\"measurements.vin_max\", 0);\nglobal.set(\"measurements.vin_min\", 0);\nglobal.set(\"measurements.inputs\", [0,0,0,0]);\nglobal.set(\"measurements.rdr1_bit_cnt\", [0,0]);\nglobal.set(\"measurements.rdr2_bit_cnt\",[0,0]);\n\n// global.set(\"status.labjack_init\", false);\n// global.set(\"status.power_supply\", false);\nglobal.set(\"status.osdp1\", \"XxXx\");\nglobal.set(\"status.osdp2\", \"xXxX\");\nglobal.set(\"status.relay1\", \"off\");\nglobal.set(\"status.relay2\", \"off\");\nglobal.set(\"status.rdr1_tamp\", \"x\");\nglobal.set(\"status.rdr2_tamp\", \"x\");\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -14803,7 +15280,7 @@
         "repair": false,
         "outputs": 2,
         "x": 450,
-        "y": 2820,
+        "y": 2900,
         "wires": [
             [
                 "fa54e6af56d3605a"
@@ -14834,7 +15311,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-        "y": 2820,
+        "y": 2900,
         "wires": [
             [
                 "e55d40efe59920a5"
@@ -14861,7 +15338,7 @@
         "repair": false,
         "outputs": 2,
         "x": 470,
-        "y": 3060,
+        "y": 3140,
         "wires": [
             [
                 "c6ee0a9947798851"
@@ -14892,7 +15369,7 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 3080,
+        "y": 3160,
         "wires": [
             [
                 "ca7a93d57e521979",
@@ -14922,12 +15399,14 @@
         "repair": false,
         "outputs": 2,
         "x": 330,
-        "y": 3180,
+        "y": 3260,
         "wires": [
             [
                 "d8ee419b25e39299"
             ],
-            []
+            [
+                "3cb54aae56a984c5"
+            ]
         ]
     },
     {
@@ -14950,7 +15429,7 @@
         "repair": false,
         "outputs": 2,
         "x": 470,
-        "y": 3180,
+        "y": 3260,
         "wires": [
             [
                 "f4f71fe9693570e8"
@@ -14981,7 +15460,659 @@
         "to": "",
         "reg": false,
         "x": 730,
-        "y": 3220,
+        "y": 3300,
+        "wires": [
+            [
+                "ca7a93d57e521979",
+                "5c4086d67212042e"
+            ]
+        ]
+    },
+    {
+        "id": "520a3f8497efe4f3",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Skip?",
+        "property": "flowCfg.d1_input",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 3680,
+        "wires": [
+            [
+                "37a289e2befe1075"
+            ],
+            [
+                "7e44050fcd7c0956"
+            ]
+        ]
+    },
+    {
+        "id": "f988136bf3d89545",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Skip?",
+        "property": "flowCfg.d2_input",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 3860,
+        "wires": [
+            [
+                "b4948c3a4fb7ab7b"
+            ],
+            [
+                "96fab275a71a7d5f"
+            ]
+        ]
+    },
+    {
+        "id": "be8bb1a90576f75e",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 330,
+        "y": 3860,
+        "wires": [
+            [
+                "f988136bf3d89545"
+            ],
+            [
+                "4bcf6ed391dace6e"
+            ]
+        ]
+    },
+    {
+        "id": "7e44050fcd7c0956",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Door1 Input\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 3680,
+        "wires": [
+            [
+                "fffa0256c6914b28",
+                "be8bb1a90576f75e"
+            ]
+        ]
+    },
+    {
+        "id": "96fab275a71a7d5f",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Door1 Input\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 3860,
+        "wires": [
+            [
+                "fffa0256c6914b28",
+                "a29ca9f410078b83"
+            ]
+        ]
+    },
+    {
+        "id": "f01aeb69367fcbc6",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "99fddf99c756b027",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 845,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "f1d4375440de5907",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 595,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "3cb54aae56a984c5",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "67857499edf699ee",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 565,
+        "y": 3080,
+        "wires": []
+    },
+    {
+        "id": "4bcf6ed391dace6e",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "21a0da3aad9ad7b1",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 755,
+        "y": 3540,
+        "wires": []
+    },
+    {
+        "id": "3025fe309ced1ce0",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "0eca9bf2ed418f2d",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 675,
+        "y": 4100,
+        "wires": []
+    },
+    {
+        "id": "a3cc0673b7f8e04c",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1360,
+        "wires": [
+            [
+                "1413586a46a136da"
+            ]
+        ]
+    },
+    {
+        "id": "b17740839fa9532d",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "name": "Compile Results",
+        "func": "\n\nlet temp_str = \"results.\" + msg.payload.name;\nlet result = temp_str.replaceAll(' ', '_');\n\nglobal.set(result, msg.payload.result);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "956c0eadf5b5c8f3",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Save Results",
+        "func": "var msgdata = {};\n\nvar serial_number = global.get('serial_num');\nvar pcb_rev = global.get('pcba');\nvar flow_config = global.get('flowCfg');\nvar measurements = global.get('measurements');\nvar parameters = global.get('parameters');\nvar results = global.get('results');\n\n\nmsg.collection = \"test_results\";\nmsg.payload = {\n    \"serial_number\" : serial_number,\n    \"pcb_rev\" : pcb_rev,\n    \"flow_config\" : flow_config,\n    \"measurements\" : measurements,\n    \"parameters\" : parameters,\n    \"results\" : results\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 4600,
+        "wires": [
+            [
+                "46f3c986a096e99e",
+                "67a13f4458d1b6e7"
+            ]
+        ]
+    },
+    {
+        "id": "46f3c986a096e99e",
+        "type": "mongodb out",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "mongodb": "3c78a6eb08cacdd4",
+        "name": "",
+        "collection": "",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 540,
+        "y": 4600,
+        "wires": []
+    },
+    {
+        "id": "67a13f4458d1b6e7",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 4660,
+        "wires": [
+            [
+                "30dd43fdc6181bde"
+            ]
+        ]
+    },
+    {
+        "id": "fd7a65f908acd305",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Test Failed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"title\":\"Test Failed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 4800,
+        "wires": [
+            [
+                "cd879e9e17e21ce8"
+            ]
+        ]
+    },
+    {
+        "id": "cd879e9e17e21ce8",
+        "type": "subflow:b72dbfa71bf72ff3",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "x": 640,
+        "y": 4820,
+        "wires": [
+            [
+                "5e67380ac05b628d"
+            ]
+        ]
+    },
+    {
+        "id": "72f0d2f7464a0bdb",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "property": "test.result",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "failed",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 270,
+        "y": 4820,
+        "wires": [
+            [
+                "fd7a65f908acd305"
+            ],
+            [
+                "10de179cfe5f14cb"
+            ]
+        ]
+    },
+    {
+        "id": "10de179cfe5f14cb",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Test Passed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"title\":\"Test Passed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 4840,
+        "wires": [
+            [
+                "cd879e9e17e21ce8"
+            ]
+        ]
+    },
+    {
+        "id": "e5f776204af2e15e",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "DUT Installed",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 595,
+        "y": 4920,
+        "wires": []
+    },
+    {
+        "id": "ace56b4fe59f4e9b",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Finish Up",
+        "info": "",
+        "x": 720,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "5e67380ac05b628d",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 4920,
+        "wires": [
+            [
+                "e5f776204af2e15e"
+            ]
+        ]
+    },
+    {
+        "id": "766c1d08fe1d1e80",
+        "type": "ui-text",
+        "z": "8992ffe741acd3ee",
+        "g": "68f251802f837cba",
+        "group": "5b0930d5b8dd2098",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "PCBA",
+        "label": "PCB Assembly:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1090,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "b86d9907184fb447",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "68f251802f837cba",
+        "name": "PCBA",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pcba.pcb_pn",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 1060,
+        "wires": [
+            [
+                "766c1d08fe1d1e80"
+            ]
+        ]
+    },
+    {
+        "id": "6611e6abe634dc81",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "68f251802f837cba",
+        "name": "PCBA Rev",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pcba.pcb_rev",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 1100,
+        "wires": [
+            [
+                "509b68e1df19700d"
+            ]
+        ]
+    },
+    {
+        "id": "509b68e1df19700d",
+        "type": "ui-text",
+        "z": "8992ffe741acd3ee",
+        "g": "68f251802f837cba",
+        "group": "5b0930d5b8dd2098",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "PCBA Rev",
+        "label": "PCB Revision:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 1070,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "4bc95be491b5b8e4",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "7d59cd562498f69c",
+        "name": "Flash Failed",
+        "func": "let temp_msg = msg.payload;\n\nmsg.payload = \n{\n    \"name\": \"Firmware\",\n    \"result\": \"Failed\",\n    \"measured\": \"Return Code\",\n    \"limit\": \"Code: \" + msg.payload.returncode\n}\n\nglobal.set(\"test.state\", \"stopped\");\nglobal.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 2980,
+        "wires": [
+            [
+                "e55d40efe59920a5"
+            ]
+        ]
+    },
+    {
+        "id": "26619a3d30d8c569",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "67857499edf699ee",
+        "name": "Failed",
+        "func": "let temp_msg = msg.payload;\n\nmsg.payload = \n{\n    \"name\": \"Firmware\",\n    \"result\": \"Failed\",\n    \"measured\": \"Door Relay1\",\n    \"limit\": \"Code: \" + msg.payload\n}\n\nglobal.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 3240,
+        "wires": [
+            [
+                "ca7a93d57e521979",
+                "bed1cae6d10865c8"
+            ]
+        ]
+    },
+    {
+        "id": "e0fea46d862c0642",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "67857499edf699ee",
+        "name": "Failed",
+        "func": "let temp_msg = msg.payload;\n\nmsg.payload = \n{\n    \"name\": \"Firmware\",\n    \"result\": \"Failed\",\n    \"measured\": \"Door Relay1\",\n    \"limit\": \"Code: \" + msg.payload\n}\n\nglobal.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 3380,
         "wires": [
             [
                 "ca7a93d57e521979",
@@ -15922,7 +17053,9 @@
         "x": 1130,
         "y": 780,
         "wires": [
-            []
+            [
+                "ab12c7ee2db0d0e1"
+            ]
         ]
     },
     {
@@ -16160,7 +17293,8 @@
         "y": 900,
         "wires": [
             [
-                "30a2aa8de5740315"
+                "30a2aa8de5740315",
+                "a4eb28b16949ad0f"
             ]
         ]
     },
@@ -16240,7 +17374,8 @@
         "y": 900,
         "wires": [
             [
-                "eeaa6008d5d00f94"
+                "eeaa6008d5d00f94",
+                "a4eb28b16949ad0f"
             ]
         ]
     },
@@ -16258,7 +17393,9 @@
         "x": 1110,
         "y": 900,
         "wires": [
-            []
+            [
+                "fd6ab0d4fc5f0abc"
+            ]
         ]
     },
     {
@@ -16306,6 +17443,31 @@
                 "6b4d46386683ec3a",
                 "ab12c7ee2db0d0e1"
             ]
+        ]
+    },
+    {
+        "id": "a4eb28b16949ad0f",
+        "type": "change",
+        "z": "37909226f52cbb23",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pcba",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 840,
+        "wires": [
+            []
         ]
     },
     {
@@ -19500,15 +20662,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "22",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "23",
+                "from": "22.27",
                 "color": "#02ac24"
             },
             {
-                "from": "25",
+                "from": "24.61",
                 "color": "#ea5353"
             }
         ],
@@ -19591,15 +20749,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "10",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "11",
+                "from": "11.32",
                 "color": "#02ac24"
             },
             {
-                "from": "13",
+                "from": "12.52",
                 "color": "#ea5353"
             }
         ],
@@ -19637,15 +20791,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "3",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "4",
+                "from": "4.75",
                 "color": "#02ac24"
             },
             {
-                "from": "6",
+                "from": "5.25",
                 "color": "#ea5353"
             }
         ],
@@ -19683,15 +20833,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "7",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "9",
+                "from": "9.45",
                 "color": "#02ac24"
             },
             {
-                "from": "11",
+                "from": "10.45",
                 "color": "#ea5353"
             }
         ],
@@ -19729,15 +20875,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "1.5",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "2.5",
+                "from": "3.13",
                 "color": "#02ac24"
             },
             {
-                "from": "4",
+                "from": "3.45",
                 "color": "#ea5353"
             }
         ],
@@ -19775,15 +20917,11 @@
                 "color": "#ea5353"
             },
             {
-                "from": "2.5",
-                "color": "#ffd91a"
-            },
-            {
-                "from": "3",
+                "from": "2.98",
                 "color": "#02ac24"
             },
             {
-                "from": "4",
+                "from": "3.45",
                 "color": "#ea5353"
             }
         ],
