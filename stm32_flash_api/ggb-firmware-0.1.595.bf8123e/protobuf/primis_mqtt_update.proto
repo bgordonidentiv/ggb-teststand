@@ -1,0 +1,54 @@
+/*******************************************************************************
+* File Name          : primis_event_logger.proto
+* Author             : Daniel Abraham
+* Contributors       :
+* Date               : April 2025
+* Description        : Protobuf definition of Mqtt Firmware Update Enums.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+enum OtaCommandType {
+  OTA_CMD_UNSPECIFIED = 0;
+  OTA_CMD_START = 1;
+  OTA_CMD_DATA = 2;
+  OTA_CMD_END = 3;
+  OTA_CMD_VERIFY = 4;
+  OTA_CMD_REBOOT = 5;
+  OTA_CMD_STATUS = 6;
+  OTA_CMD_ROLLBACK = 7;
+  OTA_CMD_ABORT = 8;
+}
+
+enum OtaCommandStatus {
+  OTA_CMD_STATUS_UNKNOWN = 0;
+  OTA_CMD_STATUS_OK = 1;
+  OTA_CMD_STATUSNOK = 2;
+}
+
+enum OtaProcessingStatus {
+  OTA_PROC_STATUS_UNKNOWN = 0;
+  OTA_PROC_STATUS_PROCESSED_OK = 1;
+  OTA_PROC_STATUS_FLASH_ERROR = 2;
+  OTA_PROC_STATUS_INVALID_DATA = 3;
+  OTA_PROC_STATUS_VERIFY_FAILED = 4;
+  OTA_PROC_STATUS_DATA_MISSING = 5;
+  OTA_PROC_STATUS_NOT_ALLOWED = 6;
+}
+
+/**
+ Events related to firmware update/fallback.
+*/
+enum FirmwareUpdateEvent {
+  FIRMWARE_UPDATE_EVENT_UNSPECIFIED = 0;
+  FIRMWARE_UPDATE_EVENT_UPDATE_COMPLETED = 1;
+  FIRMWARE_UPDATE_EVENT_FALLBACK_PERFORMED = 2;
+}
+

@@ -1,0 +1,247 @@
+/*******************************************************************************
+* File Name          : primis_common_types.proto
+* Author             : Chris Shaw
+* Contributors       :
+* Date               : October 2024
+* Description        : Protobuf definition of interface between Primis servers,
+                       bridges and apps.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+import "nanopb.proto";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+message IPv4Address {
+  bytes address = 1 [(nanopb).max_size = 4]; 
+}   
+
+message IPv6Address {
+  bytes address = 1 [(nanopb).max_size = 16]; 
+}   
+
+// IPAddress is a generic IP address type (for IPv4 and IPv6).
+message IPAddress {
+  oneof ip_address {
+    IPv4Address ipv4 = 1;
+    IPv6Address ipv6 = 2;
+  }
+}   
+
+// Host is a generic host type, which can be an IP address or a hostname.
+message Host {
+  oneof host {
+    IPAddress ip_address = 1;
+    string hostname = 2 [(nanopb).max_size = 64];
+  }
+}
+
+// MQTTBroker specifies a broker for the MQTT protocol.
+message MQTTBroker {
+  Host host = 1;
+  /*optional*/ uint32 port = 2;
+}
+
+
+enum GgbDeviceType {
+  DEVICE_TYPE_UNSPECIFIED = 0; 
+  DEVICE_TYPE_LEGACY = 1; 
+  DEVICE_TYPE_TWO_DOOR_BRIDGE = 2;
+  DEVICE_TYPE_INPUT_BRIDGE = 3;
+  DEVICE_TYPE_OUTPUT_BRIDGE = 4;
+}
+
+
+// TODO: is this really valid/useful? we could alternatively have a map or 
+// use a bitfield similar to the OG protocol.
+message OutputStatus {
+  int32 output_number = 1;
+  bool status = 2;
+}
+
+
+// TODO: could be a bit field
+message DeviceConfig {
+  bool locked = 1;
+  bool configured = 2;
+}
+
+enum PowerSource {
+  POWER_SOURCE_UNSPECIFIED = 0;
+  POWER_SOURCE_DC = 1;
+  POWER_SOURCE_POE = 2;       // IEEE 802.3af-2003
+  POWER_SOURCE_POE_PLUS = 3;  // IEEE 802.3at-2009
+}
+
+enum PowerState {
+  POWER_STATE_UNSPECIFIED = 0;
+  POWER_STATE_VOLTAGE_IN_RANGE = 1;
+  POWER_STATE_UNDER_VOLTAGE = 2;
+  POWER_STATE_OVER_VOLTAGE = 3;
+  POWER_STATE_INVALID_INPUT = 4;
+}
+
+enum RelayConfig {
+  RELAY_UNSPECIFIED = 0;
+  RELAY_DRY = 1;
+  RELAY_WET_12V = 2;
+  RELAY_WET_24V = 3;
+}
+
+enum ReaderType {
+  READER_TYPE_UNSPECIFIED = 0;
+  READER_TYPE_WIEGAND = 1;
+  READER_TYPE_OSDP = 2;
+}
+
+enum DoorInputType {
+  DOOR_INPUT_TYPE_UNSPECIFIED = 0;
+  DOOR_INPUT_TYPE_UNSUPERVISED = 1;
+  DOOR_INPUT_TYPE_SUPERVISED = 2;
+  DOOR_INPUT_TYPE_DTLM_MELM = 3;
+}
+
+
+// UpstreamServer specifies the order of preference for MQTT brokers.
+enum UpstreamServer {
+  UPSTREAM_UNSPECIFIED = 0;
+  UPSTREAM_PRIMARY = 1;
+  UPSTREAM_SECONDARY = 2;
+  UPSTREAM_TERTIARY = 3;
+}
+
+message UartConfig {
+  bool poll_mode = 1;              // select poll mode (or not)
+  bool select_4w = 2;              // select 4 wire operation
+  uint32 baud_rate = 3;                  // baud rate (9600 - 115200)
+  // bytes spare = 4;                       // currently unused parameters for UART1
+}
+
+message NetworkConfiguration {
+  bool dhcp_enabled = 1;
+  bool ipv6_enabled = 2;
+  /*optional*/ bytes mac_address = 3 [(nanopb).max_size = 6];
+  /*optional*/ IPAddress static_address = 4; // only set if dhcp_enabled is false
+  /*optional*/ IPAddress subnet_mask = 5; 
+  /*optional*/ IPAddress gateway = 6;
+  repeated MQTTBroker servers = 7 [(nanopb).max_count = 3];
+  bool legacy_reader = 8; // TODO: what is this?
+  repeated IPAddress dns_server = 9 [(nanopb).max_count = 3];
+  
+  // New for GGB
+  Host ntp_server = 10;
+  /*optional*/ IPv6Address static_global_address = 11; // only set if ipv6_enabled is true and dhcp_enabled is false
+
+  // Flag that indicates that full configuration has not yet occurred, and the
+  // GGB is in a default clean configuration, i.e. when new or after factory reset.
+  bool is_using_default_configuration = 99;
+}
+
+message DHCPConfig {
+  IPAddress server_ip = 2;
+  uint32 lease_time = 3;
+  bool lease_active = 4;
+  bool enabled = 5; // TODO - could we leave infer that if this message is present, then DHCP is enabled?
+  
+  IPAddress leased_ip = 6;
+  IPAddress gateway_ip = 7;
+  IPAddress subnet_mask = 8;
+  repeated IPAddress dns_server = 9 [(nanopb).max_count = 3];
+}
+
+
+message ReaderConfiguration {
+  ReaderType reader_type = 1;
+  /*optional*/ UartConfig uart_config = 2;
+
+  // TODO: do we allow configuration of the Wiegand lines or is that fixed?
+}
+
+message DoorInputConfiguration {
+  // How to represent variable physical input points across devices
+  // Map Physical Input N to an enum. 
+  //
+  // E.g. GGB 2-Door
+  //  Physical Input 1 = Door 1 In 1
+  //  Physical Input 2 = Door 1 In 2
+  //  Physical Input 3 = Door 2 In 1
+  //  Physical Input 4 = Door 2 In 2
+  //
+  // GGB-Input
+  //  Physical Input 1-8
+  map<uint32, DoorInputType> door_input_configuration = 1 [(nanopb).max_count = 8];
+}
+
+enum InputState {
+  INPUT_STATE_UNSPECIFIED = 0;
+  INPUT_STATE_SHORT = 1;
+  INPUT_STATE_INACTIVE = 2;
+  INPUT_STATE_ACTIVE = 3;
+  INPUT_STATE_OPEN = 4;
+}
+
+message DtlmMelmState {
+  InputState door = 1;
+  InputState alarm = 2;
+  InputState rex = 3;
+}
+
+message DoorInputStatus {
+  DoorInputType input_type = 1;
+  oneof input_state {
+    InputState supervised_unsupervised_state = 2;
+    DtlmMelmState dtlm_melm_states = 3;
+  }
+
+}
+
+
+// 
+message InputStatus {
+  map<uint32, DoorInputStatus> door_status = 1 [(nanopb).max_count = 8];
+}
+
+
+message EventMapping {
+  uint32 relay = 1;
+  uint32 state_code = 2;
+  uint32 activation_time = 3;
+}
+
+message DefaultOutputs {
+  uint32 default_outputs = 1;
+  uint32 supervision_enabled = 2;
+}
+
+enum ErrorState {
+  ERROR_STATE_UNSPECIFIED = 0;
+  ERROR_STATE_NO_ERROR = 1;
+  ERROR_STATE_IN_ERROR_STATE = 2;
+  ERROR_STATE_ERROR_CLEARED = 3;
+}
+
+message ErrorCondition {
+  ErrorState error_state = 1;
+  uint32     error_code = 2;
+  uint32     error_start_time = 3;
+  uint32     error_clear_time = 4;
+  string     error_description = 5 [(nanopb).max_size = 64];
+}
+
+// Discarded for now, keeping until final decision made.
+// Mapping Door X In Y inputs below.
+//  - For each door X (1-8) In Y (1-2) an entry exists in InputStatus map 
+//    according to sequential number.
+//  - Each input has a status according to its type:
+//     - For an unsupervised/supervised input, a single state
+//     - For a DTLM/MELM, a state for each 'line' within the DTLM
+
+//message DoorInputs {
+//  map<uint32, DoorInputStatus> door_input_status = 1 [(nanopb).max_count = 2]; 
+//}

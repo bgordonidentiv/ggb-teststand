@@ -135,6 +135,28 @@ def write_flash():
 
     return jsonify({"output": clean_output, "error": result.stderr, "returncode": result.returncode})
 
+@app.route('/api/st_link/write_prod')
+def write_prod_flash():
+
+    flash_script = '/home/ubuntu/program_ggb2door.sh'
+    bootloader = '/home/ubuntu/ggb-2door-bootloader-0.1.595.bf8123e.elf'
+    bin_file = '/home/ubuntu/ggb-2door-Release-signed-0.1.595.bf8123e.bin'
+
+    try:
+        result = subprocess.run(
+#            ['bash', 'program_ggb2door.sh ggb-2door-Release-signed-0.1.595.bf8123e.bin ggb-2door-bootloader-0.1.595.bf8123e.elf'],
+            ['bash', flash_script, bin_file, bootloader],
+            capture_output=True,
+            text=True
+        )
+        return jsonify({
+            'stdout': result.stdout,
+            'stderr': result.stderr,
+            'returncode': result.returncode
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 @app.route('/api/ps/device_list')
 def list_ps():
     rm = pyvisa.ResourceManager()

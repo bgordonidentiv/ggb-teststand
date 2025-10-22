@@ -1,0 +1,62 @@
+/*******************************************************************************
+* File Name          : primis_event_logger.proto
+* Author             : Daniel Abraham
+* Contributors       :
+* Date               : March 2025
+* Description        : Protobuf definition of Event Logger Enums.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+enum EventOperations {
+  EO_UNSPECIFIED = 0;
+  EO_READ_COUNT = 1;
+  EO_READ_EVENTS = 2; 
+  EO_CLEAR_EVENTS = 3; 
+}
+
+enum EventType {
+  UNSPECIFIED_T = 0;
+  EMERGENCY = 1;
+  ALERT = 2;
+  CRITICAL = 3;
+  ERROR = 4;
+  WARNING = 5;
+  NOTICE = 6;
+  INFORMATION = 7;
+};
+
+enum Subsystem {
+  UNSPECIFIED = 0;
+  DEVICE = 1;
+  CONFIG = 2;
+  NETWORK = 3;
+  READERS = 4;
+  INPUTS = 5;
+  OUTPUTS = 6;
+  CLOCK = 7;
+}
+
+enum EventID {
+  UNSPECIFIED_ID = 0;
+  POWER_ON = 1;
+  PWR_DETECT = 2;
+  SHUTDOWN = 3;
+  NTP_SYNC = 4;
+  RTC_DEAD = 5;
+  CONFIG_VERSION = 6;
+  CONFIG_UPDATE = 7;
+  IP_CHANGE = 8;
+  ETH_DOWN = 9;
+  ETH_UP = 10;
+  FACTORY_RESET = 11;
+  SCHEDULE_REBOOT = 12;
+  END = 256;
+};

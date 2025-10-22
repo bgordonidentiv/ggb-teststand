@@ -1,0 +1,54 @@
+/*******************************************************************************
+* File Name          : primis_ggb_eeprom.proto
+* Author             : Chris Shaw
+* Contributors       :
+* Date               : October 2024
+* Description        : Protobuf definition of interface between Primis GGB
+                       and Primis apps via NFC.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+
+syntax = "proto3";
+
+import "nanopb.proto";
+
+import "primis_common_types.proto";
+import "primis_diagnostic_status.proto";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+message EEPROM_Network { 
+
+  // Version 1 Elements:
+  NetworkConfiguration network_configuration = 1;
+  DHCPConfig dhcp = 2;
+
+  DeviceConfig device_config = 3;
+}
+
+message EEPROM_Connectors  {
+
+  DefaultOutputs default_outputs = 10;
+  
+  // Version 8 Elements:
+  map<uint32, ReaderConfiguration> reader_configuration = 11 [(nanopb).max_count = 6];
+  
+  map<uint32, EventMapping> local_control = 12 [(nanopb).max_count = 6];
+  
+  DoorInputConfiguration door_input_configuration = 13;
+}
+
+message EEPROM_Diagnostics {
+
+  // TBD : Have to decide the number
+  Diagnostics_report diagnostic_report = 11;
+}
+
+message EEPROM_ErrorCondition {
+  ErrorCondition error_condition = 1;
+}

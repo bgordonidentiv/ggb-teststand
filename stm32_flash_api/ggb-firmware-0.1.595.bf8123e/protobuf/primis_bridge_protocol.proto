@@ -1,0 +1,436 @@
+/*******************************************************************************
+* File Name          : primis_bridge_protocol.proto
+* Author             : Chris Shaw
+* Contributors       :
+* Date               : October 2024
+* Description        : Protobuf definition of interface between Primis servers
+                       and bridges.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+import "nanopb.proto";
+
+import "primis_common_types.proto";
+
+import "primis_event_logger.proto";
+
+import "primis_mqtt_update.proto";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+
+// Message for UDP broadcast only
+message UdpBridgeMessage {
+
+  // MAC Address of a specific device that is being polled or 
+  // responding to a poll.
+  // This should be checked by the device when receiving this message.
+  // The message should be ignored if the MAC address does not match.
+  // When responding, this will be the MAC address of the source device.
+  bytes  mac_address = 1 [(nanopb).max_size = 6];
+
+  oneof payload { 
+    // Network Configuration messages
+    SetNetworkConfiguration set_network_configuration = 21;
+    GetNetworkConfiguration get_network_configuration = 22;
+    NetworkConfigurationResponse network_configuration_response = 23;
+
+    // Status messages    
+    GetDeviceInformation get_device_information = 41;
+    DeviceInformationResponse device_information_response = 42;
+
+    GetDeviceStatus get_device_status = 43;
+    DeviceStatusResponse device_status_response = 44;
+  }
+}
+
+message BridgeMessage {
+
+  // Identifier for the message, or of the source message in the case of Ack or Nak
+  // 
+  uint32 message_id = 1;
+  
+  // Unix timestamp (unsigned, expiry date in 2106) of the message generation.
+  // This will represent the time at which the message was caused - not the time
+  // it was transmitted.
+  // This can be used to e.g. discard actions that have 'expired' - such as card reads.
+  uint32 timestamp = 2;
+  
+  oneof payload { 
+  
+    // Ack/Nak responses to received commands. 
+    Ack ack = 11;
+    Nak nak = 12;
+
+    // Configuration messages
+    SetNetworkConfiguration set_network_configuration = 21;
+    GetNetworkConfiguration get_network_configuration = 22;
+    NetworkConfigurationResponse network_configuration_response = 23;
+    LockNetworkConfigRequest lock_network_config = 24;
+
+    SetReaderConfiguration set_reader_configuration = 25;
+    GetReaderConfiguration get_reader_configuration = 26;
+    ReaderConfigurationResponse reader_configuration_response = 27;
+
+    SetDoorInputConfiguration set_door_input_configuration = 28;
+    GetDoorInputConfiguration get_door_input_configuration = 29;
+    DoorInputConfigurationResponse door_input_configuration_response = 30;
+
+    SetMapIOConfiguration set_map_io_configuration = 31;
+    GetMapIOConfiguration get_map_io_configuration = 32;
+    MapIOConfigurationResponse map_io_configuration_response = 33;
+
+    SetDefaultOutputs set_default_outputs = 34;
+    GetDefaultOutputs get_default_outputs = 35;
+    DefaultOutputsResponse default_outputs_response = 36;
+
+    // Sent by bridge to Primis when an activation event occurs.
+    MappedActivationEvent  mapped_activation_event = 37;
+    
+    // Status messages    
+    GetDeviceInformation get_device_information = 41;
+    DeviceInformationResponse device_information_response = 42;
+
+    GetDeviceStatus get_device_status = 43;
+    DeviceStatusResponse device_status_response = 44;
+    DeviceStatusChange device_status_change = 45;
+
+    // Run-time control messages
+    SetActiveServer set_active_server = 51;
+    ActivateTimedOutput activate_timed_output = 52;
+    
+    // Card/reader messages
+    OsdpPacket osdp_packet_to_reader = 61;
+    OsdpPacket osdp_packet_from_reader = 62;
+    WiegandPacket wiegand_packet_from_reader = 63;
+    
+    // Events
+    ReadEventLogger read_event_logger = 71;
+    ReadEventLoggerResponse read_event_logger_response = 72;
+    GetErrorCondition get_error_condition = 73;
+    ErrorConditionResponse error_condition_response = 74;
+
+    // Firmware Update
+    FirmwareUpdate firmware_update = 81;
+    FirmwareUpdateResponse firmware_update_response = 82;
+    FirmwareUpdateCompletionEvent firmware_update_complete_event = 83;
+    
+    // Administration user verification
+    AdminTokenValidationRequest admin_token_validation_request = 91;
+    AdminTokenValidationResponse admin_token_validation_response = 92;
+    
+    // Factory reset request from Primis, notification of reset from bridge
+    // The 'reset performed' notification will also be sent when factory
+    // reset was performed due to NFC request or reset button.
+    FactoryResetRequest factory_reset_request = 93;
+    FactoryResetPerformed  factory_reset_performed = 94;
+    
+    // Software Reboot Event. Sent when the bridge is going to perform a
+    // deliberate reboot.
+    SoftwareRebootEvent software_reboot_event = 95;
+    
+    // Core dump retrieval
+    CoreDumpRequest core_dump_request = 191;
+    CoreDumpResponse core_dump_response = 192;
+    
+    // Last will and testament over MQTT will use this message
+    LastWillAndTestament last_will_and_testament = 198;
+ 
+    // Not sure if this would be useful?
+    bytes legacy_payload = 199 [(nanopb).max_size = 50];
+
+  }
+}
+
+message GetNetworkConfiguration {}
+
+message SetNetworkConfiguration {
+  NetworkConfiguration network_configuration = 1;
+}
+
+message NetworkConfigurationResponse {
+  NetworkConfiguration network_configuration = 1;
+  DHCPConfig dhcp = 2;
+}
+
+message GetDoorInputConfiguration {}
+
+message SetDoorInputConfiguration {
+  DoorInputConfiguration door_input_configuration = 1;
+}
+
+message DoorInputConfigurationResponse {
+  DoorInputConfiguration door_input_configuration = 1;
+}
+
+message DeviceInformation {
+  string         firmware_version = 1 [(nanopb).max_size = 20];
+  GgbDeviceType  device_type = 2;
+  uint32         eeprom_version = 3;
+  bytes          mac_address = 4 [(nanopb).max_size = 6];
+  IPAddress      ip_address = 5;
+  UpstreamServer server_connection = 6; // which upstream we're currently connected to
+  DeviceConfig   device_config = 7;
+  string         serial_number = 8 [(nanopb).max_size = 20];
+}
+
+message GetDeviceInformation {}
+
+message DeviceInformationResponse {
+  DeviceInformation device_information = 1;
+}
+
+/**
+ * This message type conveys:-
+    - The switch setting
+    - The actual setting applied, in case of invalid switch setting (power limitations)
+    - Whether the switch setting is valid
+    
+   Note that the switch setting is valid if the switch and applied states are the same.
+ */
+message RelayStatus {
+  RelayConfig  relay_switch_setting = 1;
+  RelayConfig  relay_applied = 2;
+  bool         relay_switch_valid = 3;
+}
+
+message DeviceStatus {
+  InputStatus  input_status = 1;
+  PowerSource  power_source = 2;
+  uint32       poe_vin_millivolts = 3;
+  uint32       dc_vin_millivolts = 4;
+  RelayStatus  relay_status = 7;
+  PowerState   power_state = 8;
+  repeated OutputStatus output_status = 6 [(nanopb).max_count = 10];
+}
+
+message GetDeviceStatus {
+}
+
+message DeviceStatusResponse {
+  DeviceStatus device_status = 1;
+}
+
+message DeviceStatusChange {
+  DeviceStatus device_status = 1;
+}
+
+message DeviceOnlineStatus {
+  bool online = 1;
+}
+
+message SetReaderConfiguration {
+  map<uint32, ReaderConfiguration> reader_configuration = 1 [(nanopb).max_count = 6];
+}
+
+message GetReaderConfiguration {}
+
+message ReaderConfigurationResponse {
+  map<uint32, ReaderConfiguration> reader_configuration = 1 [(nanopb).max_count = 6];
+}
+
+message OsdpPacket {
+  uint32 reader_number = 1;
+  bytes osdp_packet = 2 [(nanopb).max_size = 240];
+}
+
+message WiegandPacket {
+  uint32 reader_number = 1;
+  bytes wiegand_packet = 2 [(nanopb).max_size = 40];
+  uint32 bit_length = 3;
+}
+
+message ActivateTimedOutput {
+  uint32 output_point = 1;
+  uint32 activation_time = 2;
+}
+
+
+message MapIOConfigurationSet {
+   map<uint32, EventMapping> event_mapping = 1 [(nanopb).max_count = 6];
+}
+
+message SetMapIOConfiguration {
+  MapIOConfigurationSet configuration = 1;
+}
+
+message GetMapIOConfiguration {}
+
+message MapIOConfigurationResponse {
+  MapIOConfigurationSet configuration = 1;
+}
+
+message MappedActivationEvent {
+  uint32       input_number = 1;
+  EventMapping triggered_mapping = 2;
+}
+
+message LockNetworkConfigRequest {
+  bool lock = 1;  // This can only be set - it cannot be unset
+}
+
+message SetActiveServer {
+  uint32 active_server = 1;
+}
+
+message SetDefaultOutputs {
+  DefaultOutputs default_outputs = 1;
+}
+
+message GetDefaultOutputs {}
+
+message DefaultOutputsResponse {
+  DefaultOutputs default_outputs = 1;
+}
+
+message ReadEventLogger {
+  EventOperations ops = 1;
+  /*optional*/ EventType type = 2;
+  /*optional*/ uint32 offset = 3;
+}
+
+message EventLoggerCount {
+  uint32 count = 1;
+}
+
+message EventLoggerData {
+  int32 timestamp = 1;      
+  EventType type = 2;             
+  uint32 sub = 3;                 
+  EventID event_id = 4;             
+  string message_data = 5 [(nanopb).max_size = 24];   
+}
+
+message EventLoggerClear {
+  bool status = 1;
+}
+
+message ReadEventLoggerResponse {
+  map<uint32, EventLoggerData> event = 1 [(nanopb).max_count = 10];
+  oneof payload { 
+    EventLoggerCount events_count = 2;
+    EventLoggerClear clear_all_events = 3;
+  }
+  EventOperations ops = 4;
+}
+
+message GetErrorCondition
+{
+}
+
+message ErrorConditionResponse {
+  ErrorCondition error_condition = 1;
+}
+
+
+// Firmware update status 
+message OtaStatus {
+  uint32 offset = 1;                            // Last Offset received
+  OtaProcessingStatus status = 2;               // Errors if any
+}
+
+// Data transfer chunk 
+message OtaData {
+  uint32 offset = 1;                            // Offset in bytes
+  bytes data = 2 [(nanopb).max_size = 256];     // Chunk of firmware data
+}
+
+// MQTT Firmare Update Command
+message FirmwareUpdate {
+  OtaCommandType command = 1;
+  /*optional*/ OtaData data = 2;
+}
+
+// MQTT Firmare Update Response
+message FirmwareUpdateResponse {
+  OtaCommandStatus command_status = 1;
+  /*optional*/ OtaStatus ota_status = 2;
+}
+
+// Message to send to Primis/server after a firmware upgrade/rollback event.
+message FirmwareUpdateCompletionEvent {
+  FirmwareUpdateEvent update_event = 1;
+  string         firmware_version = 2 [(nanopb).max_size = 20];
+}
+
+// Administrator verification
+// Request is sent by the bridge to Primis.
+// Includes the NFC-provided admin token.
+message AdminTokenValidationRequest {
+  string admin_token = 1 [(nanopb).max_size = 30];
+}
+
+message FactoryResetRequest {
+  bool perform_factory_reset = 1;
+}
+
+enum FactoryResetSource {
+  FACTORY_RESET_SOURCE_UNSPECIFIED = 0;
+  FACTORY_RESET_SOURCE_PRIMIS_REQUEST = 1;
+  FACTORY_RESET_SOURCE_NFC_REQUEST = 2;
+  FACTORY_RESET_SOURCE_RESET_BUTTON = 3;
+}
+
+message FactoryResetPerformed {
+  FactoryResetSource source = 1;
+}
+
+// Primis verifies the admin token, and returns both
+// the token requested and a simple boolean 'authorisation' flag,
+// where true indicates the changes may be applied.
+message AdminTokenValidationResponse {
+  string admin_token = 1 [(nanopb).max_size = 30];
+  bool   token_is_valid = 2;
+}
+
+enum SoftwareRebootReason {
+  SOFTWARE_REBOOT_REASON_UNSPECIFIED = 0;
+  SOFTWARE_REBOOT_REASON_NETWORK_CONFIG_CHANGED = 1;
+  SOFTWARE_REBOOT_REASON_FACTORY_RESET = 2;
+  SOFTWARE_REBOOT_REASON_NFC_CONFIGURATION = 3;
+}
+
+message SoftwareRebootEvent {
+  SoftwareRebootReason software_reboot_reason = 1;
+}
+
+message CoreDumpRequest {
+}
+
+message CoreDumpResponse {
+  // Will contain the core dump. Message content is kept agnostic to the 
+  // core format, must be interpreted offline.
+  bytes core_dump_contents = 1 [(nanopb).max_size = 600];
+}
+
+message LastWillAndTestament {
+}
+
+message Ack {}
+
+// Does Nak need additional fields, e.g. Reason/Error code
+message Nak {
+  NakReason reason = 1;
+}
+
+enum NakReason {
+  NAK_REASON_UNSPECIFIED = 0;
+  
+  // Message formatting errors
+  NAK_REASON_UNKNOWN_COMMAND_TYPE = 1;
+
+  // Specific failure codes
+  
+  // Output point config
+  NAK_REASON_INVALID_OUTPUT_POINT = 11;
+  NAK_REASON_OUTPUT_POINT_DISABLED = 12;
+  
+  // Input point config
+  NAK_REASON_INVALID_INPUT_CONFIGURATION = 15;
+}

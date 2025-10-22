@@ -1,0 +1,49 @@
+/*******************************************************************************
+* File Name          : primis_bridge_certificate_signing.proto
+* Author             : Chris Shaw
+* Contributors       :
+* Date               : July 2025
+* Description        : Protobuf definition of interface between Primis servers
+                       and bridges for certificate signing requests and responses.
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. 
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+import "nanopb.proto";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+
+message PemFormatContent {
+  string pem_string = 1 [(nanopb).max_size = 3500];
+}
+
+enum CertificateType {
+  CERTIFICATE_TYPE_UNSPECIFIED = 0;
+  CERTIFICATE_TYPE_CLIENT_CERT = 1;
+  CERTIFICATE_TYPE_INTERMEDIATE_CERT = 2;
+  CERTIFICATE_TYPE_CA_CERT = 3;
+}
+
+// Message for certificate signing only
+message BridgeCertificateSigningMessage {
+
+  oneof payload { 
+    // Certificate signing messages
+    CertificateSigningRequest certificate_signing_request = 1;
+    CertificateSigningResponse certificate_signing_response = 2;
+  }
+}
+
+message CertificateSigningRequest {
+  PemFormatContent pem_content = 1;
+}
+
+message CertificateSigningResponse {
+  PemFormatContent pem_content = 1;
+  CertificateType certificate_type = 2;
+}

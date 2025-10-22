@@ -1,0 +1,127 @@
+
+/*******************************************************************************
+* File Name          : primis_diagnostic_status.proto
+* Author             : DA
+* Contributors       :
+* Date               : February 2025
+* Description        : This file defines the Protocol Buffers (protobuf) interface 
+                       used for communication between Primis servers, network bridges,
+                       and applications related to diagnostic reports. 
+
+Protobuf v3 used, where all fields are optional and thus the keyword is 
+disallowed. Annotation left for illustration and to allow quick regression 
+to v2 if required.
+
+*******************************************************************************/
+
+syntax = "proto3";
+
+import "primis_common_types.proto";
+
+option java_package = "com.hirschsecure.ggb_model";
+
+enum DeviceState {
+    DEV_UNKNOWN = 0;
+    DEV_BOOTING = 1;
+    DEV_DHCP = 2;
+    DEV_CONNECTINGTOSERVER = 3;
+    DEV_ONLINE = 4;
+    DEV_UNCONFIGURED = 5;
+    DEV_ERROR = 6;
+}
+
+enum OTAState {
+    OTA_UNSPECIFIED = 0;
+    OTA_IN_PROGRESS = 1;
+    OTA_NOT_IN_PROGRESS = 2;
+}
+
+enum ClockState {
+    CLK_UNSPECIFIED = 0;
+    CLK_DEAD = 1;
+    CLK_RTC_BACKUP = 2;
+    CLK_NTP = 3;
+}
+
+enum OutputState {
+    OS_UNKNOWN = 0;
+    OS_OUTPUT_INACTIVE = 1;
+    OS_OUTPUT_ACTIVE = 2;
+}
+
+
+// Removed PowerSrc as duplicate of PowerSource
+
+enum DcSupplyLevel {
+    DC_SUPPLY_UNKNOWN = 0;
+    DC_SUPPLY_NOT_PRESENT = 1;
+    DC_SUPPLY_12V = 2;
+    DC_SUPPLY_24V = 3;
+}
+
+enum EthernetLinkState {
+    LINK_UNKNOWN = 0;
+    LINK_DOWN = 1;
+    LINK_UP = 2;
+}
+
+enum IPState {
+    IP_UNKNOWN = 0;
+    IP_NONE = 1;
+    IP_V4 = 2;
+    IP_V6 = 3;
+}
+
+enum ConnectionState {
+    CS_UNSPECIFIED = 0;
+    CS_NOT_CONNECTED = 1;
+    CS_CONNECTED = 2;
+}
+
+message EthernetStatus {
+    EthernetLinkState eth_state = 1;
+}
+
+message NetworkStatus {
+    IPAddress static_ip = 1;
+    IPAddress gateway = 2;
+    /*optional*/ IPv6Address global_address = 3;
+}
+
+message MQTTStatus {
+    Host host = 1;
+    uint32 port = 2;
+    ConnectionState conn_state = 3;
+}
+
+message ClockStatus {
+    ClockState state = 1;
+}
+
+message OTAStatus {
+    OTAState state = 1;
+}
+
+message DiagDeviceStatus {
+    DeviceState state = 1;
+}
+
+message PowerStatus {
+    PowerSource power_source = 1;
+    DcSupplyLevel dc_supply_level = 2;
+    PowerState power_state = 3;
+    RelayConfig relay_config = 4;
+    bool        relay_switch_valid = 5;
+}
+
+message Diagnostics_report {
+    DiagDeviceStatus device_status = 1;
+    OTAStatus ota_status = 2;
+    ClockStatus clock_status = 3;
+    EthernetStatus ethernet_state = 4;
+    NetworkStatus network_status = 5;
+    PowerStatus power_source = 6;
+    MQTTStatus mqtt_status = 7;
+    // map<uint32, InputState> input_state = 8 [(nanopb).max_count = 24]; 
+    // map<uint32, OutputState> output_state = 9 [(nanopb).max_count = 8]; 
+}
