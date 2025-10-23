@@ -8,6 +8,7 @@ services:
       # - ./node-red-data/flash_files:/data/flash_files
       - ./stm32_bin_files:/data/flash_files
       - /dev:/dev
+      - /dev/serial/by-id:/dev/serial/by-id
     devices:
       - /dev:/dev
     group_add:

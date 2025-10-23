@@ -1687,28 +1687,6 @@
         "h": 262
     },
     {
-        "id": "09c231e6bb082835",
-        "type": "group",
-        "z": "c21c2a31923f4a5d",
-        "name": "Debug Terminal",
-        "style": {
-            "fill": "#7fb7df",
-            "label": true,
-            "color": "#3f3f3f"
-        },
-        "nodes": [
-            "45499bd37bba7c24",
-            "da128cf6dcbd05bc",
-            "0505b8f9c6ee6294",
-            "85083c8451d94456",
-            "4307d3e6a4911641"
-        ],
-        "x": 154,
-        "y": 39,
-        "w": 952,
-        "h": 82
-    },
-    {
         "id": "7d59cd562498f69c",
         "type": "group",
         "z": "8992ffe741acd3ee",
@@ -1838,7 +1816,6 @@
             "label": true
         },
         "nodes": [
-            "c9d96d0b6a9c7876",
             "70215373d66bccd0",
             "8dd34d4426d93a87",
             "1de928f944e6295c",
@@ -1851,12 +1828,15 @@
             "cb5e4884ecc09b8e",
             "566a51cc4660423b",
             "829133c954edc8be",
-            "54121044c08d3225"
+            "54121044c08d3225",
+            "c9d96d0b6a9c7876",
+            "3df11ae9ec907a4a",
+            "a3822cad79ea2d7e"
         ],
         "x": 1268,
         "y": 539,
         "w": 1004,
-        "h": 682
+        "h": 722
     },
     {
         "id": "68f251802f837cba",
@@ -1943,12 +1923,21 @@
             "3eafa6382866f33b",
             "9e5bb740d27c098b",
             "bf5074227fc4a0bf",
-            "6ae46bf5f158d9bf"
+            "6ae46bf5f158d9bf",
+            "1f8aaa5ba4471536",
+            "400991cde717b568",
+            "a8b9edf52f16e76d",
+            "3e2dcc7809ef6e15",
+            "6d5723bd3d83d59f",
+            "2b90d8a6c6a37280",
+            "e7f0a456b31ada6d",
+            "920d901b9490bf35",
+            "660340c77ce4297c"
         ],
         "x": 194,
         "y": 4499,
-        "w": 612,
-        "h": 1242
+        "w": 622,
+        "h": 1482
     },
     {
         "id": "54121044c08d3225",
@@ -2741,8 +2730,8 @@
     {
         "id": "a6c6d5d269d5dc61",
         "type": "serial-port",
-        "name": "",
-        "serialport": "/dev/ttyACM1",
+        "name": "ESP32",
+        "serialport": "/dev/ttyACM0",
         "serialbaud": "115200",
         "databits": "8",
         "parity": "none",
@@ -2811,46 +2800,6 @@
         "visible": "true",
         "disabled": "false",
         "groupType": "default"
-    },
-    {
-        "id": "d0221cd8b48e55d6",
-        "type": "serial-port",
-        "name": "",
-        "serialport": "/dev/ttyUSB0",
-        "serialbaud": "115200",
-        "databits": "8",
-        "parity": "none",
-        "stopbits": "1",
-        "waitfor": "",
-        "dtr": "none",
-        "rts": "none",
-        "cts": "none",
-        "dsr": "none",
-        "newline": "\\n",
-        "bin": "false",
-        "out": "char",
-        "addchar": "",
-        "responsetimeout": "10000"
-    },
-    {
-        "id": "ae879ac8fb35df87",
-        "type": "serial-port",
-        "name": "Serial Debug with CR",
-        "serialport": "/dev/ttyUSB0",
-        "serialbaud": "115200",
-        "databits": "8",
-        "parity": "none",
-        "stopbits": "1",
-        "waitfor": "",
-        "dtr": "none",
-        "rts": "none",
-        "cts": "none",
-        "dsr": "none",
-        "newline": "\\n",
-        "bin": "false",
-        "out": "char",
-        "addchar": "\\r\\n",
-        "responsetimeout": "10000"
     },
     {
         "id": "df4e3ff11eba05b2",
@@ -12082,7 +12031,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": "1",
         "topic": "",
         "payload": "",
@@ -12965,7 +12914,7 @@
         "z": "8992ffe741acd3ee",
         "name": "",
         "x": 1580,
-        "y": 1460,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -12979,7 +12928,7 @@
             "458d7f336aeaf201"
         ],
         "x": 1345,
-        "y": 1420,
+        "y": 1320,
         "wires": [
             [
                 "cbf269f9255d29df"
@@ -13014,7 +12963,7 @@
             "9e5bb740d27c098b"
         ],
         "x": 1345,
-        "y": 1500,
+        "y": 1400,
         "wires": [
             [
                 "cbf269f9255d29df",
@@ -13805,22 +13754,6 @@
         ]
     },
     {
-        "id": "c9d96d0b6a9c7876",
-        "type": "serial in",
-        "z": "8992ffe741acd3ee",
-        "g": "efa2eb74839b1194",
-        "name": "",
-        "serial": "415c042d5c9edcd4",
-        "x": 1390,
-        "y": 760,
-        "wires": [
-            [
-                "98b065eb75b1e6c3",
-                "70215373d66bccd0"
-            ]
-        ]
-    },
-    {
         "id": "70215373d66bccd0",
         "type": "json",
         "z": "8992ffe741acd3ee",
@@ -14169,7 +14102,7 @@
         "name": "ESP32",
         "serial": "a6c6d5d269d5dc61",
         "x": 1370,
-        "y": 1180,
+        "y": 1220,
         "wires": [
             [
                 "829133c954edc8be"
@@ -14213,16 +14146,18 @@
         "id": "3df11ae9ec907a4a",
         "type": "serial out",
         "z": "8992ffe741acd3ee",
+        "g": "efa2eb74839b1194",
         "name": "",
         "serial": "415c042d5c9edcd4",
         "x": 1470,
-        "y": 1320,
+        "y": 840,
         "wires": []
     },
     {
         "id": "a3822cad79ea2d7e",
         "type": "link in",
         "z": "8992ffe741acd3ee",
+        "g": "efa2eb74839b1194",
         "name": "link in 8",
         "links": [
             "23978756652525b0",
@@ -14231,7 +14166,7 @@
             "bc945458a8c19eb7"
         ],
         "x": 1335,
-        "y": 1320,
+        "y": 840,
         "wires": [
             [
                 "3df11ae9ec907a4a"
@@ -14302,7 +14237,7 @@
         "name": "",
         "serial": "9c8032cbe34870c5",
         "x": 1400,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "8cc6f461f4b59467",
@@ -14335,7 +14270,7 @@
         "finalize": "",
         "libs": [],
         "x": 1650,
-        "y": 900,
+        "y": 940,
         "wires": [
             [
                 "cb5e4884ecc09b8e"
@@ -14387,7 +14322,7 @@
         "name": "",
         "serial": "965c5561efd11b27",
         "x": 1400,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "75339fbedbb215ad",
@@ -14409,7 +14344,7 @@
         "finalize": "",
         "libs": [],
         "x": 1650,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             [
                 "566a51cc4660423b"
@@ -14463,7 +14398,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1820,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -14481,7 +14416,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1820,
-        "y": 1100,
+        "y": 1140,
         "wires": []
     },
     {
@@ -14499,7 +14434,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1540,
-        "y": 1180,
+        "y": 1220,
         "wires": []
     },
     {
@@ -14522,8 +14457,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
-        "y": 5520,
+        "x": 350,
+        "y": 5780,
         "wires": [
             [
                 "bc0da9dcc974f651"
@@ -14536,8 +14471,8 @@
         "z": "8992ffe741acd3ee",
         "g": "6d39391e20d074cd",
         "name": "",
-        "x": 530,
-        "y": 5520,
+        "x": 570,
+        "y": 5780,
         "wires": [
             [
                 "72f0d2f7464a0bdb"
@@ -14668,39 +14603,13 @@
         ]
     },
     {
-        "id": "c6c59b962a13f039",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "name": "Super Cap",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Super Cap\",\"ain\":\"super_cap\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1090,
-        "y": 4860,
-        "wires": [
-            [
-                "7fcc27d21a5cceb9"
-            ]
-        ]
-    },
-    {
         "id": "a8b9edf52f16e76d",
         "type": "delay",
         "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
         "name": "",
         "pauseType": "delay",
-        "timeout": "2",
+        "timeout": "4",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -14711,23 +14620,12 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1080,
-        "y": 4800,
+        "x": 300,
+        "y": 4840,
         "wires": [
             [
-                "c6c59b962a13f039"
+                "660340c77ce4297c"
             ]
-        ]
-    },
-    {
-        "id": "7fcc27d21a5cceb9",
-        "type": "subflow:78b5cecde0aff5c6",
-        "z": "8992ffe741acd3ee",
-        "name": "Super Cap Chargeing Test",
-        "x": 1320,
-        "y": 4860,
-        "wires": [
-            []
         ]
     },
     {
@@ -15702,7 +15600,7 @@
         "finalize": "",
         "libs": [],
         "x": 1560,
-        "y": 1520,
+        "y": 1420,
         "wires": [
             []
         ]
@@ -15720,12 +15618,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 310,
         "y": 4600,
         "wires": [
             [
                 "46f3c986a096e99e",
-                "67a13f4458d1b6e7"
+                "2b90d8a6c6a37280"
             ]
         ]
     },
@@ -15741,7 +15639,7 @@
         "upsert": false,
         "multi": false,
         "operation": "store",
-        "x": 540,
+        "x": 570,
         "y": 4600,
         "wires": []
     },
@@ -15752,7 +15650,7 @@
         "g": "6d39391e20d074cd",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
+        "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -15763,8 +15661,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 280,
-        "y": 4660,
+        "x": 300,
+        "y": 5000,
         "wires": [
             [
                 "2f64cd8cb42a1e05"
@@ -15791,8 +15689,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 5580,
+        "x": 470,
+        "y": 5840,
         "wires": [
             [
                 "cd879e9e17e21ce8"
@@ -15805,8 +15703,8 @@
         "z": "8992ffe741acd3ee",
         "g": "6d39391e20d074cd",
         "name": "",
-        "x": 640,
-        "y": 5600,
+        "x": 680,
+        "y": 5860,
         "wires": [
             [
                 "5e67380ac05b628d"
@@ -15824,7 +15722,7 @@
         "rules": [
             {
                 "t": "eq",
-                "v": "failed",
+                "v": "Failed",
                 "vt": "str"
             },
             {
@@ -15834,8 +15732,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 270,
-        "y": 5600,
+        "x": 310,
+        "y": 5860,
         "wires": [
             [
                 "fd7a65f908acd305"
@@ -15865,8 +15763,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 430,
-        "y": 5620,
+        "x": 470,
+        "y": 5880,
         "wires": [
             [
                 "cd879e9e17e21ce8"
@@ -15883,8 +15781,8 @@
         "links": [
             "0f367029b3ce9e8f"
         ],
-        "x": 585,
-        "y": 5700,
+        "x": 735,
+        "y": 5940,
         "wires": []
     },
     {
@@ -15894,7 +15792,7 @@
         "g": "6d39391e20d074cd",
         "name": "Finish Up",
         "info": "",
-        "x": 720,
+        "x": 280,
         "y": 4540,
         "wires": []
     },
@@ -15918,8 +15816,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
-        "y": 5700,
+        "x": 510,
+        "y": 5940,
         "wires": [
             [
                 "e5f776204af2e15e"
@@ -16113,8 +16011,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 320,
-        "y": 5060,
+        "x": 360,
+        "y": 5360,
         "wires": [
             [
                 "6699149b16be24da"
@@ -16127,8 +16025,8 @@
         "z": "8992ffe741acd3ee",
         "g": "6d39391e20d074cd",
         "name": "",
-        "x": 510,
-        "y": 5060,
+        "x": 530,
+        "y": 5360,
         "wires": [
             [
                 "7c874795fd0c6d55"
@@ -16158,8 +16056,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 650,
-        "y": 5060,
+        "x": 690,
+        "y": 5360,
         "wires": [
             [
                 "7a1bb7c755a29265"
@@ -16187,8 +16085,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 310,
-        "y": 5120,
+        "x": 350,
+        "y": 5420,
         "wires": [
             [
                 "0d9118dda9bfb358"
@@ -16205,8 +16103,8 @@
         "links": [
             "a3822cad79ea2d7e"
         ],
-        "x": 690,
-        "y": 5180,
+        "x": 710,
+        "y": 5480,
         "wires": [],
         "l": true
     },
@@ -16230,8 +16128,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 5180,
+        "x": 370,
+        "y": 5480,
         "wires": [
             [
                 "bc945458a8c19eb7",
@@ -16252,8 +16150,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 5300,
+        "x": 350,
+        "y": 5600,
         "wires": [
             [
                 "bc945458a8c19eb7",
@@ -16279,8 +16177,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 290,
-        "y": 5240,
+        "x": 330,
+        "y": 5540,
         "wires": [
             [
                 "60cc8c0c190fc7f4"
@@ -16305,8 +16203,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 290,
-        "y": 5360,
+        "x": 330,
+        "y": 5660,
         "wires": [
             [
                 "596031aa804eb5c8"
@@ -16333,8 +16231,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 300,
-        "y": 5420,
+        "x": 340,
+        "y": 5720,
         "wires": [
             [
                 "bc945458a8c19eb7",
@@ -16359,8 +16257,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 290,
-        "y": 4840,
+        "x": 310,
+        "y": 5120,
         "wires": [
             [
                 "1cd5ae40a3874aba"
@@ -16376,8 +16274,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 450,
-        "y": 4840,
+        "x": 470,
+        "y": 5120,
         "wires": [
             [
                 "c233d955ae138f36"
@@ -16405,8 +16303,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 590,
-        "y": 4840,
+        "x": 630,
+        "y": 5120,
         "wires": [
             [
                 "3eafa6382866f33b"
@@ -16435,8 +16333,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 430,
-        "y": 4720,
+        "x": 470,
+        "y": 5060,
         "wires": [
             [
                 "3fa1a53da2a684a6"
@@ -16467,8 +16365,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 270,
-        "y": 4720,
+        "x": 290,
+        "y": 5060,
         "wires": [
             [
                 "a124a2fbc7131583"
@@ -16488,8 +16386,8 @@
         "links": [
             "0f367029b3ce9e8f"
         ],
-        "x": 585,
-        "y": 4680,
+        "x": 705,
+        "y": 4660,
         "wires": []
     },
     {
@@ -16512,8 +16410,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 4760,
+        "x": 660,
+        "y": 5060,
         "wires": [
             [
                 "9e5bb740d27c098b"
@@ -16540,8 +16438,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
-        "y": 4900,
+        "x": 490,
+        "y": 5180,
         "wires": [
             [
                 "9e5bb740d27c098b",
@@ -16559,8 +16457,8 @@
         "links": [
             "7b1e1beb670237f3"
         ],
-        "x": 745,
-        "y": 4900,
+        "x": 775,
+        "y": 4960,
         "wires": []
     },
     {
@@ -16581,8 +16479,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 280,
-        "y": 5000,
+        "x": 320,
+        "y": 5300,
         "wires": [
             [
                 "4b1da3adf61f9f2d"
@@ -16602,11 +16500,223 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 4940,
+        "x": 510,
+        "y": 5220,
         "wires": [
             [
                 "9e5bb740d27c098b"
+            ]
+        ]
+    },
+    {
+        "id": "c9d96d0b6a9c7876",
+        "type": "serial in",
+        "z": "8992ffe741acd3ee",
+        "g": "efa2eb74839b1194",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 1390,
+        "y": 760,
+        "wires": [
+            [
+                "70215373d66bccd0",
+                "98b065eb75b1e6c3"
+            ]
+        ]
+    },
+    {
+        "id": "1f8aaa5ba4471536",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "DUT_24V_RELAY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"off\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 4780,
+        "wires": [
+            [
+                "400991cde717b568"
+            ]
+        ]
+    },
+    {
+        "id": "400991cde717b568",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "x": 550,
+        "y": 4780,
+        "wires": [
+            [
+                "a8b9edf52f16e76d"
+            ]
+        ]
+    },
+    {
+        "id": "3e2dcc7809ef6e15",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "DUT_24V_RELAY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 4900,
+        "wires": [
+            [
+                "6d5723bd3d83d59f"
+            ]
+        ]
+    },
+    {
+        "id": "6d5723bd3d83d59f",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "",
+        "x": 530,
+        "y": 4900,
+        "wires": [
+            [
+                "67a13f4458d1b6e7"
+            ]
+        ]
+    },
+    {
+        "id": "2b90d8a6c6a37280",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4660,
+        "wires": [
+            [
+                "e7f0a456b31ada6d"
+            ],
+            [
+                "a2273f9fbda0d0be"
+            ]
+        ]
+    },
+    {
+        "id": "e7f0a456b31ada6d",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Skip?",
+        "property": "flowCfg.super_cap_off",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4720,
+        "wires": [
+            [
+                "1f8aaa5ba4471536"
+            ],
+            [
+                "920d901b9490bf35"
+            ]
+        ]
+    },
+    {
+        "id": "920d901b9490bf35",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Super Cap OFF\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 4720,
+        "wires": [
+            [
+                "9e5bb740d27c098b"
+            ]
+        ]
+    },
+    {
+        "id": "660340c77ce4297c",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "6d39391e20d074cd",
+        "name": "Check Super Cap OFF",
+        "func": "let super_cap = global.get(\"measurements.super_cap\");\nlet min = global.get(\"parameters.super_cap_off_min\");\n\nif(super_cap > min) {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + super_cap,\n        \"limit\": \"Limits: \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 4840,
+        "wires": [
+            [
+                "9e5bb740d27c098b",
+                "3e2dcc7809ef6e15"
             ]
         ]
     },
@@ -16709,136 +16819,11 @@
         ]
     },
     {
-        "id": "45499bd37bba7c24",
-        "type": "link in",
-        "z": "c21c2a31923f4a5d",
-        "d": true,
-        "g": "09c231e6bb082835",
-        "name": "Dashboard Terminal",
-        "links": [
-            "4307d3e6a4911641"
-        ],
-        "x": 270,
-        "y": 80,
-        "wires": [
-            [
-                "da128cf6dcbd05bc"
-            ]
-        ],
-        "l": true
-    },
-    {
-        "id": "da128cf6dcbd05bc",
-        "type": "function",
-        "z": "c21c2a31923f4a5d",
-        "d": true,
-        "g": "09c231e6bb082835",
-        "name": "log to context.log",
-        "func": "const MAX_ROWS = 600\n\nif (msg.topic === \"clear-log\") {\n    context.set('log', [])\n    msg.topic = ''\n    msg.payload = []\n    return msg\n}\n\nconst incomingMessage = msg.payload\nlet log = context.get('log') || []\nif (!Array.isArray(log)) {\n    log = []\n}\n\nlet logMessages = normaliseLogEntry(msg.payload)\n\nfunction normaliseLogEntry(data) {\n    const result = []\n    if (data === null) {\n        return normaliseLogEntry(\"null\")\n    } else if (typeof data === \"undefined\") {\n        return normaliseLogEntry(\"undefined\")\n    } else if (typeof data === 'number') {\n        return normaliseLogEntry(\"\" + data)\n    } else if (Array.isArray(data)) {\n        const arrStr = [\"[\"]\n        for (let index = 0; index < data.length; index++) {\n            if (index > 0) { arrStr.push(', ') }\n            arrStr.push(normaliseLogEntry(data[index]))\n        }\n        arrStr.push(\"]\")\n        return normaliseLogEntry(arrStr.join(''))\n    } else if (typeof data === 'object') {\n        result.push(\"> \" + JSON.stringify(data, null, 2))\n    } else if (Buffer.isBuffer(data)) {\n        result.push(\"> \" + data.toJSON())\n    } else if (data && typeof data !== 'string') {\n        result.push(\"> \" + data.toString())\n    } else {\n        if (data.includes('\\n')) {\n            const lines = data.split('\\n').map(m => \"> \" + m)\n            result.push(...lines)\n        } else {\n            result.push(\"> \" + data)\n        }\n    }\n    return result\n}\n\nlog.push(...logMessages.flat())\n\nif (log.length >= MAX_ROWS) {\n    // remove the oldest messages which are at the beginning of the array\n    log = log.slice(-MAX_ROWS)\n}\n\ncontext.set('log', log)\nmsg.payload = log\nreturn msg",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 550,
-        "y": 80,
-        "wires": [
-            [
-                "0505b8f9c6ee6294"
-            ]
-        ]
-    },
-    {
-        "id": "0505b8f9c6ee6294",
-        "type": "ui-template",
-        "z": "c21c2a31923f4a5d",
-        "d": true,
-        "g": "09c231e6bb082835",
-        "group": "2f18e2f3b97e3f88",
-        "page": "",
-        "ui": "",
-        "name": "",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "head": "",
-        "format": "<template>\n    <div class=\"terminal\" ref=\"terminal\">\n        <div class=\"log-entry\" v-for=\"(log, index) in logData\" :key=\"index\">\n            {{ log }}\n        </div>\n    </div>\n    <v-btn @click=\"clearLog()\">Clear</v-btn>\n</template>\n\n<script>\n    export default {\n        data() {\n            return {\n                logData: []\n            }\n        },\n        watch: {\n            msg: function () {               \n                if (Array.isArray(this.msg.payload)) {\n                    const terminal = this.$refs.terminal;\n                    const graceDistance = 25 //px\n                    const isAtBottom = terminal.scrollHeight - terminal.scrollTop - terminal.clientHeight <= graceDistance;\n                    if (isAtBottom) {\n                        this.$nextTick(() => {\n                            terminal.scrollTop = terminal.scrollHeight;\n                        })\n                    }\n                    this.logData = this.msg.payload\n                }\n            }\n        },\n        methods: {\n            clearLog: function () {\n                this.send({topic: \"clear-log\"})\n            },\n        }\n    }\n</script>\n<style scoped>\n    .terminal {\n        background-color: black;\n        color: limegreen;\n        font-family: 'Courier New', Courier, monospace;\n        padding: 20px;\n        border-radius: 5px;\n        height: 600px;\n        overflow-y: auto;\n        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);\n    }\n\n    .log-entry {\n        margin: 0;\n        line-height: 1.5;\n    }\n</style>",
-        "storeOutMessages": true,
-        "passthru": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 760,
-        "y": 80,
-        "wires": [
-            [
-                "85083c8451d94456"
-            ]
-        ]
-    },
-    {
-        "id": "85083c8451d94456",
-        "type": "switch",
-        "z": "c21c2a31923f4a5d",
-        "d": true,
-        "g": "09c231e6bb082835",
-        "name": "clear-log?",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "clear-log",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 920,
-        "y": 80,
-        "wires": [
-            [
-                "4307d3e6a4911641"
-            ]
-        ]
-    },
-    {
-        "id": "4307d3e6a4911641",
-        "type": "link out",
-        "z": "c21c2a31923f4a5d",
-        "g": "09c231e6bb082835",
-        "name": "link out 11",
-        "mode": "link",
-        "links": [
-            "45499bd37bba7c24"
-        ],
-        "x": 1065,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "d3d6db7d521edbfc",
-        "type": "serial in",
-        "z": "c21c2a31923f4a5d",
-        "d": true,
-        "name": "",
-        "serial": "415c042d5c9edcd4",
-        "x": 250,
-        "y": 160,
-        "wires": [
-            [
-                "da128cf6dcbd05bc"
-            ]
-        ]
-    },
-    {
         "id": "562457352f638d96",
         "type": "serial out",
         "z": "c21c2a31923f4a5d",
         "name": "Serial Debug",
-        "serial": "d0221cd8b48e55d6",
+        "serial": "415c042d5c9edcd4",
         "x": 470,
         "y": 440,
         "wires": []
@@ -18011,6 +17996,13 @@
                 "rows": null
             },
             {
+                "label": "Super Cap OFF Min",
+                "key": "super_cap_off_min",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
                 "label": "Input Closed Max",
                 "key": "in_closed_max",
                 "type": "number",
@@ -18038,6 +18030,7 @@
             "3v3dc_min": "",
             "super_cap_max": "",
             "super_cap_min": "",
+            "super_cap_off_min": "",
             "in_closed_max": "",
             "in_closed_min": ""
         },
@@ -18324,6 +18317,13 @@
                 "type": "checkbox",
                 "required": false,
                 "rows": null
+            },
+            {
+                "label": "Super Cap Off",
+                "key": "super_cap_off",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
             }
         ],
         "formValue": {
@@ -18345,7 +18345,8 @@
             "rdr2_12vdc": false,
             "rdr2_wiegand": false,
             "rdr2_io": false,
-            "rdr2_osdp": false
+            "rdr2_osdp": false,
+            "super_cap_off": false
         },
         "payload": "",
         "submit": "Save",
