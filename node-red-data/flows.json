@@ -1618,7 +1618,8 @@
             "1413586a46a136da",
             "07bd5c8fee381059",
             "1f360a3090b29d0c",
-            "a3cc0673b7f8e04c"
+            "a3cc0673b7f8e04c",
+            "175ca79effa85633"
         ],
         "x": 194,
         "y": 1219,
@@ -1882,7 +1883,55 @@
         "h": 642
     },
     {
-        "id": "6d39391e20d074cd",
+        "id": "d85580beba41c1ae",
+        "type": "group",
+        "z": "8992ffe741acd3ee",
+        "name": "",
+        "style": {
+            "fill": "#ffdf7f",
+            "label": true
+        },
+        "nodes": [
+            "27c6679fcf147268",
+            "2da4d7b82c6327bc",
+            "7174f18ae43d2bf8",
+            "57e03dc04c423903",
+            "109cd7b84baac6ba",
+            "c0014290af64ad9c",
+            "cd717f97c9f11bbd",
+            "97daf2c60141201e",
+            "78a1a401c61cbc6a",
+            "6e730b37fb50d628",
+            "a051a2a5289821f3",
+            "66c33942aba3dab5",
+            "77d06086dbce8810",
+            "18c90cdf1ae140c9",
+            "2ee48647884c668b",
+            "b4ff6bc4a4e80fb2",
+            "3b9bd04a986f9172",
+            "1eb2b6f380bbd985",
+            "77ab43cac69e6ff8",
+            "631449abe930afbe",
+            "b62584a6b194e225",
+            "be47e2e8b7abbfd7",
+            "acbf14b34a1025c0",
+            "5ad5781b8d7477e6",
+            "3ac998576eca06ee",
+            "7eeafc1348df92fc",
+            "407807a992d78ff3",
+            "cc51ea1618508f05",
+            "117d757cf3028679",
+            "a9dcf279987efec3",
+            "2bf8787eeb259b77",
+            "355a41800a43b050"
+        ],
+        "x": 194,
+        "y": 4479,
+        "w": 612,
+        "h": 1162
+    },
+    {
+        "id": "17a2946198528cbc",
         "type": "group",
         "z": "8992ffe741acd3ee",
         "name": "",
@@ -1891,53 +1940,46 @@
             "label": true
         },
         "nodes": [
-            "30dd43fdc6181bde",
-            "bc0da9dcc974f651",
-            "956c0eadf5b5c8f3",
-            "46f3c986a096e99e",
-            "67a13f4458d1b6e7",
-            "fd7a65f908acd305",
-            "cd879e9e17e21ce8",
-            "72f0d2f7464a0bdb",
-            "10de179cfe5f14cb",
-            "e5f776204af2e15e",
-            "ace56b4fe59f4e9b",
-            "5e67380ac05b628d",
-            "4b1da3adf61f9f2d",
-            "6699149b16be24da",
-            "7c874795fd0c6d55",
-            "7a1bb7c755a29265",
-            "bc945458a8c19eb7",
-            "0d9118dda9bfb358",
-            "60cc8c0c190fc7f4",
-            "d9f9078241aad111",
-            "afce1eb80e9af0b2",
-            "596031aa804eb5c8",
-            "3fa1a53da2a684a6",
-            "1cd5ae40a3874aba",
-            "c233d955ae138f36",
-            "a124a2fbc7131583",
-            "2f64cd8cb42a1e05",
-            "a2273f9fbda0d0be",
-            "7ed5c4eae69d71bf",
-            "3eafa6382866f33b",
-            "9e5bb740d27c098b",
-            "bf5074227fc4a0bf",
-            "6ae46bf5f158d9bf",
-            "1f8aaa5ba4471536",
-            "400991cde717b568",
-            "a8b9edf52f16e76d",
-            "3e2dcc7809ef6e15",
-            "6d5723bd3d83d59f",
-            "2b90d8a6c6a37280",
-            "e7f0a456b31ada6d",
-            "920d901b9490bf35",
-            "660340c77ce4297c"
+            "32ba15db02cae20a",
+            "dcdb91db23731808",
+            "e121f5103e9bf041",
+            "af241614bd8bbe78",
+            "2c5109c219c84238",
+            "e7512e5a4ba62d93",
+            "db515ce188ddd619",
+            "1d4d6cc9d740dd5b",
+            "d5a7061fe5259a8c",
+            "68af1deddb5d7506",
+            "fd9532ea27ac4b8c",
+            "8c195b1066345a55",
+            "4223feb382467eb3",
+            "b208880887265207",
+            "a89938797cc75906",
+            "6a992780b7381b86",
+            "82a743087c17e14f",
+            "4c74dbb9fb185f0a",
+            "09150e027bdfaad7",
+            "85408c085395d6e9",
+            "f777c8c21cb1b3c4",
+            "5dc389cbc472a5f6",
+            "53a4e1d8c808848f",
+            "2a0477b06b58ddea",
+            "44cbc4ab60280f38",
+            "17f0de9084215b75",
+            "da6076a371fd0a16",
+            "f8af3016c4d133d2",
+            "525e3b65d333a6d6",
+            "fe5f69752f385a14",
+            "c85e187bd1e7729c",
+            "2bc21e33e11e5ccc",
+            "21bf2c19f8ad9814",
+            "280798a9360c268d",
+            "a2096831a3568c81"
         ],
         "x": 194,
-        "y": 4499,
-        "w": 622,
-        "h": 1482
+        "y": 5699,
+        "w": 632,
+        "h": 1462
     },
     {
         "id": "54121044c08d3225",
@@ -2197,7 +2239,7 @@
         "name": "Test Results",
         "page": "de76f57e39382a92",
         "width": "3",
-        "height": "1",
+        "height": "15",
         "order": 1,
         "showTitle": true,
         "className": "",
@@ -2751,7 +2793,7 @@
         "id": "9c8032cbe34870c5",
         "type": "serial-port",
         "name": "Reader1 RS485",
-        "serialport": "/dev/ttyUSB1",
+        "serialport": "/dev/ttyUSB2",
         "serialbaud": "115200",
         "databits": "8",
         "parity": "none",
@@ -2771,7 +2813,7 @@
         "id": "965c5561efd11b27",
         "type": "serial-port",
         "name": "Reader2 RS485",
-        "serialport": "/dev/ttyUSB2",
+        "serialport": "/dev/ttyUSB1",
         "serialbaud": "115200",
         "databits": "8",
         "parity": "none",
@@ -5499,7 +5541,7 @@
         "width": 0,
         "height": 0,
         "head": "",
-        "format": "<template>\n  <v-virtual-scroll :items=\"items\" height=\"900\">\n    <template v-slot:default=\"{ item }\">\n      <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px;\">\n        <span>{{ item.name }} Test:</span>\n        <v-tooltip :disabled=\"!item.showToolTip\" location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip \n                    v-bind=\"props\"\n                    variant=\"flat\"\n                    :color=\"item.color\" \n                    text-color=\"white\" \n                    pill\n                    style=\"width: 80px; justify-content: center\">\n                {{ item.result }}\n                </v-chip>\n            </template>\n            <h3>{{ item.error }}</h3>\n            <p>{{ item.measured }}</p>\n            <span>{{item.limit}}</span>\n            <!-- <p>Measured: {{ item.measured }}</p> -->\n            <!-- <span>Limit: {{ item.limit }}</span> -->\n        </v-tooltip>\n      </div>\n    </template>\n  </v-virtual-scroll>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                items: []\n            }\n        },\n        watch: {\n            // watch for any changes\n            msg: function () {\n                if(this.msg.payload == \"\") {\n                    this.items = [];\n                } else if(this.msg.payload.result == \"Passed\") {\n                    this.msg.payload.color = \"green\";\n                    this.msg.payload.showToolTip = false;\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Failed\") {\n                    this.msg.payload.color = \"red\";\n                    this.msg.payload.showToolTip = true\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Skipped\") {\n                    this.msg.payload.color = \"gray\";\n                    this.msg.payload.showToolTip = false\n                    this.items.push(this.msg.payload);\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n</style>",
+        "format": "<template>\n  <v-virtual-scroll :items=\"items\" height=\"1200\">\n    <template v-slot:default=\"{ item }\">\n      <div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px;\">\n        <span>{{ item.name }} Test:</span>\n        <v-tooltip :disabled=\"!item.showToolTip\" location=\"end\">\n            <template v-slot:activator=\"{ props }\">\n                <v-chip \n                    v-bind=\"props\"\n                    variant=\"flat\"\n                    :color=\"item.color\" \n                    text-color=\"white\" \n                    pill\n                    style=\"width: 80px; justify-content: center\">\n                {{ item.result }}\n                </v-chip>\n            </template>\n            <h3>{{ item.error }}</h3>\n            <p>{{ item.measured }}</p>\n            <span>{{item.limit}}</span>\n            <!-- <p>Measured: {{ item.measured }}</p> -->\n            <!-- <span>Limit: {{ item.limit }}</span> -->\n        </v-tooltip>\n      </div>\n    </template>\n  </v-virtual-scroll>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                items: []\n            }\n        },\n        watch: {\n            // watch for any changes\n            msg: function () {\n                if(this.msg.payload == \"\") {\n                    this.items = [];\n                } else if(this.msg.payload.result == \"Passed\") {\n                    this.msg.payload.color = \"green\";\n                    this.msg.payload.showToolTip = false;\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Failed\") {\n                    this.msg.payload.color = \"red\";\n                    this.msg.payload.showToolTip = true\n                    this.items.push(this.msg.payload);\n                } else if(this.msg.payload.result == \"Skipped\") {\n                    this.msg.payload.color = \"gray\";\n                    this.msg.payload.showToolTip = false\n                    this.items.push(this.msg.payload);\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .test-label {\n        font-size: 10px;\n    }\n\n    .result-chip {\n        font-size: 10px;\n    }\n</style>",
         "storeOutMessages": true,
         "passthru": true,
         "resendOnRefresh": true,
@@ -5917,7 +5959,7 @@
         "type": "function",
         "z": "9a6977147b5009cd",
         "name": "Check Door1 Dry (OFF)",
-        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.10;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed(Dry-OFF): Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed(Dry-OFF): Door1 NC\";\n    }\n} else {\n    node.warn(\"Failed(Dry-OFF): Door1 COM\");\n    msg.payload = \"Failed(Dry-OFF): Door1 COM\";\n}\n\nreturn msg;",
+        "func": "let com = parseFloat(global.get(\"measurements.door1_com\"));     // Door 1 COM voltage\nlet no = parseFloat(global.get(\"measurements.door1_no\"));       // Door 1 NO voltage\nlet nc = parseFloat(global.get(\"measurements.door1_nc\"));       // Door 1 NC voltage\n\nlet v_max = 2.30;\nlet v_min = 2.00;\nlet gnd = 0.50;\n\nif (com > v_min && com < v_max) {               // COM should be between v_max and v_min\n    if(nc > v_min && nc < v_max) {              // NC should be between v_max and v_min\n        if(no < gnd) {                          // NO should be 0V\n            msg.payload = \"Passed\"\n        } else {\n            msg.payload = \"Failed(Dry-OFF): Door1 NO\";\n        }\n    } else {\n        msg.payload = \"Failed(Dry-OFF): Door1 NC\";\n    }\n} else {\n    node.warn(\"Failed(Dry-OFF): Door1 COM\");\n    msg.payload = \"Failed(Dry-OFF): Door1 COM\";\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -9614,7 +9656,7 @@
         "y": 500,
         "wires": [
             [
-                "9af2a4135b367a24"
+                "ee2a5c3c93df8648"
             ]
         ]
     },
@@ -10218,6 +10260,31 @@
         ]
     },
     {
+        "id": "ee2a5c3c93df8648",
+        "type": "delay",
+        "z": "916401c4eebbcc52",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "9af2a4135b367a24"
+            ]
+        ]
+    },
+    {
         "id": "3a4eb00b422348e3",
         "type": "change",
         "z": "d9d0929cb405a791",
@@ -10580,7 +10647,9 @@
             [
                 "f03b4ce2ae7fd85e"
             ],
-            []
+            [
+                "f03b4ce2ae7fd85e"
+            ]
         ]
     },
     {
@@ -11320,7 +11389,7 @@
         "y": 420,
         "wires": [
             [
-                "4639d4fce1d5d1e3"
+                "af5d9afcfeb536b1"
             ]
         ]
     },
@@ -11996,6 +12065,41 @@
         ]
     },
     {
+        "id": "81b2265b363d9159",
+        "type": "comment",
+        "z": "d9d0929cb405a791",
+        "name": "Check Wiegand Data",
+        "info": "",
+        "x": 100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "af5d9afcfeb536b1",
+        "type": "delay",
+        "z": "d9d0929cb405a791",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "250",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [
+                "4639d4fce1d5d1e3"
+            ]
+        ]
+    },
+    {
         "id": "4facd05924f25108",
         "type": "ui-template",
         "z": "b72dbfa71bf72ff3",
@@ -12332,8 +12436,8 @@
         "y": 2160,
         "wires": [
             [
-                "498d78dce13e9db2",
-                "65cf39effb40c29b"
+                "65cf39effb40c29b",
+                "498d78dce13e9db2"
             ]
         ]
     },
@@ -12525,8 +12629,9 @@
             "3cb54aae56a984c5",
             "4bcf6ed391dace6e",
             "3025fe309ced1ce0",
-            "e5f776204af2e15e",
-            "a2273f9fbda0d0be"
+            "2da4d7b82c6327bc",
+            "e121f5103e9bf041",
+            "fe5f69752f385a14"
         ],
         "x": 235,
         "y": 1360,
@@ -12960,7 +13065,8 @@
             "ca7a93d57e521979",
             "fffa0256c6914b28",
             "854a9f51973aa871",
-            "9e5bb740d27c098b"
+            "78a1a401c61cbc6a",
+            "2c5109c219c84238"
         ],
         "x": 1345,
         "y": 1400,
@@ -14163,7 +14269,8 @@
             "23978756652525b0",
             "8e7b4db3e8c1669b",
             "048203f58fe4affa",
-            "bc945458a8c19eb7"
+            "57e03dc04c423903",
+            "82a743087c17e14f"
         ],
         "x": 1335,
         "y": 840,
@@ -14299,7 +14406,7 @@
                 "8292fca9de5bb960"
             ],
             [
-                "956c0eadf5b5c8f3"
+                "27c6679fcf147268"
             ]
         ]
     },
@@ -14438,197 +14545,6 @@
         "wires": []
     },
     {
-        "id": "30dd43fdc6181bde",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "DUT_24V_RELAY",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"off\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 350,
-        "y": 5780,
-        "wires": [
-            [
-                "bc0da9dcc974f651"
-            ]
-        ]
-    },
-    {
-        "id": "bc0da9dcc974f651",
-        "type": "subflow:513e4a72f100d2f7",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "x": 570,
-        "y": 5780,
-        "wires": [
-            [
-                "72f0d2f7464a0bdb"
-            ]
-        ]
-    },
-    {
-        "id": "1a22f1d8c4db25a5",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "name": "POE_PWR_RELAY",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"on\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 5000,
-        "wires": [
-            [
-                "7c9b27c2f6e72677"
-            ]
-        ]
-    },
-    {
-        "id": "a9a95357695dc6dd",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 980,
-        "y": 5000,
-        "wires": [
-            [
-                "1a22f1d8c4db25a5"
-            ]
-        ]
-    },
-    {
-        "id": "7c9b27c2f6e72677",
-        "type": "subflow:513e4a72f100d2f7",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "x": 1390,
-        "y": 5000,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "08949fac6a1c0831",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "name": "POE_PWR_RELAY",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"off\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 5060,
-        "wires": [
-            [
-                "7c9b27c2f6e72677"
-            ]
-        ]
-    },
-    {
-        "id": "2a4faa147759bd48",
-        "type": "inject",
-        "z": "8992ffe741acd3ee",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 980,
-        "y": 5060,
-        "wires": [
-            [
-                "08949fac6a1c0831"
-            ]
-        ]
-    },
-    {
-        "id": "a8b9edf52f16e76d",
-        "type": "delay",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "4",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 300,
-        "y": 4840,
-        "wires": [
-            [
-                "660340c77ce4297c"
-            ]
-        ]
-    },
-    {
         "id": "a1d52a29c1b0e8f7",
         "type": "subflow:2c1c44b1675b8eac",
         "z": "8992ffe741acd3ee",
@@ -14650,7 +14566,8 @@
         "name": "User Prompts",
         "links": [
             "07bd5c8fee381059",
-            "0d31a03a75fe41ea"
+            "0d31a03a75fe41ea",
+            "175ca79effa85633"
         ],
         "x": 245,
         "y": 620,
@@ -15016,7 +14933,7 @@
         "z": "8992ffe741acd3ee",
         "g": "68f251802f837cba",
         "name": "Init Global Variables",
-        "func": "// Initalize all global variables\n\nglobal.set(\"test.result\", \"\");\n\n// DAQ variables\n// Fixture variables\nglobal.set(\"daq.fixture_closed\", false);\nglobal.set(\"daq.dut_installed\", false);\nglobal.set(\"daq.dut_24v_relay\", false);\nglobal.set(\"daq.poe_pwr_relay\", false);\nglobal.set(\"daq.dry_voltage_relay\", false);\nglobal.set(\"daq.wiegand_osdp\", false);\nglobal.set(\"daq.d1_in1_relay\", false);\nglobal.set(\"daq.d1_in2_relay\", false);\nglobal.set(\"daq.d2_in1_relay\", false);\nglobal.set(\"daq.d2_in2_relay\", false);\n\n// DAQ values\nglobal.set(\"daq.port_e\", 0);\nglobal.set(\"daq.port_f\", 0);\nglobal.set(\"daq.port_m\", 0);\n\nglobal.set(\"daq.door1_led\", false);\nglobal.set(\"daq.door2_led\", false);\nglobal.set(\"daq.reader1_led\", false);\nglobal.set(\"daq.rdr1_buz\", false);\nglobal.set(\"daq.rdr2_led\", false);\nglobal.set(\"daq.rdr2_buz\", false);\n\n// Spare values\nglobal.set(\"daq.spare_tp116\", false);\nglobal.set(\"daq.spare_tp117\", false);\nglobal.set(\"daq.spare_tp118\", false);\nglobal.set(\"daq.spare_tp119\", false);\nglobal.set(\"daq.spare_tp121\", false);\nglobal.set(\"daq.spare_tp122\", false);\nglobal.set(\"daq.spare_tp123\", false);\n\n// Measurements\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.door2_no\", 0);\nglobal.set(\"measurements.12vdc\", 0);\nglobal.set(\"measurements.door2_nc\", 0);\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.5vdc\", 0);\nglobal.set(\"measurements.door2_com\", 0);\nglobal.set(\"measurements.3v3dc\", 0);\nglobal.set(\"measurements.door1_no\", 0);\nglobal.set(\"measurements.10vdc\", 0);\nglobal.set(\"measurements.door1_nc\", 0);\nglobal.set(\"measurements.rdr1_12vdc\", 0);\nglobal.set(\"measurements.door1_com\", 0);\nglobal.set(\"measurements.rdr2_12vdc\", 0);\nglobal.set(\"measurements.vin\", 0);\nglobal.set(\"measurements.super_cap_max\", 0);\nglobal.set(\"measurements.super_cap_min\", 0);\nglobal.set(\"measurements.door2_no_max\", 0);\nglobal.set(\"measurements.door2_no_min\", 0);\nglobal.set(\"measurements.12vdc_max\", 0);\nglobal.set(\"measurements.12vdc_min\", 0);\nglobal.set(\"measurements.door2_nc_max\", 0);\nglobal.set(\"measurements.door2_nc_min\", 0);\nglobal.set(\"measurements.5vdc_max\", 0);\nglobal.set(\"measurements.5vdc_min\", 0);\nglobal.set(\"measurements.door2_com_max\", 0);\nglobal.set(\"measurements.door2_com_min\", 0);\nglobal.set(\"measurements.3v3dc_max\", 0);\nglobal.set(\"measurements.3v3dc_min\", 0);\nglobal.set(\"measurements.door1_no_max\", 0);\nglobal.set(\"measurements.door1_no_min\", 0);\nglobal.set(\"measurements.10vdc_max\", 0);\nglobal.set(\"measurements.10vdc_min\", 0);\nglobal.set(\"measurements.door1_nc_max\", 0);\nglobal.set(\"measurements.door1_nc_min\", 0);\nglobal.set(\"measurements.rdr1_12vdc_max\", 0);\nglobal.set(\"measurements.rdr1_12vdc_min\", 0);\nglobal.set(\"measurements.door1_com_max\", 0);\nglobal.set(\"measurements.door1_com_min\", 0);\nglobal.set(\"measurements.rdr2_12vdc_max\", 0);\nglobal.set(\"measurements.rdr2_12vdc_min\", 0);\nglobal.set(\"measurements.vin_max\", 0);\nglobal.set(\"measurements.vin_min\", 0);\nglobal.set(\"measurements.inputs\", [0,0,0,0]);\nglobal.set(\"measurements.rdr1_bit_cnt\", [0,0]);\nglobal.set(\"measurements.rdr2_bit_cnt\",[0,0]);\n\n// global.set(\"status.labjack_init\", false);\n// global.set(\"status.power_supply\", false);\nglobal.set(\"status.osdp1\", \"XxXx\");\nglobal.set(\"status.osdp2\", \"xXxX\");\nglobal.set(\"status.relay1\", \"off\");\nglobal.set(\"status.relay2\", \"off\");\nglobal.set(\"status.rdr1_tamp\", \"x\");\nglobal.set(\"status.rdr2_tamp\", \"x\");\n\n\nreturn msg;",
+        "func": "// Initalize all global variables\n\nglobal.set(\"test.result\", \"\");\n\n// DAQ variables\n// Fixture variables\nglobal.set(\"daq.fixture_closed\", false);\nglobal.set(\"daq.dut_installed\", false);\nglobal.set(\"daq.dut_24v_relay\", false);\nglobal.set(\"daq.poe_pwr_relay\", false);\nglobal.set(\"daq.dry_voltage_relay\", false);\nglobal.set(\"daq.wiegand_osdp\", false);\nglobal.set(\"daq.d1_in1_relay\", false);\nglobal.set(\"daq.d1_in2_relay\", false);\nglobal.set(\"daq.d2_in1_relay\", false);\nglobal.set(\"daq.d2_in2_relay\", false);\n\n// DAQ values\nglobal.set(\"daq.port_e\", 0);\nglobal.set(\"daq.port_f\", 0);\nglobal.set(\"daq.port_m\", 0);\n\nglobal.set(\"daq.door1_led\", false);\nglobal.set(\"daq.door2_led\", false);\nglobal.set(\"daq.reader1_led\", false);\nglobal.set(\"daq.rdr1_buz\", false);\nglobal.set(\"daq.rdr2_led\", false);\nglobal.set(\"daq.rdr2_buz\", false);\n\n// Spare values\nglobal.set(\"daq.spare_tp116\", false);\nglobal.set(\"daq.spare_tp117\", false);\nglobal.set(\"daq.spare_tp118\", false);\nglobal.set(\"daq.spare_tp119\", false);\nglobal.set(\"daq.spare_tp121\", false);\nglobal.set(\"daq.spare_tp122\", false);\nglobal.set(\"daq.spare_tp123\", false);\n\n// Measurements\nglobal.set(\"measurements.super_cap\", 0);\nglobal.set(\"measurements.door2_no\", 0);\nglobal.set(\"measurements.12vdc\", 0);\nglobal.set(\"measurements.door2_nc\", 0);\nglobal.set(\"measurements.5vdc\", 0);\nglobal.set(\"measurements.door2_com\", 0);\nglobal.set(\"measurements.3v3dc\", 0);\nglobal.set(\"measurements.door1_no\", 0);\nglobal.set(\"measurements.10vdc\", 0);\nglobal.set(\"measurements.door1_nc\", 0);\nglobal.set(\"measurements.rdr1_12vdc\", 0);\nglobal.set(\"measurements.door1_com\", 0);\nglobal.set(\"measurements.rdr2_12vdc\", 0);\nglobal.set(\"measurements.vin\", 0);\nglobal.set(\"measurements.super_cap_max\", 0);\nglobal.set(\"measurements.super_cap_min\", 0);\nglobal.set(\"measurements.door2_no_max\", 0);\nglobal.set(\"measurements.door2_no_min\", 0);\nglobal.set(\"measurements.12vdc_max\", 0);\nglobal.set(\"measurements.12vdc_min\", 0);\nglobal.set(\"measurements.door2_nc_max\", 0);\nglobal.set(\"measurements.door2_nc_min\", 0);\nglobal.set(\"measurements.5vdc_max\", 0);\nglobal.set(\"measurements.5vdc_min\", 0);\nglobal.set(\"measurements.door2_com_max\", 0);\nglobal.set(\"measurements.door2_com_min\", 0);\nglobal.set(\"measurements.3v3dc_max\", 0);\nglobal.set(\"measurements.3v3dc_min\", 0);\nglobal.set(\"measurements.door1_no_max\", 0);\nglobal.set(\"measurements.door1_no_min\", 0);\nglobal.set(\"measurements.10vdc_max\", 0);\nglobal.set(\"measurements.10vdc_min\", 0);\nglobal.set(\"measurements.door1_nc_max\", 0);\nglobal.set(\"measurements.door1_nc_min\", 0);\nglobal.set(\"measurements.rdr1_12vdc_max\", 0);\nglobal.set(\"measurements.rdr1_12vdc_min\", 0);\nglobal.set(\"measurements.door1_com_max\", 0);\nglobal.set(\"measurements.door1_com_min\", 0);\nglobal.set(\"measurements.rdr2_12vdc_max\", 0);\nglobal.set(\"measurements.rdr2_12vdc_min\", 0);\nglobal.set(\"measurements.vin_max\", 0);\nglobal.set(\"measurements.vin_min\", 0);\nglobal.set(\"measurements.inputs\", [0,0,0,0,0,0]);\nglobal.set(\"measurements.rdr1_bit_cnt\", [0,0]);\nglobal.set(\"measurements.rdr2_bit_cnt\",[0,0]);\n\n// global.set(\"status.labjack_init\", false);\n// global.set(\"status.power_supply\", false);\nglobal.set(\"status.osdp1\", \"XxXx\");\nglobal.set(\"status.osdp2\", \"xXxX\");\nglobal.set(\"status.relay1\", \"off\");\nglobal.set(\"status.relay2\", \"off\");\nglobal.set(\"status.rdr1_tamp\", \"x\");\nglobal.set(\"status.rdr2_tamp\", \"x\");\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -15157,7 +15074,8 @@
                 "fa54e6af56d3605a"
             ],
             [
-                "7e03262e4b3c48b9"
+                "7e03262e4b3c48b9",
+                "b6e971ece046c17b"
             ]
         ]
     },
@@ -15583,7 +15501,7 @@
         "y": 1360,
         "wires": [
             [
-                "1413586a46a136da"
+                "175ca79effa85633"
             ]
         ]
     },
@@ -15603,225 +15521,6 @@
         "y": 1420,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "956c0eadf5b5c8f3",
-        "type": "function",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Save Results",
-        "func": "var msgdata = {};\n\nvar serial_number = global.get('serial_num');\nvar pcb_rev = global.get('pcba');\nvar flow_config = global.get('flowCfg');\nvar measurements = global.get('measurements');\nvar parameters = global.get('parameters');\nvar results = global.get('results');\n\n\nmsg.collection = \"test_results\";\nmsg.payload = {\n    \"serial_number\" : serial_number,\n    \"pcb_rev\" : pcb_rev,\n    \"flow_config\" : flow_config,\n    \"measurements\" : measurements,\n    \"parameters\" : parameters,\n    \"results\" : results\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 310,
-        "y": 4600,
-        "wires": [
-            [
-                "46f3c986a096e99e",
-                "2b90d8a6c6a37280"
-            ]
-        ]
-    },
-    {
-        "id": "46f3c986a096e99e",
-        "type": "mongodb out",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "mongodb": "3c78a6eb08cacdd4",
-        "name": "",
-        "collection": "",
-        "payonly": true,
-        "upsert": false,
-        "multi": false,
-        "operation": "store",
-        "x": 570,
-        "y": 4600,
-        "wires": []
-    },
-    {
-        "id": "67a13f4458d1b6e7",
-        "type": "delay",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 300,
-        "y": 5000,
-        "wires": [
-            [
-                "2f64cd8cb42a1e05"
-            ]
-        ]
-    },
-    {
-        "id": "fd7a65f908acd305",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Test Failed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"title\":\"Test Failed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 5840,
-        "wires": [
-            [
-                "cd879e9e17e21ce8"
-            ]
-        ]
-    },
-    {
-        "id": "cd879e9e17e21ce8",
-        "type": "subflow:b72dbfa71bf72ff3",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "x": 680,
-        "y": 5860,
-        "wires": [
-            [
-                "5e67380ac05b628d"
-            ]
-        ]
-    },
-    {
-        "id": "72f0d2f7464a0bdb",
-        "type": "switch",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "property": "test.result",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Failed",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 310,
-        "y": 5860,
-        "wires": [
-            [
-                "fd7a65f908acd305"
-            ],
-            [
-                "10de179cfe5f14cb"
-            ]
-        ]
-    },
-    {
-        "id": "10de179cfe5f14cb",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Test Passed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"title\":\"Test Passed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 5880,
-        "wires": [
-            [
-                "cd879e9e17e21ce8"
-            ]
-        ]
-    },
-    {
-        "id": "e5f776204af2e15e",
-        "type": "link out",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "DUT Installed",
-        "mode": "link",
-        "links": [
-            "0f367029b3ce9e8f"
-        ],
-        "x": 735,
-        "y": 5940,
-        "wires": []
-    },
-    {
-        "id": "ace56b4fe59f4e9b",
-        "type": "comment",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Finish Up",
-        "info": "",
-        "x": 280,
-        "y": 4540,
-        "wires": []
-    },
-    {
-        "id": "5e67380ac05b628d",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "test.state",
-                "pt": "global",
-                "to": "stopped",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 5940,
-        "wires": [
-            [
-                "e5f776204af2e15e"
-            ]
         ]
     },
     {
@@ -15992,10 +15691,1045 @@
         ]
     },
     {
-        "id": "4b1da3adf61f9f2d",
+        "id": "c9d96d0b6a9c7876",
+        "type": "serial in",
+        "z": "8992ffe741acd3ee",
+        "g": "efa2eb74839b1194",
+        "name": "",
+        "serial": "415c042d5c9edcd4",
+        "x": 1390,
+        "y": 760,
+        "wires": [
+            [
+                "70215373d66bccd0",
+                "98b065eb75b1e6c3"
+            ]
+        ]
+    },
+    {
+        "id": "27c6679fcf147268",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4580,
+        "wires": [
+            [
+                "7174f18ae43d2bf8"
+            ],
+            [
+                "2da4d7b82c6327bc"
+            ]
+        ]
+    },
+    {
+        "id": "2da4d7b82c6327bc",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 655,
+        "y": 4540,
+        "wires": []
+    },
+    {
+        "id": "7174f18ae43d2bf8",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "d85580beba41c1ae",
+        "name": "Read Inputs",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "a",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 4640,
+        "wires": [
+            [
+                "57e03dc04c423903",
+                "109cd7b84baac6ba"
+            ]
+        ]
+    },
+    {
+        "id": "57e03dc04c423903",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 690,
+        "y": 4620,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "109cd7b84baac6ba",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 300,
+        "y": 4700,
+        "wires": [
+            [
+                "cd717f97c9f11bbd"
+            ]
+        ]
+    },
+    {
+        "id": "c0014290af64ad9c",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "DC VIN ADC Tests",
+        "info": "Read ADC values\n\nCheck that DC_Vin is above 3000 &\nPOE_VIN is below 300\n\n",
+        "x": 310,
+        "y": 4520,
+        "wires": []
+    },
+    {
+        "id": "cd717f97c9f11bbd",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip?",
+        "property": "flowCfg.dc_vin_adc",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 4700,
+        "wires": [
+            [
+                "6e730b37fb50d628"
+            ],
+            [
+                "97daf2c60141201e"
+            ]
+        ]
+    },
+    {
+        "id": "97daf2c60141201e",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"DC Vin ADC\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 4700,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "66c33942aba3dab5"
+            ]
+        ]
+    },
+    {
+        "id": "78a1a401c61cbc6a",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "7b1e1beb670237f3"
+        ],
+        "x": 765,
+        "y": 4760,
+        "wires": []
+    },
+    {
+        "id": "6e730b37fb50d628",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Check DC Vin",
+        "func": "let dc_vin = global.get(\"measurements.inputs[4]\");\nlet poe_vin = global.get(\"measurements.inputs[5]\");\n\nlet min = global.get(\"parameters.vin_adc_on_min\");\nlet max = global.get(\"parameters.vin_adc_on_max\");\nlet off_max = global.get(\"parameters.vin_adc_off_max\");\n\nif(((dc_vin < max) && (dc_vin > min)) && (poe_vin < off_max)) {\n    msg.payload = {\n    \"name\": \"Vin ADC (DC)\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Vin ADC (DC)\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + dc_vin + \" \" + poe_vin,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min + \" - \" + off_max\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 4760,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "a051a2a5289821f3"
+            ]
+        ]
+    },
+    {
+        "id": "a051a2a5289821f3",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4820,
+        "wires": [
+            [
+                "66c33942aba3dab5"
+            ],
+            [
+                "2da4d7b82c6327bc"
+            ]
+        ]
+    },
+    {
+        "id": "66c33942aba3dab5",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip?",
+        "property": "flowCfg.super_cap_off",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 4940,
+        "wires": [
+            [
+                "2ee48647884c668b"
+            ],
+            [
+                "18c90cdf1ae140c9"
+            ]
+        ]
+    },
+    {
+        "id": "77d06086dbce8810",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "SuperCAP Off Test",
+        "info": "",
+        "x": 310,
+        "y": 4880,
+        "wires": []
+    },
+    {
+        "id": "18c90cdf1ae140c9",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Super Cap OFF\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 4940,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "407807a992d78ff3"
+            ]
+        ]
+    },
+    {
+        "id": "2ee48647884c668b",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "DUT_24V_RELAY (OFF)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"off\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 5000,
+        "wires": [
+            [
+                "b4ff6bc4a4e80fb2"
+            ]
+        ]
+    },
+    {
+        "id": "b4ff6bc4a4e80fb2",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "x": 610,
+        "y": 5000,
+        "wires": [
+            [
+                "3b9bd04a986f9172"
+            ]
+        ]
+    },
+    {
+        "id": "3b9bd04a986f9172",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "4",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 300,
+        "y": 5060,
+        "wires": [
+            [
+                "1eb2b6f380bbd985"
+            ]
+        ]
+    },
+    {
+        "id": "1eb2b6f380bbd985",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Check Super Cap OFF",
+        "func": "let super_cap = global.get(\"measurements.super_cap\");\nlet min = global.get(\"parameters.super_cap_off_min\");\n\nif(super_cap > min) {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + super_cap,\n        \"limit\": \"Limits: \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 5060,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "407807a992d78ff3"
+            ]
+        ]
+    },
+    {
+        "id": "77ab43cac69e6ff8",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "POE_PWR_RELAY (ON)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 5240,
+        "wires": [
+            [
+                "b62584a6b194e225"
+            ]
+        ]
+    },
+    {
+        "id": "631449abe930afbe",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "PoE VIN ADC Test",
+        "info": "",
+        "x": 310,
+        "y": 5180,
+        "wires": []
+    },
+    {
+        "id": "b62584a6b194e225",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "x": 610,
+        "y": 5240,
+        "wires": [
+            [
+                "be47e2e8b7abbfd7"
+            ]
+        ]
+    },
+    {
+        "id": "be47e2e8b7abbfd7",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "PCB Boot Delay",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 5300,
+        "wires": [
+            [
+                "acbf14b34a1025c0"
+            ]
+        ],
+        "info": "Give the PCB time to boot and the voltages to level out.\r\n"
+    },
+    {
+        "id": "acbf14b34a1025c0",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Clear Vin Min/Max",
+        "func": "let ainList = global.get(\"admin.labjack.ain\");\n\n// Grab all of the AIN values\nconst values = Object.values(ainList);\n\nmsg.payload = values;\n\nlet maxStr = \"measurements.vin_max\";\nlet minStr = \"measurements.vin_min\";\n\nglobal.set(maxStr, 0);\nglobal.set(minStr, 100);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 5300,
+        "wires": [
+            [
+                "5ad5781b8d7477e6"
+            ]
+        ]
+    },
+    {
+        "id": "5ad5781b8d7477e6",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 300,
+        "y": 5360,
+        "wires": [
+            [
+                "3ac998576eca06ee"
+            ]
+        ]
+    },
+    {
+        "id": "3ac998576eca06ee",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "VIN",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"VIN\",\"ain\":\"vin\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 290,
+        "y": 5420,
+        "wires": [
+            [
+                "7eeafc1348df92fc"
+            ]
+        ]
+    },
+    {
+        "id": "7eeafc1348df92fc",
+        "type": "subflow:78b5cecde0aff5c6",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "VIN Test",
+        "x": 460,
+        "y": 5420,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "cc51ea1618508f05"
+            ]
+        ]
+    },
+    {
+        "id": "407807a992d78ff3",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 290,
+        "y": 5120,
+        "wires": [
+            [
+                "77ab43cac69e6ff8"
+            ],
+            [
+                "2da4d7b82c6327bc"
+            ]
+        ]
+    },
+    {
+        "id": "cc51ea1618508f05",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Read Inputs",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "a",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 5480,
+        "wires": [
+            [
+                "57e03dc04c423903",
+                "117d757cf3028679"
+            ]
+        ]
+    },
+    {
+        "id": "117d757cf3028679",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 300,
+        "y": 5540,
+        "wires": [
+            [
+                "a9dcf279987efec3"
+            ]
+        ]
+    },
+    {
+        "id": "a9dcf279987efec3",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip?",
+        "property": "flowCfg.dc_vin_adc",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 5540,
+        "wires": [
+            [
+                "355a41800a43b050"
+            ],
+            [
+                "2bf8787eeb259b77"
+            ]
+        ]
+    },
+    {
+        "id": "2bf8787eeb259b77",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Skip",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"DC Vin ADC\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 5540,
+        "wires": [
+            [
+                "78a1a401c61cbc6a"
+            ]
+        ]
+    },
+    {
+        "id": "355a41800a43b050",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "d85580beba41c1ae",
+        "name": "Check PoE Vin",
+        "func": "let dc_vin = global.get(\"measurements.inputs[4]\");\nlet poe_vin = global.get(\"measurements.inputs[5]\");\n\nlet min = global.get(\"parameters.vin_adc_on_min\");\nlet max = global.get(\"parameters.vin_adc_on_max\");\nlet off_max = global.get(\"parameters.vin_adc_off_max\");\n\nif(((poe_vin < max) && (poe_vin > min)) && (dc_vin < off_max)) {\n    msg.payload = {\n    \"name\": \"Vin ADC (PoE)\",\n    \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Vin ADC (PoE)\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + poe_vin + \" \" + dc_vin,\n        \"Limit: \": \"Limits: \" + max + \" - \" + min + \" - \" + off_max\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 5600,
+        "wires": [
+            [
+                "78a1a401c61cbc6a",
+                "32ba15db02cae20a"
+            ]
+        ]
+    },
+    {
+        "id": "32ba15db02cae20a",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Stop?",
+        "property": "test.state",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "running",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 310,
+        "y": 5900,
+        "wires": [
+            [
+                "dcdb91db23731808"
+            ],
+            [
+                "e121f5103e9bf041"
+            ]
+        ]
+    },
+    {
+        "id": "dcdb91db23731808",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Skip",
+        "property": "firmware.prod_firmware_en",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 450,
+        "y": 5900,
+        "wires": [
+            [
+                "e7512e5a4ba62d93"
+            ],
+            [
+                "af241614bd8bbe78"
+            ]
+        ]
+    },
+    {
+        "id": "e121f5103e9bf041",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "link out 24",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 435,
+        "y": 5860,
+        "wires": []
+    },
+    {
+        "id": "af241614bd8bbe78",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Skip Prod FW",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Prod Firmware\",\"result\":\"Skipped\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 5900,
+        "wires": [
+            [
+                "2c5109c219c84238"
+            ]
+        ]
+    },
+    {
+        "id": "2c5109c219c84238",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "link out 25",
+        "mode": "link",
+        "links": [
+            "7b1e1beb670237f3"
+        ],
+        "x": 785,
+        "y": 6120,
+        "wires": []
+    },
+    {
+        "id": "e7512e5a4ba62d93",
+        "type": "http request",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Write Flash",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "192.168.8.224:5000/api/st_link/write_prod",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 330,
+        "y": 5980,
+        "wires": [
+            [
+                "db515ce188ddd619"
+            ]
+        ]
+    },
+    {
+        "id": "db515ce188ddd619",
+        "type": "json",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 5980,
+        "wires": [
+            [
+                "1d4d6cc9d740dd5b"
+            ]
+        ]
+    },
+    {
+        "id": "1d4d6cc9d740dd5b",
+        "type": "switch",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "property": "payload.returncode",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 630,
+        "y": 5980,
+        "wires": [
+            [
+                "d5a7061fe5259a8c"
+            ],
+            [
+                "68af1deddb5d7506"
+            ]
+        ]
+    },
+    {
+        "id": "d5a7061fe5259a8c",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "FW Passed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"name\":\"Prod Firmware\",\"result\":\"Passed\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 6040,
+        "wires": [
+            [
+                "2c5109c219c84238",
+                "fd9532ea27ac4b8c"
+            ]
+        ]
+    },
+    {
+        "id": "68af1deddb5d7506",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Prod Flash Failed",
+        "func": "let temp_msg = msg.payload;\n\nmsg.payload = \n{\n    \"name\": \"Prod Firmware\",\n    \"result\": \"Failed\",\n    \"measured\": \"Return Code\",\n    \"limit\": \"Code: \" + msg.payload.returncode\n}\n\nglobal.set(\"test.state\", \"stopped\");\nglobal.set(\"test.result\", \"failed\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 6080,
+        "wires": [
+            [
+                "2c5109c219c84238"
+            ]
+        ]
+    },
+    {
+        "id": "fd9532ea27ac4b8c",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 6160,
+        "wires": [
+            [
+                "8c195b1066345a55"
+            ]
+        ]
+    },
+    {
+        "id": "8c195b1066345a55",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
         "name": "Mac Address Prompt",
         "rules": [
             {
@@ -16012,32 +16746,32 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 5360,
+        "y": 6220,
         "wires": [
             [
-                "6699149b16be24da"
+                "4223feb382467eb3"
             ]
         ]
     },
     {
-        "id": "6699149b16be24da",
+        "id": "4223feb382467eb3",
         "type": "subflow:2c1c44b1675b8eac",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "",
-        "x": 530,
-        "y": 5360,
+        "x": 550,
+        "y": 6220,
         "wires": [
             [
-                "7c874795fd0c6d55"
+                "b208880887265207"
             ]
         ]
     },
     {
-        "id": "7c874795fd0c6d55",
+        "id": "b208880887265207",
         "type": "switch",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "",
         "property": "payload.action",
         "propertyType": "msg",
@@ -16057,19 +16791,19 @@
         "repair": false,
         "outputs": 2,
         "x": 690,
-        "y": 5360,
+        "y": 6220,
         "wires": [
             [
-                "7a1bb7c755a29265"
+                "a89938797cc75906"
             ],
             []
         ]
     },
     {
-        "id": "7a1bb7c755a29265",
+        "id": "a89938797cc75906",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "Store MAC Address",
         "rules": [
             {
@@ -16086,33 +16820,18 @@
         "to": "",
         "reg": false,
         "x": 350,
-        "y": 5420,
+        "y": 6280,
         "wires": [
             [
-                "0d9118dda9bfb358"
+                "6a992780b7381b86"
             ]
         ]
     },
     {
-        "id": "bc945458a8c19eb7",
-        "type": "link out",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Serial Debug",
-        "mode": "link",
-        "links": [
-            "a3822cad79ea2d7e"
-        ],
-        "x": 710,
-        "y": 5480,
-        "wires": [],
-        "l": true
-    },
-    {
-        "id": "0d9118dda9bfb358",
+        "id": "6a992780b7381b86",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "Programming Mode (P)",
         "rules": [
             {
@@ -16129,19 +16848,60 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 5480,
+        "y": 6340,
         "wires": [
             [
-                "bc945458a8c19eb7",
-                "d9f9078241aad111"
+                "82a743087c17e14f",
+                "4c74dbb9fb185f0a"
             ]
         ]
     },
     {
-        "id": "60cc8c0c190fc7f4",
+        "id": "82a743087c17e14f",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Serial Debug",
+        "mode": "link",
+        "links": [
+            "a3822cad79ea2d7e"
+        ],
+        "x": 710,
+        "y": 6340,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4c74dbb9fb185f0a",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 6400,
+        "wires": [
+            [
+                "c85e187bd1e7729c"
+            ]
+        ]
+    },
+    {
+        "id": "09150e027bdfaad7",
         "type": "function",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "MAC Address CMD",
         "func": "let mac_addr = global.get(\"mac_addr\");\n\nmsg.payload = \"m=\" + mac_addr + \"\\r\\n\";\nreturn msg;",
         "outputs": 1,
@@ -16151,19 +16911,19 @@
         "finalize": "",
         "libs": [],
         "x": 350,
-        "y": 5600,
+        "y": 6580,
         "wires": [
             [
-                "bc945458a8c19eb7",
-                "afce1eb80e9af0b2"
+                "82a743087c17e14f",
+                "2bc21e33e11e5ccc"
             ]
         ]
     },
     {
-        "id": "d9f9078241aad111",
+        "id": "85408c085395d6e9",
         "type": "delay",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "",
         "pauseType": "delay",
         "timeout": "100",
@@ -16178,44 +16938,18 @@
         "allowrate": false,
         "outputs": 1,
         "x": 330,
-        "y": 5540,
+        "y": 6520,
         "wires": [
             [
-                "60cc8c0c190fc7f4"
+                "09150e027bdfaad7"
             ]
         ]
     },
     {
-        "id": "afce1eb80e9af0b2",
-        "type": "delay",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "100",
-        "timeoutUnits": "milliseconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 330,
-        "y": 5660,
-        "wires": [
-            [
-                "596031aa804eb5c8"
-            ]
-        ]
-    },
-    {
-        "id": "596031aa804eb5c8",
+        "id": "f777c8c21cb1b3c4",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "Exit & Save (X)",
         "rules": [
             {
@@ -16232,243 +16966,22 @@
         "to": "",
         "reg": false,
         "x": 340,
-        "y": 5720,
+        "y": 6700,
         "wires": [
             [
-                "bc945458a8c19eb7",
-                "30dd43fdc6181bde"
+                "82a743087c17e14f",
+                "5dc389cbc472a5f6"
             ]
         ]
     },
     {
-        "id": "3fa1a53da2a684a6",
-        "type": "http request",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Write Flash",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "192.168.8.224:5000/api/st_link/write_prod",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 310,
-        "y": 5120,
-        "wires": [
-            [
-                "1cd5ae40a3874aba"
-            ]
-        ]
-    },
-    {
-        "id": "1cd5ae40a3874aba",
-        "type": "json",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 470,
-        "y": 5120,
-        "wires": [
-            [
-                "c233d955ae138f36"
-            ]
-        ]
-    },
-    {
-        "id": "c233d955ae138f36",
-        "type": "switch",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "property": "payload.returncode",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 630,
-        "y": 5120,
-        "wires": [
-            [
-                "3eafa6382866f33b"
-            ],
-            [
-                "6ae46bf5f158d9bf"
-            ]
-        ]
-    },
-    {
-        "id": "a124a2fbc7131583",
-        "type": "switch",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Skip",
-        "property": "firmware.prod_firmware_en",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 470,
-        "y": 5060,
-        "wires": [
-            [
-                "3fa1a53da2a684a6"
-            ],
-            [
-                "7ed5c4eae69d71bf"
-            ]
-        ]
-    },
-    {
-        "id": "2f64cd8cb42a1e05",
-        "type": "switch",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Stop?",
-        "property": "test.state",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "running",
-                "vt": "str"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 290,
-        "y": 5060,
-        "wires": [
-            [
-                "a124a2fbc7131583"
-            ],
-            [
-                "a2273f9fbda0d0be"
-            ]
-        ]
-    },
-    {
-        "id": "a2273f9fbda0d0be",
-        "type": "link out",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "link out 21",
-        "mode": "link",
-        "links": [
-            "0f367029b3ce9e8f"
-        ],
-        "x": 705,
-        "y": 4660,
-        "wires": []
-    },
-    {
-        "id": "7ed5c4eae69d71bf",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Skip Prod FW",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Prod Firmware\",\"result\":\"Skipped\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 660,
-        "y": 5060,
-        "wires": [
-            [
-                "9e5bb740d27c098b"
-            ]
-        ]
-    },
-    {
-        "id": "3eafa6382866f33b",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "FW Passed",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"name\":\"Prod Firmware\",\"result\":\"Passed\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 490,
-        "y": 5180,
-        "wires": [
-            [
-                "9e5bb740d27c098b",
-                "bf5074227fc4a0bf"
-            ]
-        ]
-    },
-    {
-        "id": "9e5bb740d27c098b",
-        "type": "link out",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "link out 22",
-        "mode": "link",
-        "links": [
-            "7b1e1beb670237f3"
-        ],
-        "x": 775,
-        "y": 4960,
-        "wires": []
-    },
-    {
-        "id": "bf5074227fc4a0bf",
+        "id": "5dc389cbc472a5f6",
         "type": "delay",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "",
         "pauseType": "delay",
-        "timeout": "1",
+        "timeout": "3",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -16480,62 +16993,25 @@
         "allowrate": false,
         "outputs": 1,
         "x": 320,
-        "y": 5300,
+        "y": 6760,
         "wires": [
             [
-                "4b1da3adf61f9f2d"
+                "53a4e1d8c808848f"
             ]
         ]
     },
     {
-        "id": "6ae46bf5f158d9bf",
-        "type": "function",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Prod Flash Failed",
-        "func": "let temp_msg = msg.payload;\n\nmsg.payload = \n{\n    \"name\": \"Prod Firmware\",\n    \"result\": \"Failed\",\n    \"measured\": \"Return Code\",\n    \"limit\": \"Code: \" + msg.payload.returncode\n}\n\nglobal.set(\"test.state\", \"stopped\");\nglobal.set(\"test.result\", \"failed\");\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 5220,
-        "wires": [
-            [
-                "9e5bb740d27c098b"
-            ]
-        ]
-    },
-    {
-        "id": "c9d96d0b6a9c7876",
-        "type": "serial in",
-        "z": "8992ffe741acd3ee",
-        "g": "efa2eb74839b1194",
-        "name": "",
-        "serial": "415c042d5c9edcd4",
-        "x": 1390,
-        "y": 760,
-        "wires": [
-            [
-                "70215373d66bccd0",
-                "98b065eb75b1e6c3"
-            ]
-        ]
-    },
-    {
-        "id": "1f8aaa5ba4471536",
+        "id": "53a4e1d8c808848f",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "DUT_24V_RELAY",
+        "g": "17a2946198528cbc",
+        "name": "POE_PWR_RELAY (OFF)",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"off\"}",
+                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"off\"}",
                 "tot": "json"
             }
         ],
@@ -16544,82 +17020,40 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 4780,
+        "x": 380,
+        "y": 6820,
         "wires": [
             [
-                "400991cde717b568"
+                "2a0477b06b58ddea"
             ]
         ]
     },
     {
-        "id": "400991cde717b568",
+        "id": "2a0477b06b58ddea",
         "type": "subflow:513e4a72f100d2f7",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
+        "g": "17a2946198528cbc",
         "name": "",
-        "x": 550,
-        "y": 4780,
+        "x": 650,
+        "y": 6820,
         "wires": [
             [
-                "a8b9edf52f16e76d"
+                "280798a9360c268d"
             ]
         ]
     },
     {
-        "id": "3e2dcc7809ef6e15",
-        "type": "change",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "DUT_24V_RELAY",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"relay\":\"dut_24v_relay\",\"state\":\"on\"}",
-                "tot": "json"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 330,
-        "y": 4900,
-        "wires": [
-            [
-                "6d5723bd3d83d59f"
-            ]
-        ]
-    },
-    {
-        "id": "6d5723bd3d83d59f",
-        "type": "subflow:513e4a72f100d2f7",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "",
-        "x": 530,
-        "y": 4900,
-        "wires": [
-            [
-                "67a13f4458d1b6e7"
-            ]
-        ]
-    },
-    {
-        "id": "2b90d8a6c6a37280",
+        "id": "44cbc4ab60280f38",
         "type": "switch",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Stop?",
-        "property": "test.state",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "property": "test.result",
         "propertyType": "global",
         "rules": [
             {
                 "t": "eq",
-                "v": "running",
+                "v": "failed",
                 "vt": "str"
             },
             {
@@ -16629,59 +17063,29 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 290,
-        "y": 4660,
+        "x": 310,
+        "y": 7040,
         "wires": [
             [
-                "e7f0a456b31ada6d"
+                "17f0de9084215b75"
             ],
             [
-                "a2273f9fbda0d0be"
+                "da6076a371fd0a16"
             ]
         ]
     },
     {
-        "id": "e7f0a456b31ada6d",
-        "type": "switch",
-        "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Skip?",
-        "property": "flowCfg.super_cap_off",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 290,
-        "y": 4720,
-        "wires": [
-            [
-                "1f8aaa5ba4471536"
-            ],
-            [
-                "920d901b9490bf35"
-            ]
-        ]
-    },
-    {
-        "id": "920d901b9490bf35",
+        "id": "17f0de9084215b75",
         "type": "change",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Skip",
+        "g": "17a2946198528cbc",
+        "name": "Test Failed",
         "rules": [
             {
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"name\":\"Super Cap OFF\",\"result\":\"Skipped\"}",
+                "to": "{\"title\":\"Test Failed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
                 "tot": "json"
             }
         ],
@@ -16690,35 +17094,208 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 510,
-        "y": 4720,
+        "x": 470,
+        "y": 7020,
         "wires": [
             [
-                "9e5bb740d27c098b"
+                "f8af3016c4d133d2"
             ]
         ]
     },
     {
-        "id": "660340c77ce4297c",
+        "id": "da6076a371fd0a16",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Test Passed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"title\":\"Test Passed\",\"content\":\"It is now safe to remove DUT from the fixture\",\"cancelText\":\"OK\",\"okText\":\"OK\",\"okDisabled\":true}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 7060,
+        "wires": [
+            [
+                "f8af3016c4d133d2"
+            ]
+        ]
+    },
+    {
+        "id": "f8af3016c4d133d2",
+        "type": "subflow:b72dbfa71bf72ff3",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "x": 660,
+        "y": 7040,
+        "wires": [
+            [
+                "525e3b65d333a6d6"
+            ]
+        ]
+    },
+    {
+        "id": "525e3b65d333a6d6",
+        "type": "change",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test.state",
+                "pt": "global",
+                "to": "stopped",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 7120,
+        "wires": [
+            [
+                "fe5f69752f385a14"
+            ]
+        ]
+    },
+    {
+        "id": "fe5f69752f385a14",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "DUT Installed",
+        "mode": "link",
+        "links": [
+            "0f367029b3ce9e8f"
+        ],
+        "x": 665,
+        "y": 7120,
+        "wires": []
+    },
+    {
+        "id": "c85e187bd1e7729c",
         "type": "function",
         "z": "8992ffe741acd3ee",
-        "g": "6d39391e20d074cd",
-        "name": "Check Super Cap OFF",
-        "func": "let super_cap = global.get(\"measurements.super_cap\");\nlet min = global.get(\"parameters.super_cap_off_min\");\n\nif(super_cap > min) {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Passed\"\n    };\n} else {\n    msg.payload = {\n        \"name\": \"Super Cap Off\",\n        \"result\": \"Failed\",\n        \"measured\": \"Measured: \" + super_cap,\n        \"limit\": \"Limits: \" + min\n    };\n    global.set(\"test.result\", \"failed\");\n}\n\nreturn msg;",
+        "g": "17a2946198528cbc",
+        "name": "Serial Number CMD",
+        "func": "let serial_number = global.get(\"serial_num\");\n\nmsg.payload = \"e=\" + serial_number + \"\\r\\n\";\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
-        "y": 4840,
+        "x": 360,
+        "y": 6460,
         "wires": [
             [
-                "9e5bb740d27c098b",
-                "3e2dcc7809ef6e15"
+                "82a743087c17e14f",
+                "85408c085395d6e9"
             ]
         ]
+    },
+    {
+        "id": "2bc21e33e11e5ccc",
+        "type": "delay",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "100",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 6640,
+        "wires": [
+            [
+                "f777c8c21cb1b3c4"
+            ]
+        ]
+    },
+    {
+        "id": "21bf2c19f8ad9814",
+        "type": "comment",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Finish Up",
+        "info": "",
+        "x": 280,
+        "y": 5740,
+        "wires": []
+    },
+    {
+        "id": "280798a9360c268d",
+        "type": "function",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "name": "Save Results",
+        "func": "var msgdata = {};\n\nvar serial_number = global.get('serial_num');\nvar mac_address = global.get('mac_addr');\nvar pcb_rev = global.get('pcba');\nvar flow_config = global.get('flowCfg');\nvar measurements = global.get('measurements');\nvar parameters = global.get('parameters');\nvar results = global.get('results');\n\n\nmsg.collection = \"test_results\";\nmsg.payload = {\n    \"serial_number\" : serial_number,\n    \"mac_address\" : mac_address,\n    \"pcb_rev\" : pcb_rev,\n    \"flow_config\" : flow_config,\n    \"measurements\" : measurements,\n    \"parameters\" : parameters,\n    \"results\" : results\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 6900,
+        "wires": [
+            [
+                "44cbc4ab60280f38",
+                "a2096831a3568c81"
+            ]
+        ]
+    },
+    {
+        "id": "a2096831a3568c81",
+        "type": "mongodb out",
+        "z": "8992ffe741acd3ee",
+        "g": "17a2946198528cbc",
+        "mongodb": "3c78a6eb08cacdd4",
+        "name": "",
+        "collection": "",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "store",
+        "x": 650,
+        "y": 6900,
+        "wires": []
+    },
+    {
+        "id": "175ca79effa85633",
+        "type": "link out",
+        "z": "8992ffe741acd3ee",
+        "g": "911968d6966da0cc",
+        "name": "link out 26",
+        "mode": "link",
+        "links": [
+            "d64aa099bfd7b9f8"
+        ],
+        "x": 945,
+        "y": 1360,
+        "wires": []
     },
     {
         "id": "4c409af2d7f1e693",
@@ -17134,8 +17711,8 @@
         "z": "c21c2a31923f4a5d",
         "name": "ESP32",
         "serial": "a6c6d5d269d5dc61",
-        "x": 1060,
-        "y": 440,
+        "x": 1080,
+        "y": 520,
         "wires": []
     },
     {
@@ -17155,8 +17732,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "str",
-        "x": 830,
-        "y": 440,
+        "x": 850,
+        "y": 520,
         "wires": [
             [
                 "33e2c8356780141f"
@@ -17180,8 +17757,8 @@
         "topic": "",
         "payload": "2",
         "payloadType": "str",
-        "x": 830,
-        "y": 480,
+        "x": 850,
+        "y": 560,
         "wires": [
             [
                 "33e2c8356780141f"
@@ -17413,9 +17990,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Bryan",
+        "payload": "Reader1",
         "payloadType": "str",
-        "x": 750,
+        "x": 760,
         "y": 940,
         "wires": [
             [
@@ -17667,7 +18244,7 @@
         "payload": "M\\\\r\\\\n",
         "payloadType": "str",
         "x": 140,
-        "y": 280,
+        "y": 200,
         "wires": [
             [
                 "6afa380cf33bd2a1"
@@ -17717,7 +18294,7 @@
         "payload": "p",
         "payloadType": "str",
         "x": 160,
-        "y": 240,
+        "y": 160,
         "wires": [
             [
                 "562457352f638d96"
@@ -17737,7 +18314,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 280,
+        "y": 200,
         "wires": [
             [
                 "562457352f638d96"
@@ -17762,7 +18339,7 @@
         "payload": "M\\\\r\\\\n",
         "payloadType": "str",
         "x": 140,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
                 "92aa4cb809c3a5b3"
@@ -17782,7 +18359,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 320,
+        "y": 240,
         "wires": [
             [
                 "562457352f638d96"
@@ -17901,6 +18478,433 @@
         "wires": []
     },
     {
+        "id": "5e5bfe21c5489015",
+        "type": "serial in",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "serial": "a6c6d5d269d5dc61",
+        "x": 820,
+        "y": 200,
+        "wires": [
+            [
+                "3e84bede997f2d61"
+            ]
+        ]
+    },
+    {
+        "id": "3e84bede997f2d61",
+        "type": "debug",
+        "z": "c21c2a31923f4a5d",
+        "name": "debug 38",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "62cbf77ee69fadd0",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "name": "POE_PWR_RELAY (ON)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1640,
+        "wires": [
+            [
+                "23627aab1134c820"
+            ]
+        ]
+    },
+    {
+        "id": "ae2a552077925e7d",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 1640,
+        "wires": [
+            [
+                "62cbf77ee69fadd0"
+            ]
+        ]
+    },
+    {
+        "id": "23627aab1134c820",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "x": 950,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdc82fc4b8d74e6b",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "name": "POE_PWR_RELAY (OFF)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"poe_pwr_relay\",\"state\":\"off\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 1700,
+        "wires": [
+            [
+                "23627aab1134c820"
+            ]
+        ]
+    },
+    {
+        "id": "042973524a62e665",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 440,
+        "y": 1700,
+        "wires": [
+            [
+                "cdc82fc4b8d74e6b"
+            ]
+        ]
+    },
+    {
+        "id": "ae5fb48b628e44ec",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Serial Number (E)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "E\\\\r\\\\n",
+        "payloadType": "str",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "bf65900e40da8e65"
+            ]
+        ]
+    },
+    {
+        "id": "bf65900e40da8e65",
+        "type": "function",
+        "z": "c21c2a31923f4a5d",
+        "name": "Write Serial Number",
+        "func": "msg.payload = \"E=DM2W0123456789\\r\\n\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "1a26a79e5afa5be5",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "Serial Number (E)",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "E\\\\r\\\\n",
+        "payloadType": "str",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "7bec19c40bd8cb58"
+            ]
+        ]
+    },
+    {
+        "id": "7bec19c40bd8cb58",
+        "type": "function",
+        "z": "c21c2a31923f4a5d",
+        "name": "Read Serial Number",
+        "func": "msg.payload = \"E\\r\\n\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 320,
+        "wires": [
+            [
+                "562457352f638d96"
+            ]
+        ]
+    },
+    {
+        "id": "cb0f617c633b6540",
+        "type": "serial out",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "serial": "965c5561efd11b27",
+        "x": 1020,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "97ada41f3ac14e9b",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Reader2",
+        "payloadType": "str",
+        "x": 760,
+        "y": 1000,
+        "wires": [
+            [
+                "cb0f617c633b6540"
+            ]
+        ]
+    },
+    {
+        "id": "23b7c4bdda2bc4db",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "name": "WIEGAND_OSDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"wiegand_osdp\",\"state\":\"on\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "40a29c605e082a51"
+            ]
+        ]
+    },
+    {
+        "id": "40a29c605e082a51",
+        "type": "subflow:513e4a72f100d2f7",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "x": 1170,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "041ab2e4cacf3ec4",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 340,
+        "wires": [
+            [
+                "23b7c4bdda2bc4db"
+            ]
+        ]
+    },
+    {
+        "id": "4d8567934386b321",
+        "type": "change",
+        "z": "c21c2a31923f4a5d",
+        "name": "WIEGAND_OSDP",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"relay\":\"wiegand_osdp\",\"state\":\"off\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 400,
+        "wires": [
+            [
+                "40a29c605e082a51"
+            ]
+        ]
+    },
+    {
+        "id": "4037c9dfab8c8897",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 400,
+        "wires": [
+            [
+                "4d8567934386b321"
+            ]
+        ]
+    },
+    {
+        "id": "3b7d77d5e4a68e53",
+        "type": "inject",
+        "z": "c21c2a31923f4a5d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Garbage",
+        "payloadType": "str",
+        "x": 760,
+        "y": 1040,
+        "wires": [
+            [
+                "cb0f617c633b6540",
+                "b3e63a35084f7371"
+            ]
+        ]
+    },
+    {
         "id": "63b8c36bcb47dde8",
         "type": "ui-form",
         "z": "37909226f52cbb23",
@@ -18015,6 +19019,27 @@
                 "type": "number",
                 "required": true,
                 "rows": null
+            },
+            {
+                "label": "Vin ADC ON Max",
+                "key": "vin_adc_on_max",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Vin ADC ON Min",
+                "key": "vin_adc_on_min",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Vin ADC OFF Max",
+                "key": "vin_adc_off_max",
+                "type": "number",
+                "required": true,
+                "rows": null
             }
         ],
         "formValue": {
@@ -18032,7 +19057,10 @@
             "super_cap_min": "",
             "super_cap_off_min": "",
             "in_closed_max": "",
-            "in_closed_min": ""
+            "in_closed_min": "",
+            "vin_adc_on_max": "",
+            "vin_adc_on_min": "",
+            "vin_adc_off_max": ""
         },
         "payload": "",
         "submit": "Save",
@@ -18319,6 +19347,13 @@
                 "rows": null
             },
             {
+                "label": "DC Vin ADC",
+                "key": "dc_vin_adc",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
                 "label": "Super Cap Off",
                 "key": "super_cap_off",
                 "type": "checkbox",
@@ -18346,6 +19381,7 @@
             "rdr2_wiegand": false,
             "rdr2_io": false,
             "rdr2_osdp": false,
+            "dc_vin_adc": false,
             "super_cap_off": false
         },
         "payload": "",

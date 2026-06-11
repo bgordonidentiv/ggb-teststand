@@ -39,7 +39,7 @@ services:
 
   stm32_flash_api:
     #    image: stm32_flash_api:v0.3
-    image: stm32_flash_api:2.2
+    image: stm32_flash_api:2.4
     ports:
       - 5000:5000
       - 5001:5001

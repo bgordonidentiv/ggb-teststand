@@ -139,8 +139,12 @@ def write_flash():
 def write_prod_flash():
 
     flash_script = '/home/ubuntu/program_ggb2door.sh'
-    bootloader = '/home/ubuntu/ggb-2door-bootloader-0.1.595.bf8123e.elf'
-    bin_file = '/home/ubuntu/ggb-2door-Release-signed-0.1.595.bf8123e.bin'
+# 11/19/2025  bootloader = '/home/ubuntu/ggb-2door-bootloader-0.1.595.bf8123e.elf'
+# 11/19/2025  bin_file = '/home/ubuntu/ggb-2door-Release-signed-0.1.595.bf8123e.bin'
+#    bootloader = '/home/ubuntu/ggb-2door-bootloader-0.1.635.08a1e9f.elf'
+#    bin_file = '/home/ubuntu/ggb-2door-Release-signed-0.1.635.08a1e9f.bin'
+    bootloader = '/home/ubuntu/ggb-2door-bootloader-0.2.723.332af4b.elf'
+    bin_file = '/home/ubuntu/ggb-2door-Release-signed-0.2.723.332af4b.bin'
 
     try:
         result = subprocess.run(
